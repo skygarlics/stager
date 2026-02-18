@@ -6,9 +6,16 @@
       "level": "F",
       "status": "clear",
       "timestamp": "2026-02-18T12:21:51.348Z"
+    },
+    {
+      "song": "Lisa-RICCIA",
+      "version": "Sparkle Shower",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:22:22.940Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:21:51.350Z"
+  "lastUpdated": "2026-02-18T12:22:22.941Z"
 }
