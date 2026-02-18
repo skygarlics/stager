@@ -146,9 +146,16 @@
       "level": "F",
       "status": "clear",
       "timestamp": "2026-02-18T12:46:19.388Z"
+    },
+    {
+      "song": "glacia",
+      "version": "RESIDENT",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:46:34.055Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:46:19.388Z"
+  "lastUpdated": "2026-02-18T12:46:34.055Z"
 }
