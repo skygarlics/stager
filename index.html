@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIDX ☆12 Leveler</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="login-icon">🔒</div>
+            <h2>IIDX ☆12 Leveler</h2>
+            <p class="login-desc">パスワードを入力してアクセスしてください</p>
+            <input type="password" id="password-input" placeholder="Password" autocomplete="off" />
+            <button id="login-btn" class="btn-primary">UNLOCK</button>
+            <p id="login-error" class="error hidden"></p>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="modal hidden">
+        <div class="modal-content">
+            <div class="spinner"></div>
+            <p>データ読み込み中...</p>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" class="hidden">
+        <header>
+            <h1>IIDX ☆12 Leveler</h1>
+            <div id="status-bar">
+                <span id="current-level" class="level-badge">F</span>
+                <button id="mode-toggle" class="mode-badge" title="ゲージモード切替">ノマゲ</button>
+                <span id="song-count" class="count-badge">0 / 0</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Song Card -->
+            <div id="song-card">
+                <div id="song-version" class="song-meta"></div>
+                <div id="song-name" class="song-title">Loading...</div>
+                <div id="song-level" class="song-meta"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div id="action-buttons">
+                <button id="fail-btn" class="action-btn fail" disabled>
+                    <span class="btn-icon">✕</span>
+                    <span class="btn-label">FAIL</span>
+                </button>
+                <button id="clear-btn" class="action-btn clear" disabled>
+                    <span class="btn-icon">○</span>
+                    <span class="btn-label">CLEAR</span>
+                </button>
+            </div>
+
+            <!-- History Panel -->
+            <div id="history-panel">
+                <div class="panel-header">
+                    <h3>Play History</h3>
+                    <button id="history-toggle" class="btn-icon-only">▼</button>
+                </div>
+                <ul id="history-list"></ul>
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

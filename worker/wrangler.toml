@@ -1,0 +1,17 @@
+name = "stager-proxy"
+main = "src/index.js"
+compatibility_date = "2024-12-01"
+
+# ── Secrets (set via `wrangler secret put`) ──────────────
+# GITHUB_PAT   → GitHub Personal Access Token
+# AUTH_HASH    → SHA-256 hex hash of login password
+
+# ── Config Variables ─────────────────────────────────────
+[vars]
+REPO = "skygarlics/stager"
+DATA_BRANCH = "data"
+ALLOWED_ORIGIN = "https://skygarlics.github.io"
+
+# ── Production Environment ───────────────────────────────
+# [env.production]
+# vars = { ALLOWED_ORIGIN = "https://your-custom-domain.com" }
