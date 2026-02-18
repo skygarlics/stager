@@ -97,9 +97,16 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-18T12:42:48.608Z"
+    },
+    {
+      "song": "BLAZING_LAZER",
+      "version": "EPOLIS",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:43:05.881Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:42:48.609Z"
+  "lastUpdated": "2026-02-18T12:43:05.881Z"
 }
