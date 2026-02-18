@@ -34,9 +34,16 @@
       "level": "D",
       "status": "fail",
       "timestamp": "2026-02-18T12:25:00.585Z"
+    },
+    {
+      "song": "JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
+      "version": "EPOLIS",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:27:36.003Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:25:00.585Z"
+  "lastUpdated": "2026-02-18T12:27:36.003Z"
 }
