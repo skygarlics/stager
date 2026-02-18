@@ -195,9 +195,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-18T13:08:29.372Z"
+    },
+    {
+      "song": "ACTØ",
+      "version": "EPOLIS",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-18T13:11:12.348Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T13:08:29.372Z"
+  "lastUpdated": "2026-02-18T13:11:12.348Z"
 }
