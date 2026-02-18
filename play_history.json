@@ -139,9 +139,16 @@
       "level": "E",
       "status": "fail",
       "timestamp": "2026-02-18T12:46:10.415Z"
+    },
+    {
+      "song": "残像ニ繋ガレタ追憶ノHIDEAWAY",
+      "version": "EPOLIS",
+      "level": "F",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:46:19.388Z"
     }
   ],
-  "currentLevelIndex": 0,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:46:10.415Z"
+  "lastUpdated": "2026-02-18T12:46:19.388Z"
 }
