@@ -111,9 +111,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-18T12:43:15.615Z"
+    },
+    {
+      "song": "frequent",
+      "version": "EPOLIS",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-18T12:45:38.303Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:43:15.615Z"
+  "lastUpdated": "2026-02-18T12:45:38.304Z"
 }
