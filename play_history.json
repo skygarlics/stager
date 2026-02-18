@@ -188,9 +188,16 @@
       "level": "B",
       "status": "fail",
       "timestamp": "2026-02-18T13:05:59.930Z"
+    },
+    {
+      "song": "Space Battleship S4TØ",
+      "version": "Sparkle Shower",
+      "level": "C",
+      "status": "fail",
+      "timestamp": "2026-02-18T13:08:29.372Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T13:05:59.930Z"
+  "lastUpdated": "2026-02-18T13:08:29.372Z"
 }
