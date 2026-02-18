@@ -11,7 +11,7 @@
 // ==================== Configuration ====================
 const CONFIG = {
     // Cloudflare Worker proxy URL (handles GitHub API calls server-side)
-    WORKER_URL: '',  // e.g., 'https://stager-proxy.<your-subdomain>.workers.dev'
+    WORKER_URL: 'https://stager-proxy.stager-skygarlics.workers.dev',
     SPREADSHEET_BASE: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
     SHEET_GIDS: {
         'ノマゲ': 1873149697,
