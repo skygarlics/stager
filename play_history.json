@@ -41,9 +41,16 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-18T12:27:36.003Z"
+    },
+    {
+      "song": "RALLY '25",
+      "version": "Sparkle Shower",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-18T12:32:25.270Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:27:36.003Z"
+  "lastUpdated": "2026-02-18T12:32:25.270Z"
 }
