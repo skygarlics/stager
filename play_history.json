@@ -20,9 +20,16 @@
       "level": "D",
       "status": "fail",
       "timestamp": "2026-02-18T12:22:33.911Z"
+    },
+    {
+      "song": "灼熱 Lost Summer Dayz",
+      "version": "Pinky Crush",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:22:46.824Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:22:33.911Z"
+  "lastUpdated": "2026-02-18T12:22:46.824Z"
 }
