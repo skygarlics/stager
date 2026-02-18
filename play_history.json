@@ -174,9 +174,16 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-18T13:01:12.893Z"
+    },
+    {
+      "song": "From Human Blood",
+      "version": "Sparkle Shower",
+      "level": "C",
+      "status": "clear",
+      "timestamp": "2026-02-18T13:03:36.540Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 4,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T13:01:12.895Z"
+  "lastUpdated": "2026-02-18T13:03:36.541Z"
 }
