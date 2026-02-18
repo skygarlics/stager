@@ -181,9 +181,16 @@
       "level": "C",
       "status": "clear",
       "timestamp": "2026-02-18T13:03:36.540Z"
+    },
+    {
+      "song": "Regina vespaE",
+      "version": "Sparkle Shower",
+      "level": "B",
+      "status": "fail",
+      "timestamp": "2026-02-18T13:05:59.930Z"
     }
   ],
-  "currentLevelIndex": 4,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T13:03:36.541Z"
+  "lastUpdated": "2026-02-18T13:05:59.930Z"
 }
