@@ -104,9 +104,16 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-18T12:43:05.881Z"
+    },
+    {
+      "song": "ビビッド ☆＋＊。キラキライム",
+      "version": "Sparkle Shower",
+      "level": "C",
+      "status": "fail",
+      "timestamp": "2026-02-18T12:43:15.615Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:43:05.881Z"
+  "lastUpdated": "2026-02-18T12:43:15.615Z"
 }
