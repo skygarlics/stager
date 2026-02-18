@@ -83,9 +83,16 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-18T12:38:34.288Z"
+    },
+    {
+      "song": "SISYPHUS",
+      "version": "Pinky Crush",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-18T12:42:45.024Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:38:34.289Z"
+  "lastUpdated": "2026-02-18T12:42:45.025Z"
 }
