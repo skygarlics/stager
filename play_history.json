@@ -125,9 +125,16 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-18T12:45:40.189Z"
+    },
+    {
+      "song": "終焔のClaudia",
+      "version": "EPOLIS",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-18T12:46:01.230Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:45:40.190Z"
+  "lastUpdated": "2026-02-18T12:46:01.231Z"
 }
