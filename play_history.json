@@ -69,9 +69,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-18T12:33:19.805Z"
+    },
+    {
+      "song": "Bring The Fire",
+      "version": "Pinky Crush",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-18T12:35:53.844Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:33:19.806Z"
+  "lastUpdated": "2026-02-18T12:35:53.844Z"
 }
