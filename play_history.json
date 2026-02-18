@@ -55,9 +55,16 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-18T12:32:44.201Z"
+    },
+    {
+      "song": "Aqvion",
+      "version": "Pinky Crush",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:33:10.175Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:32:44.202Z"
+  "lastUpdated": "2026-02-18T12:33:10.175Z"
 }
