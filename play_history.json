@@ -48,9 +48,16 @@
       "level": "D",
       "status": "fail",
       "timestamp": "2026-02-18T12:32:25.270Z"
+    },
+    {
+      "song": "The Onlyonez",
+      "version": "EPOLIS",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-18T12:32:44.201Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:32:25.270Z"
+  "lastUpdated": "2026-02-18T12:32:44.202Z"
 }
