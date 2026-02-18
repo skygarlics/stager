@@ -62,9 +62,16 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-18T12:33:10.175Z"
+    },
+    {
+      "song": "chaplet -IIDX re:build-",
+      "version": "Sparkle Shower",
+      "level": "C",
+      "status": "fail",
+      "timestamp": "2026-02-18T12:33:19.805Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T12:33:10.175Z"
+  "lastUpdated": "2026-02-18T12:33:19.806Z"
 }
