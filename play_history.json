@@ -286,9 +286,16 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-19T16:32:35.757Z"
+    },
+    {
+      "song": "COSMIC V3LOCITY",
+      "version": "Pinky Crush",
+      "level": "C",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:35:01.635Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 4,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:32:35.757Z"
+  "lastUpdated": "2026-02-19T16:35:01.635Z"
 }
