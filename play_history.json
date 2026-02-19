@@ -209,9 +209,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-18T13:13:42.650Z"
+    },
+    {
+      "song": "Stereo Beasts",
+      "version": "EPOLIS",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-19T15:49:41.482Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-18T13:13:42.650Z"
+  "lastUpdated": "2026-02-19T15:49:41.483Z"
 }
