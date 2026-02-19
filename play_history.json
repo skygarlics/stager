@@ -251,9 +251,16 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-19T16:12:59.870Z"
+    },
+    {
+      "song": "#CMFLG",
+      "version": "RESIDENT",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:15:54.300Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:12:59.870Z"
+  "lastUpdated": "2026-02-19T16:15:54.300Z"
 }
