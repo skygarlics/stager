@@ -293,9 +293,16 @@
       "level": "C",
       "status": "clear",
       "timestamp": "2026-02-19T16:35:01.635Z"
+    },
+    {
+      "song": "Lightspeed",
+      "version": "Pinky Crush",
+      "level": "B",
+      "status": "fail",
+      "timestamp": "2026-02-19T16:37:21.869Z"
     }
   ],
-  "currentLevelIndex": 4,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:35:01.635Z"
+  "lastUpdated": "2026-02-19T16:37:21.869Z"
 }
