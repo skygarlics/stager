@@ -307,9 +307,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-19T16:39:54.972Z"
+    },
+    {
+      "song": "dica dica",
+      "version": "RESIDENT",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:42:30.751Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:39:54.972Z"
+  "lastUpdated": "2026-02-19T16:42:30.752Z"
 }
