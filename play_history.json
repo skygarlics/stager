@@ -258,9 +258,16 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-19T16:15:54.300Z"
+    },
+    {
+      "song": "Plazma[L]",
+      "version": "Pinky Crush",
+      "level": "C",
+      "status": "fail",
+      "timestamp": "2026-02-19T16:25:20.040Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:15:54.300Z"
+  "lastUpdated": "2026-02-19T16:25:20.041Z"
 }
