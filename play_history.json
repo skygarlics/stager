@@ -328,9 +328,16 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-19T16:47:39.080Z"
+    },
+    {
+      "song": "EX-MASSIVE FIGHTER",
+      "version": "Pinky Crush",
+      "level": "C",
+      "status": "fail",
+      "timestamp": "2026-02-19T16:49:54.216Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:47:39.080Z"
+  "lastUpdated": "2026-02-19T16:49:54.216Z"
 }
