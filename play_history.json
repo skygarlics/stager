@@ -272,9 +272,16 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-19T16:27:42.486Z"
+    },
+    {
+      "song": "Roar of Chronos",
+      "version": "Pinky Crush",
+      "level": "C",
+      "status": "fail",
+      "timestamp": "2026-02-19T16:30:20.650Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:27:42.486Z"
+  "lastUpdated": "2026-02-19T16:30:20.650Z"
 }
