@@ -223,9 +223,16 @@
       "level": "E",
       "status": "fail",
       "timestamp": "2026-02-19T15:52:28.055Z"
+    },
+    {
+      "song": "CUE CUE RESCUE[L]",
+      "version": "RESIDENT",
+      "level": "F",
+      "status": "clear",
+      "timestamp": "2026-02-19T15:54:44.329Z"
     }
   ],
-  "currentLevelIndex": 0,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T15:52:28.055Z"
+  "lastUpdated": "2026-02-19T15:54:44.329Z"
 }
