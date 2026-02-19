@@ -216,9 +216,16 @@
       "level": "D",
       "status": "fail",
       "timestamp": "2026-02-19T15:49:41.482Z"
+    },
+    {
+      "song": "LIGHTNING STRIKES",
+      "version": "HEROIC VERSE",
+      "level": "E",
+      "status": "fail",
+      "timestamp": "2026-02-19T15:52:28.055Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 0,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T15:49:41.483Z"
+  "lastUpdated": "2026-02-19T15:52:28.055Z"
 }
