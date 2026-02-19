@@ -402,6 +402,13 @@ function displaySong(song, version, level) {
     state.currentVersion = version;
     state.currentLevel = level;
 
+    // Sync currentLevelIndex to match displayed level
+    const levelIdx = CONFIG.LEVELS.indexOf(level);
+    if (levelIdx !== -1) {
+        state.currentLevelIndex = levelIdx;
+        updateLevelDisplay();
+    }
+
     const songNameEl = document.getElementById('song-name');
     songNameEl.textContent = song;
     songNameEl.classList.remove('animate');
