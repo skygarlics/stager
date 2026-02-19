@@ -244,9 +244,16 @@
       "level": "D",
       "status": "fail",
       "timestamp": "2026-02-19T15:59:38.015Z"
+    },
+    {
+      "song": "encounter",
+      "version": "CANNON BALLERS",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:12:59.870Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T15:59:38.015Z"
+  "lastUpdated": "2026-02-19T16:12:59.870Z"
 }
