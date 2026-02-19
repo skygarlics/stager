@@ -321,9 +321,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-19T16:45:09.163Z"
+    },
+    {
+      "song": "ONE AND ONLY",
+      "version": "RESIDENT",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:47:39.080Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:45:09.164Z"
+  "lastUpdated": "2026-02-19T16:47:39.080Z"
 }
