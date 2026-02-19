@@ -230,9 +230,16 @@
       "level": "F",
       "status": "clear",
       "timestamp": "2026-02-19T15:54:44.329Z"
+    },
+    {
+      "song": "Carry Me Away",
+      "version": "Rootage",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-19T15:57:13.962Z"
     }
   ],
-  "currentLevelIndex": 1,
+  "currentLevelIndex": 2,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T15:54:44.329Z"
+  "lastUpdated": "2026-02-19T15:57:13.963Z"
 }
