@@ -237,9 +237,16 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-19T15:57:13.962Z"
+    },
+    {
+      "song": "No Border",
+      "version": "RESIDENT",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-19T15:59:38.015Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T15:57:13.963Z"
+  "lastUpdated": "2026-02-19T15:59:38.015Z"
 }
