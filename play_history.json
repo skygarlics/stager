@@ -265,9 +265,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-19T16:25:20.040Z"
+    },
+    {
+      "song": "神のシナリオ",
+      "version": "RESIDENT",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:27:42.486Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:25:20.041Z"
+  "lastUpdated": "2026-02-19T16:27:42.486Z"
 }
