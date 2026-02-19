@@ -279,9 +279,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-19T16:30:20.650Z"
+    },
+    {
+      "song": "Meissa",
+      "version": "RESIDENT",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:32:35.757Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:30:20.650Z"
+  "lastUpdated": "2026-02-19T16:32:35.757Z"
 }
