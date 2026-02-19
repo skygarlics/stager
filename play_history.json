@@ -335,9 +335,16 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-19T16:49:54.216Z"
+    },
+    {
+      "song": "天邪鬼",
+      "version": "CastHour",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-19T16:52:13.972Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:49:54.216Z"
+  "lastUpdated": "2026-02-19T16:52:13.972Z"
 }
