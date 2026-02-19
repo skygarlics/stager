@@ -23,6 +23,8 @@ const CONFIG = {
     VERSION_MARKERS: ['5th', '6th', '7th', '8th', '9th', '10th', 'IIDXRED', 'HAPPY SKY'],
     // Max history entries to display
     MAX_HISTORY_DISPLAY: 30,
+    // Max history entries to persist (older entries are trimmed on save)
+    MAX_HISTORY_ENTRIES: 500,
 };
 
 // ==================== Application State ====================
@@ -32,13 +34,17 @@ const state = {
     songDB: {},                  // { version: { level: [song1, song2, ...] } }
     versions: [],                // Ordered from oldest to newest
     playedSongs: new Set(),      // "version|song" strings for session dedup
+    songStatus: new Map(),       // songKey -> { status: 'clear'|'fail', level } latest result per song
     history: [],                 // Full play history array
     currentSong: null,           // Currently displayed song
     currentVersion: null,        // Version of current song
+    currentLevel: null,          // Level of current song (may differ from currentLevelIndex)
     fileSha: null,               // GitHub file SHA for updates
     mode: 'ノマゲ',              // Current gauge mode
     isProcessing: false,         // Prevent double-clicks
     totalSongsInDB: 0,           // Total songs loaded
+    clearCount: 0,               // Lifetime clear count
+    totalCount: 0,               // Lifetime total play count
 };
 
 // ==================== Initialization ====================
@@ -264,8 +270,45 @@ function selectNextSong() {
         }
     }
 
-    // All songs at this level have been played in session - reset and retry
-    clearPlayedSongsForLevel(level);
+    // All songs at this level have been played - re-enable only failed songs first
+    clearFailedSongsForLevel(level);
+
+    for (let v = state.versions.length - 1; v >= 0; v--) {
+        const version = state.versions[v];
+        const songs = state.songDB[version]?.[level] || [];
+        const available = songs.filter(s => !state.playedSongs.has(songKey(version, s)));
+
+        if (available.length > 0) {
+            const song = pickRandom(available);
+            displaySong(song, version, level);
+            return;
+        }
+    }
+
+    // No failed songs to retry - try a cleared song from the next higher level
+    const higherLevel = CONFIG.LEVELS[Math.min(state.currentLevelIndex + 1, CONFIG.LEVELS.length - 1)];
+    if (higherLevel !== level) {
+        const clearedHigher = getClearedSongsForLevel(higherLevel);
+        if (clearedHigher.length > 0) {
+            const pick = pickRandom(clearedHigher);
+            displaySong(pick.song, pick.version, higherLevel);
+            return;
+        }
+
+        // No cleared songs at higher level - pick any song from higher level
+        for (let v = state.versions.length - 1; v >= 0; v--) {
+            const version = state.versions[v];
+            const songs = state.songDB[version]?.[higherLevel] || [];
+            if (songs.length > 0) {
+                const song = pickRandom(songs);
+                displaySong(song, version, higherLevel);
+                return;
+            }
+        }
+    }
+
+    // Fallback: reset all at current level and pick
+    clearAllPlayedSongsForLevel(level);
 
     for (let v = state.versions.length - 1; v >= 0; v--) {
         const version = state.versions[v];
@@ -287,25 +330,77 @@ function selectNextSong() {
     enableActionButtons(false);
 }
 
-function clearPlayedSongsForLevel(level) {
-    const toRemove = [];
-    for (const key of state.playedSongs) {
-        // Check if any version has this song at the current level
-        for (const version of state.versions) {
-            const songs = state.songDB[version]?.[level] || [];
-            for (const song of songs) {
-                if (key === songKey(version, song)) {
-                    toRemove.push(key);
-                }
+/**
+ * Remove only songs that were failed at this level from playedSongs,
+ * so they can be retried while cleared songs stay excluded.
+ */
+function clearFailedSongsForLevel(level) {
+    const failed = getFailedSongsForLevel(level);
+    for (const { song, version } of failed) {
+        state.playedSongs.delete(songKey(version, song));
+    }
+}
+
+/**
+ * Remove all songs at this level from playedSongs (full reset fallback).
+ */
+function clearAllPlayedSongsForLevel(level) {
+    for (const version of state.versions) {
+        const songs = state.songDB[version]?.[level] || [];
+        for (const song of songs) {
+            state.playedSongs.delete(songKey(version, song));
+        }
+    }
+}
+
+/**
+ * Get songs at a given level whose latest result is 'clear'.
+ * Returns array of { song, version } objects.
+ */
+function getClearedSongsForLevel(level) {
+    const result = [];
+    for (const version of state.versions) {
+        const songs = state.songDB[version]?.[level] || [];
+        for (const song of songs) {
+            const info = state.songStatus.get(songKey(version, song));
+            if (info && info.status === 'clear' && info.level === level) {
+                result.push({ song, version });
             }
         }
     }
-    toRemove.forEach(key => state.playedSongs.delete(key));
+    return result;
+}
+
+/**
+ * Get songs at a given level whose latest result is 'fail'.
+ * Returns array of { song, version } objects.
+ */
+function getFailedSongsForLevel(level) {
+    const result = [];
+    for (const version of state.versions) {
+        const songs = state.songDB[version]?.[level] || [];
+        for (const song of songs) {
+            const info = state.songStatus.get(songKey(version, song));
+            if (info && info.status === 'fail' && info.level === level) {
+                result.push({ song, version });
+            }
+        }
+    }
+    return result;
+}
+
+/**
+ * Get the latest status for a specific song.
+ * Returns { status, level } or null.
+ */
+function getSongStatus(version, song) {
+    return state.songStatus.get(songKey(version, song)) || null;
 }
 
 function displaySong(song, version, level) {
     state.currentSong = song;
     state.currentVersion = version;
+    state.currentLevel = level;
 
     const songNameEl = document.getElementById('song-name');
     songNameEl.textContent = song;
@@ -326,7 +421,9 @@ async function handleResult(result) {
     state.isProcessing = true;
     enableActionButtons(false);
 
-    const level = CONFIG.LEVELS[state.currentLevelIndex];
+    // Use the level of the displayed song (may differ from currentLevelIndex
+    // when a higher-level song was selected)
+    const level = state.currentLevel || CONFIG.LEVELS[state.currentLevelIndex];
 
     // Flash effect on song card
     const songCard = document.getElementById('song-card');
@@ -344,7 +441,13 @@ async function handleResult(result) {
     };
 
     state.history.push(entry);
-    state.playedSongs.add(songKey(state.currentVersion, state.currentSong));
+    const key = songKey(state.currentVersion, state.currentSong);
+    state.playedSongs.add(key);
+    state.songStatus.set(key, { status: result, level });
+
+    // Update counters
+    state.totalCount++;
+    if (result === 'clear') state.clearCount++;
 
     // Update level
     if (result === 'clear') {
@@ -412,10 +515,15 @@ async function loadPlayHistory() {
         // Clamp level index to valid range
         state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, CONFIG.LEVELS.length - 1));
 
-        // Rebuild played songs set from recent history (last 50 entries)
-        const recentHistory = state.history.slice(-50);
-        for (const entry of recentHistory) {
-            state.playedSongs.add(songKey(entry.version, entry.song));
+        // Restore counters (fallback: compute from history for backwards compat)
+        state.clearCount = data.clearCount ?? state.history.filter(e => e.status === 'clear').length;
+        state.totalCount = data.totalCount ?? state.history.length;
+
+        // Rebuild played songs set and song status from full history
+        for (const entry of state.history) {
+            const key = songKey(entry.version, entry.song);
+            state.playedSongs.add(key);
+            state.songStatus.set(key, { status: entry.status, level: entry.level });
         }
 
         console.log(`Restored ${state.history.length} history entries, level: ${CONFIG.LEVELS[state.currentLevelIndex]}`);
@@ -426,9 +534,16 @@ async function loadPlayHistory() {
 }
 
 async function savePlayHistory() {
+    // Trim history to max entries before saving
+    if (state.history.length > CONFIG.MAX_HISTORY_ENTRIES) {
+        state.history = state.history.slice(-CONFIG.MAX_HISTORY_ENTRIES);
+    }
+
     const payload = {
         history: state.history,
         currentLevelIndex: state.currentLevelIndex,
+        clearCount: state.clearCount,
+        totalCount: state.totalCount,
         mode: state.mode,
         lastUpdated: new Date().toISOString(),
     };
@@ -483,6 +598,7 @@ async function handleModeToggle() {
     state.songDB = {};
     state.versions = [];
     state.playedSongs.clear();
+    state.songStatus.clear();
     state.totalSongsInDB = 0;
 
     try {
@@ -518,9 +634,7 @@ function updateLevelDisplay() {
 }
 
 function updateCountDisplay() {
-    const clearCount = state.history.filter(e => e.status === 'clear').length;
-    const total = state.history.length;
-    document.getElementById('song-count').textContent = `${clearCount}✓ / ${total}`;
+    document.getElementById('song-count').textContent = `${state.clearCount}✓ / ${state.totalCount}`;
 }
 
 function addHistoryEntry(entry) {
