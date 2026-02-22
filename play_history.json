@@ -426,11 +426,18 @@
       "level": "A",
       "status": "fail",
       "timestamp": "2026-02-22T07:02:27.627Z"
+    },
+    {
+      "song": "今宵、ロマンス横丁。",
+      "version": "EPOLIS",
+      "level": "B+",
+      "status": "fail",
+      "timestamp": "2026-02-22T07:04:47.225Z"
     }
   ],
-  "currentLevelIndex": 5,
+  "currentLevelIndex": 4,
   "clearCount": 33,
-  "totalCount": 61,
+  "totalCount": 62,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T07:02:27.629Z"
+  "lastUpdated": "2026-02-22T07:04:47.225Z"
 }
