@@ -419,11 +419,18 @@
       "level": "A+",
       "status": "fail",
       "timestamp": "2026-02-22T06:58:23.143Z"
+    },
+    {
+      "song": "Cross Fire",
+      "version": "Pinky Crush",
+      "level": "A",
+      "status": "fail",
+      "timestamp": "2026-02-22T07:02:27.627Z"
     }
   ],
-  "currentLevelIndex": 6,
+  "currentLevelIndex": 5,
   "clearCount": 33,
-  "totalCount": 60,
+  "totalCount": 61,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:58:23.143Z"
+  "lastUpdated": "2026-02-22T07:02:27.629Z"
 }
