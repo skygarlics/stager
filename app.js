@@ -144,7 +144,7 @@ async function handleLogin() {
 // ==================== Spreadsheet Data Loading ====================
 async function loadSpreadsheetData() {
     const gid = CONFIG.SHEET_GIDS[state.mode];
-    if (!gid) {
+    if (gid == null) {
         throw new Error(`Sheet GID not configured for mode: ${state.mode}`);
     }
 
