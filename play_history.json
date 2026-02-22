@@ -412,11 +412,18 @@
       "level": "A",
       "status": "clear",
       "timestamp": "2026-02-22T06:55:57.615Z"
+    },
+    {
+      "song": "ιgniЯRuina",
+      "version": "Sparkle Shower",
+      "level": "A+",
+      "status": "fail",
+      "timestamp": "2026-02-22T06:58:23.143Z"
     }
   ],
-  "currentLevelIndex": 7,
+  "currentLevelIndex": 6,
   "clearCount": 33,
-  "totalCount": 59,
+  "totalCount": 60,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:55:57.616Z"
+  "lastUpdated": "2026-02-22T06:58:23.143Z"
 }
