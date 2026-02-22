@@ -440,11 +440,18 @@
       "level": "B",
       "status": "fail",
       "timestamp": "2026-02-22T07:07:15.538Z"
+    },
+    {
+      "song": "DIVINE JUDGEMENT",
+      "version": "Pinky Crush",
+      "level": "C",
+      "status": "clear",
+      "timestamp": "2026-02-22T07:09:41.745Z"
     }
   ],
-  "currentLevelIndex": 3,
-  "clearCount": 33,
-  "totalCount": 63,
+  "currentLevelIndex": 4,
+  "clearCount": 34,
+  "totalCount": 64,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T07:07:15.538Z"
+  "lastUpdated": "2026-02-22T07:09:41.745Z"
 }
