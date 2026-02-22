@@ -398,11 +398,18 @@
       "level": "A",
       "status": "fail",
       "timestamp": "2026-02-22T06:50:15.896Z"
+    },
+    {
+      "song": "Drop Syndicate",
+      "version": "Pinky Crush",
+      "level": "B+",
+      "status": "clear",
+      "timestamp": "2026-02-22T06:52:36.168Z"
     }
   ],
-  "currentLevelIndex": 5,
-  "clearCount": 31,
-  "totalCount": 57,
+  "currentLevelIndex": 6,
+  "clearCount": 32,
+  "totalCount": 58,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:50:15.897Z"
+  "lastUpdated": "2026-02-22T06:52:36.168Z"
 }
