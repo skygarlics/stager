@@ -363,11 +363,18 @@
       "level": "C",
       "status": "clear",
       "timestamp": "2026-02-22T06:34:26.422Z"
+    },
+    {
+      "song": "1116",
+      "version": "Pinky Crush",
+      "level": "B",
+      "status": "clear",
+      "timestamp": "2026-02-22T06:37:02.279Z"
     }
   ],
-  "currentLevelIndex": 4,
-  "clearCount": 28,
-  "totalCount": 52,
+  "currentLevelIndex": 5,
+  "clearCount": 29,
+  "totalCount": 53,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:34:26.424Z"
+  "lastUpdated": "2026-02-22T06:37:02.279Z"
 }
