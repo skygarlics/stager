@@ -391,11 +391,18 @@
       "level": "B+",
       "status": "clear",
       "timestamp": "2026-02-22T06:44:50.927Z"
+    },
+    {
+      "song": "Pinky Happy Crazy",
+      "version": "Pinky Crush",
+      "level": "A",
+      "status": "fail",
+      "timestamp": "2026-02-22T06:50:15.896Z"
     }
   ],
-  "currentLevelIndex": 6,
+  "currentLevelIndex": 5,
   "clearCount": 31,
-  "totalCount": 56,
+  "totalCount": 57,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:44:50.928Z"
+  "lastUpdated": "2026-02-22T06:50:15.897Z"
 }
