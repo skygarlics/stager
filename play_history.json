@@ -349,9 +349,18 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-19T16:54:40.790Z"
+    },
+    {
+      "song": "グッバイ宣言[L]",
+      "version": "CastHour",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-22T06:30:24.091Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 3,
+  "clearCount": 27,
+  "totalCount": 51,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-19T16:54:40.790Z"
+  "lastUpdated": "2026-02-22T06:30:24.092Z"
 }
