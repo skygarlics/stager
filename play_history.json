@@ -356,11 +356,18 @@
       "level": "D",
       "status": "clear",
       "timestamp": "2026-02-22T06:30:24.091Z"
+    },
+    {
+      "song": "MARLIN",
+      "version": "Pinky Crush",
+      "level": "C",
+      "status": "clear",
+      "timestamp": "2026-02-22T06:34:26.422Z"
     }
   ],
-  "currentLevelIndex": 3,
-  "clearCount": 27,
-  "totalCount": 51,
+  "currentLevelIndex": 4,
+  "clearCount": 28,
+  "totalCount": 52,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:30:24.092Z"
+  "lastUpdated": "2026-02-22T06:34:26.424Z"
 }
