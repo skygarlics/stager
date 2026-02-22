@@ -433,11 +433,18 @@
       "level": "B+",
       "status": "fail",
       "timestamp": "2026-02-22T07:04:47.225Z"
+    },
+    {
+      "song": "destination",
+      "version": "Pinky Crush",
+      "level": "B",
+      "status": "fail",
+      "timestamp": "2026-02-22T07:07:15.538Z"
     }
   ],
-  "currentLevelIndex": 4,
+  "currentLevelIndex": 3,
   "clearCount": 33,
-  "totalCount": 62,
+  "totalCount": 63,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T07:04:47.225Z"
+  "lastUpdated": "2026-02-22T07:07:15.538Z"
 }
