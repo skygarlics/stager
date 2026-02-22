@@ -384,11 +384,18 @@
       "level": "B",
       "status": "clear",
       "timestamp": "2026-02-22T06:42:12.391Z"
+    },
+    {
+      "song": "Flämingo",
+      "version": "Pinky Crush",
+      "level": "B+",
+      "status": "clear",
+      "timestamp": "2026-02-22T06:44:50.927Z"
     }
   ],
-  "currentLevelIndex": 5,
-  "clearCount": 30,
-  "totalCount": 55,
+  "currentLevelIndex": 6,
+  "clearCount": 31,
+  "totalCount": 56,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:42:12.391Z"
+  "lastUpdated": "2026-02-22T06:44:50.928Z"
 }
