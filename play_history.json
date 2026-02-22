@@ -377,11 +377,18 @@
       "level": "B+",
       "status": "fail",
       "timestamp": "2026-02-22T06:39:24.165Z"
+    },
+    {
+      "song": "u gotta beat",
+      "version": "Pinky Crush",
+      "level": "B",
+      "status": "clear",
+      "timestamp": "2026-02-22T06:42:12.391Z"
     }
   ],
-  "currentLevelIndex": 4,
-  "clearCount": 29,
-  "totalCount": 54,
+  "currentLevelIndex": 5,
+  "clearCount": 30,
+  "totalCount": 55,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-22T06:39:24.165Z"
+  "lastUpdated": "2026-02-22T06:42:12.391Z"
 }
