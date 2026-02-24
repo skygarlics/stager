@@ -468,11 +468,18 @@
       "level": "B",
       "status": "fail",
       "timestamp": "2026-02-24T13:56:04.437Z"
+    },
+    {
+      "song": "Here We Go Now",
+      "version": "Pinky Crush",
+      "level": "C",
+      "status": "fail",
+      "timestamp": "2026-02-24T13:58:29.087Z"
     }
   ],
-  "currentLevelIndex": 3,
+  "currentLevelIndex": 2,
   "clearCount": 35,
-  "totalCount": 67,
+  "totalCount": 68,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-24T13:56:04.437Z"
+  "lastUpdated": "2026-02-24T13:58:29.088Z"
 }
