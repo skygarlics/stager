@@ -475,11 +475,18 @@
       "level": "C",
       "status": "fail",
       "timestamp": "2026-02-24T13:58:29.087Z"
+    },
+    {
+      "song": "Silver Bullet",
+      "version": "CastHour",
+      "level": "D",
+      "status": "fail",
+      "timestamp": "2026-02-24T14:00:56.263Z"
     }
   ],
-  "currentLevelIndex": 2,
+  "currentLevelIndex": 1,
   "clearCount": 35,
-  "totalCount": 68,
+  "totalCount": 69,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-24T13:58:29.088Z"
+  "lastUpdated": "2026-02-24T14:00:56.263Z"
 }
