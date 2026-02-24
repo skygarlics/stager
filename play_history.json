@@ -454,11 +454,18 @@
       "level": "B",
       "status": "clear",
       "timestamp": "2026-02-24T13:53:28.614Z"
+    },
+    {
+      "song": "灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+      "version": "EPOLIS",
+      "level": "B+",
+      "status": "fail",
+      "timestamp": "2026-02-24T13:53:32.769Z"
     }
   ],
-  "currentLevelIndex": 5,
+  "currentLevelIndex": 4,
   "clearCount": 35,
-  "totalCount": 65,
+  "totalCount": 66,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-24T13:53:28.615Z"
+  "lastUpdated": "2026-02-24T13:53:32.769Z"
 }
