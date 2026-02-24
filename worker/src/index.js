@@ -131,6 +131,19 @@ export default {
                     }
                 }
 
+                case path === '/api/dp-rank' && request.method === 'POST': {
+                    // Rate limit same as API
+                    const rl = rateLimiter.check('api', clientIP, 30, 60_000);
+                    if (!rl.allowed) {
+                        return corsResponse(env, json(
+                            { error: 'Rate limit exceeded. Try again later.' },
+                            429,
+                            { 'Retry-After': String(rl.retryAfter) }
+                        ));
+                    }
+                    return corsResponse(env, await handleDpRank(request, env));
+                }
+
                 case path === '/api/health':
                     return corsResponse(env, json({ status: 'ok' }));
 
@@ -312,6 +325,46 @@ async function handlePutHistory(request, env) {
 
     const data = await ghResponse.json();
     return json({ ok: true, sha: data.content.sha });
+}
+
+// ==================== DP Rank Proxy ====================
+
+/**
+ * POST /api/dp-rank
+ * Proxies POST request to zasa.sakura.ne.jp/dp/rank.php
+ * Body: { offi: 11, env: "a330", cat: 0, mode: "p1" }
+ * Returns: { html: "..." } - the raw HTML response
+ */
+async function handleDpRank(request, env) {
+    if (!(await authenticate(request, env))) {
+        return json({ error: 'Unauthorized' }, 401);
+    }
+
+    const rawBody = await readBody(request);
+    if (!rawBody) return json({ error: 'Request body too large' }, 413);
+    const body = JSON.parse(rawBody);
+
+    const offi = body.offi ?? 11;
+    const envParam = body.env ?? 'a330';
+    const cat = body.cat ?? 0;
+    const mode = body.mode ?? 'p1';
+
+    const formData = `env=${encodeURIComponent(envParam)}&submit=%E8%A1%A8%E7%A4%BA&cat=${cat}&mode=${encodeURIComponent(mode)}&offi=${offi}`;
+
+    const dpResponse = await fetch('https://zasa.sakura.ne.jp/dp/rank.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData,
+    });
+
+    if (!dpResponse.ok) {
+        return json({ error: 'DP rank fetch failed', status: dpResponse.status }, 502);
+    }
+
+    const html = await dpResponse.text();
+    return json({ html });
 }
 
 // ==================== Helpers ====================

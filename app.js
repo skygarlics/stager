@@ -25,12 +25,22 @@ const CONFIG = {
     MAX_HISTORY_DISPLAY: 30,
     // Max history entries to persist (older entries are trimmed on save)
     MAX_HISTORY_ENTRIES: 500,
+
+    // DP Mode Configuration
+    DP: {
+        // Available official star levels
+        OFFI_LEVELS: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        // Default starting star level
+        DEFAULT_OFFI: 11,
+        // Latest game version env code
+        DEFAULT_ENV: 'a330',
+    },
 };
 
 // ==================== Application State ====================
 const state = {
     password: null,              // Login password (used as Bearer token for Worker)
-    currentLevelIndex: 0,       // Index into CONFIG.LEVELS
+    currentLevelIndex: 0,       // Index into CONFIG.LEVELS or DP levels
     songDB: {},                  // { version: { level: [song1, song2, ...] } }
     versions: [],                // Ordered from oldest to newest
     playedSongs: new Set(),      // "version|song" strings for session dedup
@@ -40,11 +50,19 @@ const state = {
     currentVersion: null,        // Version of current song
     currentLevel: null,          // Level of current song (may differ from currentLevelIndex)
     fileSha: null,               // GitHub file SHA for updates
-    mode: 'ノマゲ',              // Current gauge mode
+    mode: 'ノマゲ',              // Current gauge mode (SP only)
+    gameMode: 'SP',              // 'SP' or 'DP'
     isProcessing: false,         // Prevent double-clicks
     totalSongsInDB: 0,           // Total songs loaded
     clearCount: 0,               // Lifetime clear count
     totalCount: 0,               // Lifetime total play count
+
+    // DP-specific state
+    dp: {
+        offi: 11,                // Current official star level (☆11)
+        levels: [],              // Rank levels sorted ascending (e.g., ['10.2','10.5',...])
+        env: 'a330',             // Game version env code
+    },
 };
 
 // ==================== Initialization ====================
@@ -64,6 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mode toggle
     document.getElementById('mode-toggle').addEventListener('click', handleModeToggle);
+
+    // Game mode toggle (SP / DP)
+    document.getElementById('game-mode-toggle').addEventListener('click', handleGameModeToggle);
+
+    // DP star level selector
+    document.getElementById('dp-offi-down')?.addEventListener('click', () => handleDpOffiChange(-1));
+    document.getElementById('dp-offi-up')?.addEventListener('click', () => handleDpOffiChange(1));
 
     // Focus password input
     document.getElementById('password-input').focus();
@@ -113,17 +138,24 @@ async function handleLogin() {
     document.getElementById('loading-overlay').classList.remove('hidden');
 
     try {
-        // Load spreadsheet data and play history in parallel
-        await Promise.all([
-            loadSpreadsheetData(),
-            loadPlayHistory(),
-        ]);
+        // Load play history first to restore gameMode state
+        await loadPlayHistory();
+
+        // Then load song data based on restored gameMode
+        await (state.gameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
+
+        // Clamp level index after data is loaded
+        const levels = getCurrentLevels();
+        if (levels.length > 0) {
+            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, levels.length - 1));
+        }
 
         // Transition to app
         document.getElementById('loading-overlay').classList.add('hidden');
         document.getElementById('app').classList.remove('hidden');
 
         // Update UI with restored state
+        updateGameModeUI();
         updateLevelDisplay();
         updateCountDisplay();
         renderFullHistory();
@@ -251,9 +283,168 @@ function normalizeLevel(level) {
         .trim();
 }
 
+// ==================== DP Data Loading ====================
+
+/**
+ * Load DP difficulty table from zasa.sakura.ne.jp via Worker proxy
+ */
+async function loadDpData() {
+    const response = await workerFetch('/api/dp-rank', {
+        method: 'POST',
+        body: JSON.stringify({
+            offi: state.dp.offi,
+            env: state.dp.env,
+            cat: 0,
+            mode: 'p1',
+        }),
+    });
+
+    if (!response.ok) {
+        throw new Error(`DP rank fetch failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+    parseDpHtml(data.html);
+
+    if (state.dp.levels.length === 0) {
+        throw new Error('No levels found in DP ranking data');
+    }
+
+    console.log(`DP ☆${state.dp.offi}: Loaded ${state.totalSongsInDB} songs across ${state.dp.levels.length} rank levels`);
+}
+
+/**
+ * Parse the HTML table from the DP ranking site into songDB
+ * 
+ * Structure: <table class="rank_p1">
+ *   <tr> header row with <th> version names </tr>
+ *   <tr class="tile_*"> <td class="rank">level</td> <td> songs... </td> ... </tr>
+ * </table>
+ */
+function parseDpHtml(html) {
+    // Reset
+    state.songDB = {};
+    state.versions = [];
+    state.dp.levels = [];
+    state.totalSongsInDB = 0;
+
+    // Create a DOM parser
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    const table = doc.querySelector('table.rank_p1');
+    if (!table) {
+        throw new Error('Could not find rank_p1 table in DP response');
+    }
+
+    const rows = table.querySelectorAll('tr');
+    if (rows.length < 2) {
+        throw new Error('DP table has insufficient rows');
+    }
+
+    // Parse header row to get version names
+    const headerCells = rows[0].querySelectorAll('th');
+    const versionMap = []; // index -> version name (skip first and last "rank" columns)
+
+    for (let i = 0; i < headerCells.length; i++) {
+        const th = headerCells[i];
+        if (th.classList.contains('rank')) {
+            versionMap.push(null); // skip rank columns
+        } else {
+            const vName = th.textContent.trim();
+            versionMap.push(vName);
+            if (vName && !state.versions.includes(vName)) {
+                state.versions.push(vName);
+            }
+        }
+    }
+
+    // Parse data rows
+    const levelsSet = new Set();
+
+    for (let r = 1; r < rows.length; r++) {
+        const row = rows[r];
+        const cells = row.querySelectorAll('td');
+        if (cells.length === 0) continue;
+
+        // First cell with class "rank" contains the level
+        let level = null;
+        let dataStartIdx = 0;
+
+        for (let c = 0; c < cells.length; c++) {
+            if (cells[c].classList.contains('rank')) {
+                const rankText = cells[c].textContent.trim();
+                if (rankText && !level) {
+                    level = rankText;
+                    dataStartIdx = c + 1;
+                }
+            }
+        }
+
+        if (!level) continue;
+        levelsSet.add(level);
+
+        // Parse song cells - each non-rank <td> corresponds to a version
+        let versionIdx = 0;
+        for (let c = 0; c < cells.length; c++) {
+            if (cells[c].classList.contains('rank')) continue;
+
+            // Map this cell to a version
+            // We need to find the correct version - skip null entries in versionMap
+            while (versionIdx < versionMap.length && versionMap[versionIdx] === null) {
+                versionIdx++;
+            }
+            const version = versionMap[versionIdx] || null;
+            versionIdx++;
+
+            if (!version) continue;
+
+            // Extract song names from <a class="music"> links
+            const links = cells[c].querySelectorAll('a.music');
+            if (links.length === 0) continue;
+
+            const songs = [];
+            for (const link of links) {
+                const songName = link.textContent.trim();
+                if (songName) songs.push(songName);
+            }
+
+            if (songs.length === 0) continue;
+
+            if (!state.songDB[version]) {
+                state.songDB[version] = {};
+            }
+            if (!state.songDB[version][level]) {
+                state.songDB[version][level] = [];
+            }
+            state.songDB[version][level].push(...songs);
+            state.totalSongsInDB += songs.length;
+        }
+    }
+
+    // Sort levels numerically ascending
+    state.dp.levels = Array.from(levelsSet).sort((a, b) => parseFloat(a) - parseFloat(b));
+}
+
+/**
+ * Get current levels array depending on game mode
+ */
+function getCurrentLevels() {
+    return state.gameMode === 'DP' ? state.dp.levels : CONFIG.LEVELS;
+}
+
+/**
+ * Get current level string
+ */
+function getCurrentLevel() {
+    const levels = getCurrentLevels();
+    return levels[state.currentLevelIndex] || levels[0];
+}
+
 // ==================== Song Selection Algorithm ====================
 function selectNextSong() {
-    const level = CONFIG.LEVELS[state.currentLevelIndex];
+    const levels = getCurrentLevels();
+    const level = levels[state.currentLevelIndex];
 
     // Try from latest version backwards (fallback logic)
     for (let v = state.versions.length - 1; v >= 0; v--) {
@@ -286,7 +477,7 @@ function selectNextSong() {
     }
 
     // No failed songs to retry - try a cleared song from the next higher level
-    const higherLevel = CONFIG.LEVELS[Math.min(state.currentLevelIndex + 1, CONFIG.LEVELS.length - 1)];
+    const higherLevel = levels[Math.min(state.currentLevelIndex + 1, levels.length - 1)];
     if (higherLevel !== level) {
         const clearedHigher = getClearedSongsForLevel(higherLevel);
         if (clearedHigher.length > 0) {
@@ -403,7 +594,8 @@ function displaySong(song, version, level) {
     state.currentLevel = level;
 
     // Sync currentLevelIndex to match displayed level
-    const levelIdx = CONFIG.LEVELS.indexOf(level);
+    const levels = getCurrentLevels();
+    const levelIdx = levels.indexOf(level);
     if (levelIdx !== -1) {
         state.currentLevelIndex = levelIdx;
         updateLevelDisplay();
@@ -430,7 +622,8 @@ async function handleResult(result) {
 
     // Use the level of the displayed song (may differ from currentLevelIndex
     // when a higher-level song was selected)
-    const level = state.currentLevel || CONFIG.LEVELS[state.currentLevelIndex];
+    const levels = getCurrentLevels();
+    const level = state.currentLevel || levels[state.currentLevelIndex];
 
     // Flash effect on song card
     const songCard = document.getElementById('song-card');
@@ -458,7 +651,7 @@ async function handleResult(result) {
 
     // Update level
     if (result === 'clear') {
-        state.currentLevelIndex = Math.min(state.currentLevelIndex + 1, CONFIG.LEVELS.length - 1);
+        state.currentLevelIndex = Math.min(state.currentLevelIndex + 1, levels.length - 1);
     } else {
         state.currentLevelIndex = Math.max(state.currentLevelIndex - 1, 0);
     }
@@ -519,8 +712,21 @@ async function loadPlayHistory() {
         state.history = data.history || [];
         state.currentLevelIndex = data.currentLevelIndex ?? 0;
 
+        // Restore game mode
+        if (data.gameMode) {
+            state.gameMode = data.gameMode;
+        }
+        if (data.dp) {
+            state.dp.offi = data.dp.offi ?? CONFIG.DP.DEFAULT_OFFI;
+            state.dp.env = data.dp.env ?? CONFIG.DP.DEFAULT_ENV;
+        }
+        if (data.mode) {
+            state.mode = data.mode;
+        }
+
         // Clamp level index to valid range
-        state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, CONFIG.LEVELS.length - 1));
+        const maxIndex = state.gameMode === 'DP' ? 999 : CONFIG.LEVELS.length - 1;
+        state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, maxIndex));
 
         // Restore counters (fallback: compute from history for backwards compat)
         state.clearCount = data.clearCount ?? state.history.filter(e => e.status === 'clear').length;
@@ -533,7 +739,7 @@ async function loadPlayHistory() {
             state.songStatus.set(key, { status: entry.status, level: entry.level });
         }
 
-        console.log(`Restored ${state.history.length} history entries, level: ${CONFIG.LEVELS[state.currentLevelIndex]}`);
+        console.log(`Restored ${state.history.length} history entries, level: ${getCurrentLevel()}, gameMode: ${state.gameMode}`);
     } catch (e) {
         console.error('Failed to load play history:', e);
         // Non-fatal: we can still play without saved history
@@ -552,12 +758,17 @@ async function savePlayHistory() {
         clearCount: state.clearCount,
         totalCount: state.totalCount,
         mode: state.mode,
+        gameMode: state.gameMode,
+        dp: state.gameMode === 'DP' ? {
+            offi: state.dp.offi,
+            env: state.dp.env,
+        } : undefined,
         lastUpdated: new Date().toISOString(),
     };
 
     const body = {
         content: payload,
-        message: `Update play history - ${CONFIG.LEVELS[state.currentLevelIndex]} - ${new Date().toISOString()}`,
+        message: `Update play history - ${state.gameMode} ${getCurrentLevel()} - ${new Date().toISOString()}`,
     };
 
     if (state.fileSha) {
@@ -581,6 +792,9 @@ async function savePlayHistory() {
 // ==================== Mode Toggle ====================
 async function handleModeToggle() {
     if (state.isProcessing) return;
+
+    // In DP mode, mode toggle is not used (no gauge modes)
+    if (state.gameMode === 'DP') return;
 
     const modes = Object.keys(CONFIG.SHEET_GIDS);
     const currentIndex = modes.indexOf(state.mode);
@@ -621,23 +835,178 @@ async function handleModeToggle() {
     state.isProcessing = false;
 }
 
+// ==================== Game Mode Toggle (SP / DP) ====================
+async function handleGameModeToggle() {
+    if (state.isProcessing) return;
+
+    const nextGameMode = state.gameMode === 'SP' ? 'DP' : 'SP';
+
+    state.isProcessing = true;
+    enableActionButtons(false);
+
+    // Show loading
+    document.getElementById('song-name').textContent = 'データ読み込み中...';
+    document.getElementById('song-version').textContent = '';
+    document.getElementById('song-level').textContent = '';
+
+    // Save current state before switching
+    await savePlayHistory().catch(err => console.error('Save before game mode switch failed:', err));
+
+    // Switch game mode
+    state.gameMode = nextGameMode;
+
+    // Reset song-related state
+    state.songDB = {};
+    state.versions = [];
+    state.playedSongs.clear();
+    state.songStatus.clear();
+    state.totalSongsInDB = 0;
+    state.currentLevelIndex = 0;
+
+    if (nextGameMode === 'DP') {
+        state.dp.offi = CONFIG.DP.DEFAULT_OFFI;
+        state.dp.env = CONFIG.DP.DEFAULT_ENV;
+    } else {
+        state.mode = 'ノマゲ';
+    }
+
+    updateGameModeUI();
+
+    try {
+        await loadPlayHistory();
+        await (nextGameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
+
+        // Clamp level index after data is loaded
+        const levels = getCurrentLevels();
+        if (levels.length > 0) {
+            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, levels.length - 1));
+        }
+
+        updateLevelDisplay();
+        updateCountDisplay();
+        renderFullHistory();
+        selectNextSong();
+        enableActionButtons(true);
+    } catch (e) {
+        console.error('Game mode switch failed:', e);
+        document.getElementById('song-name').textContent = 'モード切替に失敗しました';
+    }
+
+    state.isProcessing = false;
+}
+
+/**
+ * Update UI elements based on current game mode
+ */
+function updateGameModeUI() {
+    const gameModeBtn = document.getElementById('game-mode-toggle');
+    const modeToggle = document.getElementById('mode-toggle');
+    const dpControls = document.getElementById('dp-controls');
+
+    gameModeBtn.textContent = state.gameMode;
+
+    if (state.gameMode === 'DP') {
+        modeToggle.classList.add('hidden');
+        dpControls.classList.remove('hidden');
+        updateDpOffiDisplay();
+    } else {
+        modeToggle.classList.remove('hidden');
+        modeToggle.textContent = state.mode;
+        dpControls.classList.add('hidden');
+    }
+}
+
+/**
+ * Update the DP star level display
+ */
+function updateDpOffiDisplay() {
+    const offiLabel = document.getElementById('dp-offi-label');
+    if (offiLabel) {
+        offiLabel.textContent = `☆${state.dp.offi}`;
+    }
+}
+
+/**
+ * Change DP star level
+ */
+async function handleDpOffiChange(delta) {
+    if (state.isProcessing || state.gameMode !== 'DP') return;
+
+    const levels = CONFIG.DP.OFFI_LEVELS;
+    const currentIdx = levels.indexOf(state.dp.offi);
+    const newIdx = currentIdx + delta;
+
+    if (newIdx < 0 || newIdx >= levels.length) return;
+
+    state.isProcessing = true;
+    enableActionButtons(false);
+
+    // Save current state
+    await savePlayHistory().catch(err => console.error('Save before offi change failed:', err));
+
+    state.dp.offi = levels[newIdx];
+
+    // Reset song state
+    state.songDB = {};
+    state.versions = [];
+    state.playedSongs.clear();
+    state.songStatus.clear();
+    state.totalSongsInDB = 0;
+    state.currentLevelIndex = 0;
+
+    updateDpOffiDisplay();
+
+    // Show loading
+    document.getElementById('song-name').textContent = 'データ読み込み中...';
+    document.getElementById('song-version').textContent = '';
+    document.getElementById('song-level').textContent = '';
+
+    try {
+        await loadDpData();
+
+        // Clamp level index after data reload
+        if (state.dp.levels.length > 0) {
+            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, state.dp.levels.length - 1));
+        }
+
+        updateLevelDisplay();
+        updateCountDisplay();
+        selectNextSong();
+        enableActionButtons(true);
+    } catch (e) {
+        console.error('DP offi change failed:', e);
+        document.getElementById('song-name').textContent = 'レベル切替に失敗しました';
+    }
+
+    state.isProcessing = false;
+}
+
 // ==================== UI Update Functions ====================
 function updateLevelDisplay() {
-    const level = CONFIG.LEVELS[state.currentLevelIndex];
+    const levels = getCurrentLevels();
+    const level = levels[state.currentLevelIndex] || levels[0] || '?';
     const levelBadge = document.getElementById('current-level');
     levelBadge.textContent = level;
 
-    // Color based on level tier
-    const tierColors = {
-        'F': '#4ade80', 'E': '#22d3ee',
-        'D': '#60a5fa', 'C': '#818cf8',
-        'B': '#a78bfa', 'B+': '#c084fc',
-        'A': '#f472b6', 'A+': '#fb7185',
-        'S': '#f97316', 'S+': '#ef4444',
-    };
+    if (state.gameMode === 'DP') {
+        // For DP mode, color by numeric rank value
+        const numLevel = parseFloat(level);
+        const hue = Math.max(0, Math.min(120, (1 - (numLevel - 1) / 12) * 120));
+        const color = `hsl(${hue}, 80%, 55%)`;
+        levelBadge.style.background = `linear-gradient(135deg, ${color}, hsl(${hue}, 80%, 40%))`;
+    } else {
+        // SP mode: Color based on level tier
+        const tierColors = {
+            'F': '#4ade80', 'E': '#22d3ee',
+            'D': '#60a5fa', 'C': '#818cf8',
+            'B': '#a78bfa', 'B+': '#c084fc',
+            'A': '#f472b6', 'A+': '#fb7185',
+            'S': '#f97316', 'S+': '#ef4444',
+        };
 
-    const color = tierColors[level] || '#888';
-    levelBadge.style.background = `linear-gradient(135deg, ${color}, ${adjustColor(color, -30)})`;
+        const color = tierColors[level] || '#888';
+        levelBadge.style.background = `linear-gradient(135deg, ${color}, ${adjustColor(color, -30)})`;
+    }
 }
 
 function updateCountDisplay() {

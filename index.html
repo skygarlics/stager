@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIDX ☆12 Leveler</title>
+    <title>IIDX Leveler</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
@@ -12,7 +12,7 @@
     <div id="login-modal" class="modal">
         <div class="modal-content">
             <div class="login-icon">🔒</div>
-            <h2>IIDX ☆12 Leveler</h2>
+            <h2>IIDX Leveler</h2>
             <p class="login-desc">パスワードを入力してアクセスしてください</p>
             <input type="password" id="password-input" placeholder="Password" autocomplete="off" />
             <button id="login-btn" class="btn-primary">UNLOCK</button>
@@ -31,10 +31,16 @@
     <!-- Main App -->
     <div id="app" class="hidden">
         <header>
-            <h1>IIDX ☆12 Leveler</h1>
+            <h1>IIDX Leveler</h1>
             <div id="status-bar">
                 <span id="current-level" class="level-badge">F</span>
+                <button id="game-mode-toggle" class="game-mode-badge" title="ゲームモード切替 (SP/DP)">SP</button>
                 <button id="mode-toggle" class="mode-badge" title="ゲージモード切替">ノマゲ</button>
+                <div id="dp-controls" class="hidden">
+                    <button id="dp-offi-down" class="dp-offi-btn" title="難易度ダウン">◀</button>
+                    <span id="dp-offi-label" class="dp-offi-label">☆11</span>
+                    <button id="dp-offi-up" class="dp-offi-btn" title="難易度アップ">▶</button>
+                </div>
                 <span id="song-count" class="count-badge">0 / 0</span>
             </div>
         </header>
