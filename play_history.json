@@ -489,11 +489,18 @@
       "level": "E",
       "status": "clear",
       "timestamp": "2026-02-24T14:03:40.879Z"
+    },
+    {
+      "song": "Fegrix",
+      "version": "CastHour",
+      "level": "D",
+      "status": "clear",
+      "timestamp": "2026-02-24T14:32:46.420Z"
     }
   ],
-  "currentLevelIndex": 2,
-  "clearCount": 36,
-  "totalCount": 70,
+  "currentLevelIndex": 3,
+  "clearCount": 37,
+  "totalCount": 71,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-24T14:03:40.880Z"
+  "lastUpdated": "2026-02-24T14:32:46.422Z"
 }
