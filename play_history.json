@@ -482,11 +482,18 @@
       "level": "D",
       "status": "fail",
       "timestamp": "2026-02-24T14:00:56.263Z"
+    },
+    {
+      "song": "Arca",
+      "version": "CANNON BALLERS",
+      "level": "E",
+      "status": "clear",
+      "timestamp": "2026-02-24T14:03:40.879Z"
     }
   ],
-  "currentLevelIndex": 1,
-  "clearCount": 35,
-  "totalCount": 69,
+  "currentLevelIndex": 2,
+  "clearCount": 36,
+  "totalCount": 70,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-24T14:00:56.263Z"
+  "lastUpdated": "2026-02-24T14:03:40.880Z"
 }
