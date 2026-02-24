@@ -873,7 +873,8 @@ async function handleGameModeToggle() {
     updateGameModeUI();
 
     try {
-        await loadPlayHistory();
+        // Load song data for the new game mode
+        // (play history is already in memory — no need to reload)
         await (nextGameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
 
         // Clamp level index after data is loaded
