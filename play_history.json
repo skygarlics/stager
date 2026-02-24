@@ -461,11 +461,18 @@
       "level": "B+",
       "status": "fail",
       "timestamp": "2026-02-24T13:53:32.769Z"
+    },
+    {
+      "song": "アラビアン ハイパー ナイト",
+      "version": "Pinky Crush",
+      "level": "B",
+      "status": "fail",
+      "timestamp": "2026-02-24T13:56:04.437Z"
     }
   ],
-  "currentLevelIndex": 4,
+  "currentLevelIndex": 3,
   "clearCount": 35,
-  "totalCount": 66,
+  "totalCount": 67,
   "mode": "ノマゲ",
-  "lastUpdated": "2026-02-24T13:53:32.769Z"
+  "lastUpdated": "2026-02-24T13:56:04.437Z"
 }
