@@ -502,6 +502,10 @@
   "clearCount": 37,
   "totalCount": 71,
   "mode": "ノマゲ",
-  "gameMode": "SP",
-  "lastUpdated": "2026-02-24T16:28:38.111Z"
+  "gameMode": "DP",
+  "dp": {
+    "offi": 11,
+    "env": "a330"
+  },
+  "lastUpdated": "2026-02-24T16:28:41.849Z"
 }
