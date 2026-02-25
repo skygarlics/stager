@@ -575,11 +575,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:27:50.706Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "IN BETWEEN [A]",
+          "version": "PC",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:30:10.825Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 43,
-      "totalCount": 81,
+      "currentLevelIndex": 3,
+      "clearCount": 44,
+      "totalCount": 82,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -657,7 +665,8 @@
         "5th|Real [A]",
         "EPO|Hat Surprise (Season 3) [A]",
         "PC|Butterfly Twist [A]",
-        "SS|voice of echo. [A]"
+        "SS|voice of echo. [A]",
+        "PC|IN BETWEEN [A]"
       ],
       "songStatus": [
         [
@@ -1198,6 +1207,13 @@
             "status": "fail",
             "level": "11.0"
           }
+        ],
+        [
+          "PC|IN BETWEEN [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     },
@@ -1515,5 +1531,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:27:50.706Z"
+  "lastUpdated": "2026-02-25T15:30:10.825Z"
 }
