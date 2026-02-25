@@ -591,11 +591,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:30:23.363Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "out of disk space [A]",
+          "version": "EPO",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:32:42.129Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 44,
-      "totalCount": 83,
+      "currentLevelIndex": 3,
+      "clearCount": 45,
+      "totalCount": 84,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -675,7 +683,8 @@
         "PC|Butterfly Twist [A]",
         "SS|voice of echo. [A]",
         "PC|IN BETWEEN [A]",
-        "SS|kors k's Let's make an Image Song! [A]"
+        "SS|kors k's Let's make an Image Song! [A]",
+        "EPO|out of disk space [A]"
       ],
       "songStatus": [
         [
@@ -1230,6 +1239,13 @@
             "status": "fail",
             "level": "11.0"
           }
+        ],
+        [
+          "EPO|out of disk space [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     },
@@ -1547,5 +1563,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:30:23.364Z"
+  "lastUpdated": "2026-02-25T15:32:42.129Z"
 }
