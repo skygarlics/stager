@@ -1171,13 +1171,21 @@
           }
         ]
       ]
+    },
+    "SP_ハード": {
+      "history": [],
+      "currentLevelIndex": 0,
+      "clearCount": 0,
+      "totalCount": 0,
+      "playedSongs": [],
+      "songStatus": []
     }
   },
-  "mode": "ノマゲ",
+  "mode": "ハード",
   "gameMode": "SP",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T14:49:33.177Z"
+  "lastUpdated": "2026-02-25T14:49:36.635Z"
 }
