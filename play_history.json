@@ -1162,18 +1162,27 @@
           "status": "clear",
           "timestamp": "2026-02-25T14:57:45.127Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Regina vespaE",
+          "version": "Sparkle Shower",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:00:07.788Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 5,
-      "totalCount": 6,
+      "totalCount": 7,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
         "Sparkle Shower|RALLY '25",
         "Sparkle Shower|ビビッド ☆＋＊。キラキライム",
         "Sparkle Shower|Disco Killer Music Lover",
-        "Sparkle Shower|From Human Blood"
+        "Sparkle Shower|From Human Blood",
+        "Sparkle Shower|Regina vespaE"
       ],
       "songStatus": [
         [
@@ -1217,6 +1226,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "Sparkle Shower|Regina vespaE",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -1235,5 +1251,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T14:57:45.127Z"
+  "lastUpdated": "2026-02-25T15:00:07.788Z"
 }
