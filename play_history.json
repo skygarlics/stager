@@ -623,11 +623,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:38:03.155Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "寝起きヤシの木 [A]",
+          "version": "EPO",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:40:51.244Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 46,
-      "totalCount": 87,
+      "currentLevelIndex": 3,
+      "clearCount": 47,
+      "totalCount": 88,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -711,7 +719,8 @@
         "EPO|out of disk space [A]",
         "SS|華麗なる！音戯探偵ひなビタ♫ [A]",
         "EPO|ラビットホール [A]",
-        "EPO|Get Higher [A]"
+        "EPO|Get Higher [A]",
+        "EPO|寝起きヤシの木 [A]"
       ],
       "songStatus": [
         [
@@ -1294,6 +1303,13 @@
             "status": "clear",
             "level": "10.5"
           }
+        ],
+        [
+          "EPO|寝起きヤシの木 [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     },
@@ -1611,5 +1627,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:38:03.155Z"
+  "lastUpdated": "2026-02-25T15:40:51.245Z"
 }
