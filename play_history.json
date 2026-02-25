@@ -615,11 +615,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:35:31.210Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Get Higher [A]",
+          "version": "EPO",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:38:03.155Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 45,
-      "totalCount": 86,
+      "currentLevelIndex": 2,
+      "clearCount": 46,
+      "totalCount": 87,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -702,7 +710,8 @@
         "SS|kors k's Let's make an Image Song! [A]",
         "EPO|out of disk space [A]",
         "SS|華麗なる！音戯探偵ひなビタ♫ [A]",
-        "EPO|ラビットホール [A]"
+        "EPO|ラビットホール [A]",
+        "EPO|Get Higher [A]"
       ],
       "songStatus": [
         [
@@ -1278,6 +1287,13 @@
             "status": "fail",
             "level": "10.7"
           }
+        ],
+        [
+          "EPO|Get Higher [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     },
@@ -1595,5 +1611,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:35:31.210Z"
+  "lastUpdated": "2026-02-25T15:38:03.155Z"
 }
