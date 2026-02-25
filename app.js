@@ -56,6 +56,7 @@ const state = {
     totalSongsInDB: 0,           // Total songs loaded
     clearCount: 0,               // Lifetime clear count
     totalCount: 0,               // Lifetime total play count
+    modeStates: {},              // { modeKey: { history, currentLevelIndex, clearCount, totalCount } }
 
     // DP-specific state
     dp: {
@@ -638,6 +639,7 @@ async function handleResult(result) {
         level: level,
         status: result,
         timestamp: new Date().toISOString(),
+        modeKey: getModeKey(),
     };
 
     state.history.push(entry);
@@ -708,11 +710,7 @@ async function loadPlayHistory() {
 
         state.fileSha = data.sha;
 
-        // Restore state
-        state.history = data.history || [];
-        state.currentLevelIndex = data.currentLevelIndex ?? 0;
-
-        // Restore game mode
+        // Restore game mode info
         if (data.gameMode) {
             state.gameMode = data.gameMode;
         }
@@ -724,22 +722,48 @@ async function loadPlayHistory() {
             state.mode = data.mode;
         }
 
+        // Restore per-mode states
+        if (data.modeStates) {
+            state.modeStates = data.modeStates;
+        } else if (data.history) {
+            // Backward compatibility: migrate from old single-history format
+            const legacyModeKey = state.gameMode === 'DP'
+                ? `DP_${state.dp.offi}`
+                : `SP_${state.mode}`;
+            // Build playedSongs and songStatus from legacy history
+            const legacyPlayed = [];
+            const legacyStatus = [];
+            for (const entry of data.history) {
+                const k = songKey(entry.version, entry.song);
+                if (!legacyPlayed.includes(k)) legacyPlayed.push(k);
+                // Last entry wins (overwrites previous status for same song)
+                const existingIdx = legacyStatus.findIndex(([key]) => key === k);
+                const statusEntry = [k, { status: entry.status, level: entry.level }];
+                if (existingIdx !== -1) {
+                    legacyStatus[existingIdx] = statusEntry;
+                } else {
+                    legacyStatus.push(statusEntry);
+                }
+            }
+
+            state.modeStates[legacyModeKey] = {
+                history: data.history,
+                currentLevelIndex: data.currentLevelIndex ?? 0,
+                clearCount: data.clearCount ?? data.history.filter(e => e.status === 'clear').length,
+                totalCount: data.totalCount ?? data.history.length,
+                playedSongs: legacyPlayed,
+                songStatus: legacyStatus,
+            };
+        }
+
+        // Restore current mode's state from modeStates
+        restoreModeState(getModeKey());
+
         // Clamp level index to valid range
         const maxIndex = state.gameMode === 'DP' ? 999 : CONFIG.LEVELS.length - 1;
         state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, maxIndex));
 
-        // Restore counters (fallback: compute from history for backwards compat)
-        state.clearCount = data.clearCount ?? state.history.filter(e => e.status === 'clear').length;
-        state.totalCount = data.totalCount ?? state.history.length;
-
-        // Rebuild played songs set and song status from full history
-        for (const entry of state.history) {
-            const key = songKey(entry.version, entry.song);
-            state.playedSongs.add(key);
-            state.songStatus.set(key, { status: entry.status, level: entry.level });
-        }
-
-        console.log(`Restored ${state.history.length} history entries, level: ${getCurrentLevel()}, gameMode: ${state.gameMode}`);
+        console.log(`Restored mode ${getModeKey()}: ${state.history.length} history entries, level: ${getCurrentLevel()}, gameMode: ${state.gameMode}`);
     } catch (e) {
         console.error('Failed to load play history:', e);
         // Non-fatal: we can still play without saved history
@@ -752,17 +776,17 @@ async function savePlayHistory() {
         state.history = state.history.slice(-CONFIG.MAX_HISTORY_ENTRIES);
     }
 
+    // Ensure current mode's state is up to date in modeStates
+    saveModeState();
+
     const payload = {
-        history: state.history,
-        currentLevelIndex: state.currentLevelIndex,
-        clearCount: state.clearCount,
-        totalCount: state.totalCount,
+        modeStates: state.modeStates,
         mode: state.mode,
         gameMode: state.gameMode,
-        dp: state.gameMode === 'DP' ? {
+        dp: {
             offi: state.dp.offi,
             env: state.dp.env,
-        } : undefined,
+        },
         lastUpdated: new Date().toISOString(),
     };
 
@@ -808,23 +832,34 @@ async function handleModeToggle() {
     document.getElementById('song-version').textContent = '';
     document.getElementById('song-level').textContent = '';
 
-    // Save current state before switching
+    // Save current mode's state before switching
+    saveModeState();
     await savePlayHistory().catch(err => console.error('Save before mode switch failed:', err));
 
     // Switch mode
     state.mode = nextMode;
     document.getElementById('mode-toggle').textContent = nextMode;
 
-    // Reset song-related state but keep level
+    // Reset song DB (different songs per gauge mode)
     state.songDB = {};
     state.versions = [];
-    state.playedSongs.clear();
-    state.songStatus.clear();
     state.totalSongsInDB = 0;
+
+    // Restore previous state for the new mode
+    restoreModeState(getModeKey());
 
     try {
         await loadSpreadsheetData();
+
+        // Clamp level index after data is loaded
+        const levels = getCurrentLevels();
+        if (levels.length > 0) {
+            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, levels.length - 1));
+        }
+
+        updateLevelDisplay();
         updateCountDisplay();
+        renderFullHistory();
         selectNextSong();
         enableActionButtons(true);
     } catch (e) {
@@ -849,32 +884,24 @@ async function handleGameModeToggle() {
     document.getElementById('song-version').textContent = '';
     document.getElementById('song-level').textContent = '';
 
-    // Save current state before switching
+    // Save current mode's state before switching
+    saveModeState();
     await savePlayHistory().catch(err => console.error('Save before game mode switch failed:', err));
 
     // Switch game mode
     state.gameMode = nextGameMode;
 
-    // Reset song-related state
+    // Reset song DB (different data source per game mode)
     state.songDB = {};
     state.versions = [];
-    state.playedSongs.clear();
-    state.songStatus.clear();
     state.totalSongsInDB = 0;
-    state.currentLevelIndex = 0;
 
-    if (nextGameMode === 'DP') {
-        state.dp.offi = CONFIG.DP.DEFAULT_OFFI;
-        state.dp.env = CONFIG.DP.DEFAULT_ENV;
-    } else {
-        state.mode = 'ノマゲ';
-    }
+    // Restore previous state for the new mode
+    restoreModeState(getModeKey());
 
     updateGameModeUI();
 
     try {
-        // Load song data for the new game mode
-        // (play history is already in memory — no need to reload)
         await (nextGameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
 
         // Clamp level index after data is loaded
@@ -942,18 +969,19 @@ async function handleDpOffiChange(delta) {
     state.isProcessing = true;
     enableActionButtons(false);
 
-    // Save current state
+    // Save current DP level's state before switching
+    saveModeState();
     await savePlayHistory().catch(err => console.error('Save before offi change failed:', err));
 
     state.dp.offi = levels[newIdx];
 
-    // Reset song state
+    // Reset song DB (different data per star level)
     state.songDB = {};
     state.versions = [];
-    state.playedSongs.clear();
-    state.songStatus.clear();
     state.totalSongsInDB = 0;
-    state.currentLevelIndex = 0;
+
+    // Restore previous state for the new DP level
+    restoreModeState(getModeKey());
 
     updateDpOffiDisplay();
 
@@ -972,6 +1000,7 @@ async function handleDpOffiChange(delta) {
 
         updateLevelDisplay();
         updateCountDisplay();
+        renderFullHistory();
         selectNextSong();
         enableActionButtons(true);
     } catch (e) {
@@ -1084,6 +1113,73 @@ function showError(el, message) {
 // ==================== Utility Functions ====================
 function songKey(version, song) {
     return `${version}|${song}`;
+}
+
+/**
+ * Get a unique key representing the current mode combination.
+ * SP modes: "SP_ノマゲ", "SP_ハード"
+ * DP modes: "DP_11", "DP_12", etc.
+ */
+function getModeKey() {
+    if (state.gameMode === 'DP') {
+        return `DP_${state.dp.offi}`;
+    }
+    return `SP_${state.mode}`;
+}
+
+/**
+ * Save current mode's volatile state into modeStates.
+ * playedSongs (Set) and songStatus (Map) are serialized to plain arrays/objects
+ * so they survive JSON round-tripping and are not limited by history trimming.
+ */
+function saveModeState() {
+    const key = getModeKey();
+    state.modeStates[key] = {
+        history: [...state.history],
+        currentLevelIndex: state.currentLevelIndex,
+        clearCount: state.clearCount,
+        totalCount: state.totalCount,
+        playedSongs: [...state.playedSongs],
+        songStatus: [...state.songStatus.entries()],
+    };
+}
+
+/**
+ * Restore a mode's state from modeStates.
+ * playedSongs and songStatus are restored directly from saved data,
+ * falling back to rebuilding from history for backward compatibility.
+ */
+function restoreModeState(modeKey) {
+    const saved = state.modeStates[modeKey];
+    state.history = saved ? [...(saved.history || [])] : [];
+    state.currentLevelIndex = saved?.currentLevelIndex ?? 0;
+    state.clearCount = saved?.clearCount ?? 0;
+    state.totalCount = saved?.totalCount ?? 0;
+
+    // Restore playedSongs
+    state.playedSongs.clear();
+    if (saved?.playedSongs) {
+        for (const k of saved.playedSongs) {
+            state.playedSongs.add(k);
+        }
+    }
+
+    // Restore songStatus
+    state.songStatus.clear();
+    if (saved?.songStatus) {
+        for (const [k, v] of saved.songStatus) {
+            state.songStatus.set(k, v);
+        }
+    }
+
+    // Fallback: if no saved playedSongs/songStatus, rebuild from history
+    if (!saved?.playedSongs && state.history.length > 0) {
+        for (const entry of state.history) {
+            const k = songKey(entry.version, entry.song);
+            state.playedSongs.add(k);
+            state.songStatus.set(k, { status: entry.status, level: entry.level });
+        }
+    }
 }
 
 function pickRandom(arr) {
