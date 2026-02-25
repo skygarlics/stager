@@ -519,11 +519,19 @@
           "level": "D",
           "status": "fail",
           "timestamp": "2026-02-25T14:45:58.023Z"
+        },
+        {
+          "song": "Broadbanded [A]",
+          "version": "DD",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-02-25T14:47:00.147Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 0,
-      "clearCount": 39,
-      "totalCount": 74,
+      "currentLevelIndex": 1,
+      "clearCount": 40,
+      "totalCount": 75,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -595,7 +603,8 @@
         "Pinky Crush|Here We Go Now",
         "CastHour|Silver Bullet",
         "CANNON BALLERS|Arca",
-        "CastHour|Fegrix"
+        "CastHour|Fegrix",
+        "DD|Broadbanded [A]"
       ],
       "songStatus": [
         [
@@ -1094,6 +1103,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "DD|Broadbanded [A]",
+          {
+            "status": "clear",
+            "level": "10.2"
+          }
         ]
       ]
     },
@@ -1126,10 +1142,10 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T14:46:54.589Z"
+  "lastUpdated": "2026-02-25T14:47:00.147Z"
 }
