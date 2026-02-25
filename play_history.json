@@ -1202,11 +1202,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:03:30.926Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "EX-MASSIVE FIGHTER",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:05:46.887Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 7,
-      "totalCount": 11,
+      "totalCount": 12,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1218,7 +1226,8 @@
         "Sparkle Shower|chaplet -IIDX re:build-",
         "Sparkle Shower|Begin",
         "Sparkle Shower|Space Battleship S4TØ",
-        "Pinky Crush|Aqvion"
+        "Pinky Crush|Aqvion",
+        "Pinky Crush|EX-MASSIVE FIGHTER"
       ],
       "songStatus": [
         [
@@ -1297,6 +1306,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|EX-MASSIVE FIGHTER",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -1315,5 +1331,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:03:30.927Z"
+  "lastUpdated": "2026-02-25T15:05:46.888Z"
 }
