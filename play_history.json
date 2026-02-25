@@ -1250,11 +1250,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:16:36.935Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Mid-Corner (Magic Maker)",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:19:08.027Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 10,
-      "totalCount": 17,
+      "totalCount": 18,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1272,7 +1280,8 @@
         "Pinky Crush|灼熱 Lost Summer Dayz",
         "Pinky Crush|SISYPHUS",
         "EPOLIS|JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
-        "EPOLIS|終焔のClaudia"
+        "EPOLIS|終焔のClaudia",
+        "Pinky Crush|Mid-Corner (Magic Maker)"
       ],
       "songStatus": [
         [
@@ -1393,6 +1402,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|Mid-Corner (Magic Maker)",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -1411,5 +1427,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:16:36.935Z"
+  "lastUpdated": "2026-02-25T15:19:08.027Z"
 }
