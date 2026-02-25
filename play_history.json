@@ -1234,11 +1234,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:14:19.013Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:14:29.488Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 8,
-      "totalCount": 15,
+      "currentLevelIndex": 2,
+      "clearCount": 9,
+      "totalCount": 16,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1254,7 +1262,8 @@
         "Pinky Crush|EX-MASSIVE FIGHTER",
         "Pinky Crush|Bring The Fire",
         "Pinky Crush|灼熱 Lost Summer Dayz",
-        "Pinky Crush|SISYPHUS"
+        "Pinky Crush|SISYPHUS",
+        "EPOLIS|JUSTICE/GUILTY feat. Nana Takahashi & 709sec."
       ],
       "songStatus": [
         [
@@ -1361,6 +1370,13 @@
             "status": "fail",
             "level": "D"
           }
+        ],
+        [
+          "EPOLIS|JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
+          {
+            "status": "clear",
+            "level": "E"
+          }
         ]
       ]
     },
@@ -1379,5 +1395,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:14:19.013Z"
+  "lastUpdated": "2026-02-25T15:14:29.489Z"
 }
