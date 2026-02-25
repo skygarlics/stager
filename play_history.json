@@ -527,11 +527,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T14:47:00.147Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "GOLD RUSH 2025 [A]",
+          "version": "SS",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:19:29.052Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
+      "currentLevelIndex": 0,
       "clearCount": 40,
-      "totalCount": 75,
+      "totalCount": 76,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -604,7 +612,8 @@
         "CastHour|Silver Bullet",
         "CANNON BALLERS|Arca",
         "CastHour|Fegrix",
-        "DD|Broadbanded [A]"
+        "DD|Broadbanded [A]",
+        "SS|GOLD RUSH 2025 [A]"
       ],
       "songStatus": [
         [
@@ -1110,6 +1119,13 @@
             "status": "clear",
             "level": "10.2"
           }
+        ],
+        [
+          "SS|GOLD RUSH 2025 [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
+          }
         ]
       ]
     },
@@ -1422,10 +1438,10 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:19:13.415Z"
+  "lastUpdated": "2026-02-25T15:19:29.052Z"
 }
