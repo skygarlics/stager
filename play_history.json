@@ -1,532 +1,1108 @@
 {
-  "history": [
-    {
-      "song": "スパークリング☆彡ハイパーチューン！！",
-      "version": "Pinky Crush",
-      "level": "F",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:21:51.348Z"
-    },
-    {
-      "song": "Lisa-RICCIA",
-      "version": "Sparkle Shower",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:22:22.940Z"
-    },
-    {
-      "song": "Begin",
-      "version": "Sparkle Shower",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:22:33.911Z"
-    },
-    {
-      "song": "灼熱 Lost Summer Dayz",
-      "version": "Pinky Crush",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:22:46.824Z"
-    },
-    {
-      "song": "Disco Killer Music Lover",
-      "version": "Sparkle Shower",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:25:00.585Z"
-    },
-    {
-      "song": "JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
-      "version": "EPOLIS",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:27:36.003Z"
-    },
-    {
-      "song": "RALLY '25",
-      "version": "Sparkle Shower",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:32:25.270Z"
-    },
-    {
-      "song": "The Onlyonez",
-      "version": "EPOLIS",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:32:44.201Z"
-    },
-    {
-      "song": "Aqvion",
-      "version": "Pinky Crush",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:33:10.175Z"
-    },
-    {
-      "song": "chaplet -IIDX re:build-",
-      "version": "Sparkle Shower",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:33:19.805Z"
-    },
-    {
-      "song": "Bring The Fire",
-      "version": "Pinky Crush",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:35:53.844Z"
-    },
-    {
-      "song": "フォニイ[L]",
-      "version": "EPOLIS",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:38:34.288Z"
-    },
-    {
-      "song": "SISYPHUS",
-      "version": "Pinky Crush",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:42:45.024Z"
-    },
-    {
-      "song": "Sirius",
-      "version": "EPOLIS",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:42:48.608Z"
-    },
-    {
-      "song": "BLAZING_LAZER",
-      "version": "EPOLIS",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:43:05.881Z"
-    },
-    {
-      "song": "ビビッド ☆＋＊。キラキライム",
-      "version": "Sparkle Shower",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:43:15.615Z"
-    },
-    {
-      "song": "frequent",
-      "version": "EPOLIS",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:45:38.303Z"
-    },
-    {
-      "song": "《PL|RAYER》",
-      "version": "EPOLIS",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:45:40.189Z"
-    },
-    {
-      "song": "終焔のClaudia",
-      "version": "EPOLIS",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:46:01.230Z"
-    },
-    {
-      "song": "Hat Surprise (Season 2)",
-      "version": "RESIDENT",
-      "level": "E",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:46:10.415Z"
-    },
-    {
-      "song": "残像ニ繋ガレタ追憶ノHIDEAWAY",
-      "version": "EPOLIS",
-      "level": "F",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:46:19.388Z"
-    },
-    {
-      "song": "glacia",
-      "version": "RESIDENT",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:46:34.055Z"
-    },
-    {
-      "song": "Out of Control",
-      "version": "EPOLIS",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-18T12:48:57.573Z"
-    },
-    {
-      "song": "KING[L]",
-      "version": "RESIDENT",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-18T12:52:04.832Z"
-    },
-    {
-      "song": "Dahlia",
-      "version": "EPOLIS",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-18T13:01:12.893Z"
-    },
-    {
-      "song": "From Human Blood",
-      "version": "Sparkle Shower",
-      "level": "C",
-      "status": "clear",
-      "timestamp": "2026-02-18T13:03:36.540Z"
-    },
-    {
-      "song": "Regina vespaE",
-      "version": "Sparkle Shower",
-      "level": "B",
-      "status": "fail",
-      "timestamp": "2026-02-18T13:05:59.930Z"
-    },
-    {
-      "song": "Space Battleship S4TØ",
-      "version": "Sparkle Shower",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-18T13:08:29.372Z"
-    },
-    {
-      "song": "ACTØ",
-      "version": "EPOLIS",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-18T13:11:12.348Z"
-    },
-    {
-      "song": "EYE OF THE HEAVEN",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-18T13:13:42.650Z"
-    },
-    {
-      "song": "Stereo Beasts",
-      "version": "EPOLIS",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-19T15:49:41.482Z"
-    },
-    {
-      "song": "LIGHTNING STRIKES",
-      "version": "HEROIC VERSE",
-      "level": "E",
-      "status": "fail",
-      "timestamp": "2026-02-19T15:52:28.055Z"
-    },
-    {
-      "song": "CUE CUE RESCUE[L]",
-      "version": "RESIDENT",
-      "level": "F",
-      "status": "clear",
-      "timestamp": "2026-02-19T15:54:44.329Z"
-    },
-    {
-      "song": "Carry Me Away",
-      "version": "Rootage",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-19T15:57:13.962Z"
-    },
-    {
-      "song": "No Border",
-      "version": "RESIDENT",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-19T15:59:38.015Z"
-    },
-    {
-      "song": "encounter",
-      "version": "CANNON BALLERS",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:12:59.870Z"
-    },
-    {
-      "song": "#CMFLG",
-      "version": "RESIDENT",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:15:54.300Z"
-    },
-    {
-      "song": "Plazma[L]",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-19T16:25:20.040Z"
-    },
-    {
-      "song": "神のシナリオ",
-      "version": "RESIDENT",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:27:42.486Z"
-    },
-    {
-      "song": "Roar of Chronos",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-19T16:30:20.650Z"
-    },
-    {
-      "song": "Meissa",
-      "version": "RESIDENT",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:32:35.757Z"
-    },
-    {
-      "song": "COSMIC V3LOCITY",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:35:01.635Z"
-    },
-    {
-      "song": "Lightspeed",
-      "version": "Pinky Crush",
-      "level": "B",
-      "status": "fail",
-      "timestamp": "2026-02-19T16:37:21.869Z"
-    },
-    {
-      "song": "Mid-Corner (Magic Maker)",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-19T16:39:54.972Z"
-    },
-    {
-      "song": "dica dica",
-      "version": "RESIDENT",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:42:30.751Z"
-    },
-    {
-      "song": "hora de verdad",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-19T16:45:09.163Z"
-    },
-    {
-      "song": "ONE AND ONLY",
-      "version": "RESIDENT",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:47:39.080Z"
-    },
-    {
-      "song": "EX-MASSIVE FIGHTER",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-19T16:49:54.216Z"
-    },
-    {
-      "song": "天邪鬼",
-      "version": "CastHour",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-19T16:52:13.972Z"
-    },
-    {
-      "song": "FlyAway",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-19T16:54:40.790Z"
-    },
-    {
-      "song": "グッバイ宣言[L]",
-      "version": "CastHour",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-22T06:30:24.091Z"
-    },
-    {
-      "song": "MARLIN",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "clear",
-      "timestamp": "2026-02-22T06:34:26.422Z"
-    },
-    {
-      "song": "1116",
-      "version": "Pinky Crush",
-      "level": "B",
-      "status": "clear",
-      "timestamp": "2026-02-22T06:37:02.279Z"
-    },
-    {
-      "song": "2 Be Continued",
-      "version": "Sparkle Shower",
-      "level": "B+",
-      "status": "fail",
-      "timestamp": "2026-02-22T06:39:24.165Z"
-    },
-    {
-      "song": "u gotta beat",
-      "version": "Pinky Crush",
-      "level": "B",
-      "status": "clear",
-      "timestamp": "2026-02-22T06:42:12.391Z"
-    },
-    {
-      "song": "Flämingo",
-      "version": "Pinky Crush",
-      "level": "B+",
-      "status": "clear",
-      "timestamp": "2026-02-22T06:44:50.927Z"
-    },
-    {
-      "song": "Pinky Happy Crazy",
-      "version": "Pinky Crush",
-      "level": "A",
-      "status": "fail",
-      "timestamp": "2026-02-22T06:50:15.896Z"
-    },
-    {
-      "song": "Drop Syndicate",
-      "version": "Pinky Crush",
-      "level": "B+",
-      "status": "clear",
-      "timestamp": "2026-02-22T06:52:36.168Z"
-    },
-    {
-      "song": "Uaigh Gealaí",
-      "version": "Pinky Crush",
-      "level": "A",
-      "status": "clear",
-      "timestamp": "2026-02-22T06:55:57.615Z"
-    },
-    {
-      "song": "ιgniЯRuina",
-      "version": "Sparkle Shower",
-      "level": "A+",
-      "status": "fail",
-      "timestamp": "2026-02-22T06:58:23.143Z"
-    },
-    {
-      "song": "Cross Fire",
-      "version": "Pinky Crush",
-      "level": "A",
-      "status": "fail",
-      "timestamp": "2026-02-22T07:02:27.627Z"
-    },
-    {
-      "song": "今宵、ロマンス横丁。",
-      "version": "EPOLIS",
-      "level": "B+",
-      "status": "fail",
-      "timestamp": "2026-02-22T07:04:47.225Z"
-    },
-    {
-      "song": "destination",
-      "version": "Pinky Crush",
-      "level": "B",
-      "status": "fail",
-      "timestamp": "2026-02-22T07:07:15.538Z"
-    },
-    {
-      "song": "DIVINE JUDGEMENT",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "clear",
-      "timestamp": "2026-02-22T07:09:41.745Z"
-    },
-    {
-      "song": "Without Heaven",
-      "version": "Pinky Crush",
-      "level": "B",
-      "status": "clear",
-      "timestamp": "2026-02-24T13:53:28.614Z"
-    },
-    {
-      "song": "灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
-      "version": "EPOLIS",
-      "level": "B+",
-      "status": "fail",
-      "timestamp": "2026-02-24T13:53:32.769Z"
-    },
-    {
-      "song": "アラビアン ハイパー ナイト",
-      "version": "Pinky Crush",
-      "level": "B",
-      "status": "fail",
-      "timestamp": "2026-02-24T13:56:04.437Z"
-    },
-    {
-      "song": "Here We Go Now",
-      "version": "Pinky Crush",
-      "level": "C",
-      "status": "fail",
-      "timestamp": "2026-02-24T13:58:29.087Z"
-    },
-    {
-      "song": "Silver Bullet",
-      "version": "CastHour",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-24T14:00:56.263Z"
-    },
-    {
-      "song": "Arca",
-      "version": "CANNON BALLERS",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-24T14:03:40.879Z"
-    },
-    {
-      "song": "Fegrix",
-      "version": "CastHour",
-      "level": "D",
-      "status": "clear",
-      "timestamp": "2026-02-24T14:32:46.420Z"
-    },
-    {
-      "song": "スパークリング☆彡ハイパーチューン！！",
-      "version": "Pinky Crush",
-      "level": "F",
-      "status": "clear",
-      "timestamp": "2026-02-25T14:45:26.437Z"
-    },
-    {
-      "song": "Lisa-RICCIA",
-      "version": "Sparkle Shower",
-      "level": "E",
-      "status": "clear",
-      "timestamp": "2026-02-25T14:45:28.878Z"
-    },
-    {
-      "song": "RALLY '25",
-      "version": "Sparkle Shower",
-      "level": "D",
-      "status": "fail",
-      "timestamp": "2026-02-25T14:45:58.023Z"
+  "modeStates": {
+    "DP_11": {
+      "history": [
+        {
+          "song": "スパークリング☆彡ハイパーチューン！！",
+          "version": "Pinky Crush",
+          "level": "F",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:21:51.348Z"
+        },
+        {
+          "song": "Lisa-RICCIA",
+          "version": "Sparkle Shower",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:22:22.940Z"
+        },
+        {
+          "song": "Begin",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:22:33.911Z"
+        },
+        {
+          "song": "灼熱 Lost Summer Dayz",
+          "version": "Pinky Crush",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:22:46.824Z"
+        },
+        {
+          "song": "Disco Killer Music Lover",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:25:00.585Z"
+        },
+        {
+          "song": "JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:27:36.003Z"
+        },
+        {
+          "song": "RALLY '25",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:32:25.270Z"
+        },
+        {
+          "song": "The Onlyonez",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:32:44.201Z"
+        },
+        {
+          "song": "Aqvion",
+          "version": "Pinky Crush",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:33:10.175Z"
+        },
+        {
+          "song": "chaplet -IIDX re:build-",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:33:19.805Z"
+        },
+        {
+          "song": "Bring The Fire",
+          "version": "Pinky Crush",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:35:53.844Z"
+        },
+        {
+          "song": "フォニイ[L]",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:38:34.288Z"
+        },
+        {
+          "song": "SISYPHUS",
+          "version": "Pinky Crush",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:42:45.024Z"
+        },
+        {
+          "song": "Sirius",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:42:48.608Z"
+        },
+        {
+          "song": "BLAZING_LAZER",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:43:05.881Z"
+        },
+        {
+          "song": "ビビッド ☆＋＊。キラキライム",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:43:15.615Z"
+        },
+        {
+          "song": "frequent",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:45:38.303Z"
+        },
+        {
+          "song": "《PL|RAYER》",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:45:40.189Z"
+        },
+        {
+          "song": "終焔のClaudia",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:46:01.230Z"
+        },
+        {
+          "song": "Hat Surprise (Season 2)",
+          "version": "RESIDENT",
+          "level": "E",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:46:10.415Z"
+        },
+        {
+          "song": "残像ニ繋ガレタ追憶ノHIDEAWAY",
+          "version": "EPOLIS",
+          "level": "F",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:46:19.388Z"
+        },
+        {
+          "song": "glacia",
+          "version": "RESIDENT",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:46:34.055Z"
+        },
+        {
+          "song": "Out of Control",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-18T12:48:57.573Z"
+        },
+        {
+          "song": "KING[L]",
+          "version": "RESIDENT",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-18T12:52:04.832Z"
+        },
+        {
+          "song": "Dahlia",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-18T13:01:12.893Z"
+        },
+        {
+          "song": "From Human Blood",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-02-18T13:03:36.540Z"
+        },
+        {
+          "song": "Regina vespaE",
+          "version": "Sparkle Shower",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-02-18T13:05:59.930Z"
+        },
+        {
+          "song": "Space Battleship S4TØ",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-18T13:08:29.372Z"
+        },
+        {
+          "song": "ACTØ",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-18T13:11:12.348Z"
+        },
+        {
+          "song": "EYE OF THE HEAVEN",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-18T13:13:42.650Z"
+        },
+        {
+          "song": "Stereo Beasts",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-19T15:49:41.482Z"
+        },
+        {
+          "song": "LIGHTNING STRIKES",
+          "version": "HEROIC VERSE",
+          "level": "E",
+          "status": "fail",
+          "timestamp": "2026-02-19T15:52:28.055Z"
+        },
+        {
+          "song": "CUE CUE RESCUE[L]",
+          "version": "RESIDENT",
+          "level": "F",
+          "status": "clear",
+          "timestamp": "2026-02-19T15:54:44.329Z"
+        },
+        {
+          "song": "Carry Me Away",
+          "version": "Rootage",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-19T15:57:13.962Z"
+        },
+        {
+          "song": "No Border",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-19T15:59:38.015Z"
+        },
+        {
+          "song": "encounter",
+          "version": "CANNON BALLERS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:12:59.870Z"
+        },
+        {
+          "song": "#CMFLG",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:15:54.300Z"
+        },
+        {
+          "song": "Plazma[L]",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-19T16:25:20.040Z"
+        },
+        {
+          "song": "神のシナリオ",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:27:42.486Z"
+        },
+        {
+          "song": "Roar of Chronos",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-19T16:30:20.650Z"
+        },
+        {
+          "song": "Meissa",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:32:35.757Z"
+        },
+        {
+          "song": "COSMIC V3LOCITY",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:35:01.635Z"
+        },
+        {
+          "song": "Lightspeed",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-02-19T16:37:21.869Z"
+        },
+        {
+          "song": "Mid-Corner (Magic Maker)",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-19T16:39:54.972Z"
+        },
+        {
+          "song": "dica dica",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:42:30.751Z"
+        },
+        {
+          "song": "hora de verdad",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-19T16:45:09.163Z"
+        },
+        {
+          "song": "ONE AND ONLY",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:47:39.080Z"
+        },
+        {
+          "song": "EX-MASSIVE FIGHTER",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-19T16:49:54.216Z"
+        },
+        {
+          "song": "天邪鬼",
+          "version": "CastHour",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-19T16:52:13.972Z"
+        },
+        {
+          "song": "FlyAway",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-19T16:54:40.790Z"
+        },
+        {
+          "song": "グッバイ宣言[L]",
+          "version": "CastHour",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-22T06:30:24.091Z"
+        },
+        {
+          "song": "MARLIN",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-02-22T06:34:26.422Z"
+        },
+        {
+          "song": "1116",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-02-22T06:37:02.279Z"
+        },
+        {
+          "song": "2 Be Continued",
+          "version": "Sparkle Shower",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-02-22T06:39:24.165Z"
+        },
+        {
+          "song": "u gotta beat",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-02-22T06:42:12.391Z"
+        },
+        {
+          "song": "Flämingo",
+          "version": "Pinky Crush",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-02-22T06:44:50.927Z"
+        },
+        {
+          "song": "Pinky Happy Crazy",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-02-22T06:50:15.896Z"
+        },
+        {
+          "song": "Drop Syndicate",
+          "version": "Pinky Crush",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-02-22T06:52:36.168Z"
+        },
+        {
+          "song": "Uaigh Gealaí",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "clear",
+          "timestamp": "2026-02-22T06:55:57.615Z"
+        },
+        {
+          "song": "ιgniЯRuina",
+          "version": "Sparkle Shower",
+          "level": "A+",
+          "status": "fail",
+          "timestamp": "2026-02-22T06:58:23.143Z"
+        },
+        {
+          "song": "Cross Fire",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-02-22T07:02:27.627Z"
+        },
+        {
+          "song": "今宵、ロマンス横丁。",
+          "version": "EPOLIS",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-02-22T07:04:47.225Z"
+        },
+        {
+          "song": "destination",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-02-22T07:07:15.538Z"
+        },
+        {
+          "song": "DIVINE JUDGEMENT",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-02-22T07:09:41.745Z"
+        },
+        {
+          "song": "Without Heaven",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-02-24T13:53:28.614Z"
+        },
+        {
+          "song": "灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+          "version": "EPOLIS",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-02-24T13:53:32.769Z"
+        },
+        {
+          "song": "アラビアン ハイパー ナイト",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-02-24T13:56:04.437Z"
+        },
+        {
+          "song": "Here We Go Now",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-02-24T13:58:29.087Z"
+        },
+        {
+          "song": "Silver Bullet",
+          "version": "CastHour",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-24T14:00:56.263Z"
+        },
+        {
+          "song": "Arca",
+          "version": "CANNON BALLERS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-24T14:03:40.879Z"
+        },
+        {
+          "song": "Fegrix",
+          "version": "CastHour",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-02-24T14:32:46.420Z"
+        },
+        {
+          "song": "スパークリング☆彡ハイパーチューン！！",
+          "version": "Pinky Crush",
+          "level": "F",
+          "status": "clear",
+          "timestamp": "2026-02-25T14:45:26.437Z"
+        },
+        {
+          "song": "Lisa-RICCIA",
+          "version": "Sparkle Shower",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-02-25T14:45:28.878Z"
+        },
+        {
+          "song": "RALLY '25",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-25T14:45:58.023Z"
+        }
+      ],
+      "currentLevelIndex": 0,
+      "clearCount": 39,
+      "totalCount": 74,
+      "playedSongs": [
+        "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
+        "Sparkle Shower|Lisa-RICCIA",
+        "Sparkle Shower|Begin",
+        "Pinky Crush|灼熱 Lost Summer Dayz",
+        "Sparkle Shower|Disco Killer Music Lover",
+        "EPOLIS|JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
+        "Sparkle Shower|RALLY '25",
+        "EPOLIS|The Onlyonez",
+        "Pinky Crush|Aqvion",
+        "Sparkle Shower|chaplet -IIDX re:build-",
+        "Pinky Crush|Bring The Fire",
+        "EPOLIS|フォニイ[L]",
+        "Pinky Crush|SISYPHUS",
+        "EPOLIS|Sirius",
+        "EPOLIS|BLAZING_LAZER",
+        "Sparkle Shower|ビビッド ☆＋＊。キラキライム",
+        "EPOLIS|frequent",
+        "EPOLIS|《PL|RAYER》",
+        "EPOLIS|終焔のClaudia",
+        "RESIDENT|Hat Surprise (Season 2)",
+        "EPOLIS|残像ニ繋ガレタ追憶ノHIDEAWAY",
+        "RESIDENT|glacia",
+        "EPOLIS|Out of Control",
+        "RESIDENT|KING[L]",
+        "EPOLIS|Dahlia",
+        "Sparkle Shower|From Human Blood",
+        "Sparkle Shower|Regina vespaE",
+        "Sparkle Shower|Space Battleship S4TØ",
+        "EPOLIS|ACTØ",
+        "Pinky Crush|EYE OF THE HEAVEN",
+        "EPOLIS|Stereo Beasts",
+        "HEROIC VERSE|LIGHTNING STRIKES",
+        "RESIDENT|CUE CUE RESCUE[L]",
+        "Rootage|Carry Me Away",
+        "RESIDENT|No Border",
+        "CANNON BALLERS|encounter",
+        "RESIDENT|#CMFLG",
+        "Pinky Crush|Plazma[L]",
+        "RESIDENT|神のシナリオ",
+        "Pinky Crush|Roar of Chronos",
+        "RESIDENT|Meissa",
+        "Pinky Crush|COSMIC V3LOCITY",
+        "Pinky Crush|Lightspeed",
+        "Pinky Crush|Mid-Corner (Magic Maker)",
+        "RESIDENT|dica dica",
+        "Pinky Crush|hora de verdad",
+        "RESIDENT|ONE AND ONLY",
+        "Pinky Crush|EX-MASSIVE FIGHTER",
+        "CastHour|天邪鬼",
+        "Pinky Crush|FlyAway",
+        "CastHour|グッバイ宣言[L]",
+        "Pinky Crush|MARLIN",
+        "Pinky Crush|1116",
+        "Sparkle Shower|2 Be Continued",
+        "Pinky Crush|u gotta beat",
+        "Pinky Crush|Flämingo",
+        "Pinky Crush|Pinky Happy Crazy",
+        "Pinky Crush|Drop Syndicate",
+        "Pinky Crush|Uaigh Gealaí",
+        "Sparkle Shower|ιgniЯRuina",
+        "Pinky Crush|Cross Fire",
+        "EPOLIS|今宵、ロマンス横丁。",
+        "Pinky Crush|destination",
+        "Pinky Crush|DIVINE JUDGEMENT",
+        "Pinky Crush|Without Heaven",
+        "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+        "Pinky Crush|アラビアン ハイパー ナイト",
+        "Pinky Crush|Here We Go Now",
+        "CastHour|Silver Bullet",
+        "CANNON BALLERS|Arca",
+        "CastHour|Fegrix"
+      ],
+      "songStatus": [
+        [
+          "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
+          {
+            "status": "clear",
+            "level": "F"
+          }
+        ],
+        [
+          "Sparkle Shower|Lisa-RICCIA",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "Sparkle Shower|Begin",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|灼熱 Lost Summer Dayz",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "Sparkle Shower|Disco Killer Music Lover",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "EPOLIS|JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "Sparkle Shower|RALLY '25",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "EPOLIS|The Onlyonez",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "Pinky Crush|Aqvion",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Sparkle Shower|chaplet -IIDX re:build-",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "Pinky Crush|Bring The Fire",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "EPOLIS|フォニイ[L]",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "Pinky Crush|SISYPHUS",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "EPOLIS|Sirius",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "EPOLIS|BLAZING_LAZER",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Sparkle Shower|ビビッド ☆＋＊。キラキライム",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "EPOLIS|frequent",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "EPOLIS|《PL|RAYER》",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "EPOLIS|終焔のClaudia",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "RESIDENT|Hat Surprise (Season 2)",
+          {
+            "status": "fail",
+            "level": "E"
+          }
+        ],
+        [
+          "EPOLIS|残像ニ繋ガレタ追憶ノHIDEAWAY",
+          {
+            "status": "clear",
+            "level": "F"
+          }
+        ],
+        [
+          "RESIDENT|glacia",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "EPOLIS|Out of Control",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "RESIDENT|KING[L]",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "EPOLIS|Dahlia",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Sparkle Shower|From Human Blood",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "Sparkle Shower|Regina vespaE",
+          {
+            "status": "fail",
+            "level": "B"
+          }
+        ],
+        [
+          "Sparkle Shower|Space Battleship S4TØ",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "EPOLIS|ACTØ",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|EYE OF THE HEAVEN",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "EPOLIS|Stereo Beasts",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "HEROIC VERSE|LIGHTNING STRIKES",
+          {
+            "status": "fail",
+            "level": "E"
+          }
+        ],
+        [
+          "RESIDENT|CUE CUE RESCUE[L]",
+          {
+            "status": "clear",
+            "level": "F"
+          }
+        ],
+        [
+          "Rootage|Carry Me Away",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "RESIDENT|No Border",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "CANNON BALLERS|encounter",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "RESIDENT|#CMFLG",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|Plazma[L]",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|神のシナリオ",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|Roar of Chronos",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|Meissa",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|COSMIC V3LOCITY",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "Pinky Crush|Lightspeed",
+          {
+            "status": "fail",
+            "level": "B"
+          }
+        ],
+        [
+          "Pinky Crush|Mid-Corner (Magic Maker)",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|dica dica",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|hora de verdad",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|ONE AND ONLY",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|EX-MASSIVE FIGHTER",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "CastHour|天邪鬼",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|FlyAway",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "CastHour|グッバイ宣言[L]",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "Pinky Crush|MARLIN",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "Pinky Crush|1116",
+          {
+            "status": "clear",
+            "level": "B"
+          }
+        ],
+        [
+          "Sparkle Shower|2 Be Continued",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
+        ],
+        [
+          "Pinky Crush|u gotta beat",
+          {
+            "status": "clear",
+            "level": "B"
+          }
+        ],
+        [
+          "Pinky Crush|Flämingo",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
+        ],
+        [
+          "Pinky Crush|Pinky Happy Crazy",
+          {
+            "status": "fail",
+            "level": "A"
+          }
+        ],
+        [
+          "Pinky Crush|Drop Syndicate",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
+        ],
+        [
+          "Pinky Crush|Uaigh Gealaí",
+          {
+            "status": "clear",
+            "level": "A"
+          }
+        ],
+        [
+          "Sparkle Shower|ιgniЯRuina",
+          {
+            "status": "fail",
+            "level": "A+"
+          }
+        ],
+        [
+          "Pinky Crush|Cross Fire",
+          {
+            "status": "fail",
+            "level": "A"
+          }
+        ],
+        [
+          "EPOLIS|今宵、ロマンス横丁。",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
+        ],
+        [
+          "Pinky Crush|destination",
+          {
+            "status": "fail",
+            "level": "B"
+          }
+        ],
+        [
+          "Pinky Crush|DIVINE JUDGEMENT",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "Pinky Crush|Without Heaven",
+          {
+            "status": "clear",
+            "level": "B"
+          }
+        ],
+        [
+          "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
+        ],
+        [
+          "Pinky Crush|アラビアン ハイパー ナイト",
+          {
+            "status": "fail",
+            "level": "B"
+          }
+        ],
+        [
+          "Pinky Crush|Here We Go Now",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "CastHour|Silver Bullet",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "CANNON BALLERS|Arca",
+          {
+            "status": "clear",
+            "level": "E"
+          }
+        ],
+        [
+          "CastHour|Fegrix",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ]
+      ]
     }
-  ],
-  "currentLevelIndex": 0,
-  "clearCount": 39,
-  "totalCount": 74,
+  },
   "mode": "ノマゲ",
   "gameMode": "DP",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T14:46:11.516Z"
+  "lastUpdated": "2026-02-25T14:46:41.031Z"
 }
