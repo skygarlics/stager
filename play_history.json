@@ -647,11 +647,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:44:45.965Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "無双 [A]",
+          "version": "PC",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:47:32.391Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 48,
-      "totalCount": 90,
+      "totalCount": 91,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -738,7 +746,8 @@
         "EPO|Get Higher [A]",
         "EPO|寝起きヤシの木 [A]",
         "SS|Meteor☆Shower [A]",
-        "RDT|Beyond Evolution [H]"
+        "RDT|Beyond Evolution [H]",
+        "PC|無双 [A]"
       ],
       "songStatus": [
         [
@@ -1342,6 +1351,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "PC|無双 [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     },
@@ -1659,5 +1675,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:44:45.965Z"
+  "lastUpdated": "2026-02-25T15:47:32.391Z"
 }
