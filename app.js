@@ -25,6 +25,8 @@ const CONFIG = {
     MAX_HISTORY_DISPLAY: 30,
     // Max history entries to persist (older entries are trimmed on save)
     MAX_HISTORY_ENTRIES: 500,
+    // Number of days to keep login session
+    SESSION_DAYS: 30,
 
     // DP Mode Configuration
     DP: {
@@ -91,11 +93,90 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('dp-offi-down')?.addEventListener('click', () => handleDpOffiChange(-1));
     document.getElementById('dp-offi-up')?.addEventListener('click', () => handleDpOffiChange(1));
 
-    // Focus password input
-    document.getElementById('password-input').focus();
+    // Try auto-login from saved session
+    tryAutoLogin();
 });
 
 // ==================== Login / Authentication ====================
+
+/**
+ * Save login session to localStorage with expiry.
+ */
+function saveSession(password) {
+    const session = {
+        password,
+        expires: Date.now() + CONFIG.SESSION_DAYS * 24 * 60 * 60 * 1000,
+    };
+    try {
+        localStorage.setItem('stager_session', JSON.stringify(session));
+    } catch (e) {
+        console.warn('Failed to save session:', e);
+    }
+}
+
+/**
+ * Load saved session from localStorage. Returns password or null.
+ */
+function loadSession() {
+    try {
+        const raw = localStorage.getItem('stager_session');
+        if (!raw) return null;
+        const session = JSON.parse(raw);
+        if (!session.password || !session.expires) return null;
+        if (Date.now() > session.expires) {
+            localStorage.removeItem('stager_session');
+            return null;
+        }
+        return session.password;
+    } catch (e) {
+        return null;
+    }
+}
+
+/**
+ * Clear saved session.
+ */
+function clearSession() {
+    localStorage.removeItem('stager_session');
+}
+
+/**
+ * Try to auto-login using a saved session.
+ * Falls back to showing the login modal.
+ */
+async function tryAutoLogin() {
+    const savedPassword = loadSession();
+    if (!savedPassword) {
+        document.getElementById('password-input').focus();
+        return;
+    }
+
+    // Attempt silent authentication
+    try {
+        const authRes = await fetch(`${CONFIG.WORKER_URL}/api/auth`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ password: savedPassword }),
+        });
+
+        if (!authRes.ok) {
+            // Saved password is no longer valid
+            clearSession();
+            document.getElementById('password-input').focus();
+            return;
+        }
+    } catch (e) {
+        // Network error - show login modal
+        document.getElementById('password-input').focus();
+        return;
+    }
+
+    // Session valid - extend expiry and proceed to app
+    state.password = savedPassword;
+    saveSession(savedPassword);
+    await initializeApp();
+}
+
 async function handleLogin() {
     const passwordInput = document.getElementById('password-input');
     const password = passwordInput.value.trim();
@@ -133,6 +214,15 @@ async function handleLogin() {
     }
 
     state.password = password;
+    saveSession(password);
+    await initializeApp();
+}
+
+/**
+ * Common initialization after successful authentication.
+ */
+async function initializeApp() {
+    const errorEl = document.getElementById('login-error');
 
     // Transition to loading
     document.getElementById('login-modal').classList.add('hidden');
@@ -168,6 +258,7 @@ async function handleLogin() {
         enableActionButtons(true);
     } catch (e) {
         console.error('Initialization failed:', e);
+        clearSession();
         document.getElementById('loading-overlay').classList.add('hidden');
         document.getElementById('login-modal').classList.remove('hidden');
         showError(errorEl, `初期化に失敗しました: ${e.message}`);
