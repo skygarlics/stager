@@ -543,11 +543,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:21:53.585Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Real [A]",
+          "version": "5th",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:21:57.409Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 0,
-      "clearCount": 40,
-      "totalCount": 77,
+      "currentLevelIndex": 1,
+      "clearCount": 41,
+      "totalCount": 78,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1139,7 +1147,7 @@
         [
           "5th|Real [A]",
           {
-            "status": "fail",
+            "status": "clear",
             "level": "10.2"
           }
         ]
@@ -1459,5 +1467,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:21:53.585Z"
+  "lastUpdated": "2026-02-25T15:21:57.409Z"
 }
