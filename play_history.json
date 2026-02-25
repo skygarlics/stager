@@ -1210,11 +1210,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:05:46.887Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Bring The Fire",
+          "version": "Pinky Crush",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:14:03.115Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 7,
-      "totalCount": 12,
+      "totalCount": 13,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1227,7 +1235,8 @@
         "Sparkle Shower|Begin",
         "Sparkle Shower|Space Battleship S4TØ",
         "Pinky Crush|Aqvion",
-        "Pinky Crush|EX-MASSIVE FIGHTER"
+        "Pinky Crush|EX-MASSIVE FIGHTER",
+        "Pinky Crush|Bring The Fire"
       ],
       "songStatus": [
         [
@@ -1313,6 +1322,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "Pinky Crush|Bring The Fire",
+          {
+            "status": "fail",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -1331,5 +1347,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:05:46.888Z"
+  "lastUpdated": "2026-02-25T15:14:03.116Z"
 }
