@@ -631,11 +631,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:40:51.244Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Meteor☆Shower [A]",
+          "version": "SS",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:41:04.225Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 47,
-      "totalCount": 88,
+      "totalCount": 89,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -720,7 +728,8 @@
         "SS|華麗なる！音戯探偵ひなビタ♫ [A]",
         "EPO|ラビットホール [A]",
         "EPO|Get Higher [A]",
-        "EPO|寝起きヤシの木 [A]"
+        "EPO|寝起きヤシの木 [A]",
+        "SS|Meteor☆Shower [A]"
       ],
       "songStatus": [
         [
@@ -1310,6 +1319,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "SS|Meteor☆Shower [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     },
@@ -1627,5 +1643,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:40:51.245Z"
+  "lastUpdated": "2026-02-25T15:41:04.225Z"
 }
