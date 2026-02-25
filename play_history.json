@@ -663,11 +663,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:50:06.907Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "ミッドナイト☆WAR [A]",
+          "version": "ROOT",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:52:56.867Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 48,
-      "totalCount": 92,
+      "currentLevelIndex": 2,
+      "clearCount": 49,
+      "totalCount": 93,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -756,7 +764,8 @@
         "SS|Meteor☆Shower [A]",
         "RDT|Beyond Evolution [H]",
         "PC|無双 [A]",
-        "RDT|Programmed Genom [A]"
+        "RDT|Programmed Genom [A]",
+        "ROOT|ミッドナイト☆WAR [A]"
       ],
       "songStatus": [
         [
@@ -1374,6 +1383,13 @@
             "status": "fail",
             "level": "10.7"
           }
+        ],
+        [
+          "ROOT|ミッドナイト☆WAR [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     },
@@ -1691,5 +1707,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:50:06.907Z"
+  "lastUpdated": "2026-02-25T15:52:56.867Z"
 }
