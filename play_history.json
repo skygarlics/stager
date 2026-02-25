@@ -599,11 +599,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:32:42.129Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "華麗なる！音戯探偵ひなビタ♫ [A]",
+          "version": "SS",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:33:04.618Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 45,
-      "totalCount": 84,
+      "totalCount": 85,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -684,7 +692,8 @@
         "SS|voice of echo. [A]",
         "PC|IN BETWEEN [A]",
         "SS|kors k's Let's make an Image Song! [A]",
-        "EPO|out of disk space [A]"
+        "EPO|out of disk space [A]",
+        "SS|華麗なる！音戯探偵ひなビタ♫ [A]"
       ],
       "songStatus": [
         [
@@ -1246,6 +1255,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "SS|華麗なる！音戯探偵ひなビタ♫ [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     },
@@ -1563,5 +1579,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:32:42.129Z"
+  "lastUpdated": "2026-02-25T15:33:04.618Z"
 }
