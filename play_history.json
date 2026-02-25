@@ -567,11 +567,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:27:14.141Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "voice of echo. [A]",
+          "version": "SS",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-02-25T15:27:50.706Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 43,
-      "totalCount": 80,
+      "totalCount": 81,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -648,7 +656,8 @@
         "SS|GOLD RUSH 2025 [A]",
         "5th|Real [A]",
         "EPO|Hat Surprise (Season 3) [A]",
-        "PC|Butterfly Twist [A]"
+        "PC|Butterfly Twist [A]",
+        "SS|voice of echo. [A]"
       ],
       "songStatus": [
         [
@@ -1182,6 +1191,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "SS|voice of echo. [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     },
@@ -1499,5 +1515,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:27:14.142Z"
+  "lastUpdated": "2026-02-25T15:27:50.706Z"
 }
