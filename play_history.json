@@ -1182,10 +1182,10 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T14:49:39.686Z"
+  "lastUpdated": "2026-02-25T14:49:44.470Z"
 }
