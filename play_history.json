@@ -551,11 +551,19 @@
           "status": "clear",
           "timestamp": "2026-02-25T15:21:57.409Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Hat Surprise (Season 3) [A]",
+          "version": "EPO",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-02-25T15:24:24.944Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 41,
-      "totalCount": 78,
+      "currentLevelIndex": 2,
+      "clearCount": 42,
+      "totalCount": 79,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -630,7 +638,8 @@
         "CastHour|Fegrix",
         "DD|Broadbanded [A]",
         "SS|GOLD RUSH 2025 [A]",
-        "5th|Real [A]"
+        "5th|Real [A]",
+        "EPO|Hat Surprise (Season 3) [A]"
       ],
       "songStatus": [
         [
@@ -1150,6 +1159,13 @@
             "status": "clear",
             "level": "10.2"
           }
+        ],
+        [
+          "EPO|Hat Surprise (Season 3) [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     },
@@ -1467,5 +1483,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-02-25T15:21:57.409Z"
+  "lastUpdated": "2026-02-25T15:24:24.944Z"
 }
