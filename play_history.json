@@ -1554,11 +1554,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:19:08.027Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "frequent",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:15:32.651Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 10,
-      "totalCount": 18,
+      "currentLevelIndex": 3,
+      "clearCount": 11,
+      "totalCount": 19,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1577,7 +1585,8 @@
         "Pinky Crush|SISYPHUS",
         "EPOLIS|JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
         "EPOLIS|終焔のClaudia",
-        "Pinky Crush|Mid-Corner (Magic Maker)"
+        "Pinky Crush|Mid-Corner (Magic Maker)",
+        "EPOLIS|frequent"
       ],
       "songStatus": [
         [
@@ -1705,6 +1714,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|frequent",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -1718,10 +1734,10 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "DP",
+  "gameMode": "SP",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T05:57:45.323Z"
+  "lastUpdated": "2026-03-08T06:15:32.654Z"
 }
