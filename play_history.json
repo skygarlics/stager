@@ -1658,11 +1658,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:30:40.434Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "2 Be Continued",
+          "version": "Sparkle Shower",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:33:00.873Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 18,
-      "totalCount": 31,
+      "totalCount": 32,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1694,7 +1702,8 @@
         "Pinky Crush|Plazma[L]",
         "EPOLIS|Out of Control",
         "Pinky Crush|COSMIC V3LOCITY",
-        "Pinky Crush|u gotta beat"
+        "Pinky Crush|u gotta beat",
+        "Sparkle Shower|2 Be Continued"
       ],
       "songStatus": [
         [
@@ -1913,6 +1922,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "Sparkle Shower|2 Be Continued",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -1931,5 +1947,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:30:40.438Z"
+  "lastUpdated": "2026-03-08T06:33:00.873Z"
 }
