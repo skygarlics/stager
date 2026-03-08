@@ -1634,11 +1634,19 @@
           "status": "fail",
           "timestamp": "2026-03-08T06:27:51.502Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Out of Control",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:30:16.417Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 15,
-      "totalCount": 28,
+      "currentLevelIndex": 3,
+      "clearCount": 16,
+      "totalCount": 29,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1667,7 +1675,8 @@
         "EPOLIS|Stereo Beasts",
         "EPOLIS|《PL|RAYER》",
         "EPOLIS|Dahlia",
-        "Pinky Crush|Plazma[L]"
+        "Pinky Crush|Plazma[L]",
+        "EPOLIS|Out of Control"
       ],
       "songStatus": [
         [
@@ -1865,6 +1874,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|Out of Control",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -1883,5 +1899,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:27:51.502Z"
+  "lastUpdated": "2026-03-08T06:30:16.418Z"
 }
