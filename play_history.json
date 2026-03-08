@@ -1562,11 +1562,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:15:32.651Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "hora de verdad",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:18:49.924Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 11,
-      "totalCount": 19,
+      "totalCount": 20,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1586,7 +1594,8 @@
         "EPOLIS|JUSTICE/GUILTY feat. Nana Takahashi & 709sec.",
         "EPOLIS|終焔のClaudia",
         "Pinky Crush|Mid-Corner (Magic Maker)",
-        "EPOLIS|frequent"
+        "EPOLIS|frequent",
+        "Pinky Crush|hora de verdad"
       ],
       "songStatus": [
         [
@@ -1721,6 +1730,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|hora de verdad",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -1739,5 +1755,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:15:32.654Z"
+  "lastUpdated": "2026-03-08T06:18:49.924Z"
 }
