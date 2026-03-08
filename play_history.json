@@ -1594,11 +1594,19 @@
           "status": "fail",
           "timestamp": "2026-03-08T06:21:48.496Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Roar of Chronos",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:24:21.791Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 13,
-      "totalCount": 23,
+      "totalCount": 24,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1622,7 +1630,8 @@
         "Pinky Crush|hora de verdad",
         "EPOLIS|BLAZING_LAZER",
         "Pinky Crush|MARLIN",
-        "Pinky Crush|Without Heaven"
+        "Pinky Crush|Without Heaven",
+        "Pinky Crush|Roar of Chronos"
       ],
       "songStatus": [
         [
@@ -1785,6 +1794,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|Roar of Chronos",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -1803,5 +1819,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:21:48.496Z"
+  "lastUpdated": "2026-03-08T06:24:21.791Z"
 }
