@@ -1626,11 +1626,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:27:10.555Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Plazma[L]",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:27:51.502Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 15,
-      "totalCount": 27,
+      "totalCount": 28,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1658,7 +1666,8 @@
         "Pinky Crush|Roar of Chronos",
         "EPOLIS|Stereo Beasts",
         "EPOLIS|《PL|RAYER》",
-        "EPOLIS|Dahlia"
+        "EPOLIS|Dahlia",
+        "Pinky Crush|Plazma[L]"
       ],
       "songStatus": [
         [
@@ -1849,6 +1858,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|Plazma[L]",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -1867,5 +1883,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:27:10.555Z"
+  "lastUpdated": "2026-03-08T06:27:51.502Z"
 }
