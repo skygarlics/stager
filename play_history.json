@@ -1586,11 +1586,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:19:28.949Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Without Heaven",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:21:48.496Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 13,
-      "totalCount": 22,
+      "totalCount": 23,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1613,7 +1621,8 @@
         "EPOLIS|frequent",
         "Pinky Crush|hora de verdad",
         "EPOLIS|BLAZING_LAZER",
-        "Pinky Crush|MARLIN"
+        "Pinky Crush|MARLIN",
+        "Pinky Crush|Without Heaven"
       ],
       "songStatus": [
         [
@@ -1769,6 +1778,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "Pinky Crush|Without Heaven",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -1787,5 +1803,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:19:28.952Z"
+  "lastUpdated": "2026-03-08T06:21:48.496Z"
 }
