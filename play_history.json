@@ -1570,11 +1570,19 @@
           "status": "fail",
           "timestamp": "2026-03-08T06:18:49.924Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "BLAZING_LAZER",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:19:18.703Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 11,
-      "totalCount": 20,
+      "currentLevelIndex": 3,
+      "clearCount": 12,
+      "totalCount": 21,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1595,7 +1603,8 @@
         "EPOLIS|終焔のClaudia",
         "Pinky Crush|Mid-Corner (Magic Maker)",
         "EPOLIS|frequent",
-        "Pinky Crush|hora de verdad"
+        "Pinky Crush|hora de verdad",
+        "EPOLIS|BLAZING_LAZER"
       ],
       "songStatus": [
         [
@@ -1737,6 +1746,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|BLAZING_LAZER",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -1755,5 +1771,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:18:49.924Z"
+  "lastUpdated": "2026-03-08T06:19:18.703Z"
 }
