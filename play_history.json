@@ -1650,11 +1650,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:30:34.005Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "u gotta beat",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:30:40.434Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 17,
-      "totalCount": 30,
+      "currentLevelIndex": 5,
+      "clearCount": 18,
+      "totalCount": 31,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1685,7 +1693,8 @@
         "EPOLIS|Dahlia",
         "Pinky Crush|Plazma[L]",
         "EPOLIS|Out of Control",
-        "Pinky Crush|COSMIC V3LOCITY"
+        "Pinky Crush|COSMIC V3LOCITY",
+        "Pinky Crush|u gotta beat"
       ],
       "songStatus": [
         [
@@ -1897,6 +1906,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "Pinky Crush|u gotta beat",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -1915,5 +1931,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:30:34.005Z"
+  "lastUpdated": "2026-03-08T06:30:40.438Z"
 }
