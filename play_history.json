@@ -1698,11 +1698,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:43:27.993Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Pinky Happy Crazy",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:45:55.408Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 21,
-      "totalCount": 36,
+      "currentLevelIndex": 7,
+      "clearCount": 22,
+      "totalCount": 37,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1739,7 +1747,8 @@
         "Pinky Crush|Lightspeed",
         "Pinky Crush|FlyAway",
         "Pinky Crush|destination",
-        "Pinky Crush|Flämingo"
+        "Pinky Crush|Flämingo",
+        "Pinky Crush|Pinky Happy Crazy"
       ],
       "songStatus": [
         [
@@ -1993,6 +2002,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|Pinky Happy Crazy",
+          {
+            "status": "clear",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -2011,5 +2027,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:43:27.994Z"
+  "lastUpdated": "2026-03-08T06:45:55.409Z"
 }
