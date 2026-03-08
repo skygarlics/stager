@@ -1666,11 +1666,19 @@
           "status": "fail",
           "timestamp": "2026-03-08T06:33:00.873Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Lightspeed",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:34:49.396Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 18,
-      "totalCount": 32,
+      "totalCount": 33,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1703,7 +1711,8 @@
         "EPOLIS|Out of Control",
         "Pinky Crush|COSMIC V3LOCITY",
         "Pinky Crush|u gotta beat",
-        "Sparkle Shower|2 Be Continued"
+        "Sparkle Shower|2 Be Continued",
+        "Pinky Crush|Lightspeed"
       ],
       "songStatus": [
         [
@@ -1929,6 +1938,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|Lightspeed",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -1947,5 +1963,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:33:00.873Z"
+  "lastUpdated": "2026-03-08T06:34:49.400Z"
 }
