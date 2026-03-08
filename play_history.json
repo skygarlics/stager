@@ -1674,11 +1674,19 @@
           "status": "fail",
           "timestamp": "2026-03-08T06:34:49.396Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "FlyAway",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:37:31.407Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 18,
-      "totalCount": 33,
+      "currentLevelIndex": 4,
+      "clearCount": 19,
+      "totalCount": 34,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1712,7 +1720,8 @@
         "Pinky Crush|COSMIC V3LOCITY",
         "Pinky Crush|u gotta beat",
         "Sparkle Shower|2 Be Continued",
-        "Pinky Crush|Lightspeed"
+        "Pinky Crush|Lightspeed",
+        "Pinky Crush|FlyAway"
       ],
       "songStatus": [
         [
@@ -1945,6 +1954,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|FlyAway",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -1963,5 +1979,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:34:49.400Z"
+  "lastUpdated": "2026-03-08T06:37:31.408Z"
 }
