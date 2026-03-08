@@ -1754,11 +1754,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:59:05.875Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Memoria Obscura",
+          "version": "Sparkle Shower",
+          "level": "A+",
+          "status": "fail",
+          "timestamp": "2026-03-08T07:06:30.538Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 25,
-      "totalCount": 43,
+      "totalCount": 44,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1802,7 +1810,8 @@
         "Pinky Crush|Drop Syndicate",
         "Pinky Crush|uәn",
         "EPOLIS|Resonant",
-        "Pinky Crush|Uaigh Gealaí"
+        "Pinky Crush|Uaigh Gealaí",
+        "Sparkle Shower|Memoria Obscura"
       ],
       "songStatus": [
         [
@@ -2105,6 +2114,13 @@
             "status": "clear",
             "level": "A"
           }
+        ],
+        [
+          "Sparkle Shower|Memoria Obscura",
+          {
+            "status": "fail",
+            "level": "A+"
+          }
         ]
       ]
     },
@@ -2123,5 +2139,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:59:05.876Z"
+  "lastUpdated": "2026-03-08T07:06:30.540Z"
 }
