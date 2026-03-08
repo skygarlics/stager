@@ -1602,11 +1602,27 @@
           "status": "fail",
           "timestamp": "2026-03-08T06:24:21.791Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Stereo Beasts",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:24:22.105Z",
+          "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "《PL|RAYER》",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:24:39.156Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
       "currentLevelIndex": 2,
-      "clearCount": 13,
-      "totalCount": 24,
+      "clearCount": 14,
+      "totalCount": 26,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1631,7 +1647,9 @@
         "EPOLIS|BLAZING_LAZER",
         "Pinky Crush|MARLIN",
         "Pinky Crush|Without Heaven",
-        "Pinky Crush|Roar of Chronos"
+        "Pinky Crush|Roar of Chronos",
+        "EPOLIS|Stereo Beasts",
+        "EPOLIS|《PL|RAYER》"
       ],
       "songStatus": [
         [
@@ -1801,6 +1819,20 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|Stereo Beasts",
+          {
+            "status": "fail",
+            "level": "D"
+          }
+        ],
+        [
+          "EPOLIS|《PL|RAYER》",
+          {
+            "status": "clear",
+            "level": "E"
+          }
         ]
       ]
     },
@@ -1819,5 +1851,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:24:21.791Z"
+  "lastUpdated": "2026-03-08T06:24:39.157Z"
 }
