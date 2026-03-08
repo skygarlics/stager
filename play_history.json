@@ -1618,11 +1618,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:24:39.156Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Dahlia",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:27:10.555Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 14,
-      "totalCount": 26,
+      "currentLevelIndex": 3,
+      "clearCount": 15,
+      "totalCount": 27,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1649,7 +1657,8 @@
         "Pinky Crush|Without Heaven",
         "Pinky Crush|Roar of Chronos",
         "EPOLIS|Stereo Beasts",
-        "EPOLIS|《PL|RAYER》"
+        "EPOLIS|《PL|RAYER》",
+        "EPOLIS|Dahlia"
       ],
       "songStatus": [
         [
@@ -1833,6 +1842,13 @@
             "status": "clear",
             "level": "E"
           }
+        ],
+        [
+          "EPOLIS|Dahlia",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -1851,5 +1867,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:24:39.157Z"
+  "lastUpdated": "2026-03-08T06:27:10.555Z"
 }
