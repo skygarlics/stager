@@ -1730,11 +1730,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:53:48.066Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "uәn",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-03-08T06:56:19.402Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 23,
-      "totalCount": 40,
+      "totalCount": 41,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1775,7 +1783,8 @@
         "Pinky Crush|Pinky Happy Crazy",
         "Sparkle Shower|ιgniЯRuina",
         "Pinky Crush|NOIXIA",
-        "Pinky Crush|Drop Syndicate"
+        "Pinky Crush|Drop Syndicate",
+        "Pinky Crush|uәn"
       ],
       "songStatus": [
         [
@@ -2057,6 +2066,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|uәn",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -2075,5 +2091,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:53:48.069Z"
+  "lastUpdated": "2026-03-08T06:56:19.403Z"
 }
