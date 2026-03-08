@@ -1690,11 +1690,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:40:10.212Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Flämingo",
+          "version": "Pinky Crush",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:43:27.993Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 20,
-      "totalCount": 35,
+      "currentLevelIndex": 6,
+      "clearCount": 21,
+      "totalCount": 36,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1730,7 +1738,8 @@
         "Sparkle Shower|2 Be Continued",
         "Pinky Crush|Lightspeed",
         "Pinky Crush|FlyAway",
-        "Pinky Crush|destination"
+        "Pinky Crush|destination",
+        "Pinky Crush|Flämingo"
       ],
       "songStatus": [
         [
@@ -1977,6 +1986,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|Flämingo",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -1995,5 +2011,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:40:10.212Z"
+  "lastUpdated": "2026-03-08T06:43:27.994Z"
 }
