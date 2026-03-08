@@ -1642,11 +1642,19 @@
           "status": "clear",
           "timestamp": "2026-03-08T06:30:16.417Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "COSMIC V3LOCITY",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:30:34.005Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 16,
-      "totalCount": 29,
+      "currentLevelIndex": 4,
+      "clearCount": 17,
+      "totalCount": 30,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1676,7 +1684,8 @@
         "EPOLIS|《PL|RAYER》",
         "EPOLIS|Dahlia",
         "Pinky Crush|Plazma[L]",
-        "EPOLIS|Out of Control"
+        "EPOLIS|Out of Control",
+        "Pinky Crush|COSMIC V3LOCITY"
       ],
       "songStatus": [
         [
@@ -1881,6 +1890,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|COSMIC V3LOCITY",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -1899,5 +1915,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:30:16.418Z"
+  "lastUpdated": "2026-03-08T06:30:34.005Z"
 }
