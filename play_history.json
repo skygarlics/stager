@@ -1738,11 +1738,19 @@
           "status": "fail",
           "timestamp": "2026-03-08T06:56:19.402Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Resonant",
+          "version": "EPOLIS",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-03-08T06:58:54.335Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 23,
-      "totalCount": 41,
+      "currentLevelIndex": 6,
+      "clearCount": 24,
+      "totalCount": 42,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1784,7 +1792,8 @@
         "Sparkle Shower|ιgniЯRuina",
         "Pinky Crush|NOIXIA",
         "Pinky Crush|Drop Syndicate",
-        "Pinky Crush|uәn"
+        "Pinky Crush|uәn",
+        "EPOLIS|Resonant"
       ],
       "songStatus": [
         [
@@ -2073,6 +2082,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "EPOLIS|Resonant",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -2091,5 +2107,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T06:56:19.403Z"
+  "lastUpdated": "2026-03-08T06:58:54.335Z"
 }
