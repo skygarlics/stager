@@ -2877,11 +2877,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:12:45.611Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Amor∞Fati [H]",
+          "version": "SS",
+          "level": "10.0",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:12:51.689Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 7,
-      "totalCount": 10,
+      "currentLevelIndex": 5,
+      "clearCount": 8,
+      "totalCount": 11,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2892,7 +2900,8 @@
         "SS|それが、ボクの使命～レスキュー隊長 メンキュー～ [A]",
         "PC|Lightspeed [H]",
         "SS|From Human Blood [H]",
-        "SS|Begin [H]"
+        "SS|Begin [H]",
+        "SS|Amor∞Fati [H]"
       ],
       "songStatus": [
         [
@@ -2964,6 +2973,13 @@
             "status": "fail",
             "level": "10.2"
           }
+        ],
+        [
+          "SS|Amor∞Fati [H]",
+          {
+            "status": "clear",
+            "level": "10.0"
+          }
         ]
       ]
     }
@@ -2974,5 +2990,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:12:45.612Z"
+  "lastUpdated": "2026-03-21T07:12:51.690Z"
 }
