@@ -687,11 +687,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:22:51.875Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Get Higher [A]",
+          "version": "EPO",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T06:23:19.351Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 0,
-      "clearCount": 49,
-      "totalCount": 95,
+      "currentLevelIndex": 2,
+      "clearCount": 50,
+      "totalCount": 96,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2619,5 +2627,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:22:51.875Z"
+  "lastUpdated": "2026-03-21T06:23:19.351Z"
 }
