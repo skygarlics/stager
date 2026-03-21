@@ -1802,11 +1802,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T04:59:26.379Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "EYE OF THE HEAVEN",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-03-21T05:07:33.732Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 26,
-      "totalCount": 49,
+      "currentLevelIndex": 4,
+      "clearCount": 27,
+      "totalCount": 50,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1856,7 +1864,8 @@
         "EPOLIS|Submerge Serenade[L]",
         "Pinky Crush|アラビアン ハイパー ナイト",
         "Pinky Crush|Here We Go Now",
-        "EPOLIS|ACTØ"
+        "EPOLIS|ACTØ",
+        "Pinky Crush|EYE OF THE HEAVEN"
       ],
       "songStatus": [
         [
@@ -2201,6 +2210,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|EYE OF THE HEAVEN",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2219,5 +2235,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T04:59:26.379Z"
+  "lastUpdated": "2026-03-21T05:07:33.733Z"
 }
