@@ -2925,11 +2925,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:19:50.102Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "キスキツネ [A]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:22:53.333Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 11,
-      "totalCount": 16,
+      "totalCount": 17,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2946,7 +2954,8 @@
         "SS|HyperTwist [H]",
         "SS|好吃来世deエレクトリック [A]",
         "PC|弾幕信仰 [A]",
-        "SS|SPLASH!!!!!!!!! [A]"
+        "SS|SPLASH!!!!!!!!! [A]",
+        "PC|キスキツネ [A]"
       ],
       "songStatus": [
         [
@@ -3060,6 +3069,13 @@
             "status": "clear",
             "level": "10.2"
           }
+        ],
+        [
+          "PC|キスキツネ [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -3070,5 +3086,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:19:50.103Z"
+  "lastUpdated": "2026-03-21T07:22:53.334Z"
 }
