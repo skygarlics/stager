@@ -703,11 +703,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:25:42.190Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "うさ☆かめ 大戦争！ [A]",
+          "version": "CB",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T06:28:10.536Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 50,
-      "totalCount": 97,
+      "currentLevelIndex": 2,
+      "clearCount": 51,
+      "totalCount": 98,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -800,7 +808,8 @@
         "ROOT|ミッドナイト☆WAR [A]",
         "RDT|少年リップルズ [A]",
         "CB|FUTURE is Dead [A]",
-        "CH|Hat Surprise [A]"
+        "CH|Hat Surprise [A]",
+        "CB|うさ☆かめ 大戦争！ [A]"
       ],
       "songStatus": [
         [
@@ -1445,6 +1454,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "CB|うさ☆かめ 大戦争！ [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
           }
         ]
       ]
@@ -2643,5 +2659,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:25:42.191Z"
+  "lastUpdated": "2026-03-21T06:28:10.537Z"
 }
