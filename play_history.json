@@ -3101,11 +3101,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T08:15:22.019Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "オッド♡ラヴィ [A]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T08:18:27.172Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 22,
-      "totalCount": 38,
+      "currentLevelIndex": 7,
+      "clearCount": 23,
+      "totalCount": 39,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3144,7 +3152,8 @@
         "ROOT|50th Memorial Songs -Flagship medley- [A]",
         "RDT|楽園追放 [A]",
         "ROOT|CoMAAAAAAA [A]",
-        "RDT|VØID [H]"
+        "RDT|VØID [H]",
+        "PC|オッド♡ラヴィ [A]"
       ],
       "songStatus": [
         [
@@ -3412,6 +3421,13 @@
             "status": "fail",
             "level": "10.7"
           }
+        ],
+        [
+          "PC|オッド♡ラヴィ [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -3422,5 +3438,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T08:15:22.020Z"
+  "lastUpdated": "2026-03-21T08:18:27.172Z"
 }
