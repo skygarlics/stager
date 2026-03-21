@@ -759,11 +759,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:52:52.044Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "BREAK OVER [A]",
+          "version": "SINO",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T06:53:21.426Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 0,
-      "clearCount": 53,
-      "totalCount": 104,
+      "currentLevelIndex": 2,
+      "clearCount": 54,
+      "totalCount": 105,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2755,5 +2763,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:52:52.045Z"
+  "lastUpdated": "2026-03-21T06:53:21.426Z"
 }
