@@ -3069,11 +3069,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T08:04:31.842Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "50th Memorial Songs -Flagship medley- [A]",
+          "version": "ROOT",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-03-21T08:07:11.347Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 21,
-      "totalCount": 34,
+      "totalCount": 35,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3108,7 +3116,8 @@
         "EPO|Bitter & Lucky [A]",
         "RDT|The Clown of 24stairs [H]",
         "RDT|Somnidiscotheque [H]",
-        "10th|Back Into The light [A]"
+        "10th|Back Into The light [A]",
+        "ROOT|50th Memorial Songs -Flagship medley- [A]"
       ],
       "songStatus": [
         [
@@ -3348,6 +3357,13 @@
             "status": "fail",
             "level": "11.2"
           }
+        ],
+        [
+          "ROOT|50th Memorial Songs -Flagship medley- [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     }
@@ -3358,5 +3374,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T08:04:31.842Z"
+  "lastUpdated": "2026-03-21T08:07:11.348Z"
 }
