@@ -3037,11 +3037,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:54:30.660Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Bitter & Lucky [A]",
+          "version": "EPO",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:57:01.487Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 19,
-      "totalCount": 30,
+      "totalCount": 31,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3072,7 +3080,8 @@
         "PC|ゲシュタルト [A]",
         "PC|XHRONOXAPSULΞ [H]",
         "PC|Skratch Education Lv-1 [H]",
-        "EPO|Tripping Jumping [A]"
+        "EPO|Tripping Jumping [A]",
+        "EPO|Bitter & Lucky [A]"
       ],
       "songStatus": [
         [
@@ -3284,6 +3293,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "EPO|Bitter & Lucky [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     }
@@ -3294,5 +3310,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:54:30.661Z"
+  "lastUpdated": "2026-03-21T07:57:01.488Z"
 }
