@@ -1898,11 +1898,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T05:35:57.002Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "God Mind",
+          "version": "Pinky Crush",
+          "level": "A+",
+          "status": "fail",
+          "timestamp": "2026-03-21T05:41:50.448Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 34,
-      "totalCount": 61,
+      "totalCount": 62,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1964,7 +1972,8 @@
         "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
         "EPOLIS|Demon March",
         "Sparkle Shower|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason",
-        "EPOLIS|Cult Invitation"
+        "EPOLIS|Cult Invitation",
+        "Pinky Crush|God Mind"
       ],
       "songStatus": [
         [
@@ -2393,6 +2402,13 @@
             "status": "clear",
             "level": "A"
           }
+        ],
+        [
+          "Pinky Crush|God Mind",
+          {
+            "status": "fail",
+            "level": "A+"
+          }
         ]
       ]
     },
@@ -2411,5 +2427,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:35:57.002Z"
+  "lastUpdated": "2026-03-21T05:41:50.450Z"
 }
