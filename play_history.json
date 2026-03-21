@@ -3077,11 +3077,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T08:07:11.347Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "楽園追放 [A]",
+          "version": "RDT",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-03-21T08:09:31.918Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 21,
-      "totalCount": 35,
+      "currentLevelIndex": 8,
+      "clearCount": 22,
+      "totalCount": 36,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3117,7 +3125,8 @@
         "RDT|The Clown of 24stairs [H]",
         "RDT|Somnidiscotheque [H]",
         "10th|Back Into The light [A]",
-        "ROOT|50th Memorial Songs -Flagship medley- [A]"
+        "ROOT|50th Memorial Songs -Flagship medley- [A]",
+        "RDT|楽園追放 [A]"
       ],
       "songStatus": [
         [
@@ -3364,6 +3373,13 @@
             "status": "fail",
             "level": "11.0"
           }
+        ],
+        [
+          "RDT|楽園追放 [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     }
@@ -3374,5 +3390,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T08:07:11.348Z"
+  "lastUpdated": "2026-03-21T08:09:31.918Z"
 }
