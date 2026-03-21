@@ -1834,11 +1834,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:14:40.966Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Ghost Pulse",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-03-21T05:17:05.290Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 28,
-      "totalCount": 53,
+      "totalCount": 54,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1892,7 +1900,8 @@
         "Pinky Crush|EYE OF THE HEAVEN",
         "Pinky Crush|1116",
         "Pinky Crush|DIVINE JUDGEMENT",
-        "EPOLIS|摩天楼"
+        "EPOLIS|摩天楼",
+        "EPOLIS|Ghost Pulse"
       ],
       "songStatus": [
         [
@@ -2265,6 +2274,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|Ghost Pulse",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2283,5 +2299,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:14:40.967Z"
+  "lastUpdated": "2026-03-21T05:17:05.290Z"
 }
