@@ -2821,15 +2821,24 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:02:20.801Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "バブリン [A]",
+          "version": "SS",
+          "level": "9.6",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:05:28.985Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 3,
-      "totalCount": 3,
+      "currentLevelIndex": 4,
+      "clearCount": 4,
+      "totalCount": 4,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
-        "SS|PALETTE [A]"
+        "SS|PALETTE [A]",
+        "SS|バブリン [A]"
       ],
       "songStatus": [
         [
@@ -2852,6 +2861,13 @@
             "status": "clear",
             "level": "9.3"
           }
+        ],
+        [
+          "SS|バブリン [A]",
+          {
+            "status": "clear",
+            "level": "9.6"
+          }
         ]
       ]
     }
@@ -2862,5 +2878,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:02:20.802Z"
+  "lastUpdated": "2026-03-21T07:05:28.986Z"
 }
