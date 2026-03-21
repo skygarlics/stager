@@ -3053,11 +3053,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:59:44.129Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Somnidiscotheque [H]",
+          "version": "RDT",
+          "level": "11.0",
+          "status": "clear",
+          "timestamp": "2026-03-21T08:02:10.730Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 8,
-      "clearCount": 20,
-      "totalCount": 32,
+      "currentLevelIndex": 9,
+      "clearCount": 21,
+      "totalCount": 33,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3090,7 +3098,8 @@
         "PC|Skratch Education Lv-1 [H]",
         "EPO|Tripping Jumping [A]",
         "EPO|Bitter & Lucky [A]",
-        "RDT|The Clown of 24stairs [H]"
+        "RDT|The Clown of 24stairs [H]",
+        "RDT|Somnidiscotheque [H]"
       ],
       "songStatus": [
         [
@@ -3316,6 +3325,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "RDT|Somnidiscotheque [H]",
+          {
+            "status": "clear",
+            "level": "11.0"
+          }
         ]
       ]
     }
@@ -3326,5 +3342,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:59:44.130Z"
+  "lastUpdated": "2026-03-21T08:02:10.731Z"
 }
