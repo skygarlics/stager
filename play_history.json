@@ -1906,11 +1906,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:41:50.448Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "TECHNOPHOBIA",
+          "version": "RESIDENT",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-03-21T05:44:36.631Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 34,
-      "totalCount": 62,
+      "totalCount": 63,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1973,7 +1981,8 @@
         "EPOLIS|Demon March",
         "Sparkle Shower|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason",
         "EPOLIS|Cult Invitation",
-        "Pinky Crush|God Mind"
+        "Pinky Crush|God Mind",
+        "RESIDENT|TECHNOPHOBIA"
       ],
       "songStatus": [
         [
@@ -2409,6 +2418,13 @@
             "status": "fail",
             "level": "A+"
           }
+        ],
+        [
+          "RESIDENT|TECHNOPHOBIA",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -2427,5 +2443,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:41:50.450Z"
+  "lastUpdated": "2026-03-21T05:44:36.632Z"
 }
