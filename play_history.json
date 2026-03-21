@@ -1970,11 +1970,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:01:55.083Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "suspicions",
+          "version": "RESIDENT",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:04:12.763Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 38,
-      "totalCount": 70,
+      "totalCount": 71,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2045,7 +2053,8 @@
         "EPOLIS|未完成ノ蒸氣驅動乙女",
         "EPOLIS|今宵、ロマンス横丁。",
         "EPOLIS|The Last Apocalypse",
-        "RESIDENT|kors k's How to make OTOGE CORE 「LONG」"
+        "RESIDENT|kors k's How to make OTOGE CORE 「LONG」",
+        "RESIDENT|suspicions"
       ],
       "songStatus": [
         [
@@ -2537,6 +2546,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "RESIDENT|suspicions",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -2555,5 +2571,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:01:55.083Z"
+  "lastUpdated": "2026-03-21T06:04:12.764Z"
 }
