@@ -783,11 +783,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:58:56.512Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Hat Surprise (Season 3) [A]",
+          "version": "EPO",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T06:59:13.933Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 0,
-      "clearCount": 54,
-      "totalCount": 107,
+      "currentLevelIndex": 2,
+      "clearCount": 55,
+      "totalCount": 108,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2795,5 +2803,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:58:56.513Z"
+  "lastUpdated": "2026-03-21T06:59:13.934Z"
 }
