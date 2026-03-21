@@ -2941,11 +2941,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:25:27.122Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "朱と碧のランページ [A]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:28:08.429Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 12,
-      "totalCount": 18,
+      "currentLevelIndex": 7,
+      "clearCount": 13,
+      "totalCount": 19,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2964,7 +2972,8 @@
         "PC|弾幕信仰 [A]",
         "SS|SPLASH!!!!!!!!! [A]",
         "PC|キスキツネ [A]",
-        "SS|COLOR BURST [A]"
+        "SS|COLOR BURST [A]",
+        "PC|朱と碧のランページ [A]"
       ],
       "songStatus": [
         [
@@ -3092,6 +3101,13 @@
             "status": "clear",
             "level": "10.2"
           }
+        ],
+        [
+          "PC|朱と碧のランページ [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -3102,5 +3118,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:25:27.123Z"
+  "lastUpdated": "2026-03-21T07:28:08.430Z"
 }
