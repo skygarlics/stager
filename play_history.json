@@ -2917,11 +2917,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:17:31.519Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "SPLASH!!!!!!!!! [A]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:19:50.102Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 10,
-      "totalCount": 15,
+      "currentLevelIndex": 6,
+      "clearCount": 11,
+      "totalCount": 16,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2937,7 +2945,8 @@
         "SS|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]",
         "SS|HyperTwist [H]",
         "SS|好吃来世deエレクトリック [A]",
-        "PC|弾幕信仰 [A]"
+        "PC|弾幕信仰 [A]",
+        "SS|SPLASH!!!!!!!!! [A]"
       ],
       "songStatus": [
         [
@@ -3044,6 +3053,13 @@
             "status": "fail",
             "level": "10.5"
           }
+        ],
+        [
+          "SS|SPLASH!!!!!!!!! [A]",
+          {
+            "status": "clear",
+            "level": "10.2"
+          }
         ]
       ]
     }
@@ -3054,5 +3070,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:17:31.519Z"
+  "lastUpdated": "2026-03-21T07:19:50.103Z"
 }
