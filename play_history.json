@@ -1858,11 +1858,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T05:22:40.033Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Vermilion Carol",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-03-21T05:25:10.351Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 30,
-      "totalCount": 56,
+      "currentLevelIndex": 5,
+      "clearCount": 31,
+      "totalCount": 57,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1919,7 +1927,8 @@
         "EPOLIS|摩天楼",
         "EPOLIS|Ghost Pulse",
         "RESIDENT|Meissa",
-        "EPOLIS|電光"
+        "EPOLIS|電光",
+        "EPOLIS|Vermilion Carol"
       ],
       "songStatus": [
         [
@@ -2313,6 +2322,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|Vermilion Carol",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2331,5 +2347,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:22:40.034Z"
+  "lastUpdated": "2026-03-21T05:25:10.352Z"
 }
