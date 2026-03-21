@@ -1962,11 +1962,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T05:59:19.254Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "kors k's How to make OTOGE CORE 「LONG」",
+          "version": "RESIDENT",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-03-21T06:01:55.083Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 37,
-      "totalCount": 69,
+      "currentLevelIndex": 6,
+      "clearCount": 38,
+      "totalCount": 70,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2036,7 +2044,8 @@
         "EPOLIS|Million Dollar",
         "EPOLIS|未完成ノ蒸氣驅動乙女",
         "EPOLIS|今宵、ロマンス横丁。",
-        "EPOLIS|The Last Apocalypse"
+        "EPOLIS|The Last Apocalypse",
+        "RESIDENT|kors k's How to make OTOGE CORE 「LONG」"
       ],
       "songStatus": [
         [
@@ -2521,6 +2530,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "RESIDENT|kors k's How to make OTOGE CORE 「LONG」",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -2539,5 +2555,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:59:19.254Z"
+  "lastUpdated": "2026-03-21T06:01:55.083Z"
 }
