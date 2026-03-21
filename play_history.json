@@ -2949,11 +2949,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:28:08.429Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "SILKY BRAVE [A]",
+          "version": "SS",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:28:28.139Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 13,
-      "totalCount": 19,
+      "totalCount": 20,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2973,7 +2981,8 @@
         "SS|SPLASH!!!!!!!!! [A]",
         "PC|キスキツネ [A]",
         "SS|COLOR BURST [A]",
-        "PC|朱と碧のランページ [A]"
+        "PC|朱と碧のランページ [A]",
+        "SS|SILKY BRAVE [A]"
       ],
       "songStatus": [
         [
@@ -3108,6 +3117,13 @@
             "status": "clear",
             "level": "10.5"
           }
+        ],
+        [
+          "SS|SILKY BRAVE [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
+          }
         ]
       ]
     }
@@ -3118,5 +3134,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:28:08.430Z"
+  "lastUpdated": "2026-03-21T07:28:28.140Z"
 }
