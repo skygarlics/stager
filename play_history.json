@@ -1794,11 +1794,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T04:58:50.905Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "ACTØ",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-03-21T04:59:26.379Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 25,
-      "totalCount": 48,
+      "currentLevelIndex": 3,
+      "clearCount": 26,
+      "totalCount": 49,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1847,7 +1855,8 @@
         "Pinky Crush|Cross Fire",
         "EPOLIS|Submerge Serenade[L]",
         "Pinky Crush|アラビアン ハイパー ナイト",
-        "Pinky Crush|Here We Go Now"
+        "Pinky Crush|Here We Go Now",
+        "EPOLIS|ACTØ"
       ],
       "songStatus": [
         [
@@ -2185,6 +2194,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|ACTØ",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -2203,5 +2219,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T04:58:50.906Z"
+  "lastUpdated": "2026-03-21T04:59:26.379Z"
 }
