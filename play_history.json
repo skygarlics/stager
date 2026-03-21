@@ -1762,11 +1762,19 @@
           "status": "fail",
           "timestamp": "2026-03-08T07:06:30.538Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Cross Fire",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-03-21T04:50:39.416Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 25,
-      "totalCount": 44,
+      "totalCount": 45,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1811,7 +1819,8 @@
         "Pinky Crush|uәn",
         "EPOLIS|Resonant",
         "Pinky Crush|Uaigh Gealaí",
-        "Sparkle Shower|Memoria Obscura"
+        "Sparkle Shower|Memoria Obscura",
+        "Pinky Crush|Cross Fire"
       ],
       "songStatus": [
         [
@@ -2121,6 +2130,13 @@
             "status": "fail",
             "level": "A+"
           }
+        ],
+        [
+          "Pinky Crush|Cross Fire",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -2139,5 +2155,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-08T07:06:30.540Z"
+  "lastUpdated": "2026-03-21T04:50:39.417Z"
 }
