@@ -3085,11 +3085,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T08:09:31.918Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "CoMAAAAAAA [A]",
+          "version": "ROOT",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-03-21T08:12:46.764Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 22,
-      "totalCount": 36,
+      "totalCount": 37,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3126,7 +3134,8 @@
         "RDT|Somnidiscotheque [H]",
         "10th|Back Into The light [A]",
         "ROOT|50th Memorial Songs -Flagship medley- [A]",
-        "RDT|楽園追放 [A]"
+        "RDT|楽園追放 [A]",
+        "ROOT|CoMAAAAAAA [A]"
       ],
       "songStatus": [
         [
@@ -3380,6 +3389,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "ROOT|CoMAAAAAAA [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     }
@@ -3390,5 +3406,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T08:09:31.918Z"
+  "lastUpdated": "2026-03-21T08:12:46.764Z"
 }
