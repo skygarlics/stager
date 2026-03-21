@@ -2981,11 +2981,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:33:39.569Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Secret Rouge [A]",
+          "version": "PC",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:36:22.611Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 15,
-      "totalCount": 23,
+      "totalCount": 24,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3009,7 +3017,8 @@
         "SS|SILKY BRAVE [A]",
         "PC|Lycoris [A]",
         "SS|Makin' It [H]",
-        "SS|FiZZλ_PØT!0И [H]"
+        "SS|FiZZλ_PØT!0И [H]",
+        "PC|Secret Rouge [A]"
       ],
       "songStatus": [
         [
@@ -3172,6 +3181,13 @@
             "status": "fail",
             "level": "11.0"
           }
+        ],
+        [
+          "PC|Secret Rouge [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
+          }
         ]
       ]
     }
@@ -3182,5 +3198,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:33:39.569Z"
+  "lastUpdated": "2026-03-21T07:36:22.611Z"
 }
