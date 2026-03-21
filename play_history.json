@@ -711,11 +711,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:28:10.536Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Ventriloquist [A]",
+          "version": "CH",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:30:39.798Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 51,
-      "totalCount": 98,
+      "totalCount": 99,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -809,7 +817,8 @@
         "RDT|少年リップルズ [A]",
         "CB|FUTURE is Dead [A]",
         "CH|Hat Surprise [A]",
-        "CB|うさ☆かめ 大戦争！ [A]"
+        "CB|うさ☆かめ 大戦争！ [A]",
+        "CH|Ventriloquist [A]"
       ],
       "songStatus": [
         [
@@ -1461,6 +1470,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "CH|Ventriloquist [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -2659,5 +2675,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:28:10.537Z"
+  "lastUpdated": "2026-03-21T06:30:39.798Z"
 }
