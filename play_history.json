@@ -3061,11 +3061,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T08:02:10.730Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Back Into The light [A]",
+          "version": "10th",
+          "level": "11.2",
+          "status": "fail",
+          "timestamp": "2026-03-21T08:04:31.842Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 9,
+      "currentLevelIndex": 8,
       "clearCount": 21,
-      "totalCount": 33,
+      "totalCount": 34,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3099,7 +3107,8 @@
         "EPO|Tripping Jumping [A]",
         "EPO|Bitter & Lucky [A]",
         "RDT|The Clown of 24stairs [H]",
-        "RDT|Somnidiscotheque [H]"
+        "RDT|Somnidiscotheque [H]",
+        "10th|Back Into The light [A]"
       ],
       "songStatus": [
         [
@@ -3332,6 +3341,13 @@
             "status": "clear",
             "level": "11.0"
           }
+        ],
+        [
+          "10th|Back Into The light [A]",
+          {
+            "status": "fail",
+            "level": "11.2"
+          }
         ]
       ]
     }
@@ -3342,5 +3358,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T08:02:10.731Z"
+  "lastUpdated": "2026-03-21T08:04:31.842Z"
 }
