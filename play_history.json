@@ -2893,11 +2893,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:12:53.941Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "HyperTwist [H]",
+          "version": "SS",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:13:02.204Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 9,
-      "totalCount": 12,
+      "totalCount": 13,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2910,7 +2918,8 @@
         "SS|From Human Blood [H]",
         "SS|Begin [H]",
         "SS|Amor∞Fati [H]",
-        "SS|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]"
+        "SS|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]",
+        "SS|HyperTwist [H]"
       ],
       "songStatus": [
         [
@@ -2996,6 +3005,13 @@
             "status": "clear",
             "level": "10.2"
           }
+        ],
+        [
+          "SS|HyperTwist [H]",
+          {
+            "status": "fail",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -3006,5 +3022,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:12:53.941Z"
+  "lastUpdated": "2026-03-21T07:13:02.204Z"
 }
