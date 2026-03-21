@@ -2869,11 +2869,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:12:37.151Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Begin [H]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:12:45.611Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 7,
-      "totalCount": 9,
+      "totalCount": 10,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2883,7 +2891,8 @@
         "SS|Watermelon Explosion [A]",
         "SS|それが、ボクの使命～レスキュー隊長 メンキュー～ [A]",
         "PC|Lightspeed [H]",
-        "SS|From Human Blood [H]"
+        "SS|From Human Blood [H]",
+        "SS|Begin [H]"
       ],
       "songStatus": [
         [
@@ -2948,6 +2957,13 @@
             "status": "clear",
             "level": "10.0"
           }
+        ],
+        [
+          "SS|Begin [H]",
+          {
+            "status": "fail",
+            "level": "10.2"
+          }
         ]
       ]
     }
@@ -2958,5 +2974,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:12:37.151Z"
+  "lastUpdated": "2026-03-21T07:12:45.612Z"
 }
