@@ -2989,11 +2989,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:36:22.611Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "hora de verdad [H]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:39:45.554Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 15,
-      "totalCount": 24,
+      "currentLevelIndex": 7,
+      "clearCount": 16,
+      "totalCount": 25,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3018,7 +3026,8 @@
         "PC|Lycoris [A]",
         "SS|Makin' It [H]",
         "SS|FiZZλ_PØT!0И [H]",
-        "PC|Secret Rouge [A]"
+        "PC|Secret Rouge [A]",
+        "PC|hora de verdad [H]"
       ],
       "songStatus": [
         [
@@ -3188,6 +3197,13 @@
             "status": "fail",
             "level": "10.7"
           }
+        ],
+        [
+          "PC|hora de verdad [H]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -3198,5 +3214,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:36:22.611Z"
+  "lastUpdated": "2026-03-21T07:39:45.555Z"
 }
