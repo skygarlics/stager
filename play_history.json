@@ -695,11 +695,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:23:19.351Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Hat Surprise [A]",
+          "version": "CH",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:25:42.190Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 50,
-      "totalCount": 96,
+      "totalCount": 97,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -791,7 +799,8 @@
         "RDT|Programmed Genom [A]",
         "ROOT|ミッドナイト☆WAR [A]",
         "RDT|少年リップルズ [A]",
-        "CB|FUTURE is Dead [A]"
+        "CB|FUTURE is Dead [A]",
+        "CH|Hat Surprise [A]"
       ],
       "songStatus": [
         [
@@ -1429,6 +1438,13 @@
           {
             "status": "fail",
             "level": "10.5"
+          }
+        ],
+        [
+          "CH|Hat Surprise [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -2627,5 +2643,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:23:19.351Z"
+  "lastUpdated": "2026-03-21T06:25:42.191Z"
 }
