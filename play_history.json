@@ -3021,11 +3021,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:48:54.321Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Skratch Education Lv-1 [H]",
+          "version": "PC",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:51:32.779Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 18,
-      "totalCount": 28,
+      "totalCount": 29,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3054,7 +3062,8 @@
         "PC|hora de verdad [H]",
         "PC|Mighty Cutie [A]",
         "PC|ゲシュタルト [A]",
-        "PC|XHRONOXAPSULΞ [H]"
+        "PC|XHRONOXAPSULΞ [H]",
+        "PC|Skratch Education Lv-1 [H]"
       ],
       "songStatus": [
         [
@@ -3252,6 +3261,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "PC|Skratch Education Lv-1 [H]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     }
@@ -3262,5 +3278,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:48:54.322Z"
+  "lastUpdated": "2026-03-21T07:51:32.780Z"
 }
