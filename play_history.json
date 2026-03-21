@@ -1922,11 +1922,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:47:10.964Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "電腦都市",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-03-21T05:49:39.724Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 34,
-      "totalCount": 64,
+      "totalCount": 65,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1991,7 +1999,8 @@
         "EPOLIS|Cult Invitation",
         "Pinky Crush|God Mind",
         "RESIDENT|TECHNOPHOBIA",
-        "EPOLIS|Xb10r"
+        "EPOLIS|Xb10r",
+        "EPOLIS|電腦都市"
       ],
       "songStatus": [
         [
@@ -2441,6 +2450,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|電腦都市",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2459,5 +2475,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:47:10.966Z"
+  "lastUpdated": "2026-03-21T05:49:39.725Z"
 }
