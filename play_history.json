@@ -3045,11 +3045,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:57:01.487Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "The Clown of 24stairs [H]",
+          "version": "RDT",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:59:44.129Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 19,
-      "totalCount": 31,
+      "currentLevelIndex": 8,
+      "clearCount": 20,
+      "totalCount": 32,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3081,7 +3089,8 @@
         "PC|XHRONOXAPSULΞ [H]",
         "PC|Skratch Education Lv-1 [H]",
         "EPO|Tripping Jumping [A]",
-        "EPO|Bitter & Lucky [A]"
+        "EPO|Bitter & Lucky [A]",
+        "RDT|The Clown of 24stairs [H]"
       ],
       "songStatus": [
         [
@@ -3300,6 +3309,13 @@
             "status": "fail",
             "level": "11.0"
           }
+        ],
+        [
+          "RDT|The Clown of 24stairs [H]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     }
@@ -3310,5 +3326,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:57:01.488Z"
+  "lastUpdated": "2026-03-21T07:59:44.130Z"
 }
