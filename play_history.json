@@ -1826,11 +1826,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T05:12:11.579Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "摩天楼",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-03-21T05:14:40.966Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 28,
-      "totalCount": 52,
+      "totalCount": 53,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1883,7 +1891,8 @@
         "EPOLIS|ACTØ",
         "Pinky Crush|EYE OF THE HEAVEN",
         "Pinky Crush|1116",
-        "Pinky Crush|DIVINE JUDGEMENT"
+        "Pinky Crush|DIVINE JUDGEMENT",
+        "EPOLIS|摩天楼"
       ],
       "songStatus": [
         [
@@ -2249,6 +2258,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|摩天楼",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2267,5 +2283,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:12:11.579Z"
+  "lastUpdated": "2026-03-21T05:14:40.967Z"
 }
