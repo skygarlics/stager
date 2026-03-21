@@ -775,11 +775,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:56:24.304Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Dazzlin' Darlin [A]",
+          "version": "DJT",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:58:56.512Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
+      "currentLevelIndex": 0,
       "clearCount": 54,
-      "totalCount": 106,
+      "totalCount": 107,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -880,7 +888,8 @@
         "PEN|もっと！モット！ときめき feat. 松下 [A]",
         "BIS|Ah Hah Yeah [A]",
         "SIR|G59 [H]",
-        "BIS|Explorer feat. ぷにぷに電機 [L]"
+        "BIS|Explorer feat. ぷにぷに電機 [L]",
+        "DJT|Dazzlin' Darlin [A]"
       ],
       "songStatus": [
         [
@@ -1581,6 +1590,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "DJT|Dazzlin' Darlin [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
           }
         ]
       ]
@@ -2779,5 +2795,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:56:24.305Z"
+  "lastUpdated": "2026-03-21T06:58:56.513Z"
 }
