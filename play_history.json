@@ -1882,11 +1882,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T05:31:53.354Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason",
+          "version": "Sparkle Shower",
+          "level": "A+",
+          "status": "fail",
+          "timestamp": "2026-03-21T05:33:29.233Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 33,
-      "totalCount": 59,
+      "totalCount": 60,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1946,7 +1954,8 @@
         "EPOLIS|電光",
         "EPOLIS|Vermilion Carol",
         "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
-        "EPOLIS|Demon March"
+        "EPOLIS|Demon March",
+        "Sparkle Shower|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason"
       ],
       "songStatus": [
         [
@@ -2361,6 +2370,13 @@
             "status": "clear",
             "level": "A"
           }
+        ],
+        [
+          "Sparkle Shower|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason",
+          {
+            "status": "fail",
+            "level": "A+"
+          }
         ]
       ]
     },
@@ -2379,5 +2395,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:31:53.356Z"
+  "lastUpdated": "2026-03-21T05:33:29.234Z"
 }
