@@ -2965,11 +2965,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:30:48.955Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Makin' It [H]",
+          "version": "SS",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:33:26.734Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 14,
-      "totalCount": 21,
+      "currentLevelIndex": 8,
+      "clearCount": 15,
+      "totalCount": 22,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2991,7 +2999,8 @@
         "SS|COLOR BURST [A]",
         "PC|朱と碧のランページ [A]",
         "SS|SILKY BRAVE [A]",
-        "PC|Lycoris [A]"
+        "PC|Lycoris [A]",
+        "SS|Makin' It [H]"
       ],
       "songStatus": [
         [
@@ -3140,6 +3149,13 @@
             "status": "clear",
             "level": "10.5"
           }
+        ],
+        [
+          "SS|Makin' It [H]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     }
@@ -3150,5 +3166,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:30:48.955Z"
+  "lastUpdated": "2026-03-21T07:33:26.735Z"
 }
