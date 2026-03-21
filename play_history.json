@@ -1786,11 +1786,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T04:56:12.728Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Here We Go Now",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-03-21T04:58:50.905Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 25,
-      "totalCount": 47,
+      "totalCount": 48,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1838,7 +1846,8 @@
         "Sparkle Shower|Memoria Obscura",
         "Pinky Crush|Cross Fire",
         "EPOLIS|Submerge Serenade[L]",
-        "Pinky Crush|アラビアン ハイパー ナイト"
+        "Pinky Crush|アラビアン ハイパー ナイト",
+        "Pinky Crush|Here We Go Now"
       ],
       "songStatus": [
         [
@@ -2169,6 +2178,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|Here We Go Now",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2187,5 +2203,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T04:56:12.729Z"
+  "lastUpdated": "2026-03-21T04:58:50.906Z"
 }
