@@ -719,11 +719,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:30:39.798Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "BREAK OVER [A]",
+          "version": "SINO",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T06:39:42.255Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 51,
-      "totalCount": 99,
+      "currentLevelIndex": 2,
+      "clearCount": 52,
+      "totalCount": 100,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -818,7 +826,8 @@
         "CB|FUTURE is Dead [A]",
         "CH|Hat Surprise [A]",
         "CB|うさ☆かめ 大戦争！ [A]",
-        "CH|Ventriloquist [A]"
+        "CH|Ventriloquist [A]",
+        "SINO|BREAK OVER [A]"
       ],
       "songStatus": [
         [
@@ -1477,6 +1486,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "SINO|BREAK OVER [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
           }
         ]
       ]
@@ -2675,5 +2691,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:30:39.798Z"
+  "lastUpdated": "2026-03-21T06:39:42.256Z"
 }
