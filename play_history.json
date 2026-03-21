@@ -767,11 +767,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:53:21.426Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Explorer feat. ぷにぷに電機 [L]",
+          "version": "BIS",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:56:24.304Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 54,
-      "totalCount": 105,
+      "totalCount": 106,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -871,7 +879,8 @@
         "BIS|Sinus Iridum [H]",
         "PEN|もっと！モット！ときめき feat. 松下 [A]",
         "BIS|Ah Hah Yeah [A]",
-        "SIR|G59 [H]"
+        "SIR|G59 [H]",
+        "BIS|Explorer feat. ぷにぷに電機 [L]"
       ],
       "songStatus": [
         [
@@ -1565,6 +1574,13 @@
           {
             "status": "fail",
             "level": "10.5"
+          }
+        ],
+        [
+          "BIS|Explorer feat. ぷにぷに電機 [L]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -2763,5 +2779,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:53:21.426Z"
+  "lastUpdated": "2026-03-21T06:56:24.305Z"
 }
