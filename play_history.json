@@ -3005,11 +3005,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:42:38.797Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "ゲシュタルト [A]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:45:27.396Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 16,
-      "totalCount": 26,
+      "currentLevelIndex": 7,
+      "clearCount": 17,
+      "totalCount": 27,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3036,7 +3044,8 @@
         "SS|FiZZλ_PØT!0И [H]",
         "PC|Secret Rouge [A]",
         "PC|hora de verdad [H]",
-        "PC|Mighty Cutie [A]"
+        "PC|Mighty Cutie [A]",
+        "PC|ゲシュタルト [A]"
       ],
       "songStatus": [
         [
@@ -3220,6 +3229,13 @@
             "status": "fail",
             "level": "10.7"
           }
+        ],
+        [
+          "PC|ゲシュタルト [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -3230,5 +3246,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:42:38.798Z"
+  "lastUpdated": "2026-03-21T07:45:27.396Z"
 }
