@@ -1890,11 +1890,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:33:29.233Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Cult Invitation",
+          "version": "EPOLIS",
+          "level": "A",
+          "status": "clear",
+          "timestamp": "2026-03-21T05:35:57.002Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 33,
-      "totalCount": 60,
+      "currentLevelIndex": 7,
+      "clearCount": 34,
+      "totalCount": 61,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1955,7 +1963,8 @@
         "EPOLIS|Vermilion Carol",
         "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
         "EPOLIS|Demon March",
-        "Sparkle Shower|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason"
+        "Sparkle Shower|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason",
+        "EPOLIS|Cult Invitation"
       ],
       "songStatus": [
         [
@@ -2377,6 +2386,13 @@
             "status": "fail",
             "level": "A+"
           }
+        ],
+        [
+          "EPOLIS|Cult Invitation",
+          {
+            "status": "clear",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -2395,5 +2411,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:33:29.234Z"
+  "lastUpdated": "2026-03-21T05:35:57.002Z"
 }
