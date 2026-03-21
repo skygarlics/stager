@@ -1842,11 +1842,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:17:05.290Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Meissa",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-03-21T05:19:51.101Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 28,
-      "totalCount": 54,
+      "currentLevelIndex": 3,
+      "clearCount": 29,
+      "totalCount": 55,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1901,7 +1909,8 @@
         "Pinky Crush|1116",
         "Pinky Crush|DIVINE JUDGEMENT",
         "EPOLIS|摩天楼",
-        "EPOLIS|Ghost Pulse"
+        "EPOLIS|Ghost Pulse",
+        "RESIDENT|Meissa"
       ],
       "songStatus": [
         [
@@ -2281,6 +2290,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|Meissa",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -2299,5 +2315,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:17:05.290Z"
+  "lastUpdated": "2026-03-21T05:19:51.102Z"
 }
