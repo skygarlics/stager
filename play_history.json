@@ -2933,11 +2933,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:22:53.333Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "COLOR BURST [A]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:25:27.122Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 11,
-      "totalCount": 17,
+      "currentLevelIndex": 6,
+      "clearCount": 12,
+      "totalCount": 18,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2955,7 +2963,8 @@
         "SS|好吃来世deエレクトリック [A]",
         "PC|弾幕信仰 [A]",
         "SS|SPLASH!!!!!!!!! [A]",
-        "PC|キスキツネ [A]"
+        "PC|キスキツネ [A]",
+        "SS|COLOR BURST [A]"
       ],
       "songStatus": [
         [
@@ -3076,6 +3085,13 @@
             "status": "fail",
             "level": "10.5"
           }
+        ],
+        [
+          "SS|COLOR BURST [A]",
+          {
+            "status": "clear",
+            "level": "10.2"
+          }
         ]
       ]
     }
@@ -3086,5 +3102,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:22:53.334Z"
+  "lastUpdated": "2026-03-21T07:25:27.123Z"
 }
