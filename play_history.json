@@ -1930,11 +1930,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:49:39.724Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Million Dollar",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-03-21T05:52:07.559Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 34,
-      "totalCount": 65,
+      "currentLevelIndex": 4,
+      "clearCount": 35,
+      "totalCount": 66,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2000,7 +2008,8 @@
         "Pinky Crush|God Mind",
         "RESIDENT|TECHNOPHOBIA",
         "EPOLIS|Xb10r",
-        "EPOLIS|電腦都市"
+        "EPOLIS|電腦都市",
+        "EPOLIS|Million Dollar"
       ],
       "songStatus": [
         [
@@ -2457,6 +2466,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|Million Dollar",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2475,5 +2491,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:49:39.725Z"
+  "lastUpdated": "2026-03-21T05:52:07.559Z"
 }
