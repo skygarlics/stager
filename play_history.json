@@ -1954,11 +1954,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:56:44.847Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "The Last Apocalypse",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-03-21T05:59:19.254Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 36,
-      "totalCount": 68,
+      "currentLevelIndex": 5,
+      "clearCount": 37,
+      "totalCount": 69,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2027,7 +2035,8 @@
         "EPOLIS|電腦都市",
         "EPOLIS|Million Dollar",
         "EPOLIS|未完成ノ蒸氣驅動乙女",
-        "EPOLIS|今宵、ロマンス横丁。"
+        "EPOLIS|今宵、ロマンス横丁。",
+        "EPOLIS|The Last Apocalypse"
       ],
       "songStatus": [
         [
@@ -2505,6 +2514,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|The Last Apocalypse",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2523,5 +2539,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:56:44.847Z"
+  "lastUpdated": "2026-03-21T05:59:19.254Z"
 }
