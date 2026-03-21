@@ -1986,11 +1986,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:06:41.724Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "VOLAQUAS",
+          "version": "RESIDENT",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:12:14.703Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 39,
-      "totalCount": 72,
+      "totalCount": 73,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2063,7 +2071,8 @@
         "EPOLIS|The Last Apocalypse",
         "RESIDENT|kors k's How to make OTOGE CORE 「LONG」",
         "RESIDENT|suspicions",
-        "RESIDENT|Peaktime Booster"
+        "RESIDENT|Peaktime Booster",
+        "RESIDENT|VOLAQUAS"
       ],
       "songStatus": [
         [
@@ -2569,6 +2578,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "RESIDENT|VOLAQUAS",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -2587,5 +2603,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:06:41.724Z"
+  "lastUpdated": "2026-03-21T06:12:14.704Z"
 }
