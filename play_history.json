@@ -743,11 +743,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:45:26.326Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Ah Hah Yeah [A]",
+          "version": "BIS",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:47:46.601Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 53,
-      "totalCount": 102,
+      "totalCount": 103,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -845,7 +853,8 @@
         "CH|Ventriloquist [A]",
         "SINO|BREAK OVER [A]",
         "BIS|Sinus Iridum [H]",
-        "PEN|もっと！モット！ときめき feat. 松下 [A]"
+        "PEN|もっと！モット！ときめき feat. 松下 [A]",
+        "BIS|Ah Hah Yeah [A]"
       ],
       "songStatus": [
         [
@@ -1525,6 +1534,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "BIS|Ah Hah Yeah [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -2723,5 +2739,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:45:26.326Z"
+  "lastUpdated": "2026-03-21T06:47:46.602Z"
 }
