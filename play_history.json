@@ -3013,11 +3013,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:45:27.396Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "XHRONOXAPSULΞ [H]",
+          "version": "PC",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:48:54.321Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 17,
-      "totalCount": 27,
+      "currentLevelIndex": 8,
+      "clearCount": 18,
+      "totalCount": 28,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3045,7 +3053,8 @@
         "PC|Secret Rouge [A]",
         "PC|hora de verdad [H]",
         "PC|Mighty Cutie [A]",
-        "PC|ゲシュタルト [A]"
+        "PC|ゲシュタルト [A]",
+        "PC|XHRONOXAPSULΞ [H]"
       ],
       "songStatus": [
         [
@@ -3236,6 +3245,13 @@
             "status": "clear",
             "level": "10.5"
           }
+        ],
+        [
+          "PC|XHRONOXAPSULΞ [H]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     }
@@ -3246,5 +3262,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:45:27.396Z"
+  "lastUpdated": "2026-03-21T07:48:54.322Z"
 }
