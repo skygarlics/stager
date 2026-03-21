@@ -1914,11 +1914,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T05:44:36.631Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "Xb10r",
+          "version": "EPOLIS",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-03-21T05:47:10.964Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 34,
-      "totalCount": 63,
+      "totalCount": 64,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1982,7 +1990,8 @@
         "Sparkle Shower|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason",
         "EPOLIS|Cult Invitation",
         "Pinky Crush|God Mind",
-        "RESIDENT|TECHNOPHOBIA"
+        "RESIDENT|TECHNOPHOBIA",
+        "EPOLIS|Xb10r"
       ],
       "songStatus": [
         [
@@ -2425,6 +2434,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "EPOLIS|Xb10r",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -2443,5 +2459,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T05:44:36.632Z"
+  "lastUpdated": "2026-03-21T05:47:10.966Z"
 }
