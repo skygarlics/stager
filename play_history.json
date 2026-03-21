@@ -2957,11 +2957,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:28:28.139Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Lycoris [A]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:30:48.955Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 13,
-      "totalCount": 20,
+      "currentLevelIndex": 7,
+      "clearCount": 14,
+      "totalCount": 21,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2982,7 +2990,8 @@
         "PC|キスキツネ [A]",
         "SS|COLOR BURST [A]",
         "PC|朱と碧のランページ [A]",
-        "SS|SILKY BRAVE [A]"
+        "SS|SILKY BRAVE [A]",
+        "PC|Lycoris [A]"
       ],
       "songStatus": [
         [
@@ -3124,6 +3133,13 @@
             "status": "fail",
             "level": "10.7"
           }
+        ],
+        [
+          "PC|Lycoris [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -3134,5 +3150,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:28:28.140Z"
+  "lastUpdated": "2026-03-21T07:30:48.955Z"
 }
