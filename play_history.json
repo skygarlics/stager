@@ -2885,11 +2885,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:12:51.689Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:12:53.941Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 8,
-      "totalCount": 11,
+      "currentLevelIndex": 6,
+      "clearCount": 9,
+      "totalCount": 12,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2901,7 +2909,8 @@
         "PC|Lightspeed [H]",
         "SS|From Human Blood [H]",
         "SS|Begin [H]",
-        "SS|Amor∞Fati [H]"
+        "SS|Amor∞Fati [H]",
+        "SS|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]"
       ],
       "songStatus": [
         [
@@ -2980,6 +2989,13 @@
             "status": "clear",
             "level": "10.0"
           }
+        ],
+        [
+          "SS|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]",
+          {
+            "status": "clear",
+            "level": "10.2"
+          }
         ]
       ]
     }
@@ -2990,5 +3006,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:12:51.690Z"
+  "lastUpdated": "2026-03-21T07:12:53.941Z"
 }
