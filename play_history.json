@@ -3109,11 +3109,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T08:18:27.172Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Brave Spirits [A]",
+          "version": "CH",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-03-21T08:20:54.179Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 23,
-      "totalCount": 39,
+      "currentLevelIndex": 8,
+      "clearCount": 24,
+      "totalCount": 40,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3153,7 +3161,8 @@
         "RDT|楽園追放 [A]",
         "ROOT|CoMAAAAAAA [A]",
         "RDT|VØID [H]",
-        "PC|オッド♡ラヴィ [A]"
+        "PC|オッド♡ラヴィ [A]",
+        "CH|Brave Spirits [A]"
       ],
       "songStatus": [
         [
@@ -3428,6 +3437,13 @@
             "status": "clear",
             "level": "10.5"
           }
+        ],
+        [
+          "CH|Brave Spirits [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
+          }
         ]
       ]
     }
@@ -3438,5 +3454,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T08:18:27.172Z"
+  "lastUpdated": "2026-03-21T08:20:54.180Z"
 }
