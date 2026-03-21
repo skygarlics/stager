@@ -735,11 +735,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:42:38.530Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "もっと！モット！ときめき feat. 松下 [A]",
+          "version": "PEN",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-03-21T06:45:26.326Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 52,
-      "totalCount": 101,
+      "currentLevelIndex": 2,
+      "clearCount": 53,
+      "totalCount": 102,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -836,7 +844,8 @@
         "CB|うさ☆かめ 大戦争！ [A]",
         "CH|Ventriloquist [A]",
         "SINO|BREAK OVER [A]",
-        "BIS|Sinus Iridum [H]"
+        "BIS|Sinus Iridum [H]",
+        "PEN|もっと！モット！ときめき feat. 松下 [A]"
       ],
       "songStatus": [
         [
@@ -1509,6 +1518,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "PEN|もっと！モット！ときめき feat. 松下 [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
           }
         ]
       ]
@@ -2707,5 +2723,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:42:38.530Z"
+  "lastUpdated": "2026-03-21T06:45:26.326Z"
 }
