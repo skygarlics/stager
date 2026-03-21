@@ -679,11 +679,19 @@
           "status": "fail",
           "timestamp": "2026-02-25T15:55:25.800Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "FUTURE is Dead [A]",
+          "version": "CB",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:22:51.875Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 1,
+      "currentLevelIndex": 0,
       "clearCount": 49,
-      "totalCount": 94,
+      "totalCount": 95,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -774,7 +782,8 @@
         "PC|無双 [A]",
         "RDT|Programmed Genom [A]",
         "ROOT|ミッドナイト☆WAR [A]",
-        "RDT|少年リップルズ [A]"
+        "RDT|少年リップルズ [A]",
+        "CB|FUTURE is Dead [A]"
       ],
       "songStatus": [
         [
@@ -1405,6 +1414,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "CB|FUTURE is Dead [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
           }
         ]
       ]
@@ -2598,10 +2614,10 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:17:53.110Z"
+  "lastUpdated": "2026-03-21T06:22:51.875Z"
 }
