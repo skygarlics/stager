@@ -2973,11 +2973,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:33:26.734Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "FiZZλ_PØT!0И [H]",
+          "version": "SS",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:33:39.569Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 15,
-      "totalCount": 22,
+      "totalCount": 23,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3000,7 +3008,8 @@
         "PC|朱と碧のランページ [A]",
         "SS|SILKY BRAVE [A]",
         "PC|Lycoris [A]",
-        "SS|Makin' It [H]"
+        "SS|Makin' It [H]",
+        "SS|FiZZλ_PØT!0И [H]"
       ],
       "songStatus": [
         [
@@ -3156,6 +3165,13 @@
             "status": "clear",
             "level": "10.7"
           }
+        ],
+        [
+          "SS|FiZZλ_PØT!0И [H]",
+          {
+            "status": "fail",
+            "level": "11.0"
+          }
         ]
       ]
     }
@@ -3166,5 +3182,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:33:26.735Z"
+  "lastUpdated": "2026-03-21T07:33:39.569Z"
 }
