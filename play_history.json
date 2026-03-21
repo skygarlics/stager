@@ -727,11 +727,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:39:42.255Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Sinus Iridum [H]",
+          "version": "BIS",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-03-21T06:42:38.530Z",
+          "modeKey": "DP_11"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 52,
-      "totalCount": 100,
+      "totalCount": 101,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -827,7 +835,8 @@
         "CH|Hat Surprise [A]",
         "CB|うさ☆かめ 大戦争！ [A]",
         "CH|Ventriloquist [A]",
-        "SINO|BREAK OVER [A]"
+        "SINO|BREAK OVER [A]",
+        "BIS|Sinus Iridum [H]"
       ],
       "songStatus": [
         [
@@ -1493,6 +1502,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "BIS|Sinus Iridum [H]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -2691,5 +2707,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T06:39:42.256Z"
+  "lastUpdated": "2026-03-21T06:42:38.530Z"
 }
