@@ -2845,18 +2845,27 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:05:46.323Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "それが、ボクの使命～レスキュー隊長 メンキュー～ [A]",
+          "version": "SS",
+          "level": "10.0",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:07:58.726Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 5,
-      "totalCount": 6,
+      "totalCount": 7,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
         "SS|PALETTE [A]",
         "SS|バブリン [A]",
         "SS|Show Time [A]",
-        "SS|Watermelon Explosion [A]"
+        "SS|Watermelon Explosion [A]",
+        "SS|それが、ボクの使命～レスキュー隊長 メンキュー～ [A]"
       ],
       "songStatus": [
         [
@@ -2900,6 +2909,13 @@
             "status": "fail",
             "level": "10.2"
           }
+        ],
+        [
+          "SS|それが、ボクの使命～レスキュー隊長 メンキュー～ [A]",
+          {
+            "status": "fail",
+            "level": "10.0"
+          }
         ]
       ]
     }
@@ -2910,5 +2926,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:05:46.323Z"
+  "lastUpdated": "2026-03-21T07:07:58.726Z"
 }
