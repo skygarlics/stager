@@ -2901,11 +2901,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T07:13:02.204Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "好吃来世deエレクトリック [A]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-03-21T07:13:24.264Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 9,
-      "totalCount": 13,
+      "currentLevelIndex": 6,
+      "clearCount": 10,
+      "totalCount": 14,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -2919,7 +2927,8 @@
         "SS|Begin [H]",
         "SS|Amor∞Fati [H]",
         "SS|⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]",
-        "SS|HyperTwist [H]"
+        "SS|HyperTwist [H]",
+        "SS|好吃来世deエレクトリック [A]"
       ],
       "songStatus": [
         [
@@ -3012,6 +3021,13 @@
             "status": "fail",
             "level": "10.5"
           }
+        ],
+        [
+          "SS|好吃来世deエレクトリック [A]",
+          {
+            "status": "clear",
+            "level": "10.2"
+          }
         ]
       ]
     }
@@ -3022,5 +3038,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:13:02.204Z"
+  "lastUpdated": "2026-03-21T07:13:24.264Z"
 }
