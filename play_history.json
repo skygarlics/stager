@@ -1778,11 +1778,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T04:51:02.214Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "アラビアン ハイパー ナイト",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-03-21T04:56:12.728Z",
+          "modeKey": "SP_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 25,
-      "totalCount": 46,
+      "totalCount": 47,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -1829,7 +1837,8 @@
         "Pinky Crush|Uaigh Gealaí",
         "Sparkle Shower|Memoria Obscura",
         "Pinky Crush|Cross Fire",
-        "EPOLIS|Submerge Serenade[L]"
+        "EPOLIS|Submerge Serenade[L]",
+        "Pinky Crush|アラビアン ハイパー ナイト"
       ],
       "songStatus": [
         [
@@ -2153,6 +2162,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|アラビアン ハイパー ナイト",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2171,5 +2187,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T04:51:02.214Z"
+  "lastUpdated": "2026-03-21T04:56:12.729Z"
 }
