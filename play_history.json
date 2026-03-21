@@ -2837,17 +2837,26 @@
           "status": "clear",
           "timestamp": "2026-03-21T07:05:42.728Z",
           "modeKey": "DP_10"
+        },
+        {
+          "song": "Watermelon Explosion [A]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "fail",
+          "timestamp": "2026-03-21T07:05:46.323Z",
+          "modeKey": "DP_10"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 5,
-      "totalCount": 5,
+      "totalCount": 6,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
         "SS|PALETTE [A]",
         "SS|バブリン [A]",
-        "SS|Show Time [A]"
+        "SS|Show Time [A]",
+        "SS|Watermelon Explosion [A]"
       ],
       "songStatus": [
         [
@@ -2884,6 +2893,13 @@
             "status": "clear",
             "level": "10.0"
           }
+        ],
+        [
+          "SS|Watermelon Explosion [A]",
+          {
+            "status": "fail",
+            "level": "10.2"
+          }
         ]
       ]
     }
@@ -2894,5 +2910,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-03-21T07:05:42.728Z"
+  "lastUpdated": "2026-03-21T07:05:46.323Z"
 }
