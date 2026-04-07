@@ -2250,11 +2250,19 @@
           "status": "clear",
           "timestamp": "2026-04-07T13:17:47.253Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "BIGWAVERS",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-04-07T13:20:36.183Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 42,
-      "totalCount": 80,
+      "totalCount": 81,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2335,7 +2343,8 @@
         "RESIDENT|#CMFLG",
         "EPOLIS|Sword of Vengeance",
         "RESIDENT|I",
-        "EPOLIS|Seven Times Four"
+        "EPOLIS|Seven Times Four",
+        "RESIDENT|BIGWAVERS"
       ],
       "songStatus": [
         [
@@ -2897,6 +2906,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|BIGWAVERS",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2932,5 +2948,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:17:47.253Z"
+  "lastUpdated": "2026-04-07T13:20:36.183Z"
 }
