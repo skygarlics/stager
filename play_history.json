@@ -2226,11 +2226,19 @@
           "status": "clear",
           "timestamp": "2026-04-07T13:09:33.298Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Sword of Vengeance",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-04-07T13:12:31.878Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 40,
-      "totalCount": 77,
+      "currentLevelIndex": 4,
+      "clearCount": 41,
+      "totalCount": 78,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2308,7 +2316,8 @@
         "RESIDENT|ぞうしょく！？マイデンティティ",
         "EPOLIS|MAXIMUM CHEAT GIRL",
         "Sparkle Shower|クレッシェンド",
-        "RESIDENT|#CMFLG"
+        "RESIDENT|#CMFLG",
+        "EPOLIS|Sword of Vengeance"
       ],
       "songStatus": [
         [
@@ -2849,6 +2858,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "EPOLIS|Sword of Vengeance",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2884,5 +2900,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:09:33.298Z"
+  "lastUpdated": "2026-04-07T13:12:31.878Z"
 }
