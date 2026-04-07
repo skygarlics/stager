@@ -2194,11 +2194,19 @@
           "status": "fail",
           "timestamp": "2026-03-21T06:12:14.703Z",
           "modeKey": "SP_ノマゲ"
+        },
+        {
+          "song": "ぞうしょく！？マイデンティティ",
+          "version": "RESIDENT",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-04-07T13:06:08.014Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 39,
-      "totalCount": 73,
+      "totalCount": 74,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2272,7 +2280,8 @@
         "RESIDENT|kors k's How to make OTOGE CORE 「LONG」",
         "RESIDENT|suspicions",
         "RESIDENT|Peaktime Booster",
-        "RESIDENT|VOLAQUAS"
+        "RESIDENT|VOLAQUAS",
+        "RESIDENT|ぞうしょく！？マイデンティティ"
       ],
       "songStatus": [
         [
@@ -2785,6 +2794,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "RESIDENT|ぞうしょく！？マイデンティティ",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -2814,11 +2830,11 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "DP",
+  "gameMode": "SP",
   "playEnv": "home",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T12:55:17.042Z"
+  "lastUpdated": "2026-04-07T13:06:08.015Z"
 }
