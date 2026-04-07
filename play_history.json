@@ -2234,11 +2234,19 @@
           "status": "clear",
           "timestamp": "2026-04-07T13:12:31.878Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "I",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-04-07T13:15:16.907Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 41,
-      "totalCount": 78,
+      "totalCount": 79,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2317,7 +2325,8 @@
         "EPOLIS|MAXIMUM CHEAT GIRL",
         "Sparkle Shower|クレッシェンド",
         "RESIDENT|#CMFLG",
-        "EPOLIS|Sword of Vengeance"
+        "EPOLIS|Sword of Vengeance",
+        "RESIDENT|I"
       ],
       "songStatus": [
         [
@@ -2865,6 +2874,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|I",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2900,5 +2916,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:12:31.878Z"
+  "lastUpdated": "2026-04-07T13:15:16.908Z"
 }
