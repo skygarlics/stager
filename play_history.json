@@ -2306,11 +2306,19 @@
           "status": "clear",
           "timestamp": "2026-04-07T13:26:08.991Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "神っぽいな[L]",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-04-07T13:28:26.067Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 45,
-      "totalCount": 87,
+      "currentLevelIndex": 4,
+      "clearCount": 46,
+      "totalCount": 88,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2398,7 +2406,8 @@
         "RESIDENT|Ōu Legends",
         "RESIDENT|神のシナリオ",
         "EPOLIS|The Onlyonez",
-        "RESIDENT|ONE AND ONLY"
+        "RESIDENT|ONE AND ONLY",
+        "RESIDENT|神っぽいな[L]"
       ],
       "songStatus": [
         [
@@ -3009,6 +3018,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "RESIDENT|神っぽいな[L]",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -3044,5 +3060,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:26:08.992Z"
+  "lastUpdated": "2026-04-07T13:28:26.067Z"
 }
