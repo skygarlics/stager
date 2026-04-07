@@ -3474,10 +3474,10 @@
   },
   "mode": "ノマゲ",
   "gameMode": "DP",
-  "playEnv": "arcade",
+  "playEnv": "home",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T12:53:38.504Z"
+  "lastUpdated": "2026-04-07T12:53:39.438Z"
 }
