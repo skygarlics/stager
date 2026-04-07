@@ -2202,11 +2202,19 @@
           "status": "fail",
           "timestamp": "2026-04-07T13:06:08.014Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "MAXIMUM CHEAT GIRL",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-04-07T13:08:51.727Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 39,
-      "totalCount": 74,
+      "totalCount": 75,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2281,7 +2289,8 @@
         "RESIDENT|suspicions",
         "RESIDENT|Peaktime Booster",
         "RESIDENT|VOLAQUAS",
-        "RESIDENT|ぞうしょく！？マイデンティティ"
+        "RESIDENT|ぞうしょく！？マイデンティティ",
+        "EPOLIS|MAXIMUM CHEAT GIRL"
       ],
       "songStatus": [
         [
@@ -2801,6 +2810,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|MAXIMUM CHEAT GIRL",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -2836,5 +2852,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:06:08.015Z"
+  "lastUpdated": "2026-04-07T13:08:51.727Z"
 }
