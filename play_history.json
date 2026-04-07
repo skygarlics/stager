@@ -2282,11 +2282,19 @@
           "status": "fail",
           "timestamp": "2026-04-07T13:25:23.988Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "神のシナリオ",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-04-07T13:25:56.469Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 43,
-      "totalCount": 84,
+      "totalCount": 85,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2371,7 +2379,8 @@
         "RESIDENT|BIGWAVERS",
         "EPOLIS|GAME ON",
         "RESIDENT|24h Endurance Race",
-        "RESIDENT|Ōu Legends"
+        "RESIDENT|Ōu Legends",
+        "RESIDENT|神のシナリオ"
       ],
       "songStatus": [
         [
@@ -2961,6 +2970,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|神のシナリオ",
+          {
+            "status": "fail",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -2996,5 +3012,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:25:23.988Z"
+  "lastUpdated": "2026-04-07T13:25:56.469Z"
 }
