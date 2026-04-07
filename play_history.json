@@ -2274,11 +2274,19 @@
           "status": "fail",
           "timestamp": "2026-04-07T13:23:06.375Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Ōu Legends",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-04-07T13:25:23.988Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 43,
-      "totalCount": 83,
+      "totalCount": 84,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2362,7 +2370,8 @@
         "EPOLIS|Seven Times Four",
         "RESIDENT|BIGWAVERS",
         "EPOLIS|GAME ON",
-        "RESIDENT|24h Endurance Race"
+        "RESIDENT|24h Endurance Race",
+        "RESIDENT|Ōu Legends"
       ],
       "songStatus": [
         [
@@ -2945,6 +2954,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "RESIDENT|Ōu Legends",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2980,5 +2996,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:23:06.376Z"
+  "lastUpdated": "2026-04-07T13:25:23.988Z"
 }
