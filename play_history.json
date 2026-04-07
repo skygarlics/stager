@@ -1,6 +1,6 @@
 {
   "modeStates": {
-    "DP_11": {
+    "DP_home_11": {
       "history": [
         {
           "song": "スパークリング☆彡ハイパーチューン！！",
@@ -1609,7 +1609,7 @@
         ]
       ]
     },
-    "SP_ノマゲ": {
+    "SP_home_ノマゲ": {
       "history": [
         {
           "song": "スパークリング☆彡ハイパーチューン！！",
@@ -2788,7 +2788,7 @@
         ]
       ]
     },
-    "SP_ハード": {
+    "SP_home_ハード": {
       "history": [],
       "currentLevelIndex": 0,
       "clearCount": 0,
@@ -2796,7 +2796,7 @@
       "playedSongs": [],
       "songStatus": []
     },
-    "DP_10": {
+    "DP_home_10": {
       "history": [
         {
           "song": "スパークリング☆彡ハイパーチューン！！ [H]",
@@ -3466,9 +3466,10 @@
   },
   "mode": "ノマゲ",
   "gameMode": "DP",
+  "playEnv": "home",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T12:52:53.857Z"
+  "lastUpdated": "2026-04-07T12:53:35.160Z"
 }
