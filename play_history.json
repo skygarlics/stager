@@ -2210,11 +2210,19 @@
           "status": "fail",
           "timestamp": "2026-04-07T13:08:51.727Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "クレッシェンド",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-04-07T13:09:26.898Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 39,
-      "totalCount": 75,
+      "totalCount": 76,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2290,7 +2298,8 @@
         "RESIDENT|Peaktime Booster",
         "RESIDENT|VOLAQUAS",
         "RESIDENT|ぞうしょく！？マイデンティティ",
-        "EPOLIS|MAXIMUM CHEAT GIRL"
+        "EPOLIS|MAXIMUM CHEAT GIRL",
+        "Sparkle Shower|クレッシェンド"
       ],
       "songStatus": [
         [
@@ -2817,6 +2826,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Sparkle Shower|クレッシェンド",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2852,5 +2868,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:08:51.727Z"
+  "lastUpdated": "2026-04-07T13:09:26.898Z"
 }
