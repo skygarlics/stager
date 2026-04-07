@@ -2298,11 +2298,19 @@
           "status": "clear",
           "timestamp": "2026-04-07T13:26:01.520Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ONE AND ONLY",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-04-07T13:26:08.991Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 44,
-      "totalCount": 86,
+      "currentLevelIndex": 3,
+      "clearCount": 45,
+      "totalCount": 87,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2389,7 +2397,8 @@
         "RESIDENT|24h Endurance Race",
         "RESIDENT|Ōu Legends",
         "RESIDENT|神のシナリオ",
-        "EPOLIS|The Onlyonez"
+        "EPOLIS|The Onlyonez",
+        "RESIDENT|ONE AND ONLY"
       ],
       "songStatus": [
         [
@@ -2993,6 +3002,13 @@
             "status": "clear",
             "level": "E"
           }
+        ],
+        [
+          "RESIDENT|ONE AND ONLY",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -3028,5 +3044,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:26:01.520Z"
+  "lastUpdated": "2026-04-07T13:26:08.992Z"
 }
