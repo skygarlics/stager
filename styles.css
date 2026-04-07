@@ -162,7 +162,7 @@ header {
     flex-wrap: nowrap;
 }
 
-.level-badge, .mode-badge, .count-badge {
+.level-badge, .mode-badge, .env-badge, .count-badge {
     padding: 0.25rem 0.5rem;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -187,6 +187,20 @@ header {
 .mode-badge:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
+}
+
+.env-badge {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.18), rgba(255, 152, 0, 0.18));
+    border: 1px solid rgba(255, 193, 7, 0.25);
+    color: #ffd166;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: inherit;
+}
+
+.env-badge:hover {
+    border-color: #ffd166;
+    color: #ffe29a;
 }
 
 .count-badge {

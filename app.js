@@ -54,6 +54,7 @@ const state = {
     fileSha: null,               // GitHub file SHA for updates
     mode: 'ノマゲ',              // Current gauge mode (SP only)
     gameMode: 'SP',              // 'SP' or 'DP'
+    playEnv: 'home',             // 'home' or 'arcade'
     isProcessing: false,         // Prevent double-clicks
     totalSongsInDB: 0,           // Total songs loaded
     clearCount: 0,               // Lifetime clear count
@@ -88,6 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Game mode toggle (SP / DP)
     document.getElementById('game-mode-toggle').addEventListener('click', handleGameModeToggle);
+
+    // Play environment toggle (home / arcade)
+    document.getElementById('env-toggle').addEventListener('click', handleEnvironmentToggle);
 
     // DP star level selector
     document.getElementById('dp-offi-down')?.addEventListener('click', () => handleDpOffiChange(-1));
@@ -247,6 +251,7 @@ async function initializeApp() {
 
         // Update UI with restored state
         updateGameModeUI();
+        updateEnvironmentUI();
         updateLevelDisplay();
         updateCountDisplay();
         renderFullHistory();
@@ -805,6 +810,11 @@ async function loadPlayHistory() {
         if (data.gameMode) {
             state.gameMode = data.gameMode;
         }
+        if (data.playEnv) {
+            state.playEnv = data.playEnv;
+        } else if (data.environment) {
+            state.playEnv = data.environment;
+        }
         if (data.dp) {
             state.dp.offi = data.dp.offi ?? CONFIG.DP.DEFAULT_OFFI;
             state.dp.env = data.dp.env ?? CONFIG.DP.DEFAULT_ENV;
@@ -815,12 +825,10 @@ async function loadPlayHistory() {
 
         // Restore per-mode states
         if (data.modeStates) {
-            state.modeStates = data.modeStates;
+            state.modeStates = normalizeModeStates(data.modeStates);
         } else if (data.history) {
             // Backward compatibility: migrate from old single-history format
-            const legacyModeKey = state.gameMode === 'DP'
-                ? `DP_${state.dp.offi}`
-                : `SP_${state.mode}`;
+            const legacyModeKey = getModeKey();
             // Build playedSongs and songStatus from legacy history
             const legacyPlayed = [];
             const legacyStatus = [];
@@ -874,6 +882,7 @@ async function savePlayHistory() {
         modeStates: state.modeStates,
         mode: state.mode,
         gameMode: state.gameMode,
+        playEnv: state.playEnv,
         dp: {
             offi: state.dp.offi,
             env: state.dp.env,
@@ -883,7 +892,7 @@ async function savePlayHistory() {
 
     const body = {
         content: payload,
-        message: `Update play history - ${state.gameMode} ${getCurrentLevel()} - ${new Date().toISOString()}`,
+        message: `Update play history - ${state.gameMode} ${state.playEnv} ${getCurrentLevel()} - ${new Date().toISOString()}`,
     };
 
     if (state.fileSha) {
@@ -951,12 +960,44 @@ async function handleModeToggle() {
         updateLevelDisplay();
         updateCountDisplay();
         renderFullHistory();
+        updateEnvironmentUI();
         selectNextSong();
         enableActionButtons(true);
     } catch (e) {
         console.error('Mode switch failed:', e);
         document.getElementById('song-name').textContent = 'モード切替に失敗しました';
     }
+
+    state.isProcessing = false;
+}
+
+// ==================== Environment Toggle (home / arcade) ====================
+async function handleEnvironmentToggle() {
+    if (state.isProcessing) return;
+
+    state.isProcessing = true;
+    enableActionButtons(false);
+
+    document.getElementById('song-name').textContent = 'データ読み込み中...';
+    document.getElementById('song-version').textContent = '';
+    document.getElementById('song-level').textContent = '';
+
+    saveModeState();
+    await savePlayHistory().catch(err => console.error('Save before environment switch failed:', err));
+
+    state.playEnv = state.playEnv === 'home' ? 'arcade' : 'home';
+    updateEnvironmentUI();
+
+    restoreModeState(getModeKey());
+    updateLevelDisplay();
+    updateCountDisplay();
+    renderFullHistory();
+    selectNextSong();
+
+    saveModeState();
+    await savePlayHistory().catch(err => console.error('Save after environment switch failed:', err));
+
+    enableActionButtons(true);
 
     state.isProcessing = false;
 }
@@ -991,6 +1032,7 @@ async function handleGameModeToggle() {
     restoreModeState(getModeKey());
 
     updateGameModeUI();
+    updateEnvironmentUI();
 
     try {
         await (nextGameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
@@ -1036,6 +1078,17 @@ function updateGameModeUI() {
 }
 
 /**
+ * Update the play environment display
+ */
+function updateEnvironmentUI() {
+    const envToggle = document.getElementById('env-toggle');
+    if (!envToggle) return;
+
+    envToggle.textContent = state.playEnv === 'home' ? '家用' : 'アーケード';
+    envToggle.title = state.playEnv === 'home' ? '家用環境へ切替' : 'アーケード環境へ切替';
+}
+
+/**
  * Update the DP star level display
  */
 function updateDpOffiDisplay() {
@@ -1075,6 +1128,7 @@ async function handleDpOffiChange(delta) {
     restoreModeState(getModeKey());
 
     updateDpOffiDisplay();
+    updateEnvironmentUI();
 
     // Show loading
     document.getElementById('song-name').textContent = 'データ読み込み中...';
@@ -1208,14 +1262,12 @@ function songKey(version, song) {
 
 /**
  * Get a unique key representing the current mode combination.
- * SP modes: "SP_ノマゲ", "SP_ハード"
- * DP modes: "DP_11", "DP_12", etc.
+ * SP modes: "SP_home_ノマゲ", "SP_arcade_ノマゲ"
+ * DP modes: "DP_home_11", "DP_arcade_11", etc.
  */
 function getModeKey() {
-    if (state.gameMode === 'DP') {
-        return `DP_${state.dp.offi}`;
-    }
-    return `SP_${state.mode}`;
+    const suffix = state.gameMode === 'DP' ? state.dp.offi : state.mode;
+    return `${state.gameMode}_${state.playEnv}_${suffix}`;
 }
 
 /**
@@ -1271,6 +1323,32 @@ function restoreModeState(modeKey) {
             state.songStatus.set(k, { status: entry.status, level: entry.level });
         }
     }
+}
+
+/**
+ * Normalize stored modeStates so old data is treated as home environment.
+ */
+function normalizeModeStates(modeStates) {
+    const normalized = {};
+
+    for (const [key, value] of Object.entries(modeStates || {})) {
+        const envAwareMatch = key.match(/^(SP|DP)_(home|arcade)_(.+)$/);
+        if (envAwareMatch) {
+            normalized[key] = value;
+            continue;
+        }
+
+        const legacyMatch = key.match(/^(SP|DP)_(.+)$/);
+        if (legacyMatch) {
+            const [, gameMode, suffix] = legacyMatch;
+            normalized[`${gameMode}_home_${suffix}`] = value;
+            continue;
+        }
+
+        normalized[key] = value;
+    }
+
+    return normalized;
 }
 
 function pickRandom(arr) {
