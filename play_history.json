@@ -3462,14 +3462,22 @@
           }
         ]
       ]
+    },
+    "DP_arcade_10": {
+      "history": [],
+      "currentLevelIndex": 0,
+      "clearCount": 0,
+      "totalCount": 0,
+      "playedSongs": [],
+      "songStatus": []
     }
   },
   "mode": "ノマゲ",
   "gameMode": "DP",
-  "playEnv": "home",
+  "playEnv": "arcade",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T12:53:35.160Z"
+  "lastUpdated": "2026-04-07T12:53:36.197Z"
 }
