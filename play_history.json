@@ -2314,11 +2314,19 @@
           "status": "clear",
           "timestamp": "2026-04-07T13:28:26.067Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Caldwell 99[L]",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-04-07T13:30:55.337Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 46,
-      "totalCount": 88,
+      "currentLevelIndex": 5,
+      "clearCount": 47,
+      "totalCount": 89,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2407,7 +2415,8 @@
         "RESIDENT|神のシナリオ",
         "EPOLIS|The Onlyonez",
         "RESIDENT|ONE AND ONLY",
-        "RESIDENT|神っぽいな[L]"
+        "RESIDENT|神っぽいな[L]",
+        "RESIDENT|Caldwell 99[L]"
       ],
       "songStatus": [
         [
@@ -3025,6 +3034,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|Caldwell 99[L]",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -3060,5 +3076,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:28:26.067Z"
+  "lastUpdated": "2026-04-07T13:30:55.337Z"
 }
