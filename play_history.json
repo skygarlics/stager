@@ -2242,11 +2242,19 @@
           "status": "fail",
           "timestamp": "2026-04-07T13:15:16.907Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Seven Times Four",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-04-07T13:17:47.253Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 41,
-      "totalCount": 79,
+      "currentLevelIndex": 4,
+      "clearCount": 42,
+      "totalCount": 80,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2326,7 +2334,8 @@
         "Sparkle Shower|クレッシェンド",
         "RESIDENT|#CMFLG",
         "EPOLIS|Sword of Vengeance",
-        "RESIDENT|I"
+        "RESIDENT|I",
+        "EPOLIS|Seven Times Four"
       ],
       "songStatus": [
         [
@@ -2881,6 +2890,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|Seven Times Four",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -2916,5 +2932,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-04-07T13:15:16.908Z"
+  "lastUpdated": "2026-04-07T13:17:47.253Z"
 }
