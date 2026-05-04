@@ -3093,13 +3093,22 @@
           "status": "clear",
           "timestamp": "2026-05-04T10:22:07.910Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Lisa-RICCIA",
+          "version": "Sparkle Shower",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-05-04T10:30:55.832Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 1,
-      "totalCount": 1,
+      "currentLevelIndex": 2,
+      "clearCount": 2,
+      "totalCount": 2,
       "playedSongs": [
-        "Pinky Crush|スパークリング☆彡ハイパーチューン！！"
+        "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
+        "Sparkle Shower|Lisa-RICCIA"
       ],
       "songStatus": [
         [
@@ -3107,6 +3116,13 @@
           {
             "status": "clear",
             "level": "F"
+          }
+        ],
+        [
+          "Sparkle Shower|Lisa-RICCIA",
+          {
+            "status": "clear",
+            "level": "E"
           }
         ]
       ]
@@ -3119,5 +3135,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T10:22:07.910Z"
+  "lastUpdated": "2026-05-04T10:30:55.832Z"
 }
