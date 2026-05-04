@@ -3157,11 +3157,19 @@
           "status": "fail",
           "timestamp": "2026-05-04T11:14:28.846Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "The Onlyonez",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-05-04T11:23:57.055Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 5,
-      "totalCount": 9,
+      "currentLevelIndex": 2,
+      "clearCount": 6,
+      "totalCount": 10,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3171,7 +3179,8 @@
         "Sparkle Shower|chaplet -IIDX re:build-",
         "Sparkle Shower|HyperTwist",
         "Pinky Crush|灼熱 Lost Summer Dayz",
-        "Sparkle Shower|RALLY '25"
+        "Sparkle Shower|RALLY '25",
+        "EPOLIS|The Onlyonez"
       ],
       "songStatus": [
         [
@@ -3236,6 +3245,13 @@
             "status": "fail",
             "level": "D"
           }
+        ],
+        [
+          "EPOLIS|The Onlyonez",
+          {
+            "status": "clear",
+            "level": "E"
+          }
         ]
       ]
     }
@@ -3247,5 +3263,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T11:14:28.846Z"
+  "lastUpdated": "2026-05-04T11:23:57.056Z"
 }
