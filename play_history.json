@@ -3125,17 +3125,26 @@
           "status": "clear",
           "timestamp": "2026-05-04T10:55:05.392Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "chaplet -IIDX re:build-",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-05-04T10:57:39.948Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 4,
-      "totalCount": 5,
+      "totalCount": 6,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
         "Sparkle Shower|Disco Killer Music Lover",
         "Sparkle Shower|Space Battleship S4TØ",
-        "Sparkle Shower|Begin"
+        "Sparkle Shower|Begin",
+        "Sparkle Shower|chaplet -IIDX re:build-"
       ],
       "songStatus": [
         [
@@ -3172,6 +3181,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Sparkle Shower|chaplet -IIDX re:build-",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     }
@@ -3183,5 +3199,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T10:55:05.392Z"
+  "lastUpdated": "2026-05-04T10:57:39.950Z"
 }
