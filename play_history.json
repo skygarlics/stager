@@ -3165,11 +3165,19 @@
           "status": "clear",
           "timestamp": "2026-05-04T11:23:57.055Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Bring The Fire",
+          "version": "Pinky Crush",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-05-04T11:26:34.654Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 6,
-      "totalCount": 10,
+      "totalCount": 11,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3180,7 +3188,8 @@
         "Sparkle Shower|HyperTwist",
         "Pinky Crush|灼熱 Lost Summer Dayz",
         "Sparkle Shower|RALLY '25",
-        "EPOLIS|The Onlyonez"
+        "EPOLIS|The Onlyonez",
+        "Pinky Crush|Bring The Fire"
       ],
       "songStatus": [
         [
@@ -3252,6 +3261,13 @@
             "status": "clear",
             "level": "E"
           }
+        ],
+        [
+          "Pinky Crush|Bring The Fire",
+          {
+            "status": "fail",
+            "level": "D"
+          }
         ]
       ]
     }
@@ -3263,5 +3279,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T11:23:57.056Z"
+  "lastUpdated": "2026-05-04T11:26:34.654Z"
 }
