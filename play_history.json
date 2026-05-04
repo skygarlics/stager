@@ -3197,11 +3197,19 @@
           "status": "fail",
           "timestamp": "2026-05-04T12:14:07.264Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "SISYPHUS",
+          "version": "Pinky Crush",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-05-04T12:20:41.801Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 8,
-      "totalCount": 14,
+      "currentLevelIndex": 3,
+      "clearCount": 9,
+      "totalCount": 15,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3216,7 +3224,8 @@
         "Pinky Crush|Bring The Fire",
         "EPOLIS|Sirius",
         "Pinky Crush|Aqvion",
-        "Sparkle Shower|クレッシェンド"
+        "Sparkle Shower|クレッシェンド",
+        "Pinky Crush|SISYPHUS"
       ],
       "songStatus": [
         [
@@ -3316,6 +3325,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "Pinky Crush|SISYPHUS",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     }
@@ -3327,5 +3343,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T12:14:07.265Z"
+  "lastUpdated": "2026-05-04T12:20:41.801Z"
 }
