@@ -3181,11 +3181,19 @@
           "status": "clear",
           "timestamp": "2026-05-04T11:41:07.082Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Aqvion",
+          "version": "Pinky Crush",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-05-04T11:41:09.196Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 7,
-      "totalCount": 12,
+      "currentLevelIndex": 3,
+      "clearCount": 8,
+      "totalCount": 13,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3198,7 +3206,8 @@
         "Sparkle Shower|RALLY '25",
         "EPOLIS|The Onlyonez",
         "Pinky Crush|Bring The Fire",
-        "EPOLIS|Sirius"
+        "EPOLIS|Sirius",
+        "Pinky Crush|Aqvion"
       ],
       "songStatus": [
         [
@@ -3284,6 +3293,13 @@
             "status": "clear",
             "level": "E"
           }
+        ],
+        [
+          "Pinky Crush|Aqvion",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     }
@@ -3295,5 +3311,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T11:41:07.082Z"
+  "lastUpdated": "2026-05-04T11:41:09.196Z"
 }
