@@ -3141,11 +3141,19 @@
           "status": "fail",
           "timestamp": "2026-05-04T11:12:02.672Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "灼熱 Lost Summer Dayz",
+          "version": "Pinky Crush",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-05-04T11:12:05.173Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 4,
-      "totalCount": 7,
+      "currentLevelIndex": 2,
+      "clearCount": 5,
+      "totalCount": 8,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3153,7 +3161,8 @@
         "Sparkle Shower|Space Battleship S4TØ",
         "Sparkle Shower|Begin",
         "Sparkle Shower|chaplet -IIDX re:build-",
-        "Sparkle Shower|HyperTwist"
+        "Sparkle Shower|HyperTwist",
+        "Pinky Crush|灼熱 Lost Summer Dayz"
       ],
       "songStatus": [
         [
@@ -3204,6 +3213,13 @@
             "status": "fail",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|灼熱 Lost Summer Dayz",
+          {
+            "status": "clear",
+            "level": "E"
+          }
         ]
       ]
     }
@@ -3215,5 +3231,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T11:12:02.673Z"
+  "lastUpdated": "2026-05-04T11:12:05.173Z"
 }
