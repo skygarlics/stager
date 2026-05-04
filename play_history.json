@@ -3083,14 +3083,22 @@
       "totalCount": 0,
       "playedSongs": [],
       "songStatus": []
+    },
+    "SP_arcade_ノマゲ": {
+      "history": [],
+      "currentLevelIndex": 0,
+      "clearCount": 0,
+      "totalCount": 0,
+      "playedSongs": [],
+      "songStatus": []
     }
   },
   "mode": "ノマゲ",
   "gameMode": "SP",
-  "playEnv": "home",
+  "playEnv": "arcade",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T10:22:03.738Z"
+  "lastUpdated": "2026-05-04T10:22:05.122Z"
 }
