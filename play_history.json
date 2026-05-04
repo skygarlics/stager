@@ -3173,11 +3173,19 @@
           "status": "fail",
           "timestamp": "2026-05-04T11:26:34.654Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Sirius",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-05-04T11:41:07.082Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 6,
-      "totalCount": 11,
+      "currentLevelIndex": 2,
+      "clearCount": 7,
+      "totalCount": 12,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3189,7 +3197,8 @@
         "Pinky Crush|灼熱 Lost Summer Dayz",
         "Sparkle Shower|RALLY '25",
         "EPOLIS|The Onlyonez",
-        "Pinky Crush|Bring The Fire"
+        "Pinky Crush|Bring The Fire",
+        "EPOLIS|Sirius"
       ],
       "songStatus": [
         [
@@ -3268,6 +3277,13 @@
             "status": "fail",
             "level": "D"
           }
+        ],
+        [
+          "EPOLIS|Sirius",
+          {
+            "status": "clear",
+            "level": "E"
+          }
         ]
       ]
     }
@@ -3279,5 +3295,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T11:26:34.654Z"
+  "lastUpdated": "2026-05-04T11:41:07.082Z"
 }
