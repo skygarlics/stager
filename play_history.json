@@ -3101,14 +3101,23 @@
           "status": "clear",
           "timestamp": "2026-05-04T10:30:55.832Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Disco Killer Music Lover",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-05-04T10:34:50.368Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 2,
-      "totalCount": 2,
+      "currentLevelIndex": 3,
+      "clearCount": 3,
+      "totalCount": 3,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
-        "Sparkle Shower|Lisa-RICCIA"
+        "Sparkle Shower|Lisa-RICCIA",
+        "Sparkle Shower|Disco Killer Music Lover"
       ],
       "songStatus": [
         [
@@ -3124,6 +3133,13 @@
             "status": "clear",
             "level": "E"
           }
+        ],
+        [
+          "Sparkle Shower|Disco Killer Music Lover",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     }
@@ -3135,5 +3151,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T10:30:55.832Z"
+  "lastUpdated": "2026-05-04T10:34:50.368Z"
 }
