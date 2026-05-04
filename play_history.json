@@ -3205,11 +3205,19 @@
           "status": "clear",
           "timestamp": "2026-05-04T12:20:41.801Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "From Human Blood",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-04T12:40:47.562Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 9,
-      "totalCount": 15,
+      "currentLevelIndex": 4,
+      "clearCount": 10,
+      "totalCount": 16,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3225,7 +3233,8 @@
         "EPOLIS|Sirius",
         "Pinky Crush|Aqvion",
         "Sparkle Shower|クレッシェンド",
-        "Pinky Crush|SISYPHUS"
+        "Pinky Crush|SISYPHUS",
+        "Sparkle Shower|From Human Blood"
       ],
       "songStatus": [
         [
@@ -3332,6 +3341,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Sparkle Shower|From Human Blood",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     }
@@ -3343,5 +3359,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T12:20:41.801Z"
+  "lastUpdated": "2026-05-04T12:40:47.565Z"
 }
