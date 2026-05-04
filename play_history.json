@@ -3149,11 +3149,19 @@
           "status": "clear",
           "timestamp": "2026-05-04T11:12:05.173Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "RALLY '25",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-05-04T11:14:28.846Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 5,
-      "totalCount": 8,
+      "totalCount": 9,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3162,7 +3170,8 @@
         "Sparkle Shower|Begin",
         "Sparkle Shower|chaplet -IIDX re:build-",
         "Sparkle Shower|HyperTwist",
-        "Pinky Crush|灼熱 Lost Summer Dayz"
+        "Pinky Crush|灼熱 Lost Summer Dayz",
+        "Sparkle Shower|RALLY '25"
       ],
       "songStatus": [
         [
@@ -3220,6 +3229,13 @@
             "status": "clear",
             "level": "E"
           }
+        ],
+        [
+          "Sparkle Shower|RALLY '25",
+          {
+            "status": "fail",
+            "level": "D"
+          }
         ]
       ]
     }
@@ -3231,5 +3247,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T11:12:05.173Z"
+  "lastUpdated": "2026-05-04T11:14:28.846Z"
 }
