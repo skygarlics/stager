@@ -3085,12 +3085,31 @@
       "songStatus": []
     },
     "SP_arcade_ノマゲ": {
-      "history": [],
-      "currentLevelIndex": 0,
-      "clearCount": 0,
-      "totalCount": 0,
-      "playedSongs": [],
-      "songStatus": []
+      "history": [
+        {
+          "song": "スパークリング☆彡ハイパーチューン！！",
+          "version": "Pinky Crush",
+          "level": "F",
+          "status": "clear",
+          "timestamp": "2026-05-04T10:22:07.910Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        }
+      ],
+      "currentLevelIndex": 1,
+      "clearCount": 1,
+      "totalCount": 1,
+      "playedSongs": [
+        "Pinky Crush|スパークリング☆彡ハイパーチューン！！"
+      ],
+      "songStatus": [
+        [
+          "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
+          {
+            "status": "clear",
+            "level": "F"
+          }
+        ]
+      ]
     }
   },
   "mode": "ノマゲ",
@@ -3100,5 +3119,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-04T10:22:05.122Z"
+  "lastUpdated": "2026-05-04T10:22:07.910Z"
 }
