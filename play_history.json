@@ -3285,11 +3285,19 @@
           "status": "clear",
           "timestamp": "2026-05-05T11:55:52.933Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Here We Go Now",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-05T11:58:29.343Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 14,
-      "totalCount": 25,
+      "currentLevelIndex": 4,
+      "clearCount": 15,
+      "totalCount": 26,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3315,7 +3323,8 @@
         "Pinky Crush|DIVINE JUDGEMENT",
         "EPOLIS|Out of Control",
         "Pinky Crush|hora de verdad",
-        "EPOLIS|Stereo Beasts"
+        "EPOLIS|Stereo Beasts",
+        "Pinky Crush|Here We Go Now"
       ],
       "songStatus": [
         [
@@ -3492,6 +3501,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|Here We Go Now",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     }
@@ -3503,5 +3519,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-05T11:55:52.933Z"
+  "lastUpdated": "2026-05-05T11:58:29.344Z"
 }
