@@ -3237,11 +3237,19 @@
           "status": "fail",
           "timestamp": "2026-05-05T11:09:22.293Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "MARLIN",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-05-05T11:15:49.070Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 11,
-      "totalCount": 19,
+      "totalCount": 20,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3261,7 +3269,8 @@
         "Sparkle Shower|From Human Blood",
         "Sparkle Shower|Regina vespaE",
         "Sparkle Shower|ビビッド ☆＋＊。キラキライム",
-        "Pinky Crush|1116"
+        "Pinky Crush|1116",
+        "Pinky Crush|MARLIN"
       ],
       "songStatus": [
         [
@@ -3396,6 +3405,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|MARLIN",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     }
@@ -3407,5 +3423,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-05T11:09:22.297Z"
+  "lastUpdated": "2026-05-05T11:15:49.071Z"
 }
