@@ -3261,11 +3261,19 @@
           "status": "fail",
           "timestamp": "2026-05-05T11:18:28.037Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Out of Control",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-05-05T11:20:56.980Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 12,
-      "totalCount": 22,
+      "currentLevelIndex": 3,
+      "clearCount": 13,
+      "totalCount": 23,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3288,7 +3296,8 @@
         "Pinky Crush|1116",
         "Pinky Crush|MARLIN",
         "EPOLIS|終焔のClaudia",
-        "Pinky Crush|DIVINE JUDGEMENT"
+        "Pinky Crush|DIVINE JUDGEMENT",
+        "EPOLIS|Out of Control"
       ],
       "songStatus": [
         [
@@ -3444,6 +3453,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|Out of Control",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     }
@@ -3455,5 +3471,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-05T11:18:28.037Z"
+  "lastUpdated": "2026-05-05T11:20:56.980Z"
 }
