@@ -3253,11 +3253,19 @@
           "status": "clear",
           "timestamp": "2026-05-05T11:18:04.852Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "DIVINE JUDGEMENT",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-05-05T11:18:28.037Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 12,
-      "totalCount": 21,
+      "totalCount": 22,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3279,7 +3287,8 @@
         "Sparkle Shower|ビビッド ☆＋＊。キラキライム",
         "Pinky Crush|1116",
         "Pinky Crush|MARLIN",
-        "EPOLIS|終焔のClaudia"
+        "EPOLIS|終焔のClaudia",
+        "Pinky Crush|DIVINE JUDGEMENT"
       ],
       "songStatus": [
         [
@@ -3428,6 +3437,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Pinky Crush|DIVINE JUDGEMENT",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     }
@@ -3439,5 +3455,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-05T11:18:04.853Z"
+  "lastUpdated": "2026-05-05T11:18:28.037Z"
 }
