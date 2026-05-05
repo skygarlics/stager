@@ -3221,11 +3221,27 @@
           "status": "fail",
           "timestamp": "2026-05-05T10:59:22.811Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ビビッド ☆＋＊。キラキライム",
+          "version": "Sparkle Shower",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-05T10:59:24.387Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "1116",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-05-05T11:09:22.293Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 10,
-      "totalCount": 17,
+      "clearCount": 11,
+      "totalCount": 19,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3243,7 +3259,9 @@
         "Sparkle Shower|クレッシェンド",
         "Pinky Crush|SISYPHUS",
         "Sparkle Shower|From Human Blood",
-        "Sparkle Shower|Regina vespaE"
+        "Sparkle Shower|Regina vespaE",
+        "Sparkle Shower|ビビッド ☆＋＊。キラキライム",
+        "Pinky Crush|1116"
       ],
       "songStatus": [
         [
@@ -3364,6 +3382,20 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Sparkle Shower|ビビッド ☆＋＊。キラキライム",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "Pinky Crush|1116",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     }
@@ -3375,5 +3407,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-05T10:59:22.812Z"
+  "lastUpdated": "2026-05-05T11:09:22.297Z"
 }
