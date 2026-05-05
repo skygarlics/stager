@@ -3277,11 +3277,19 @@
           "status": "fail",
           "timestamp": "2026-05-05T11:53:14.929Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Stereo Beasts",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-05-05T11:55:52.933Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 13,
-      "totalCount": 24,
+      "currentLevelIndex": 3,
+      "clearCount": 14,
+      "totalCount": 25,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3306,7 +3314,8 @@
         "EPOLIS|終焔のClaudia",
         "Pinky Crush|DIVINE JUDGEMENT",
         "EPOLIS|Out of Control",
-        "Pinky Crush|hora de verdad"
+        "Pinky Crush|hora de verdad",
+        "EPOLIS|Stereo Beasts"
       ],
       "songStatus": [
         [
@@ -3476,6 +3485,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|Stereo Beasts",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     }
@@ -3487,5 +3503,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-05T11:53:14.930Z"
+  "lastUpdated": "2026-05-05T11:55:52.933Z"
 }
