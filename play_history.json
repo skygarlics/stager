@@ -3333,11 +3333,19 @@
           "status": "clear",
           "timestamp": "2026-05-07T05:54:12.951Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "2 Be Continued",
+          "version": "Sparkle Shower",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-05-07T06:44:29.842Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 18,
-      "totalCount": 31,
+      "currentLevelIndex": 6,
+      "clearCount": 19,
+      "totalCount": 32,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3369,7 +3377,8 @@
         "Pinky Crush|EX-MASSIVE FIGHTER",
         "EPOLIS|frequent",
         "Pinky Crush|Plazma[L]",
-        "Pinky Crush|u gotta beat"
+        "Pinky Crush|u gotta beat",
+        "Sparkle Shower|2 Be Continued"
       ],
       "songStatus": [
         [
@@ -3588,6 +3597,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "Sparkle Shower|2 Be Continued",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     }
@@ -3599,5 +3615,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-07T05:54:12.951Z"
+  "lastUpdated": "2026-05-07T06:44:29.846Z"
 }
