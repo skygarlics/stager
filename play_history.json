@@ -3301,11 +3301,19 @@
           "status": "fail",
           "timestamp": "2026-05-07T05:31:35.556Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "EX-MASSIVE FIGHTER",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-05-07T05:38:01.142Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 15,
-      "totalCount": 27,
+      "totalCount": 28,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3333,7 +3341,8 @@
         "Pinky Crush|hora de verdad",
         "EPOLIS|Stereo Beasts",
         "Pinky Crush|Here We Go Now",
-        "Pinky Crush|アラビアン ハイパー ナイト"
+        "Pinky Crush|アラビアン ハイパー ナイト",
+        "Pinky Crush|EX-MASSIVE FIGHTER"
       ],
       "songStatus": [
         [
@@ -3524,6 +3533,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|EX-MASSIVE FIGHTER",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     }
@@ -3535,5 +3551,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-07T05:31:35.558Z"
+  "lastUpdated": "2026-05-07T05:38:01.145Z"
 }
