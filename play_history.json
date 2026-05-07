@@ -3349,11 +3349,19 @@
           "status": "fail",
           "timestamp": "2026-05-07T06:58:13.787Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Drop Syndicate",
+          "version": "Pinky Crush",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-05-07T08:30:36.008Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 19,
-      "totalCount": 33,
+      "currentLevelIndex": 6,
+      "clearCount": 20,
+      "totalCount": 34,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3387,7 +3395,8 @@
         "Pinky Crush|Plazma[L]",
         "Pinky Crush|u gotta beat",
         "Sparkle Shower|2 Be Continued",
-        "Sparkle Shower|HEROES"
+        "Sparkle Shower|HEROES",
+        "Pinky Crush|Drop Syndicate"
       ],
       "songStatus": [
         [
@@ -3620,6 +3629,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "Pinky Crush|Drop Syndicate",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     }
@@ -3631,5 +3647,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-07T06:58:13.787Z"
+  "lastUpdated": "2026-05-07T08:30:36.012Z"
 }
