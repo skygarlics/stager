@@ -3357,11 +3357,19 @@
           "status": "clear",
           "timestamp": "2026-05-07T08:30:36.008Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Uaigh Gealaí",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-05-08T11:29:06.168Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 20,
-      "totalCount": 34,
+      "totalCount": 35,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3396,7 +3404,8 @@
         "Pinky Crush|u gotta beat",
         "Sparkle Shower|2 Be Continued",
         "Sparkle Shower|HEROES",
-        "Pinky Crush|Drop Syndicate"
+        "Pinky Crush|Drop Syndicate",
+        "Pinky Crush|Uaigh Gealaí"
       ],
       "songStatus": [
         [
@@ -3636,6 +3645,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|Uaigh Gealaí",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     }
@@ -3647,5 +3663,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-07T08:30:36.012Z"
+  "lastUpdated": "2026-05-08T11:29:06.169Z"
 }
