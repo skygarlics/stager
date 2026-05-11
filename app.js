@@ -21,6 +21,7 @@ const CONFIG = {
 };
 
 const DEFAULT_SERVICE = 'iidx';
+const DEFAULT_LOGIN_DESC = 'パスワードを入力してアクセスしてください';
 const SHARED_SHEET_CONFIG = {
     spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
     sheetGids: {
@@ -31,13 +32,13 @@ const SHARED_SHEET_CONFIG = {
 const SERVICE_CONFIGS = {
     iidx: {
         title: 'IIDX ☆12 Leveler',
-        loginDesc: 'パスワードを入力してアクセスしてください',
+        loginDesc: DEFAULT_LOGIN_DESC,
         ...SHARED_SHEET_CONFIG,
         sheetGids: { ...SHARED_SHEET_CONFIG.sheetGids },
     },
     drum: {
         title: 'Drum Stager',
-        loginDesc: 'パスワードを入力してアクセスしてください',
+        loginDesc: DEFAULT_LOGIN_DESC,
         // TODO: Replace with drum-specific spreadsheet configuration when ready.
         ...SHARED_SHEET_CONFIG,
         sheetGids: { ...SHARED_SHEET_CONFIG.sheetGids },
@@ -126,13 +127,62 @@ function initializeRouting() {
         }
         if (nextService === state.service) return;
 
-        state.service = nextService;
-        applyServiceUI();
-
-        if (state.password) {
-            window.location.reload();
-        }
+        handleServiceSwitch(nextService);
     });
+}
+
+async function handleServiceSwitch(nextService) {
+    state.service = nextService;
+    applyServiceUI();
+
+    if (!state.password) return;
+
+    resetServiceState();
+    document.getElementById('loading-overlay').classList.remove('hidden');
+    document.getElementById('app').classList.add('hidden');
+
+    try {
+        await initializeAppData();
+    } catch (e) {
+        console.error('Service switch failed:', e);
+        document.getElementById('loading-overlay').classList.add('hidden');
+        document.getElementById('app').classList.remove('hidden');
+        document.getElementById('song-name').textContent = 'サービス切替に失敗しました';
+        document.getElementById('song-version').textContent = '';
+        document.getElementById('song-level').textContent = '';
+        enableActionButtons(false);
+    }
+}
+
+function resetServiceState() {
+    state.currentLevelIndex = 0;
+    state.songDB = {};
+    state.versions = [];
+    state.playedSongs.clear();
+    state.history = [];
+    state.currentSong = null;
+    state.currentVersion = null;
+    state.fileSha = null;
+    state.mode = 'ノマゲ';
+    state.isProcessing = false;
+    state.totalSongsInDB = 0;
+    document.getElementById('mode-toggle').textContent = state.mode;
+}
+
+async function initializeAppData() {
+    await Promise.all([
+        loadSpreadsheetData(),
+        loadPlayHistory(),
+    ]);
+
+    document.getElementById('loading-overlay').classList.add('hidden');
+    document.getElementById('app').classList.remove('hidden');
+
+    updateLevelDisplay();
+    updateCountDisplay();
+    renderFullHistory();
+    selectNextSong();
+    enableActionButtons(true);
 }
 
 // ==================== Login / Authentication ====================
@@ -179,26 +229,7 @@ async function handleLogin() {
     document.getElementById('loading-overlay').classList.remove('hidden');
 
     try {
-        // Load spreadsheet data and play history in parallel
-        await Promise.all([
-            loadSpreadsheetData(),
-            loadPlayHistory(),
-        ]);
-
-        // Transition to app
-        document.getElementById('loading-overlay').classList.add('hidden');
-        document.getElementById('app').classList.remove('hidden');
-
-        // Update UI with restored state
-        updateLevelDisplay();
-        updateCountDisplay();
-        renderFullHistory();
-
-        // Select first song
-        selectNextSong();
-
-        // Enable buttons
-        enableActionButtons(true);
+        await initializeAppData();
     } catch (e) {
         console.error('Initialization failed:', e);
         document.getElementById('loading-overlay').classList.add('hidden');
