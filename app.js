@@ -22,27 +22,25 @@ const CONFIG = {
 
 const DEFAULT_SERVICE = 'iidx';
 const DEFAULT_LOGIN_DESC = 'パスワードを入力してアクセスしてください';
-const SHARED_SHEET_CONFIG = {
-    spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
-    sheetGids: {
-        'ノマゲ': 1873149697,
-        'ハード': 0,
-    },
+const SHARED_SPREADSHEET_BASE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub';
+const SHARED_SHEET_GIDS = {
+    'ノマゲ': 1873149697,
+    'ハード': 0,
 };
 const SERVICE_CONFIGS = {
     iidx: {
         title: 'IIDX ☆12 Leveler',
         loginDesc: DEFAULT_LOGIN_DESC,
-        ...SHARED_SHEET_CONFIG,
-        sheetGids: { ...SHARED_SHEET_CONFIG.sheetGids },
+        spreadsheetBase: SHARED_SPREADSHEET_BASE,
+        sheetGids: { ...SHARED_SHEET_GIDS },
     },
     drum: {
         title: 'Drum Stager',
         loginDesc: DEFAULT_LOGIN_DESC,
         // TODO: Replace with drum-specific spreadsheet configuration when ready.
         isPlaceholderConfig: true,
-        ...SHARED_SHEET_CONFIG,
-        sheetGids: { ...SHARED_SHEET_CONFIG.sheetGids },
+        spreadsheetBase: SHARED_SPREADSHEET_BASE,
+        sheetGids: { ...SHARED_SHEET_GIDS },
     },
 };
 

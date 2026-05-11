@@ -371,6 +371,9 @@ function sleep(ms) {
 function getHistoryFile(url) {
     const rawService = (url.searchParams.get('service') || DEFAULT_SERVICE).toLowerCase();
     const safeService = ALLOWED_SERVICES.has(rawService) ? rawService : DEFAULT_SERVICE;
+    if (safeService !== rawService) {
+        console.warn(`Invalid service requested: ${rawService}`);
+    }
     return `${HISTORY_FILE_PREFIX}${safeService}.json`;
 }
 
