@@ -12,11 +12,6 @@
 const CONFIG = {
     // Cloudflare Worker proxy URL (handles GitHub API calls server-side)
     WORKER_URL: '',  // e.g., 'https://stager-proxy.<your-subdomain>.workers.dev'
-    SPREADSHEET_BASE: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
-    SHEET_GIDS: {
-        'ノマゲ': 1873149697,
-        'ハード': 0,
-    },
     // Levels ordered from lowest to highest
     LEVELS: ['F', 'E', 'D', 'C', 'B', 'B+', 'A', 'A+', 'S', 'S+'],
     // Known version identifiers to help find the header row
@@ -25,8 +20,31 @@ const CONFIG = {
     MAX_HISTORY_DISPLAY: 30,
 };
 
+const DEFAULT_SERVICE = 'iidx';
+const SERVICE_CONFIGS = {
+    iidx: {
+        title: 'IIDX ☆12 Leveler',
+        loginDesc: 'パスワードを入力してアクセスしてください',
+        spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
+        sheetGids: {
+            'ノマゲ': 1873149697,
+            'ハード': 0,
+        },
+    },
+    drum: {
+        title: 'Drum Stager',
+        loginDesc: 'パスワードを入力してアクセスしてください',
+        spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
+        sheetGids: {
+            'ノマゲ': 1873149697,
+            'ハード': 0,
+        },
+    },
+};
+
 // ==================== Application State ====================
 const state = {
+    service: DEFAULT_SERVICE,     // Current hash-route service key
     password: null,              // Login password (used as Bearer token for Worker)
     currentLevelIndex: 0,       // Index into CONFIG.LEVELS
     songDB: {},                  // { version: { level: [song1, song2, ...] } }
@@ -43,6 +61,8 @@ const state = {
 
 // ==================== Initialization ====================
 document.addEventListener('DOMContentLoaded', () => {
+    initializeRouting();
+
     // Login handlers
     document.getElementById('login-btn').addEventListener('click', handleLogin);
     document.getElementById('password-input').addEventListener('keydown', (e) => {
@@ -62,6 +82,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // Focus password input
     document.getElementById('password-input').focus();
 });
+
+// ==================== Hash Routing ====================
+function normalizeServiceKey(value) {
+    const key = (value || '').toLowerCase();
+    return SERVICE_CONFIGS[key] ? key : null;
+}
+
+function getServiceFromHash() {
+    const raw = window.location.hash.replace(/^#\/?/, '');
+    return normalizeServiceKey(raw);
+}
+
+function getCurrentServiceConfig() {
+    return SERVICE_CONFIGS[state.service] || SERVICE_CONFIGS[DEFAULT_SERVICE];
+}
+
+function applyServiceUI() {
+    const serviceConfig = getCurrentServiceConfig();
+    document.title = serviceConfig.title;
+    document.getElementById('login-title').textContent = serviceConfig.title;
+    document.getElementById('app-title').textContent = serviceConfig.title;
+    document.querySelector('.login-desc').textContent = serviceConfig.loginDesc;
+}
+
+function initializeRouting() {
+    const service = getServiceFromHash() || DEFAULT_SERVICE;
+    if (!getServiceFromHash()) {
+        window.location.hash = `#${service}`;
+    }
+
+    state.service = service;
+    applyServiceUI();
+
+    window.addEventListener('hashchange', () => {
+        const nextService = getServiceFromHash();
+        if (!nextService) {
+            window.location.hash = `#${DEFAULT_SERVICE}`;
+            return;
+        }
+        if (nextService === state.service) return;
+
+        state.service = nextService;
+        applyServiceUI();
+
+        if (state.password) {
+            window.location.reload();
+        }
+    });
+}
 
 // ==================== Login / Authentication ====================
 async function handleLogin() {
@@ -137,12 +206,13 @@ async function handleLogin() {
 
 // ==================== Spreadsheet Data Loading ====================
 async function loadSpreadsheetData() {
-    const gid = CONFIG.SHEET_GIDS[state.mode];
+    const serviceConfig = getCurrentServiceConfig();
+    const gid = serviceConfig.sheetGids[state.mode];
     if (!gid) {
         throw new Error(`Sheet GID not configured for mode: ${state.mode}`);
     }
 
-    const csvUrl = `${CONFIG.SPREADSHEET_BASE}?gid=${gid}&single=true&output=csv`;
+    const csvUrl = `${serviceConfig.spreadsheetBase}?gid=${gid}&single=true&output=csv`;
 
     const response = await fetch(csvUrl);
     if (!response.ok) {
@@ -390,7 +460,7 @@ async function workerFetch(path, options = {}) {
 
 async function loadPlayHistory() {
     try {
-        const response = await workerFetch('/api/history');
+        const response = await workerFetch(`/api/history?service=${encodeURIComponent(state.service)}`);
 
         if (!response.ok) {
             throw new Error(`Worker API error: ${response.status}`);
@@ -427,6 +497,7 @@ async function loadPlayHistory() {
 
 async function savePlayHistory() {
     const payload = {
+        service: state.service,
         history: state.history,
         currentLevelIndex: state.currentLevelIndex,
         mode: state.mode,
@@ -442,7 +513,7 @@ async function savePlayHistory() {
         body.sha = state.fileSha;
     }
 
-    const response = await workerFetch('/api/history', {
+    const response = await workerFetch(`/api/history?service=${encodeURIComponent(state.service)}`, {
         method: 'PUT',
         body: JSON.stringify(body),
     });
@@ -460,7 +531,7 @@ async function savePlayHistory() {
 async function handleModeToggle() {
     if (state.isProcessing) return;
 
-    const modes = Object.keys(CONFIG.SHEET_GIDS);
+    const modes = Object.keys(getCurrentServiceConfig().sheetGids);
     const currentIndex = modes.indexOf(state.mode);
     const nextMode = modes[(currentIndex + 1) % modes.length];
 
