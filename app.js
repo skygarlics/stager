@@ -34,6 +34,7 @@ const SERVICE_CONFIGS = {
     drum: {
         title: 'Drum Stager',
         loginDesc: 'パスワードを入力してアクセスしてください',
+        // TODO: Replace with drum-specific spreadsheet configuration when ready.
         spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
         sheetGids: {
             'ノマゲ': 1873149697,
@@ -497,7 +498,6 @@ async function loadPlayHistory() {
 
 async function savePlayHistory() {
     const payload = {
-        service: state.service,
         history: state.history,
         currentLevelIndex: state.currentLevelIndex,
         mode: state.mode,
