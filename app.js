@@ -21,25 +21,26 @@ const CONFIG = {
 };
 
 const DEFAULT_SERVICE = 'iidx';
+const SHARED_SHEET_CONFIG = {
+    spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
+    sheetGids: {
+        'ノマゲ': 1873149697,
+        'ハード': 0,
+    },
+};
 const SERVICE_CONFIGS = {
     iidx: {
         title: 'IIDX ☆12 Leveler',
         loginDesc: 'パスワードを入力してアクセスしてください',
-        spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
-        sheetGids: {
-            'ノマゲ': 1873149697,
-            'ハード': 0,
-        },
+        ...SHARED_SHEET_CONFIG,
+        sheetGids: { ...SHARED_SHEET_CONFIG.sheetGids },
     },
     drum: {
         title: 'Drum Stager',
         loginDesc: 'パスワードを入力してアクセスしてください',
         // TODO: Replace with drum-specific spreadsheet configuration when ready.
-        spreadsheetBase: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
-        sheetGids: {
-            'ノマゲ': 1873149697,
-            'ハード': 0,
-        },
+        ...SHARED_SHEET_CONFIG,
+        sheetGids: { ...SHARED_SHEET_CONFIG.sheetGids },
     },
 };
 
@@ -108,8 +109,9 @@ function applyServiceUI() {
 }
 
 function initializeRouting() {
-    const service = getServiceFromHash() || DEFAULT_SERVICE;
-    if (!getServiceFromHash()) {
+    const serviceFromHash = getServiceFromHash();
+    const service = serviceFromHash || DEFAULT_SERVICE;
+    if (!serviceFromHash) {
         window.location.hash = `#${service}`;
     }
 

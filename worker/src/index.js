@@ -17,6 +17,7 @@
 // ==================== Constants ====================
 const DEFAULT_SERVICE = 'iidx';
 const HISTORY_FILE_PREFIX = 'play_history_';
+const ALLOWED_SERVICES = new Set(['iidx', 'drum']);
 const GITHUB_API = 'https://api.github.com';
 const MAX_REQUEST_BODY = 512 * 1024; // 512 KB max request body
 
@@ -369,7 +370,7 @@ function sleep(ms) {
 
 function getHistoryFile(url) {
     const rawService = (url.searchParams.get('service') || DEFAULT_SERVICE).toLowerCase();
-    const safeService = /^[a-z0-9_-]{1,32}$/.test(rawService) ? rawService : DEFAULT_SERVICE;
+    const safeService = ALLOWED_SERVICES.has(rawService) ? rawService : DEFAULT_SERVICE;
     return `${HISTORY_FILE_PREFIX}${safeService}.json`;
 }
 
