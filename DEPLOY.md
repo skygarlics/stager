@@ -109,6 +109,8 @@ DATA_BRANCH = "data"                            # 데이터 브랜치
 ALLOWED_ORIGIN = "https://skygarlics.github.io" # GitHub Pages URL
 ```
 
+`ALLOWED_ORIGIN`에는 `https://skygarlics.github.io/stager/`처럼 경로까지 넣지 말고, 반드시 origin만 넣습니다.
+
 ### 2-5. 배포
 
 ```bash
