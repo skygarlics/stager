@@ -40,6 +40,7 @@ const SERVICE_CONFIGS = {
         title: 'Drum Stager',
         loginDesc: DEFAULT_LOGIN_DESC,
         // TODO: Replace with drum-specific spreadsheet configuration when ready.
+        isPlaceholderConfig: true,
         ...SHARED_SHEET_CONFIG,
         sheetGids: { ...SHARED_SHEET_CONFIG.sheetGids },
     },
@@ -170,6 +171,11 @@ function resetServiceState() {
 }
 
 async function initializeAppData() {
+    const serviceConfig = getCurrentServiceConfig();
+    if (serviceConfig.isPlaceholderConfig) {
+        console.warn(`[${state.service}] placeholder sheet config is in use`);
+    }
+
     await Promise.all([
         loadSpreadsheetData(),
         loadPlayHistory(),
@@ -243,7 +249,7 @@ async function loadSpreadsheetData() {
     const serviceConfig = getCurrentServiceConfig();
     const gid = serviceConfig.sheetGids[state.mode];
     if (!gid) {
-        throw new Error(`Sheet GID not configured for mode: ${state.mode}`);
+        throw new Error(`Sheet GID not configured for mode: ${state.mode} in service: ${state.service}`);
     }
 
     const csvUrl = `${serviceConfig.spreadsheetBase}?gid=${gid}&single=true&output=csv`;
