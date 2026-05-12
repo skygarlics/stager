@@ -12,7 +12,7 @@
     <div id="login-modal" class="modal">
         <div class="modal-content">
             <div class="login-icon">🔒</div>
-            <h2>IIDX ☆12 Leveler</h2>
+            <h2 id="login-title">IIDX ☆12 Leveler</h2>
             <p class="login-desc">パスワードを入力してアクセスしてください</p>
             <input type="password" id="password-input" placeholder="Password" autocomplete="off" />
             <button id="login-btn" class="btn-primary">UNLOCK</button>
@@ -31,7 +31,7 @@
     <!-- Main App -->
     <div id="app" class="hidden">
         <header>
-            <h1>IIDX ☆12 Leveler</h1>
+            <h1 id="app-title">IIDX ☆12 Leveler</h1>
             <div id="status-bar">
                 <span id="current-level" class="level-badge">F</span>
                 <button id="mode-toggle" class="mode-badge" title="ゲージモード切替">ノマゲ</button>
@@ -70,6 +70,9 @@
         </main>
 
         <footer>
+            <a class="footer-link" href="#iidx">#iidx</a>
+            <span class="footer-link"> / </span>
+            <a class="footer-link" href="#drum">#drum</a>
         </footer>
     </div>
 

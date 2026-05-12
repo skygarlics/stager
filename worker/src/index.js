@@ -15,7 +15,9 @@
  */
 
 // ==================== Constants ====================
-const HISTORY_FILE = 'play_history.json';
+const DEFAULT_SERVICE = 'iidx';
+const HISTORY_FILE_PREFIX = 'play_history_';
+const ALLOWED_SERVICES = new Set(['iidx', 'drum']);
 const GITHUB_API = 'https://api.github.com';
 const MAX_REQUEST_BODY = 512 * 1024; // 512 KB max request body
 
@@ -115,6 +117,7 @@ export default {
 
                 case path === '/api/history' && request.method === 'GET':
                 case path === '/api/history' && request.method === 'PUT': {
+                    const historyFile = getHistoryFile(url);
                     // API rate limit: 30 requests per 60 seconds per IP
                     const rl = rateLimiter.check('api', clientIP, 30, 60_000);
                     if (!rl.allowed) {
@@ -125,9 +128,9 @@ export default {
                         ));
                     }
                     if (request.method === 'GET') {
-                        return corsResponse(env, await handleGetHistory(request, env));
+                        return corsResponse(env, await handleGetHistory(request, env, historyFile));
                     } else {
-                        return corsResponse(env, await handlePutHistory(request, env));
+                        return corsResponse(env, await handlePutHistory(request, env, historyFile));
                     }
                 }
 
@@ -210,9 +213,9 @@ async function authenticate(request, env) {
 
 /**
  * GET /api/history
- * Proxies to GitHub API to fetch play_history.json
+ * Proxies to GitHub API to fetch service-specific play history file
  */
-async function handleGetHistory(request, env) {
+async function handleGetHistory(request, env, historyFile) {
     if (!(await authenticate(request, env))) {
         return json({ error: 'Unauthorized' }, 401);
     }
@@ -220,7 +223,7 @@ async function handleGetHistory(request, env) {
     const repo = env.REPO || 'skygarlics/stager';
     const branch = env.DATA_BRANCH || 'data';
 
-    const url = `${GITHUB_API}/repos/${repo}/contents/${HISTORY_FILE}?ref=${branch}`;
+    const url = `${GITHUB_API}/repos/${repo}/contents/${historyFile}?ref=${branch}`;
 
     const ghResponse = await fetch(url, {
         headers: {
@@ -260,10 +263,10 @@ async function handleGetHistory(request, env) {
 
 /**
  * PUT /api/history
- * Proxies to GitHub API to update play_history.json
+ * Proxies to GitHub API to update service-specific play history file
  * Body: { content: {...}, sha: "..." }
  */
-async function handlePutHistory(request, env) {
+async function handlePutHistory(request, env, historyFile) {
     if (!(await authenticate(request, env))) {
         return json({ error: 'Unauthorized' }, 401);
     }
@@ -278,7 +281,7 @@ async function handlePutHistory(request, env) {
     const jsonStr = JSON.stringify(body.content, null, 2);
     const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
 
-    const url = `${GITHUB_API}/repos/${repo}/contents/${HISTORY_FILE}`;
+    const url = `${GITHUB_API}/repos/${repo}/contents/${historyFile}`;
 
     const ghBody = {
         message: body.message || `Update play history - ${new Date().toISOString()}`,
@@ -363,6 +366,15 @@ async function readBody(request) {
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function getHistoryFile(url) {
+    const rawService = (url.searchParams.get('service') || DEFAULT_SERVICE).toLowerCase();
+    const safeService = ALLOWED_SERVICES.has(rawService) ? rawService : DEFAULT_SERVICE;
+    if (safeService !== rawService) {
+        console.warn(`Invalid service requested: ${rawService}`);
+    }
+    return `${HISTORY_FILE_PREFIX}${safeService}.json`;
 }
 
 function corsResponse(env, response) {
