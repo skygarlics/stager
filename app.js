@@ -45,6 +45,8 @@ const CONFIG = {
     DP_CACHE_VERSION: 1,
     HISTORY_CACHE_KEY: 'PLAY_HISTORY_STATE_V1',
     HISTORY_CACHE_TTL_MS: 60 * 60 * 1000,
+    DRUM_HISTORY_CACHE_KEY: 'DRUM_HISTORY_STATE_V1',
+    DRUM_HISTORY_CACHE_TTL_MS: 60 * 60 * 1000,
 };
 
 const ROUTES = {
@@ -265,6 +267,41 @@ function applyPlayHistoryPayload(data) {
     const maxIndex = state.gameMode === 'DP' ? 999 : CONFIG.LEVELS.length - 1;
     state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, maxIndex));
     return true;
+}
+
+function applyDrumHistoryPayload(data) {
+    if (!data) return false;
+
+    state.drumFileSha = data.sha || null;
+    const payload = normalizeDrumHistoryPayload(data);
+    state.drumRankStore = payload.rankStore;
+    state.drumFloorStatuses = payload.floorStatuses;
+    state.drumSelectedFloorIndex = clampDrumFloorIndex(payload.selectedFloorIndex);
+
+    localStorage.setItem('drum_ranks_v1', JSON.stringify(state.drumRankStore));
+    localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(state.drumFloorStatuses));
+    saveDrumSelectedFloorIndex(state.drumSelectedFloorIndex);
+    return true;
+}
+
+async function getCachedDrumHistoryState() {
+    const cached = await getDpCacheFromIdb(CONFIG.DRUM_HISTORY_CACHE_KEY);
+    if (!cached || !cached.entry || !cached.savedAt) return null;
+
+    const savedAt = Date.parse(cached.savedAt);
+    if (!Number.isFinite(savedAt)) return null;
+
+    const age = Date.now() - savedAt;
+    if (age > CONFIG.DRUM_HISTORY_CACHE_TTL_MS) return null;
+
+    return cached;
+}
+
+async function saveCachedDrumHistoryState(entry, sha) {
+    await saveDpCacheToIdb(CONFIG.DRUM_HISTORY_CACHE_KEY, {
+        entry,
+        sha: sha || null,
+    });
 }
 
 // ==================== Initialization ====================
@@ -911,6 +948,12 @@ function saveDrumRank(floorName, sIdx, value) {
 
 async function loadDrumHistory() {
     try {
+        const cached = await getCachedDrumHistoryState();
+        if (cached?.entry && applyDrumHistoryPayload({ ...cached.entry, sha: cached.sha || null })) {
+            console.log('Restored drum history from IndexedDB cache');
+            return;
+        }
+
         const response = await workerFetch('/api/drum-history');
         if (!response.ok) {
             throw new Error(`Worker API error: ${response.status}`);
@@ -922,23 +965,33 @@ async function loadDrumHistory() {
             state.drumRankStore = loadDrumRankStore();
             state.drumFloorStatuses = loadDrumFloorStatuses();
             state.drumSelectedFloorIndex = clampDrumFloorIndex(loadDrumSelectedFloorIndex());
+            await saveCachedDrumHistoryState({
+                schemaVersion: 1,
+                route: 'drum',
+                selectedFloorIndex: state.drumSelectedFloorIndex,
+                rankStore: state.drumRankStore,
+                floorStatuses: state.drumFloorStatuses,
+                lastUpdated: new Date().toISOString(),
+            }, null);
             return;
         }
 
-        state.drumFileSha = data.sha || null;
-        const payload = normalizeDrumHistoryPayload(data);
-        state.drumRankStore = payload.rankStore;
-        state.drumFloorStatuses = payload.floorStatuses;
-        state.drumSelectedFloorIndex = clampDrumFloorIndex(payload.selectedFloorIndex);
-
-        localStorage.setItem('drum_ranks_v1', JSON.stringify(state.drumRankStore));
-        localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(state.drumFloorStatuses));
-        saveDrumSelectedFloorIndex(state.drumSelectedFloorIndex);
+        applyDrumHistoryPayload({ ...data, sha: data.sha || null });
+        await saveCachedDrumHistoryState(data, data.sha || null);
     } catch (e) {
         console.error('Failed to load drum history:', e);
         state.drumRankStore = loadDrumRankStore();
         state.drumFloorStatuses = loadDrumFloorStatuses();
         state.drumSelectedFloorIndex = clampDrumFloorIndex(loadDrumSelectedFloorIndex());
+        try {
+            const cached = await getCachedDrumHistoryState();
+            if (cached?.entry) {
+                applyDrumHistoryPayload({ ...cached.entry, sha: cached.sha || null });
+                console.warn('Using stale IndexedDB drum history cache after load failure');
+            }
+        } catch (cacheError) {
+            console.warn('Failed to restore stale drum history cache:', cacheError);
+        }
     }
 }
 
@@ -974,6 +1027,7 @@ async function saveDrumHistory() {
     const data = await response.json();
     state.drumFileSha = data.sha || null;
     saveDrumSelectedFloorIndex(payload.selectedFloorIndex);
+    await saveCachedDrumHistoryState(payload, state.drumFileSha);
 }
 
 function normalizeDrumHistoryPayload(data) {
