@@ -12,7 +12,7 @@
     <div id="login-modal" class="modal">
         <div class="modal-content">
             <div class="login-icon">🔒</div>
-            <h2>IIDX Leveler</h2>
+            <h2 id="login-title">IIDX Leveler</h2>
             <p class="login-desc">パスワードを入力してアクセスしてください</p>
             <input type="password" id="password-input" placeholder="Password" autocomplete="off" />
             <button id="login-btn" class="btn-primary">UNLOCK</button>
@@ -31,6 +31,10 @@
     <!-- Main App -->
     <div id="app" class="hidden">
         <header>
+            <nav id="route-tabs" class="route-tabs" aria-label="Page routes">
+                <a href="#iidx" id="route-iidx" class="route-tab">IIDX</a>
+                <a href="#drum" id="route-drum" class="route-tab">Drum</a>
+            </nav>
             <div id="status-bar">
                 <span id="current-level" class="level-badge">F</span>
                 <button id="game-mode-toggle" class="game-mode-badge" title="SP/DP">SP</button>
@@ -46,33 +50,46 @@
         </header>
 
         <main>
-            <!-- Song Card -->
-            <div id="song-card">
-                <div id="song-version" class="song-meta"></div>
-                <div id="song-name" class="song-title">Loading...</div>
-                <div id="song-level" class="song-meta"></div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div id="action-buttons">
-                <button id="fail-btn" class="action-btn fail" disabled>
-                    <span class="btn-icon">✕</span>
-                    <span class="btn-label">FAIL</span>
-                </button>
-                <button id="clear-btn" class="action-btn clear" disabled>
-                    <span class="btn-icon">○</span>
-                    <span class="btn-label">CLEAR</span>
-                </button>
-            </div>
-
-            <!-- History Panel -->
-            <div id="history-panel">
-                <div class="panel-header">
-                    <h3>Play History</h3>
-                    <button id="history-toggle" class="btn-icon-only">▼</button>
+            <section id="iidx-section" class="route-section">
+                <!-- Song Card -->
+                <div id="song-card">
+                    <div id="song-version" class="song-meta"></div>
+                    <div id="song-name" class="song-title">Loading...</div>
+                    <div id="song-level" class="song-meta"></div>
                 </div>
-                <ul id="history-list"></ul>
-            </div>
+
+                <!-- Action Buttons -->
+                <div id="action-buttons">
+                    <button id="fail-btn" class="action-btn fail" disabled>
+                        <span class="btn-icon">✕</span>
+                        <span class="btn-label">FAIL</span>
+                    </button>
+                    <button id="clear-btn" class="action-btn clear" disabled>
+                        <span class="btn-icon">○</span>
+                        <span class="btn-label">CLEAR</span>
+                    </button>
+                </div>
+
+                <!-- History Panel -->
+                <div id="history-panel">
+                    <div class="panel-header">
+                        <h3>Play History</h3>
+                        <button id="history-toggle" class="btn-icon-only">▼</button>
+                    </div>
+                    <ul id="history-list"></ul>
+                </div>
+            </section>
+
+            <section id="drum-section" class="route-section hidden">
+                <div class="drum-page-head">
+                    <div>
+                        <h2>DrumTower</h2>
+                        <p id="drum-summary" class="drum-summary">CSV data loading...</p>
+                    </div>
+                    <div id="drum-summary-stats" class="drum-summary-stats"></div>
+                </div>
+                <div id="drum-floor-list" class="drum-floor-list"></div>
+            </section>
         </main>
 
         <footer>
