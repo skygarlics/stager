@@ -81,6 +81,7 @@ const state = {
     currentVersion: null,        // Version of current song
     currentLevel: null,          // Level of current song (may differ from currentLevelIndex)
     fileSha: null,               // GitHub file SHA for updates
+    drumFileSha: null,           // GitHub file SHA for DrumTower updates
     mode: 'ノマゲ',              // Current gauge mode (SP only)
     gameMode: 'SP',              // 'SP' or 'DP'
     playEnv: 'home',             // 'home' or 'arcade'
@@ -399,8 +400,7 @@ async function loadDrumTowerData() {
 
     const data = await response.json();
     state.drumFloors = Array.isArray(data.floors) ? data.floors : [];
-    state.drumRankStore = loadDrumRankStore();
-    state.drumFloorStatuses = loadDrumFloorStatuses();
+    await loadDrumHistory();
 }
 
 function renderDrumTowerSection() {
@@ -445,6 +445,7 @@ function renderDrumFloorNavigation() {
     prev.disabled = state.drumSelectedFloorIndex <= 0;
     prev.addEventListener('click', () => {
         state.drumSelectedFloorIndex = clampDrumFloorIndex(state.drumSelectedFloorIndex - 1);
+        saveDrumHistory().catch(err => console.error('Failed to save drum selected floor:', err));
         renderDrumTowerSection();
         updateDrumSummary();
         updateHeaderCountForDrum();
@@ -462,6 +463,7 @@ function renderDrumFloorNavigation() {
     next.disabled = state.drumSelectedFloorIndex >= state.drumFloors.length - 1;
     next.addEventListener('click', () => {
         state.drumSelectedFloorIndex = clampDrumFloorIndex(state.drumSelectedFloorIndex + 1);
+        saveDrumHistory().catch(err => console.error('Failed to save drum selected floor:', err));
         renderDrumTowerSection();
         updateDrumSummary();
         updateHeaderCountForDrum();
@@ -508,8 +510,8 @@ function renderDrumFloorCard(floor, index) {
         current.cleared = !current.cleared;
         current.updatedAt = new Date().toISOString();
         statuses[floorKey] = current;
-        localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(statuses));
         state.drumFloorStatuses = statuses;
+        saveDrumHistory().catch(err => console.error('Failed to save drum floor state:', err));
         renderDrumTowerSection();
         updateDrumSummary();
         updateHeaderCountForDrum();
@@ -572,6 +574,8 @@ function renderDrumSongRow(floorKey, song) {
         const next = state.drumRankStore[songKey] === 'S' ? '' : 'S';
         saveDrumRank(floorKey, song.idx, next);
         state.drumRankStore = loadDrumRankStore();
+        state.drumSelectedFloorIndex = clampDrumFloorIndex(state.drumSelectedFloorIndex);
+        saveDrumHistory().catch(err => console.error('Failed to save drum rank state:', err));
         renderDrumTowerSection();
         updateDrumSummary();
         updateHeaderCountForDrum();
@@ -683,6 +687,9 @@ function updateHeaderCountForDrum() {
 }
 
 function loadDrumFloorStatuses() {
+    if (state.drumFloorStatuses && Object.keys(state.drumFloorStatuses).length > 0) {
+        return state.drumFloorStatuses;
+    }
     try {
         const raw = localStorage.getItem('drum_floor_statuses_v1');
         return raw ? JSON.parse(raw) : {};
@@ -692,6 +699,9 @@ function loadDrumFloorStatuses() {
 }
 
 function loadDrumRankStore() {
+    if (state.drumRankStore && Object.keys(state.drumRankStore).length > 0) {
+        return state.drumRankStore;
+    }
     try {
         const raw = localStorage.getItem('drum_ranks_v1');
         return raw ? JSON.parse(raw) : {};
@@ -702,9 +712,85 @@ function loadDrumRankStore() {
 
 function saveDrumRank(floorName, sIdx, value) {
     const key = `${floorName}|${sIdx}`;
-    const store = loadDrumRankStore();
+    const store = { ...(state.drumRankStore || loadDrumRankStore()) };
     if (value) store[key] = value; else delete store[key];
+    state.drumRankStore = store;
     localStorage.setItem('drum_ranks_v1', JSON.stringify(store));
+}
+
+async function loadDrumHistory() {
+    try {
+        const response = await workerFetch('/api/drum-history');
+        if (!response.ok) {
+            throw new Error(`Worker API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (!data.exists) {
+            state.drumFileSha = null;
+            state.drumRankStore = loadDrumRankStore();
+            state.drumFloorStatuses = loadDrumFloorStatuses();
+            return;
+        }
+
+        state.drumFileSha = data.sha || null;
+    const payload = normalizeDrumHistoryPayload(data);
+    state.drumRankStore = payload.rankStore;
+    state.drumFloorStatuses = payload.floorStatuses;
+    state.drumSelectedFloorIndex = payload.selectedFloorIndex;
+
+        localStorage.setItem('drum_ranks_v1', JSON.stringify(state.drumRankStore));
+        localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(state.drumFloorStatuses));
+    } catch (e) {
+        console.error('Failed to load drum history:', e);
+        state.drumRankStore = loadDrumRankStore();
+        state.drumFloorStatuses = loadDrumFloorStatuses();
+    }
+}
+
+async function saveDrumHistory() {
+    const payload = {
+        schemaVersion: 1,
+        route: 'drum',
+        selectedFloorIndex: state.drumSelectedFloorIndex || 0,
+        rankStore: state.drumRankStore || {},
+        floorStatuses: state.drumFloorStatuses || {},
+        lastUpdated: new Date().toISOString(),
+    };
+
+    const body = {
+        content: payload,
+        message: `Update drum history - ${state.drumSelectedFloorIndex + 1}F - ${new Date().toISOString()}`,
+    };
+
+    if (state.drumFileSha) {
+        body.sha = state.drumFileSha;
+    }
+
+    const response = await workerFetch('/api/drum-history', {
+        method: 'PUT',
+        body: JSON.stringify(body),
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(`Worker PUT failed: ${response.status} - ${errorData.detail || ''}`);
+    }
+
+    const data = await response.json();
+    state.drumFileSha = data.sha || null;
+}
+
+function normalizeDrumHistoryPayload(data) {
+    const rankStore = data.rankStore || data.drumRankStore || data.ranks || data.data?.rankStore || {};
+    const floorStatuses = data.floorStatuses || data.drumFloorStatuses || data.floors || data.data?.floorStatuses || {};
+    const selectedFloorIndex = data.selectedFloorIndex ?? data.drumSelectedFloorIndex ?? data.currentFloorIndex ?? data.data?.selectedFloorIndex ?? 0;
+
+    return {
+        rankStore,
+        floorStatuses,
+        selectedFloorIndex,
+    };
 }
 
 // ==================== Spreadsheet Data Loading ====================
@@ -1222,6 +1308,15 @@ async function workerFetch(path, options = {}) {
                 status: 200,
                 json: async () => ({ exists: false, history: [], currentLevelIndex: 0 }),
                 text: async () => JSON.stringify({ exists: false, history: [], currentLevelIndex: 0 }),
+            };
+        }
+
+        if (path === '/api/drum-history') {
+            return {
+                ok: true,
+                status: 200,
+                json: async () => ({ exists: false, schemaVersion: 1, route: 'drum', rankStore: {}, floorStatuses: {}, selectedFloorIndex: 0 }),
+                text: async () => JSON.stringify({ exists: false, schemaVersion: 1, route: 'drum', rankStore: {}, floorStatuses: {}, selectedFloorIndex: 0 }),
             };
         }
 

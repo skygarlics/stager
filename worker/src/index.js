@@ -16,6 +16,7 @@
 
 // ==================== Constants ====================
 const HISTORY_FILE = 'play_history.json';
+const DRUM_HISTORY_FILE = 'play_history_drum.json';
 const GITHUB_API = 'https://api.github.com';
 const MAX_REQUEST_BODY = 512 * 1024; // 512 KB max request body
 
@@ -131,6 +132,23 @@ export default {
                     }
                 }
 
+                case path === '/api/drum-history' && request.method === 'GET':
+                case path === '/api/drum-history' && request.method === 'PUT': {
+                    const rl = rateLimiter.check('api', clientIP, 30, 60_000);
+                    if (!rl.allowed) {
+                        return corsResponse(env, json(
+                            { error: 'Rate limit exceeded. Try again later.' },
+                            429,
+                            { 'Retry-After': String(rl.retryAfter) }
+                        ));
+                    }
+                    if (request.method === 'GET') {
+                        return corsResponse(env, await handleGetDrumHistory(request, env));
+                    } else {
+                        return corsResponse(env, await handlePutDrumHistory(request, env));
+                    }
+                }
+
                 case path === '/api/dp-rank' && request.method === 'POST': {
                     // Rate limit same as API
                     const rl = rateLimiter.check('api', clientIP, 30, 60_000);
@@ -182,6 +200,119 @@ async function handleAuth(request, env) {
     }
 
     return json({ ok: true });
+}
+
+/**
+ * GET /api/drum-history
+ * Proxies to GitHub API to fetch play_history_drum.json
+ */
+async function handleGetDrumHistory(request, env) {
+    if (!(await authenticate(request, env))) {
+        return json({ error: 'Unauthorized' }, 401);
+    }
+
+    const repo = env.REPO || 'skygarlics/stager';
+    const branch = env.DATA_BRANCH || 'data';
+
+    const url = `${GITHUB_API}/repos/${repo}/contents/${DRUM_HISTORY_FILE}?ref=${branch}`;
+
+    const ghResponse = await fetch(url, {
+        headers: {
+            'Authorization': `token ${env.GITHUB_PAT}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Stager-Worker',
+        },
+    });
+
+    if (ghResponse.status === 404) {
+        return json({ exists: false, schemaVersion: 1, route: 'drum', rankStore: {}, floorStatuses: {}, selectedFloorIndex: 0 });
+    }
+
+    if (!ghResponse.ok) {
+        const errorText = await ghResponse.text();
+        return json({ error: 'GitHub API error', status: ghResponse.status, detail: errorText }, 502);
+    }
+
+    const data = await ghResponse.json();
+    const base64Clean = data.content.replace(/\n/g, '');
+    const content = atob(base64Clean);
+    const decoded = new TextDecoder().decode(
+        Uint8Array.from(content, c => c.charCodeAt(0))
+    );
+    const parsed = JSON.parse(decoded);
+    const normalized = normalizeDrumHistoryPayload(parsed);
+
+    return json({
+        ...normalized,
+        exists: true,
+        sha: data.sha,
+    });
+}
+
+/**
+ * PUT /api/drum-history
+ * Proxies to GitHub API to update play_history_drum.json
+ */
+async function handlePutDrumHistory(request, env) {
+    if (!(await authenticate(request, env))) {
+        return json({ error: 'Unauthorized' }, 401);
+    }
+
+    const repo = env.REPO || 'skygarlics/stager';
+    const branch = env.DATA_BRANCH || 'data';
+    const rawBody = await readBody(request);
+    if (!rawBody) return json({ error: 'Request body too large (max 512KB)' }, 413);
+    const body = JSON.parse(rawBody);
+
+    const normalizedContent = normalizeDrumHistoryPayload(body.content || {});
+    const jsonStr = JSON.stringify(normalizedContent, null, 2);
+    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+
+    const url = `${GITHUB_API}/repos/${repo}/contents/${DRUM_HISTORY_FILE}`;
+
+    const ghBody = {
+        message: body.message || `Update drum history - ${new Date().toISOString()}`,
+        content: encoded,
+        branch: branch,
+    };
+
+    if (body.sha) {
+        ghBody.sha = body.sha;
+    }
+
+    const ghResponse = await fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Authorization': `token ${env.GITHUB_PAT}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json',
+            'User-Agent': 'Stager-Worker',
+        },
+        body: JSON.stringify(ghBody),
+    });
+
+    if (!ghResponse.ok) {
+        const errorData = await ghResponse.json().catch(() => ({}));
+        return json({
+            error: 'GitHub PUT failed',
+            status: ghResponse.status,
+            detail: errorData.message || '',
+        }, 502);
+    }
+
+    const data = await ghResponse.json();
+    return json({ ok: true, sha: data.content.sha });
+}
+
+function normalizeDrumHistoryPayload(payload) {
+    return {
+        schemaVersion: 1,
+        route: 'drum',
+        selectedFloorIndex: payload.selectedFloorIndex ?? payload.drumSelectedFloorIndex ?? payload.currentFloorIndex ?? 0,
+        rankStore: payload.rankStore || payload.drumRankStore || payload.ranks || {},
+        floorStatuses: payload.floorStatuses || payload.drumFloorStatuses || payload.floors || {},
+        lastUpdated: payload.lastUpdated || new Date().toISOString(),
+    };
 }
 
 /**

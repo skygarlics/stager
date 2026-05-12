@@ -16,6 +16,10 @@ stager/
 **프론트엔드**는 GitHub Pages에서 정적 호스팅되고, **백엔드(Worker)**는 Cloudflare Workers에서 실행됩니다.
 Worker가 GitHub API 호출을 대신 처리하므로 PAT(Personal Access Token)이 클라이언트에 노출되지 않습니다.
 
+현재 백엔드는 두 개의 기록 파일을 다룹니다.
+- `play_history.json` : IIDX 플레이 기록
+- `play_history_drum.json` : DrumTower 층별 S 토글 / clear 상태 / 선택 floor
+
 ---
 
 ## Phase 1: 사전 준비
@@ -184,6 +188,7 @@ GitHub → Repository → **Settings** → **Pages**:
 | 5 | CLEAR/FAIL | 버튼 클릭 → 레벨 변동 & 다음 곡 |
 | 6 | 데이터 영속성 | 브라우저 새로고침 → 기록 & 레벨 복원 |
 | 7 | 모드 전환 | ノマゲ ↔ ハード 전환 동작 |
+| 8 | DrumTower 저장 | Drum 페이지에서 층 변경 / S 토글 후 `play_history_drum.json` 갱신 |
 
 ---
 
@@ -194,7 +199,7 @@ GitHub → Repository → **Settings** → **Pages**:
 | **PAT 위치** | Cloudflare Secret (서버 측, 암호화 저장) |
 | **클라이언트 노출 정보** | Worker URL, 스프레드시트 URL만 |
 | **인증 방식** | 비밀번호 → Worker에서 SHA-256 해시 비교 |
-| **Rate Limiting** | `/api/auth`: IP당 5회/분, `/api/history`: IP당 30회/분 |
+| **Rate Limiting** | `/api/auth`: IP당 5회/분, `/api/history`: IP당 30회/분, `/api/drum-history`: IP당 30회/분 |
 | **요청 크기 제한** | 512KB |
 | **CORS** | `ALLOWED_ORIGIN`에 지정된 도메인만 허용 |
 | **브루트포스 방지** | Rate limit + 실패 시 200~500ms 랜덤 딜레이 |
