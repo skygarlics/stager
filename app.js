@@ -174,10 +174,17 @@ async function initializeAppData() {
         console.warn(`[${state.service}] placeholder sheet config is in use`);
     }
 
-    await Promise.all([
-        loadSpreadsheetData(),
-        loadPlayHistory(),
-    ]);
+    if (state.service === 'drum') {
+        await Promise.all([
+            loadDrumJsonData(),
+            loadPlayHistory(),
+        ]);
+    } else {
+        await Promise.all([
+            loadSpreadsheetData(),
+            loadPlayHistory(),
+        ]);
+    }
 
     document.getElementById('loading-overlay').classList.add('hidden');
     document.getElementById('app').classList.remove('hidden');
@@ -187,6 +194,167 @@ async function initializeAppData() {
     renderFullHistory();
     selectNextSong();
     enableActionButtons(true);
+}
+
+// ==================== Drum JSON / Floor Panel ====================
+async function loadDrumJsonData() {
+    const url = './data/drumtower_floors_app.json';
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Failed to load drum JSON: ${res.status}`);
+    const data = await res.json();
+    // data.floors -> [{ floor, songCount, songs: [...] }]
+    state.drumFloors = data.floors || [];
+    renderDrumFloorPanel();
+}
+
+function renderDrumFloorPanel() {
+    // Remove existing panel if any
+    const existing = document.getElementById('drum-floor-panel');
+    if (existing) existing.remove();
+
+    const main = document.querySelector('main');
+    const panel = document.createElement('div');
+    panel.id = 'drum-floor-panel';
+    panel.className = 'drum-panel';
+
+    const header = document.createElement('div');
+    header.className = 'panel-header';
+    const title = document.createElement('h3');
+    title.textContent = 'Drum Tower - Floors';
+    header.appendChild(title);
+
+    const evalBtn = document.createElement('button');
+    evalBtn.textContent = 'Evaluate Floors';
+    evalBtn.className = 'btn-primary';
+    evalBtn.addEventListener('click', evaluateDrumFloors);
+    header.appendChild(evalBtn);
+
+    panel.appendChild(header);
+
+    const store = loadDrumRankStore();
+
+    for (let fIdx = 0; fIdx < state.drumFloors.length; fIdx++) {
+        const floor = state.drumFloors[fIdx];
+        const section = document.createElement('section');
+        section.className = 'floor-section';
+
+        const h4 = document.createElement('h4');
+        h4.textContent = `${floor.floor} (${floor.songCount})`;
+        const statusBadge = document.createElement('span');
+        statusBadge.className = 'floor-status';
+        statusBadge.id = `floor-status-${fIdx}`;
+        h4.appendChild(statusBadge);
+        section.appendChild(h4);
+
+        const table = document.createElement('table');
+        table.className = 'floor-table';
+        const thead = document.createElement('thead');
+        thead.innerHTML = '<tr><th>#</th><th>曲名</th><th>Ver</th><th>難度</th><th>Lv</th><th>タグ</th><th>ランク</th></tr>';
+        table.appendChild(thead);
+        const tbody = document.createElement('tbody');
+
+        for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+            const song = floor.songs[sIdx];
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${sIdx + 1}</td>
+                <td class="song-name">${escapeHtml(song.songName || song.displayName || '')}</td>
+                <td class="song-ver">${escapeHtml(song.version || '')}</td>
+                <td class="song-diff">${escapeHtml(song.difficultyLabel || '')}</td>
+                <td class="song-lv">${song.level ?? ''}</td>
+                <td class="song-tags">${(song.tags || []).join(', ')}</td>
+            `;
+
+            const tdSelect = document.createElement('td');
+            const select = document.createElement('select');
+            select.id = `rank-${fIdx}-${sIdx}`;
+            const ranks = ['','S+','S','A+','A','B+','B','C','D','E','F'];
+            for (const r of ranks) {
+                const opt = document.createElement('option');
+                opt.value = r;
+                opt.textContent = r || '-';
+                select.appendChild(opt);
+            }
+            // restore from store
+            const key = `${floor.floor}|${sIdx}`;
+            if (store[key]) select.value = store[key];
+            select.addEventListener('change', () => saveDrumRank(floor.floor, sIdx, select.value));
+
+            tdSelect.appendChild(select);
+            tr.appendChild(tdSelect);
+            tbody.appendChild(tr);
+        }
+
+        table.appendChild(tbody);
+        section.appendChild(table);
+        panel.appendChild(section);
+    }
+
+    main.appendChild(panel);
+}
+
+function evaluateDrumFloors() {
+    const results = [];
+    const rankOrder = CONFIG.LEVELS; // F..S+
+    const sIndex = rankOrder.indexOf('S');
+
+    for (let fIdx = 0; fIdx < state.drumFloors.length; fIdx++) {
+        const floor = state.drumFloors[fIdx];
+        let sOrHigherCount = 0;
+        let bossFail = false;
+        const failures = [];
+
+        for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+            const sel = document.getElementById(`rank-${fIdx}-${sIdx}`);
+            const rank = sel ? sel.value : '';
+            const isSOrHigher = rank && rankOrder.indexOf(rank) >= sIndex;
+
+            if (isSOrHigher) sOrHigherCount++;
+
+            const song = floor.songs[sIdx];
+            const isBoss = (song.clearType && song.clearType === 'boss') || (song.tags || []).includes('보스곡');
+            if (isBoss && !isSOrHigher) {
+                bossFail = true;
+                failures.push({ song: song.songName || song.displayName, reason: 'boss-not-S' });
+            }
+        }
+
+        const needed = Math.ceil((floor.songCount || floor.songs.length) * 3 / 4);
+        const countOk = sOrHigherCount >= needed;
+        const cleared = countOk && !bossFail;
+
+        // update UI badge
+        const badge = document.getElementById(`floor-status-${fIdx}`);
+        if (badge) {
+            badge.textContent = cleared ? 'CLEARED' : 'LOCKED';
+            badge.style.color = cleared ? 'limegreen' : 'crimson';
+            badge.style.marginLeft = '8px';
+        }
+
+        results.push({ floor: floor.floor, cleared, sOrHigherCount, needed, bossFail, failures });
+    }
+
+    // show a summary alert (concise)
+    const okCount = results.filter(r => r.cleared).length;
+    alert(`Floors cleared: ${okCount} / ${results.length}`);
+}
+
+function saveDrumRank(floorName, sIdx, value) {
+    const key = `${floorName}|${sIdx}`;
+    const store = loadDrumRankStore();
+    if (value) store[key] = value; else delete store[key];
+    localStorage.setItem('drum_ranks_v1', JSON.stringify(store));
+}
+
+function loadDrumRankStore() {
+    try {
+        const raw = localStorage.getItem('drum_ranks_v1');
+        return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+}
+
+function escapeHtml(s) {
+    return (s+'').replace(/[&<>"]+/g, h => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[h]));
 }
 
 // ==================== Login / Authentication ====================
