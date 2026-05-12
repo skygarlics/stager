@@ -3716,11 +3716,11 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "playEnv": "home",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-12T10:41:06.208Z"
+  "lastUpdated": "2026-05-12T10:41:14.113Z"
 }
