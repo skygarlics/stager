@@ -11,66 +11,62 @@
 // ==================== Configuration ====================
 const CONFIG = {
     // Cloudflare Worker proxy URL (handles GitHub API calls server-side)
-    WORKER_URL: 'https://stager-proxy.stager-skygarlics.workers.dev',
-    SPREADSHEET_BASE: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub',
-    SHEET_GIDS: {
-        'ノマゲ': 1873149697,
-        'ハード': 0,
-    },
+    WORKER_URL: '',  // e.g., 'https://stager-proxy.<your-subdomain>.workers.dev'
+    // When true, allow running the app without a Worker configured (development only)
+    DEV_ALLOW_OFFLINE: true,
     // Levels ordered from lowest to highest
     LEVELS: ['F', 'E', 'D', 'C', 'B', 'B+', 'A', 'A+', 'S', 'S+'],
     // Known version identifiers to help find the header row
     VERSION_MARKERS: ['5th', '6th', '7th', '8th', '9th', '10th', 'IIDXRED', 'HAPPY SKY'],
     // Max history entries to display
     MAX_HISTORY_DISPLAY: 30,
-    // Max history entries to persist (older entries are trimmed on save)
-    MAX_HISTORY_ENTRIES: 500,
-    // Number of days to keep login session
-    SESSION_DAYS: 30,
+};
 
-    // DP Mode Configuration
-    DP: {
-        // Available official star levels
-        OFFI_LEVELS: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        // Default starting star level
-        DEFAULT_OFFI: 11,
-        // Latest game version env code
-        DEFAULT_ENV: 'a330',
+const DEFAULT_SERVICE = 'iidx';
+const DEFAULT_LOGIN_DESC = 'パスワードを入力してアクセスしてください';
+const SHARED_SPREADSHEET_BASE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSUdp6iuEzE8Z5AL1hkoxzLexp89nJnLQMmICm6_MC0_UjCp1ImZFzabcZkvCpK7mcWvm_2t6iYoJRg/pub';
+const SHARED_SHEET_GIDS = {
+    'ノマゲ': 1873149697,
+    'ハード': 0,
+};
+const SERVICE_CONFIGS = {
+    iidx: {
+        title: 'IIDX ☆12 Leveler',
+        loginDesc: DEFAULT_LOGIN_DESC,
+        spreadsheetBase: SHARED_SPREADSHEET_BASE,
+        sheetGids: { ...SHARED_SHEET_GIDS },
+    },
+    drum: {
+        title: 'Drum Stager',
+        loginDesc: DEFAULT_LOGIN_DESC,
+        // TODO: Replace with drum-specific spreadsheet configuration when ready.
+        isPlaceholderConfig: true,
+        spreadsheetBase: SHARED_SPREADSHEET_BASE,
+        sheetGids: { ...SHARED_SHEET_GIDS },
     },
 };
 
 // ==================== Application State ====================
 const state = {
+    service: DEFAULT_SERVICE,     // Current hash-route service key
     password: null,              // Login password (used as Bearer token for Worker)
-    currentLevelIndex: 0,       // Index into CONFIG.LEVELS or DP levels
+    currentLevelIndex: 0,       // Index into CONFIG.LEVELS
     songDB: {},                  // { version: { level: [song1, song2, ...] } }
     versions: [],                // Ordered from oldest to newest
     playedSongs: new Set(),      // "version|song" strings for session dedup
-    songStatus: new Map(),       // songKey -> { status: 'clear'|'fail', level } latest result per song
     history: [],                 // Full play history array
     currentSong: null,           // Currently displayed song
     currentVersion: null,        // Version of current song
-    currentLevel: null,          // Level of current song (may differ from currentLevelIndex)
     fileSha: null,               // GitHub file SHA for updates
-    mode: 'ノマゲ',              // Current gauge mode (SP only)
-    gameMode: 'SP',              // 'SP' or 'DP'
-    playEnv: 'home',             // 'home' or 'arcade'
+    mode: 'ノマゲ',              // Current gauge mode
     isProcessing: false,         // Prevent double-clicks
     totalSongsInDB: 0,           // Total songs loaded
-    clearCount: 0,               // Lifetime clear count
-    totalCount: 0,               // Lifetime total play count
-    modeStates: {},              // { modeKey: { history, currentLevelIndex, clearCount, totalCount } }
-
-    // DP-specific state
-    dp: {
-        offi: 11,                // Current official star level (☆11)
-        levels: [],              // Rank levels sorted ascending (e.g., ['10.2','10.5',...])
-        env: 'a330',             // Game version env code
-    },
 };
 
 // ==================== Initialization ====================
 document.addEventListener('DOMContentLoaded', () => {
+    initializeRouting();
+
     // Login handlers
     document.getElementById('login-btn').addEventListener('click', handleLogin);
     document.getElementById('password-input').addEventListener('keydown', (e) => {
@@ -81,106 +77,430 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('clear-btn').addEventListener('click', () => handleResult('clear'));
     document.getElementById('fail-btn').addEventListener('click', () => handleResult('fail'));
 
+    // Service toggle (visible button in header)
+    const svcToggle = document.getElementById('service-toggle');
+    if (svcToggle) {
+        svcToggle.addEventListener('click', () => {
+            // cycle through available services
+            const keys = Object.keys(SERVICE_CONFIGS);
+            const cur = state.service || DEFAULT_SERVICE;
+            const idx = keys.indexOf(cur);
+            const next = keys[(idx + 1) % keys.length];
+            window.location.hash = `#${next}`;
+        });
+    }
+
     // History toggle
     document.getElementById('history-toggle').addEventListener('click', toggleHistory);
 
     // Mode toggle
     document.getElementById('mode-toggle').addEventListener('click', handleModeToggle);
 
-    // Game mode toggle (SP / DP)
-    document.getElementById('game-mode-toggle').addEventListener('click', handleGameModeToggle);
-
-    // Play environment toggle (home / arcade)
-    document.getElementById('env-toggle').addEventListener('click', handleEnvironmentToggle);
-
-    // DP star level selector
-    document.getElementById('dp-offi-down')?.addEventListener('click', () => handleDpOffiChange(-1));
-    document.getElementById('dp-offi-up')?.addEventListener('click', () => handleDpOffiChange(1));
-
-    // Try auto-login from saved session
-    tryAutoLogin();
+    // Focus password input
+    document.getElementById('password-input').focus();
 });
 
-// ==================== Login / Authentication ====================
-
-/**
- * Save login session to localStorage with expiry.
- */
-function saveSession(password) {
-    const session = {
-        password,
-        expires: Date.now() + CONFIG.SESSION_DAYS * 24 * 60 * 60 * 1000,
-    };
-    try {
-        localStorage.setItem('stager_session', JSON.stringify(session));
-    } catch (e) {
-        console.warn('Failed to save session:', e);
-    }
+// ==================== Hash Routing ====================
+function normalizeServiceKey(value) {
+    const key = (value || '').toLowerCase();
+    return SERVICE_CONFIGS[key] ? key : null;
 }
 
-/**
- * Load saved session from localStorage. Returns password or null.
- */
-function loadSession() {
-    try {
-        const raw = localStorage.getItem('stager_session');
-        if (!raw) return null;
-        const session = JSON.parse(raw);
-        if (!session.password || !session.expires) return null;
-        if (Date.now() > session.expires) {
-            localStorage.removeItem('stager_session');
-            return null;
-        }
-        return session.password;
-    } catch (e) {
-        return null;
-    }
+function getServiceFromHash() {
+    const raw = window.location.hash.replace(/^#\/?/, '');
+    return normalizeServiceKey(raw);
 }
 
-/**
- * Clear saved session.
- */
-function clearSession() {
-    localStorage.removeItem('stager_session');
+function getCurrentServiceConfig() {
+    return SERVICE_CONFIGS[state.service] || SERVICE_CONFIGS[DEFAULT_SERVICE];
 }
 
-/**
- * Try to auto-login using a saved session.
- * Falls back to showing the login modal.
- */
-async function tryAutoLogin() {
-    const savedPassword = loadSession();
-    if (!savedPassword) {
-        document.getElementById('password-input').focus();
-        return;
+function applyServiceUI() {
+    const serviceConfig = getCurrentServiceConfig();
+    document.title = serviceConfig.title;
+    document.getElementById('login-title').textContent = serviceConfig.title;
+    document.getElementById('app-title').textContent = serviceConfig.title;
+    document.querySelector('.login-desc').textContent = serviceConfig.loginDesc;
+    // Toggle IIDX song info visibility when in drum mode
+    const isDrum = state.service === 'drum';
+    const songCard = document.getElementById('song-card');
+    const actionButtons = document.getElementById('action-buttons');
+    if (songCard) songCard.classList.toggle('hidden', isDrum);
+    if (actionButtons) actionButtons.classList.toggle('hidden', isDrum);
+    // Show/hide drum panel depending on service
+    const drumPanel = document.getElementById('drum-floor-panel');
+    if (drumPanel) drumPanel.classList.toggle('hidden', !isDrum);
+
+    // Hide play history in Drum mode
+    const historyPanel = document.getElementById('history-panel');
+    if (historyPanel) historyPanel.classList.toggle('hidden', isDrum);
+
+    // Update service-toggle button label to show current service
+    const svcBtn = document.getElementById('service-toggle');
+    if (svcBtn) svcBtn.textContent = getServiceLabel(state.service);
+}
+
+function getServiceLabel(key) {
+    if (!key) return '';
+    if (key.toLowerCase() === 'iidx') return 'IIDX';
+    if (key.toLowerCase() === 'drum') return 'Drum';
+    // fallback: capitalize
+    return key.charAt(0).toUpperCase() + key.slice(1);
+}
+
+function initializeRouting() {
+    const serviceFromHash = getServiceFromHash();
+    const service = serviceFromHash || DEFAULT_SERVICE;
+    if (!serviceFromHash) {
+        window.location.hash = `#${service}`;
     }
 
-    // Attempt silent authentication
-    try {
-        const authRes = await fetch(`${CONFIG.WORKER_URL}/api/auth`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ password: savedPassword }),
-        });
+    state.service = service;
+    applyServiceUI();
 
-        if (!authRes.ok) {
-            // Saved password is no longer valid
-            clearSession();
-            document.getElementById('password-input').focus();
+    window.addEventListener('hashchange', () => {
+        const nextService = getServiceFromHash();
+        if (!nextService) {
+            window.location.hash = `#${DEFAULT_SERVICE}`;
             return;
         }
+        if (nextService === state.service) return;
+
+        handleServiceSwitch(nextService);
+    });
+}
+
+async function handleServiceSwitch(nextService) {
+    state.service = nextService;
+    applyServiceUI();
+
+    if (!state.password) return;
+
+    resetServiceState();
+    document.getElementById('loading-overlay').classList.remove('hidden');
+    document.getElementById('app').classList.add('hidden');
+
+    try {
+        await initializeAppData();
     } catch (e) {
-        // Network error - show login modal
-        document.getElementById('password-input').focus();
+        console.error('Service switch failed:', e);
+        document.getElementById('loading-overlay').classList.add('hidden');
+        document.getElementById('app').classList.remove('hidden');
+        document.getElementById('song-name').textContent = 'サービス切替に失敗しました';
+        document.getElementById('song-version').textContent = '';
+        document.getElementById('song-level').textContent = '';
+        enableActionButtons(false);
+    }
+}
+
+function resetServiceState() {
+    state.currentLevelIndex = 0;
+    state.songDB = {};
+    state.versions = [];
+    state.playedSongs.clear();
+    state.history = [];
+    state.currentSong = null;
+    state.currentVersion = null;
+    state.fileSha = null;
+    state.mode = 'ノマゲ';
+    state.isProcessing = false;
+    state.totalSongsInDB = 0;
+    document.getElementById('mode-toggle').textContent = state.mode;
+}
+
+async function initializeAppData() {
+    const serviceConfig = getCurrentServiceConfig();
+    if (serviceConfig.isPlaceholderConfig) {
+        console.warn(`[${state.service}] placeholder sheet config is in use`);
+    }
+
+    if (state.service === 'drum') {
+        await Promise.all([
+            loadDrumJsonData(),
+            loadPlayHistory(),
+        ]);
+    } else {
+        await Promise.all([
+            loadSpreadsheetData(),
+            loadPlayHistory(),
+        ]);
+    }
+
+    document.getElementById('loading-overlay').classList.add('hidden');
+    document.getElementById('app').classList.remove('hidden');
+
+    updateLevelDisplay();
+    updateCountDisplay();
+    renderFullHistory();
+    selectNextSong();
+    enableActionButtons(true);
+}
+
+// ==================== Drum JSON / Floor Panel ====================
+async function loadDrumJsonData() {
+    const url = './data/drumtower_floors_app.json';
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Failed to load drum JSON: ${res.status}`);
+    const data = await res.json();
+    // data.floors -> [{ floor, songCount, songs: [...] }]
+    state.drumFloors = data.floors || [];
+    renderDrumFloorPanel();
+}
+
+function renderDrumFloorPanel() {
+    // Render single-current-floor UI
+    const existing = document.getElementById('drum-floor-panel');
+    if (existing) existing.remove();
+    const main = document.querySelector('main');
+    const panel = document.createElement('div');
+    panel.id = 'drum-floor-panel';
+    panel.className = 'drum-panel';
+
+    const header = document.createElement('div');
+    header.className = 'panel-header';
+    const title = document.createElement('h3');
+    title.textContent = 'Drumtower';
+    header.appendChild(title);
+
+    // floor navigation
+    const nav = document.createElement('div');
+    nav.style.display = 'flex';
+    nav.style.gap = '8px';
+    nav.style.alignItems = 'center';
+
+    const prevBtn = document.createElement('button');
+    prevBtn.textContent = '◀';
+    prevBtn.className = 'mode-badge';
+    prevBtn.addEventListener('click', () => {
+        state.drumCurrentFloorIndex = Math.max(0, (state.drumCurrentFloorIndex || 0) - 1);
+        renderDrumFloorPanel();
+    });
+    nav.appendChild(prevBtn);
+
+    const floorSelect = document.createElement('select');
+    floorSelect.id = 'drum-floor-select';
+    for (let i = 0; i < state.drumFloors.length; i++) {
+        const opt = document.createElement('option');
+        opt.value = String(i);
+        opt.textContent = `${state.drumFloors[i].floor} (${state.drumFloors[i].songCount})`;
+        floorSelect.appendChild(opt);
+    }
+    floorSelect.value = String(state.drumCurrentFloorIndex || 0);
+    floorSelect.addEventListener('change', () => {
+        state.drumCurrentFloorIndex = Number(floorSelect.value);
+        renderDrumFloorPanel();
+    });
+    nav.appendChild(floorSelect);
+
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = '▶';
+    nextBtn.className = 'mode-badge';
+    nextBtn.addEventListener('click', () => {
+        state.drumCurrentFloorIndex = Math.min(state.drumFloors.length - 1, (state.drumCurrentFloorIndex || 0) + 1);
+        renderDrumFloorPanel();
+    });
+    nav.appendChild(nextBtn);
+
+    header.appendChild(nav);
+
+    panel.appendChild(header);
+
+    const floor = state.drumFloors[state.drumCurrentFloorIndex || 0];
+    if (!floor) {
+        const p = document.createElement('p');
+        p.textContent = 'No floor data available';
+        panel.appendChild(p);
+        main.appendChild(panel);
         return;
     }
 
-    // Session valid - extend expiry and proceed to app
-    state.password = savedPassword;
-    saveSession(savedPassword);
-    await initializeApp();
+    const statusRow = document.createElement('div');
+    statusRow.style.display = 'flex';
+    statusRow.style.gap = '8px';
+    statusRow.style.alignItems = 'center';
+    const statusBadge = document.createElement('button');
+    statusBadge.id = 'current-floor-status';
+    statusBadge.className = 'floor-status';
+    statusBadge.title = 'Toggle floor clear';
+    statusBadge.addEventListener('click', () => {
+        // Toggle persisted cleared state for this floor
+        const statuses = loadDrumFloorStatuses();
+        const key = floor.floor;
+        const prev = statuses[key] || {};
+        prev.cleared = !prev.cleared;
+        prev.timestamp = new Date().toISOString();
+        statuses[key] = prev;
+        localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(statuses));
+        renderDrumFloorPanel();
+    });
+    statusRow.appendChild(statusBadge);
+
+    // Show cleared count (S or higher) for this floor instead of manual Check button
+    const countSpan = document.createElement('span');
+    countSpan.id = 'current-floor-count';
+    countSpan.className = 'floor-count';
+    // compute S-or-higher count from stored ranks
+    const storeForCount = loadDrumRankStore();
+    const rankOrder = CONFIG.LEVELS || ['D','C','B','A','S','S+'];
+    const sIndex = rankOrder.indexOf('S');
+    let sOrHigherCount = 0;
+    for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+        const key = `${floor.floor}|${sIdx}`;
+        const rank = storeForCount[key] || '';
+        if (rank && rankOrder.indexOf(rank) >= sIndex) sOrHigherCount++;
+    }
+    countSpan.textContent = `${sOrHigherCount}/${floor.songs.length} S`;
+    statusRow.appendChild(countSpan);
+
+    panel.appendChild(statusRow);
+
+    const list = document.createElement('div');
+    list.className = 'floor-list';
+
+    const store = loadDrumRankStore();
+    const statuses = loadDrumFloorStatuses();
+    const floorStatus = statuses[floor.floor] || {};
+    if (floorStatus.cleared) {
+        statusBadge.textContent = 'CLEARED';
+        statusBadge.style.color = 'limegreen';
+        statusBadge.setAttribute('aria-pressed', 'true');
+    } else {
+        statusBadge.textContent = 'LOCKED';
+        statusBadge.style.color = 'crimson';
+        statusBadge.setAttribute('aria-pressed', 'false');
+    }
+
+    for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+        const song = floor.songs[sIdx];
+        const row = document.createElement('p');
+        row.className = 'floor-row';
+
+        const songName = document.createElement('span');
+        songName.className = 'song-name';
+        songName.textContent = song.songName || song.displayName || '';
+
+        const songDiff = document.createElement('span');
+        songDiff.className = 'song-diff';
+        songDiff.textContent = song.difficultyLabel || '';
+
+        const songLv = document.createElement('span');
+        songLv.className = 'song-lv';
+        songLv.textContent = song.level ?? '';
+
+        const songVer = document.createElement('span');
+        songVer.className = 'song-ver';
+        songVer.textContent = song.version || '';
+
+        const songTags = document.createElement('span');
+        songTags.className = 'song-tags';
+        // Normalize tags: accept array or comma-separated string
+        let tags = song.tags || [];
+        if (typeof tags === 'string') {
+            tags = tags.split(',').map(t => t.trim()).filter(Boolean);
+        }
+        if (!Array.isArray(tags)) tags = [];
+        if (tags.length === 0) {
+            songTags.textContent = '';
+        } else {
+            // Render tags as newline-separated text inside the span (no <br>)
+            songTags.textContent = tags.map(t => t).join('\n');
+        }
+
+        const tdToggle = document.createElement('span');
+        tdToggle.className = 'song-rank';
+        const btn = document.createElement('button');
+        btn.className = 'mode-badge';
+        const key = `${floor.floor}|${sIdx}`;
+        const val = store[key] || '';
+        btn.textContent = val === 'S' ? 'S' : '-';
+        btn.addEventListener('click', () => {
+            const newVal = (store[key] === 'S') ? '' : 'S';
+            saveDrumRank(floor.floor, sIdx, newVal);
+            renderDrumFloorPanel();
+        });
+        tdToggle.appendChild(btn);
+        row.appendChild(songName);
+        row.appendChild(songDiff);
+        row.appendChild(songLv);
+        row.appendChild(songVer);
+        row.appendChild(songTags);
+        row.appendChild(tdToggle);
+
+        list.appendChild(row);
+    }
+
+    panel.appendChild(list);
+    main.appendChild(panel);
 }
 
+function evaluateCurrentFloor() {
+    const rankOrder = CONFIG.LEVELS;
+    const sIndex = rankOrder.indexOf('S');
+    const floor = state.drumFloors[state.drumCurrentFloorIndex || 0];
+    if (!floor) return;
+
+    const store = loadDrumRankStore();
+    let sOrHigherCount = 0;
+    let bossFail = false;
+    const failures = [];
+
+    for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+        const key = `${floor.floor}|${sIdx}`;
+        const rank = store[key] || '';
+        const isSOrHigher = rank && rankOrder.indexOf(rank) >= sIndex;
+        if (isSOrHigher) sOrHigherCount++;
+
+        const song = floor.songs[sIdx];
+        const isBoss = (song.clearType && song.clearType === 'boss') || (song.tags || []).includes('보ス곡') || (song.tags || []).includes('보스곡');
+        if (isBoss && !isSOrHigher) {
+            bossFail = true;
+            failures.push({ song: song.songName || song.displayName, reason: 'boss-not-S' });
+        }
+    }
+
+    const needed = Math.ceil((floor.songCount || floor.songs.length) * 3 / 4);
+    const countOk = sOrHigherCount >= needed;
+    const cleared = countOk && !bossFail;
+
+    // persist floor status
+    const statuses = loadDrumFloorStatuses();
+    statuses[floor.floor] = { cleared, sOrHigherCount, needed, bossFail, failures, timestamp: new Date().toISOString() };
+    localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(statuses));
+
+    renderDrumFloorPanel();
+    if (cleared) {
+        alert(`Floor ${floor.floor} CLEARED! (${sOrHigherCount}/${floor.songs.length} S+)`);
+    } else {
+        alert(`Floor ${floor.floor} NOT CLEARED. ${sOrHigherCount}/${needed} S+ required. Boss requirement ${bossFail ? 'FAILED' : 'OK'}.`);
+    }
+}
+
+function loadDrumFloorStatuses() {
+    try {
+        const raw = localStorage.getItem('drum_floor_statuses_v1');
+        return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+}
+
+function saveDrumRank(floorName, sIdx, value) {
+    const key = `${floorName}|${sIdx}`;
+    const store = loadDrumRankStore();
+    if (value) store[key] = value; else delete store[key];
+    localStorage.setItem('drum_ranks_v1', JSON.stringify(store));
+}
+
+function loadDrumRankStore() {
+    try {
+        const raw = localStorage.getItem('drum_ranks_v1');
+        return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+}
+
+function escapeHtml(s) {
+    return (s+'').replace(/[&<>"]+/g, h => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[h]));
+}
+
+// ==================== Login / Authentication ====================
 async function handleLogin() {
     const passwordInput = document.getElementById('password-input');
     const password = passwordInput.value.trim();
@@ -194,7 +514,25 @@ async function handleLogin() {
     }
 
     if (!CONFIG.WORKER_URL) {
-        showError(errorEl, 'Worker URLが未設定です。app.js の WORKER_URL を設定してください。');
+        if (!CONFIG.DEV_ALLOW_OFFLINE) {
+            showError(errorEl, 'Worker URLが未設定です。app.js の WORKER_URL を設定してください。');
+            return;
+        }
+        // Dev fallback: skip worker auth and proceed
+        console.warn('DEV: WORKER_URL not set, running in offline development mode');
+        state.password = 'dev';
+        document.getElementById('login-modal').classList.add('hidden');
+        document.getElementById('loading-overlay').classList.remove('hidden');
+
+        try {
+            await initializeAppData();
+        } catch (e) {
+            console.error('Initialization failed (dev mode):', e);
+            document.getElementById('loading-overlay').classList.add('hidden');
+            document.getElementById('login-modal').classList.remove('hidden');
+            showError(errorEl, `初期化に失敗しました: ${e.message}`);
+        }
+
         return;
     }
 
@@ -218,52 +556,15 @@ async function handleLogin() {
     }
 
     state.password = password;
-    saveSession(password);
-    await initializeApp();
-}
-
-/**
- * Common initialization after successful authentication.
- */
-async function initializeApp() {
-    const errorEl = document.getElementById('login-error');
 
     // Transition to loading
     document.getElementById('login-modal').classList.add('hidden');
     document.getElementById('loading-overlay').classList.remove('hidden');
 
     try {
-        // Load play history first to restore gameMode state
-        await loadPlayHistory();
-
-        // Then load song data based on restored gameMode
-        await (state.gameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
-
-        // Clamp level index after data is loaded
-        const levels = getCurrentLevels();
-        if (levels.length > 0) {
-            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, levels.length - 1));
-        }
-
-        // Transition to app
-        document.getElementById('loading-overlay').classList.add('hidden');
-        document.getElementById('app').classList.remove('hidden');
-
-        // Update UI with restored state
-        updateGameModeUI();
-        updateEnvironmentUI();
-        updateLevelDisplay();
-        updateCountDisplay();
-        renderFullHistory();
-
-        // Select first song
-        selectNextSong();
-
-        // Enable buttons
-        enableActionButtons(true);
+        await initializeAppData();
     } catch (e) {
         console.error('Initialization failed:', e);
-        clearSession();
         document.getElementById('loading-overlay').classList.add('hidden');
         document.getElementById('login-modal').classList.remove('hidden');
         showError(errorEl, `初期化に失敗しました: ${e.message}`);
@@ -272,12 +573,13 @@ async function initializeApp() {
 
 // ==================== Spreadsheet Data Loading ====================
 async function loadSpreadsheetData() {
-    const gid = CONFIG.SHEET_GIDS[state.mode];
-    if (gid == null) {
-        throw new Error(`Sheet GID not configured for mode: ${state.mode}`);
+    const serviceConfig = getCurrentServiceConfig();
+    const gid = serviceConfig.sheetGids[state.mode];
+    if (!gid) {
+        throw new Error(`Sheet GID not configured for mode: ${state.mode} in service: ${state.service}`);
     }
 
-    const csvUrl = `${CONFIG.SPREADSHEET_BASE}?gid=${gid}&single=true&output=csv`;
+    const csvUrl = `${serviceConfig.spreadsheetBase}?gid=${gid}&single=true&output=csv`;
 
     const response = await fetch(csvUrl);
     if (!response.ok) {
@@ -380,168 +682,9 @@ function normalizeLevel(level) {
         .trim();
 }
 
-// ==================== DP Data Loading ====================
-
-/**
- * Load DP difficulty table from zasa.sakura.ne.jp via Worker proxy
- */
-async function loadDpData() {
-    const response = await workerFetch('/api/dp-rank', {
-        method: 'POST',
-        body: JSON.stringify({
-            offi: state.dp.offi,
-            env: state.dp.env,
-            cat: 0,
-            mode: 'p1',
-        }),
-    });
-
-    if (!response.ok) {
-        throw new Error(`DP rank fetch failed: ${response.status}`);
-    }
-
-    const data = await response.json();
-    parseDpHtml(data.html);
-
-    if (state.dp.levels.length === 0) {
-        throw new Error('No levels found in DP ranking data');
-    }
-
-    console.log(`DP ☆${state.dp.offi}: Loaded ${state.totalSongsInDB} songs across ${state.dp.levels.length} rank levels`);
-}
-
-/**
- * Parse the HTML table from the DP ranking site into songDB
- * 
- * Structure: <table class="rank_p1">
- *   <tr> header row with <th> version names </tr>
- *   <tr class="tile_*"> <td class="rank">level</td> <td> songs... </td> ... </tr>
- * </table>
- */
-function parseDpHtml(html) {
-    // Reset
-    state.songDB = {};
-    state.versions = [];
-    state.dp.levels = [];
-    state.totalSongsInDB = 0;
-
-    // Create a DOM parser
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-
-    const table = doc.querySelector('table.rank_p1');
-    if (!table) {
-        throw new Error('Could not find rank_p1 table in DP response');
-    }
-
-    const rows = table.querySelectorAll('tr');
-    if (rows.length < 2) {
-        throw new Error('DP table has insufficient rows');
-    }
-
-    // Parse header row to get version names
-    const headerCells = rows[0].querySelectorAll('th');
-    const versionMap = []; // index -> version name (skip first and last "rank" columns)
-
-    for (let i = 0; i < headerCells.length; i++) {
-        const th = headerCells[i];
-        if (th.classList.contains('rank')) {
-            versionMap.push(null); // skip rank columns
-        } else {
-            const vName = th.textContent.trim();
-            versionMap.push(vName);
-            if (vName && !state.versions.includes(vName)) {
-                state.versions.push(vName);
-            }
-        }
-    }
-
-    // Parse data rows
-    const levelsSet = new Set();
-
-    for (let r = 1; r < rows.length; r++) {
-        const row = rows[r];
-        const cells = row.querySelectorAll('td');
-        if (cells.length === 0) continue;
-
-        // First cell with class "rank" contains the level
-        let level = null;
-        let dataStartIdx = 0;
-
-        for (let c = 0; c < cells.length; c++) {
-            if (cells[c].classList.contains('rank')) {
-                const rankText = cells[c].textContent.trim();
-                if (rankText && !level) {
-                    level = rankText;
-                    dataStartIdx = c + 1;
-                }
-            }
-        }
-
-        if (!level) continue;
-        levelsSet.add(level);
-
-        // Parse song cells - each non-rank <td> corresponds to a version
-        let versionIdx = 0;
-        for (let c = 0; c < cells.length; c++) {
-            if (cells[c].classList.contains('rank')) continue;
-
-            // Map this cell to a version
-            // We need to find the correct version - skip null entries in versionMap
-            while (versionIdx < versionMap.length && versionMap[versionIdx] === null) {
-                versionIdx++;
-            }
-            const version = versionMap[versionIdx] || null;
-            versionIdx++;
-
-            if (!version) continue;
-
-            // Extract song names from <a class="music"> links
-            const links = cells[c].querySelectorAll('a.music');
-            if (links.length === 0) continue;
-
-            const songs = [];
-            for (const link of links) {
-                const songName = link.textContent.trim();
-                if (songName) songs.push(songName);
-            }
-
-            if (songs.length === 0) continue;
-
-            if (!state.songDB[version]) {
-                state.songDB[version] = {};
-            }
-            if (!state.songDB[version][level]) {
-                state.songDB[version][level] = [];
-            }
-            state.songDB[version][level].push(...songs);
-            state.totalSongsInDB += songs.length;
-        }
-    }
-
-    // Sort levels numerically ascending
-    state.dp.levels = Array.from(levelsSet).sort((a, b) => parseFloat(a) - parseFloat(b));
-}
-
-/**
- * Get current levels array depending on game mode
- */
-function getCurrentLevels() {
-    return state.gameMode === 'DP' ? state.dp.levels : CONFIG.LEVELS;
-}
-
-/**
- * Get current level string
- */
-function getCurrentLevel() {
-    const levels = getCurrentLevels();
-    return levels[state.currentLevelIndex] || levels[0];
-}
-
 // ==================== Song Selection Algorithm ====================
 function selectNextSong() {
-    const levels = getCurrentLevels();
-    const level = levels[state.currentLevelIndex];
+    const level = CONFIG.LEVELS[state.currentLevelIndex];
 
     // Try from latest version backwards (fallback logic)
     for (let v = state.versions.length - 1; v >= 0; v--) {
@@ -558,45 +701,8 @@ function selectNextSong() {
         }
     }
 
-    // All songs at this level have been played - re-enable only failed songs first
-    clearFailedSongsForLevel(level);
-
-    for (let v = state.versions.length - 1; v >= 0; v--) {
-        const version = state.versions[v];
-        const songs = state.songDB[version]?.[level] || [];
-        const available = songs.filter(s => !state.playedSongs.has(songKey(version, s)));
-
-        if (available.length > 0) {
-            const song = pickRandom(available);
-            displaySong(song, version, level);
-            return;
-        }
-    }
-
-    // No failed songs to retry - try a cleared song from the next higher level
-    const higherLevel = levels[Math.min(state.currentLevelIndex + 1, levels.length - 1)];
-    if (higherLevel !== level) {
-        const clearedHigher = getClearedSongsForLevel(higherLevel);
-        if (clearedHigher.length > 0) {
-            const pick = pickRandom(clearedHigher);
-            displaySong(pick.song, pick.version, higherLevel);
-            return;
-        }
-
-        // No cleared songs at higher level - pick any song from higher level
-        for (let v = state.versions.length - 1; v >= 0; v--) {
-            const version = state.versions[v];
-            const songs = state.songDB[version]?.[higherLevel] || [];
-            if (songs.length > 0) {
-                const song = pickRandom(songs);
-                displaySong(song, version, higherLevel);
-                return;
-            }
-        }
-    }
-
-    // Fallback: reset all at current level and pick
-    clearAllPlayedSongsForLevel(level);
+    // All songs at this level have been played in session - reset and retry
+    clearPlayedSongsForLevel(level);
 
     for (let v = state.versions.length - 1; v >= 0; v--) {
         const version = state.versions[v];
@@ -618,85 +724,25 @@ function selectNextSong() {
     enableActionButtons(false);
 }
 
-/**
- * Remove only songs that were failed at this level from playedSongs,
- * so they can be retried while cleared songs stay excluded.
- */
-function clearFailedSongsForLevel(level) {
-    const failed = getFailedSongsForLevel(level);
-    for (const { song, version } of failed) {
-        state.playedSongs.delete(songKey(version, song));
-    }
-}
-
-/**
- * Remove all songs at this level from playedSongs (full reset fallback).
- */
-function clearAllPlayedSongsForLevel(level) {
-    for (const version of state.versions) {
-        const songs = state.songDB[version]?.[level] || [];
-        for (const song of songs) {
-            state.playedSongs.delete(songKey(version, song));
-        }
-    }
-}
-
-/**
- * Get songs at a given level whose latest result is 'clear'.
- * Returns array of { song, version } objects.
- */
-function getClearedSongsForLevel(level) {
-    const result = [];
-    for (const version of state.versions) {
-        const songs = state.songDB[version]?.[level] || [];
-        for (const song of songs) {
-            const info = state.songStatus.get(songKey(version, song));
-            if (info && info.status === 'clear' && info.level === level) {
-                result.push({ song, version });
+function clearPlayedSongsForLevel(level) {
+    const toRemove = [];
+    for (const key of state.playedSongs) {
+        // Check if any version has this song at the current level
+        for (const version of state.versions) {
+            const songs = state.songDB[version]?.[level] || [];
+            for (const song of songs) {
+                if (key === songKey(version, song)) {
+                    toRemove.push(key);
+                }
             }
         }
     }
-    return result;
-}
-
-/**
- * Get songs at a given level whose latest result is 'fail'.
- * Returns array of { song, version } objects.
- */
-function getFailedSongsForLevel(level) {
-    const result = [];
-    for (const version of state.versions) {
-        const songs = state.songDB[version]?.[level] || [];
-        for (const song of songs) {
-            const info = state.songStatus.get(songKey(version, song));
-            if (info && info.status === 'fail' && info.level === level) {
-                result.push({ song, version });
-            }
-        }
-    }
-    return result;
-}
-
-/**
- * Get the latest status for a specific song.
- * Returns { status, level } or null.
- */
-function getSongStatus(version, song) {
-    return state.songStatus.get(songKey(version, song)) || null;
+    toRemove.forEach(key => state.playedSongs.delete(key));
 }
 
 function displaySong(song, version, level) {
     state.currentSong = song;
     state.currentVersion = version;
-    state.currentLevel = level;
-
-    // Sync currentLevelIndex to match displayed level
-    const levels = getCurrentLevels();
-    const levelIdx = levels.indexOf(level);
-    if (levelIdx !== -1) {
-        state.currentLevelIndex = levelIdx;
-        updateLevelDisplay();
-    }
 
     const songNameEl = document.getElementById('song-name');
     songNameEl.textContent = song;
@@ -717,10 +763,7 @@ async function handleResult(result) {
     state.isProcessing = true;
     enableActionButtons(false);
 
-    // Use the level of the displayed song (may differ from currentLevelIndex
-    // when a higher-level song was selected)
-    const levels = getCurrentLevels();
-    const level = state.currentLevel || levels[state.currentLevelIndex];
+    const level = CONFIG.LEVELS[state.currentLevelIndex];
 
     // Flash effect on song card
     const songCard = document.getElementById('song-card');
@@ -735,21 +778,14 @@ async function handleResult(result) {
         level: level,
         status: result,
         timestamp: new Date().toISOString(),
-        modeKey: getModeKey(),
     };
 
     state.history.push(entry);
-    const key = songKey(state.currentVersion, state.currentSong);
-    state.playedSongs.add(key);
-    state.songStatus.set(key, { status: result, level });
-
-    // Update counters
-    state.totalCount++;
-    if (result === 'clear') state.clearCount++;
+    state.playedSongs.add(songKey(state.currentVersion, state.currentSong));
 
     // Update level
     if (result === 'clear') {
-        state.currentLevelIndex = Math.min(state.currentLevelIndex + 1, levels.length - 1);
+        state.currentLevelIndex = Math.min(state.currentLevelIndex + 1, CONFIG.LEVELS.length - 1);
     } else {
         state.currentLevelIndex = Math.max(state.currentLevelIndex - 1, 0);
     }
@@ -790,8 +826,16 @@ async function workerFetch(path, options = {}) {
 }
 
 async function loadPlayHistory() {
+    if (!CONFIG.WORKER_URL) {
+        if (CONFIG.DEV_ALLOW_OFFLINE) {
+            console.log('DEV: skipping loadPlayHistory (no WORKER_URL)');
+            return;
+        }
+        throw new Error('Worker URL not configured');
+    }
+
     try {
-        const response = await workerFetch('/api/history');
+        const response = await workerFetch(`/api/history?service=${encodeURIComponent(state.service)}`);
 
         if (!response.ok) {
             throw new Error(`Worker API error: ${response.status}`);
@@ -806,63 +850,20 @@ async function loadPlayHistory() {
 
         state.fileSha = data.sha;
 
-        // Restore game mode info
-        if (data.gameMode) {
-            state.gameMode = data.gameMode;
-        }
-        if (data.playEnv) {
-            state.playEnv = data.playEnv;
-        } else if (data.environment) {
-            state.playEnv = data.environment;
-        }
-        if (data.dp) {
-            state.dp.offi = data.dp.offi ?? CONFIG.DP.DEFAULT_OFFI;
-            state.dp.env = data.dp.env ?? CONFIG.DP.DEFAULT_ENV;
-        }
-        if (data.mode) {
-            state.mode = data.mode;
-        }
-
-        // Restore per-mode states
-        if (data.modeStates) {
-            state.modeStates = normalizeModeStates(data.modeStates);
-        } else if (data.history) {
-            // Backward compatibility: migrate from old single-history format
-            const legacyModeKey = getModeKey();
-            // Build playedSongs and songStatus from legacy history
-            const legacyPlayed = [];
-            const legacyStatus = [];
-            for (const entry of data.history) {
-                const k = songKey(entry.version, entry.song);
-                if (!legacyPlayed.includes(k)) legacyPlayed.push(k);
-                // Last entry wins (overwrites previous status for same song)
-                const existingIdx = legacyStatus.findIndex(([key]) => key === k);
-                const statusEntry = [k, { status: entry.status, level: entry.level }];
-                if (existingIdx !== -1) {
-                    legacyStatus[existingIdx] = statusEntry;
-                } else {
-                    legacyStatus.push(statusEntry);
-                }
-            }
-
-            state.modeStates[legacyModeKey] = {
-                history: data.history,
-                currentLevelIndex: data.currentLevelIndex ?? 0,
-                clearCount: data.clearCount ?? data.history.filter(e => e.status === 'clear').length,
-                totalCount: data.totalCount ?? data.history.length,
-                playedSongs: legacyPlayed,
-                songStatus: legacyStatus,
-            };
-        }
-
-        // Restore current mode's state from modeStates
-        restoreModeState(getModeKey());
+        // Restore state
+        state.history = data.history || [];
+        state.currentLevelIndex = data.currentLevelIndex ?? 0;
 
         // Clamp level index to valid range
-        const maxIndex = state.gameMode === 'DP' ? 999 : CONFIG.LEVELS.length - 1;
-        state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, maxIndex));
+        state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, CONFIG.LEVELS.length - 1));
 
-        console.log(`Restored mode ${getModeKey()}: ${state.history.length} history entries, level: ${getCurrentLevel()}, gameMode: ${state.gameMode}`);
+        // Rebuild played songs set from recent history (last 50 entries)
+        const recentHistory = state.history.slice(-50);
+        for (const entry of recentHistory) {
+            state.playedSongs.add(songKey(entry.version, entry.song));
+        }
+
+        console.log(`Restored ${state.history.length} history entries, level: ${CONFIG.LEVELS[state.currentLevelIndex]}`);
     } catch (e) {
         console.error('Failed to load play history:', e);
         // Non-fatal: we can still play without saved history
@@ -870,36 +871,30 @@ async function loadPlayHistory() {
 }
 
 async function savePlayHistory() {
-    // Trim history to max entries before saving
-    if (state.history.length > CONFIG.MAX_HISTORY_ENTRIES) {
-        state.history = state.history.slice(-CONFIG.MAX_HISTORY_ENTRIES);
+    if (!CONFIG.WORKER_URL) {
+        if (CONFIG.DEV_ALLOW_OFFLINE) {
+            console.log('DEV: skipping savePlayHistory (no WORKER_URL)');
+            return;
+        }
+        throw new Error('Worker URL not configured');
     }
-
-    // Ensure current mode's state is up to date in modeStates
-    saveModeState();
-
     const payload = {
-        modeStates: state.modeStates,
+        history: state.history,
+        currentLevelIndex: state.currentLevelIndex,
         mode: state.mode,
-        gameMode: state.gameMode,
-        playEnv: state.playEnv,
-        dp: {
-            offi: state.dp.offi,
-            env: state.dp.env,
-        },
         lastUpdated: new Date().toISOString(),
     };
 
     const body = {
         content: payload,
-        message: `Update play history - ${state.gameMode} ${state.playEnv} ${getCurrentLevel()} - ${new Date().toISOString()}`,
+        message: `Update play history - ${CONFIG.LEVELS[state.currentLevelIndex]} - ${new Date().toISOString()}`,
     };
 
     if (state.fileSha) {
         body.sha = state.fileSha;
     }
 
-    const response = await workerFetch('/api/history', {
+    const response = await workerFetch(`/api/history?service=${encodeURIComponent(state.service)}`, {
         method: 'PUT',
         body: JSON.stringify(body),
     });
@@ -917,10 +912,7 @@ async function savePlayHistory() {
 async function handleModeToggle() {
     if (state.isProcessing) return;
 
-    // In DP mode, mode toggle is not used (no gauge modes)
-    if (state.gameMode === 'DP') return;
-
-    const modes = Object.keys(CONFIG.SHEET_GIDS);
+    const modes = Object.keys(getCurrentServiceConfig().sheetGids);
     const currentIndex = modes.indexOf(state.mode);
     const nextMode = modes[(currentIndex + 1) % modes.length];
 
@@ -932,35 +924,22 @@ async function handleModeToggle() {
     document.getElementById('song-version').textContent = '';
     document.getElementById('song-level').textContent = '';
 
-    // Save current mode's state before switching
-    saveModeState();
+    // Save current state before switching
     await savePlayHistory().catch(err => console.error('Save before mode switch failed:', err));
 
     // Switch mode
     state.mode = nextMode;
     document.getElementById('mode-toggle').textContent = nextMode;
 
-    // Reset song DB (different songs per gauge mode)
+    // Reset song-related state but keep level
     state.songDB = {};
     state.versions = [];
+    state.playedSongs.clear();
     state.totalSongsInDB = 0;
-
-    // Restore previous state for the new mode
-    restoreModeState(getModeKey());
 
     try {
         await loadSpreadsheetData();
-
-        // Clamp level index after data is loaded
-        const levels = getCurrentLevels();
-        if (levels.length > 0) {
-            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, levels.length - 1));
-        }
-
-        updateLevelDisplay();
         updateCountDisplay();
-        renderFullHistory();
-        updateEnvironmentUI();
         selectNextSong();
         enableActionButtons(true);
     } catch (e) {
@@ -971,221 +950,29 @@ async function handleModeToggle() {
     state.isProcessing = false;
 }
 
-// ==================== Environment Toggle (home / arcade) ====================
-async function handleEnvironmentToggle() {
-    if (state.isProcessing) return;
-
-    state.isProcessing = true;
-    enableActionButtons(false);
-
-    document.getElementById('song-name').textContent = 'データ読み込み中...';
-    document.getElementById('song-version').textContent = '';
-    document.getElementById('song-level').textContent = '';
-
-    saveModeState();
-    await savePlayHistory().catch(err => console.error('Save before environment switch failed:', err));
-
-    state.playEnv = state.playEnv === 'home' ? 'arcade' : 'home';
-    updateEnvironmentUI();
-
-    restoreModeState(getModeKey());
-    updateLevelDisplay();
-    updateCountDisplay();
-    renderFullHistory();
-    selectNextSong();
-
-    saveModeState();
-    await savePlayHistory().catch(err => console.error('Save after environment switch failed:', err));
-
-    enableActionButtons(true);
-
-    state.isProcessing = false;
-}
-
-// ==================== Game Mode Toggle (SP / DP) ====================
-async function handleGameModeToggle() {
-    if (state.isProcessing) return;
-
-    const nextGameMode = state.gameMode === 'SP' ? 'DP' : 'SP';
-
-    state.isProcessing = true;
-    enableActionButtons(false);
-
-    // Show loading
-    document.getElementById('song-name').textContent = 'データ読み込み中...';
-    document.getElementById('song-version').textContent = '';
-    document.getElementById('song-level').textContent = '';
-
-    // Save current mode's state before switching
-    saveModeState();
-    await savePlayHistory().catch(err => console.error('Save before game mode switch failed:', err));
-
-    // Switch game mode
-    state.gameMode = nextGameMode;
-
-    // Reset song DB (different data source per game mode)
-    state.songDB = {};
-    state.versions = [];
-    state.totalSongsInDB = 0;
-
-    // Restore previous state for the new mode
-    restoreModeState(getModeKey());
-
-    updateGameModeUI();
-    updateEnvironmentUI();
-
-    try {
-        await (nextGameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
-
-        // Clamp level index after data is loaded
-        const levels = getCurrentLevels();
-        if (levels.length > 0) {
-            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, levels.length - 1));
-        }
-
-        updateLevelDisplay();
-        updateCountDisplay();
-        renderFullHistory();
-        selectNextSong();
-        enableActionButtons(true);
-    } catch (e) {
-        console.error('Game mode switch failed:', e);
-        document.getElementById('song-name').textContent = 'モード切替に失敗しました';
-    }
-
-    state.isProcessing = false;
-}
-
-/**
- * Update UI elements based on current game mode
- */
-function updateGameModeUI() {
-    const gameModeBtn = document.getElementById('game-mode-toggle');
-    const modeToggle = document.getElementById('mode-toggle');
-    const dpControls = document.getElementById('dp-controls');
-
-    gameModeBtn.textContent = state.gameMode;
-
-    if (state.gameMode === 'DP') {
-        modeToggle.classList.add('hidden');
-        dpControls.classList.remove('hidden');
-        updateDpOffiDisplay();
-    } else {
-        modeToggle.classList.remove('hidden');
-        modeToggle.textContent = state.mode;
-        dpControls.classList.add('hidden');
-    }
-}
-
-/**
- * Update the play environment display
- */
-function updateEnvironmentUI() {
-    const envToggle = document.getElementById('env-toggle');
-    if (!envToggle) return;
-
-    envToggle.textContent = state.playEnv === 'home' ? '家用' : 'アーケード';
-    envToggle.title = state.playEnv === 'home' ? '家用環境へ切替' : 'アーケード環境へ切替';
-}
-
-/**
- * Update the DP star level display
- */
-function updateDpOffiDisplay() {
-    const offiLabel = document.getElementById('dp-offi-label');
-    if (offiLabel) {
-        offiLabel.textContent = `☆${state.dp.offi}`;
-    }
-}
-
-/**
- * Change DP star level
- */
-async function handleDpOffiChange(delta) {
-    if (state.isProcessing || state.gameMode !== 'DP') return;
-
-    const levels = CONFIG.DP.OFFI_LEVELS;
-    const currentIdx = levels.indexOf(state.dp.offi);
-    const newIdx = currentIdx + delta;
-
-    if (newIdx < 0 || newIdx >= levels.length) return;
-
-    state.isProcessing = true;
-    enableActionButtons(false);
-
-    // Save current DP level's state before switching
-    saveModeState();
-    await savePlayHistory().catch(err => console.error('Save before offi change failed:', err));
-
-    state.dp.offi = levels[newIdx];
-
-    // Reset song DB (different data per star level)
-    state.songDB = {};
-    state.versions = [];
-    state.totalSongsInDB = 0;
-
-    // Restore previous state for the new DP level
-    restoreModeState(getModeKey());
-
-    updateDpOffiDisplay();
-    updateEnvironmentUI();
-
-    // Show loading
-    document.getElementById('song-name').textContent = 'データ読み込み中...';
-    document.getElementById('song-version').textContent = '';
-    document.getElementById('song-level').textContent = '';
-
-    try {
-        await loadDpData();
-
-        // Clamp level index after data reload
-        if (state.dp.levels.length > 0) {
-            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, state.dp.levels.length - 1));
-        }
-
-        updateLevelDisplay();
-        updateCountDisplay();
-        renderFullHistory();
-        selectNextSong();
-        enableActionButtons(true);
-    } catch (e) {
-        console.error('DP offi change failed:', e);
-        document.getElementById('song-name').textContent = 'レベル切替に失敗しました';
-    }
-
-    state.isProcessing = false;
-}
-
 // ==================== UI Update Functions ====================
 function updateLevelDisplay() {
-    const levels = getCurrentLevels();
-    const level = levels[state.currentLevelIndex] || levels[0] || '?';
+    const level = CONFIG.LEVELS[state.currentLevelIndex];
     const levelBadge = document.getElementById('current-level');
     levelBadge.textContent = level;
 
-    if (state.gameMode === 'DP') {
-        // For DP mode, color by numeric rank value
-        const numLevel = parseFloat(level);
-        const hue = Math.max(0, Math.min(120, (1 - (numLevel - 1) / 12) * 120));
-        const color = `hsl(${hue}, 80%, 55%)`;
-        levelBadge.style.background = `linear-gradient(135deg, ${color}, hsl(${hue}, 80%, 40%))`;
-    } else {
-        // SP mode: Color based on level tier
-        const tierColors = {
-            'F': '#4ade80', 'E': '#22d3ee',
-            'D': '#60a5fa', 'C': '#818cf8',
-            'B': '#a78bfa', 'B+': '#c084fc',
-            'A': '#f472b6', 'A+': '#fb7185',
-            'S': '#f97316', 'S+': '#ef4444',
-        };
+    // Color based on level tier
+    const tierColors = {
+        'F': '#4ade80', 'E': '#22d3ee',
+        'D': '#60a5fa', 'C': '#818cf8',
+        'B': '#a78bfa', 'B+': '#c084fc',
+        'A': '#f472b6', 'A+': '#fb7185',
+        'S': '#f97316', 'S+': '#ef4444',
+    };
 
-        const color = tierColors[level] || '#888';
-        levelBadge.style.background = `linear-gradient(135deg, ${color}, ${adjustColor(color, -30)})`;
-    }
+    const color = tierColors[level] || '#888';
+    levelBadge.style.background = `linear-gradient(135deg, ${color}, ${adjustColor(color, -30)})`;
 }
 
 function updateCountDisplay() {
-    document.getElementById('song-count').textContent = `${state.clearCount}✓ / ${state.totalCount}`;
+    const clearCount = state.history.filter(e => e.status === 'clear').length;
+    const total = state.history.length;
+    document.getElementById('song-count').textContent = `${clearCount}✓ / ${total}`;
 }
 
 function addHistoryEntry(entry) {
@@ -1258,97 +1045,6 @@ function showError(el, message) {
 // ==================== Utility Functions ====================
 function songKey(version, song) {
     return `${version}|${song}`;
-}
-
-/**
- * Get a unique key representing the current mode combination.
- * SP modes: "SP_home_ノマゲ", "SP_arcade_ノマゲ"
- * DP modes: "DP_home_11", "DP_arcade_11", etc.
- */
-function getModeKey() {
-    const suffix = state.gameMode === 'DP' ? state.dp.offi : state.mode;
-    return `${state.gameMode}_${state.playEnv}_${suffix}`;
-}
-
-/**
- * Save current mode's volatile state into modeStates.
- * playedSongs (Set) and songStatus (Map) are serialized to plain arrays/objects
- * so they survive JSON round-tripping and are not limited by history trimming.
- */
-function saveModeState() {
-    const key = getModeKey();
-    state.modeStates[key] = {
-        history: [...state.history],
-        currentLevelIndex: state.currentLevelIndex,
-        clearCount: state.clearCount,
-        totalCount: state.totalCount,
-        playedSongs: [...state.playedSongs],
-        songStatus: [...state.songStatus.entries()],
-    };
-}
-
-/**
- * Restore a mode's state from modeStates.
- * playedSongs and songStatus are restored directly from saved data,
- * falling back to rebuilding from history for backward compatibility.
- */
-function restoreModeState(modeKey) {
-    const saved = state.modeStates[modeKey];
-    state.history = saved ? [...(saved.history || [])] : [];
-    state.currentLevelIndex = saved?.currentLevelIndex ?? 0;
-    state.clearCount = saved?.clearCount ?? 0;
-    state.totalCount = saved?.totalCount ?? 0;
-
-    // Restore playedSongs
-    state.playedSongs.clear();
-    if (saved?.playedSongs) {
-        for (const k of saved.playedSongs) {
-            state.playedSongs.add(k);
-        }
-    }
-
-    // Restore songStatus
-    state.songStatus.clear();
-    if (saved?.songStatus) {
-        for (const [k, v] of saved.songStatus) {
-            state.songStatus.set(k, v);
-        }
-    }
-
-    // Fallback: if no saved playedSongs/songStatus, rebuild from history
-    if (!saved?.playedSongs && state.history.length > 0) {
-        for (const entry of state.history) {
-            const k = songKey(entry.version, entry.song);
-            state.playedSongs.add(k);
-            state.songStatus.set(k, { status: entry.status, level: entry.level });
-        }
-    }
-}
-
-/**
- * Normalize stored modeStates so old data is treated as home environment.
- */
-function normalizeModeStates(modeStates) {
-    const normalized = {};
-
-    for (const [key, value] of Object.entries(modeStates || {})) {
-        const envAwareMatch = key.match(/^(SP|DP)_(home|arcade)_(.+)$/);
-        if (envAwareMatch) {
-            normalized[key] = value;
-            continue;
-        }
-
-        const legacyMatch = key.match(/^(SP|DP)_(.+)$/);
-        if (legacyMatch) {
-            const [, gameMode, suffix] = legacyMatch;
-            normalized[`${gameMode}_home_${suffix}`] = value;
-            continue;
-        }
-
-        normalized[key] = value;
-    }
-
-    return normalized;
 }
 
 function pickRandom(arr) {

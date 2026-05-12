@@ -109,6 +109,8 @@ DATA_BRANCH = "data"                            # 데이터 브랜치
 ALLOWED_ORIGIN = "https://skygarlics.github.io" # GitHub Pages URL
 ```
 
+`ALLOWED_ORIGIN`에는 `https://skygarlics.github.io/stager/`처럼 경로까지 넣지 말고, 반드시 origin만 넣습니다.
+
 ### 2-5. 배포
 
 ```bash
@@ -170,6 +172,14 @@ GitHub → Repository → **Settings** → **Pages**:
 - **Save**
 
 약 1~2분 후 접속 가능: `https://skygarlics.github.io/stager/`
+
+### 3-3. 해시 라우팅 URL
+
+- 기존 서비스(IIDX): `https://skygarlics.github.io/stager/#iidx`
+- 신규 서비스(Drum): `https://skygarlics.github.io/stager/#drum`
+
+각 서비스는 Worker에 `service` 쿼리를 전달해 플레이 기록 파일을 분리 저장합니다.
+(예: `play_history_iidx.json`, `play_history_drum.json`)
 
 ---
 
