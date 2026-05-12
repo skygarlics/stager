@@ -17,6 +17,7 @@
 // ==================== Constants ====================
 const HISTORY_FILE = 'play_history.json';
 const DRUM_HISTORY_FILE = 'play_history_drum.json';
+const DP_CACHE_FILE = 'dp_rank_cache.json';
 const GITHUB_API = 'https://api.github.com';
 const MAX_REQUEST_BODY = 512 * 1024; // 512 KB max request body
 
@@ -162,6 +163,23 @@ export default {
                     return corsResponse(env, await handleDpRank(request, env));
                 }
 
+                case path === '/api/dp-rank-cache' && request.method === 'GET':
+                case path === '/api/dp-rank-cache' && request.method === 'PUT': {
+                    const rl = rateLimiter.check('api', clientIP, 30, 60_000);
+                    if (!rl.allowed) {
+                        return corsResponse(env, json(
+                            { error: 'Rate limit exceeded. Try again later.' },
+                            429,
+                            { 'Retry-After': String(rl.retryAfter) }
+                        ));
+                    }
+                    if (request.method === 'GET') {
+                        return corsResponse(env, await handleGetDpRankCache(request, env));
+                    } else {
+                        return corsResponse(env, await handlePutDpRankCache(request, env));
+                    }
+                }
+
                 case path === '/api/health':
                     return corsResponse(env, json({ status: 'ok' }));
 
@@ -266,7 +284,7 @@ async function handlePutDrumHistory(request, env) {
 
     const normalizedContent = normalizeDrumHistoryPayload(body.content || {});
     const jsonStr = JSON.stringify(normalizedContent, null, 2);
-    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+    const encoded = toBase64Utf8(jsonStr);
 
     const url = `${GITHUB_API}/repos/${repo}/contents/${DRUM_HISTORY_FILE}`;
 
@@ -420,7 +438,7 @@ async function handlePutHistory(request, env) {
 
     // Encode content to base64
     const jsonStr = JSON.stringify(body.content, null, 2);
-    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+    const encoded = toBase64Utf8(jsonStr);
 
     const url = `${GITHUB_API}/repos/${repo}/contents/${HISTORY_FILE}`;
 
@@ -498,6 +516,162 @@ async function handleDpRank(request, env) {
     return json({ html });
 }
 
+/**
+ * GET /api/dp-rank-cache
+ * Query: ?key=DP_a330_11
+ */
+async function handleGetDpRankCache(request, env) {
+    if (!(await authenticate(request, env))) {
+        return json({ error: 'Unauthorized' }, 401);
+    }
+
+    const repo = env.REPO || 'skygarlics/stager';
+    const branch = env.DATA_BRANCH || 'data';
+    const requestUrl = new URL(request.url);
+    const key = requestUrl.searchParams.get('key');
+    const url = `${GITHUB_API}/repos/${repo}/contents/${DP_CACHE_FILE}?ref=${branch}`;
+
+    const ghResponse = await fetch(url, {
+        headers: {
+            'Authorization': `token ${env.GITHUB_PAT}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Stager-Worker',
+        },
+    });
+
+    if (ghResponse.status === 404) {
+        return json({ exists: false, schemaVersion: 1, key: key || null, entry: null, entries: {} });
+    }
+
+    if (!ghResponse.ok) {
+        const errorText = await ghResponse.text();
+        return json({ error: 'GitHub API error', status: ghResponse.status, detail: errorText }, 502);
+    }
+
+    const data = await ghResponse.json();
+    const base64Clean = data.content.replace(/\n/g, '');
+    const content = atob(base64Clean);
+    const decoded = new TextDecoder().decode(
+        Uint8Array.from(content, c => c.charCodeAt(0))
+    );
+    const parsed = JSON.parse(decoded);
+    const normalized = normalizeDpRankCachePayload(parsed);
+
+    if (key) {
+        return json({
+            exists: true,
+            schemaVersion: normalized.schemaVersion,
+            key,
+            entry: normalized.entries[key] || null,
+            lastUpdated: normalized.lastUpdated,
+            sha: data.sha,
+        });
+    }
+
+    return json({
+        ...normalized,
+        exists: true,
+        sha: data.sha,
+    });
+}
+
+/**
+ * PUT /api/dp-rank-cache
+ * Body: { key: "...", entry: {...}, sha?: "..." }
+ */
+async function handlePutDpRankCache(request, env) {
+    if (!(await authenticate(request, env))) {
+        return json({ error: 'Unauthorized' }, 401);
+    }
+
+    const repo = env.REPO || 'skygarlics/stager';
+    const branch = env.DATA_BRANCH || 'data';
+    const rawBody = await readBody(request);
+    if (!rawBody) return json({ error: 'Request body too large (max 512KB)' }, 413);
+    const body = JSON.parse(rawBody);
+
+    const key = typeof body.key === 'string' ? body.key.trim() : '';
+    if (!key) {
+        return json({ error: 'Cache key is required' }, 400);
+    }
+    if (!body.entry || typeof body.entry !== 'object') {
+        return json({ error: 'Cache entry is required' }, 400);
+    }
+
+    const getUrl = `${GITHUB_API}/repos/${repo}/contents/${DP_CACHE_FILE}?ref=${branch}`;
+    const getResponse = await fetch(getUrl, {
+        headers: {
+            'Authorization': `token ${env.GITHUB_PAT}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Stager-Worker',
+        },
+    });
+
+    let currentPayload = normalizeDpRankCachePayload({});
+    let fileSha = body.sha || null;
+
+    if (getResponse.ok) {
+        const existing = await getResponse.json();
+        const base64Clean = existing.content.replace(/\n/g, '');
+        const content = atob(base64Clean);
+        const decoded = new TextDecoder().decode(
+            Uint8Array.from(content, c => c.charCodeAt(0))
+        );
+        currentPayload = normalizeDpRankCachePayload(JSON.parse(decoded));
+        if (!fileSha) fileSha = existing.sha;
+    } else if (getResponse.status !== 404) {
+        const errorText = await getResponse.text();
+        return json({ error: 'GitHub API error', status: getResponse.status, detail: errorText }, 502);
+    }
+
+    currentPayload.entries[key] = body.entry;
+    currentPayload.lastUpdated = new Date().toISOString();
+    const jsonStr = JSON.stringify(currentPayload, null, 2);
+    const encoded = toBase64Utf8(jsonStr);
+
+    const putUrl = `${GITHUB_API}/repos/${repo}/contents/${DP_CACHE_FILE}`;
+    const ghBody = {
+        message: body.message || `Update DP cache ${key} - ${new Date().toISOString()}`,
+        content: encoded,
+        branch,
+    };
+    if (fileSha) ghBody.sha = fileSha;
+
+    const putResponse = await fetch(putUrl, {
+        method: 'PUT',
+        headers: {
+            'Authorization': `token ${env.GITHUB_PAT}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json',
+            'User-Agent': 'Stager-Worker',
+        },
+        body: JSON.stringify(ghBody),
+    });
+
+    if (!putResponse.ok) {
+        const errorData = await putResponse.json().catch(() => ({}));
+        return json({
+            error: 'GitHub PUT failed',
+            status: putResponse.status,
+            detail: errorData.message || '',
+        }, 502);
+    }
+
+    const data = await putResponse.json();
+    return json({ ok: true, key, sha: data.content.sha });
+}
+
+function normalizeDpRankCachePayload(payload) {
+    const entries = payload && typeof payload.entries === 'object' && payload.entries !== null
+        ? payload.entries
+        : {};
+    return {
+        schemaVersion: 1,
+        entries,
+        lastUpdated: payload?.lastUpdated || new Date().toISOString(),
+    };
+}
+
 // ==================== Helpers ====================
 
 function json(data, status = 200, extraHeaders = {}) {
@@ -547,6 +721,15 @@ async function readBody(request) {
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function toBase64Utf8(text) {
+    const bytes = new TextEncoder().encode(text);
+    let binary = '';
+    for (const byte of bytes) {
+        binary += String.fromCharCode(byte);
+    }
+    return btoa(binary);
 }
 
 function corsResponse(env, response) {

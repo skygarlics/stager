@@ -301,6 +301,24 @@ header {
     text-align: center;
 }
 
+.dp-refresh-btn {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.18), rgba(167, 139, 250, 0.18));
+    border: 1px solid rgba(34, 211, 238, 0.35);
+    color: #9be7ff;
+    border-radius: 20px;
+    padding: 0.2rem 0.45rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: inherit;
+}
+
+.dp-refresh-btn:hover {
+    border-color: #9be7ff;
+    color: #d8f6ff;
+}
+
 /* ==================== Main Content ==================== */
 main {
     max-width: 600px;
