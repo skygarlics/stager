@@ -943,6 +943,16 @@ async function loadDpData() {
     const response = await workerFetch(`/api/dp-rank-cache?key=${encodeURIComponent(key)}`);
 
     if (!response.ok) {
+        // Some Worker deployments may not include dp-rank-cache routes yet.
+        // Treat 404 as cache-miss instead of hard failure.
+        if (response.status === 404) {
+            state.dpCacheFileSha = null;
+            state.songDB = {};
+            state.versions = [];
+            state.dp.levels = [];
+            state.totalSongsInDB = 0;
+            return false;
+        }
         throw new Error(`DP cache fetch failed: ${response.status}`);
     }
 
@@ -1140,6 +1150,12 @@ async function fetchAndStoreDpData() {
     });
 
     if (!saveResponse.ok) {
+        // Allow DP refresh to proceed even when cache API is not deployed yet.
+        if (saveResponse.status === 404) {
+            console.warn('DP cache endpoint is unavailable (404). Continuing without cache save.');
+            state.dpCacheFileSha = null;
+            return;
+        }
         const errorData = await saveResponse.json().catch(() => ({}));
         throw new Error(`DP cache save failed: ${saveResponse.status} - ${errorData.detail || ''}`);
     }
