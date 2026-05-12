@@ -121,7 +121,7 @@ function getSpCacheKey() {
     return `SP_${state.mode}`;
 }
 
-function openDpCacheDb() {
+function openCacheDb() {
     if (!('indexedDB' in window)) {
         return Promise.resolve(null);
     }
@@ -141,9 +141,9 @@ function openDpCacheDb() {
     });
 }
 
-async function getDpCacheFromIdb(key) {
+async function getCachedEntryFromIdb(key) {
     try {
-        const db = await openDpCacheDb();
+        const db = await openCacheDb();
         if (!db) return null;
 
         return await new Promise((resolve, reject) => {
@@ -165,9 +165,9 @@ async function getDpCacheFromIdb(key) {
     }
 }
 
-async function saveDpCacheToIdb(key, payload) {
+async function saveCachedEntryToIdb(key, payload) {
     try {
-        const db = await openDpCacheDb();
+        const db = await openCacheDb();
         if (!db) return;
 
         await new Promise((resolve, reject) => {
@@ -193,24 +193,35 @@ async function saveDpCacheToIdb(key, payload) {
     }
 }
 
-async function getCachedHistoryState() {
-    const cached = await getDpCacheFromIdb(CONFIG.HISTORY_CACHE_KEY);
-    if (!cached || !cached.entry || !cached.savedAt) return null;
+async function readCachedEntry(key, ttlMs = null) {
+    const cached = await getCachedEntryFromIdb(key);
+    if (!cached || !cached.entry) return null;
 
+    if (ttlMs == null) {
+        return cached;
+    }
+
+    if (!cached.savedAt) return null;
     const savedAt = Date.parse(cached.savedAt);
     if (!Number.isFinite(savedAt)) return null;
 
-    const age = Date.now() - savedAt;
-    if (age > CONFIG.HISTORY_CACHE_TTL_MS) return null;
-
+    if (Date.now() - savedAt > ttlMs) return null;
     return cached;
 }
 
-async function saveCachedHistoryState(entry, sha) {
-    await saveDpCacheToIdb(CONFIG.HISTORY_CACHE_KEY, {
+async function writeCachedEntry(key, entry, sha = null) {
+    await saveCachedEntryToIdb(key, {
         entry,
-        sha: sha || null,
+        sha,
     });
+}
+
+async function getCachedHistoryState() {
+    return readCachedEntry(CONFIG.HISTORY_CACHE_KEY, CONFIG.HISTORY_CACHE_TTL_MS);
+}
+
+async function saveCachedHistoryState(entry, sha) {
+    await writeCachedEntry(CONFIG.HISTORY_CACHE_KEY, entry, sha || null);
 }
 
 function applyPlayHistoryPayload(data) {
@@ -285,23 +296,11 @@ function applyDrumHistoryPayload(data) {
 }
 
 async function getCachedDrumHistoryState() {
-    const cached = await getDpCacheFromIdb(CONFIG.DRUM_HISTORY_CACHE_KEY);
-    if (!cached || !cached.entry || !cached.savedAt) return null;
-
-    const savedAt = Date.parse(cached.savedAt);
-    if (!Number.isFinite(savedAt)) return null;
-
-    const age = Date.now() - savedAt;
-    if (age > CONFIG.DRUM_HISTORY_CACHE_TTL_MS) return null;
-
-    return cached;
+    return readCachedEntry(CONFIG.DRUM_HISTORY_CACHE_KEY, CONFIG.DRUM_HISTORY_CACHE_TTL_MS);
 }
 
 async function saveCachedDrumHistoryState(entry, sha) {
-    await saveDpCacheToIdb(CONFIG.DRUM_HISTORY_CACHE_KEY, {
-        entry,
-        sha: sha || null,
-    });
+    await writeCachedEntry(CONFIG.DRUM_HISTORY_CACHE_KEY, entry, sha || null);
 }
 
 // ==================== Initialization ====================
@@ -1050,7 +1049,7 @@ async function loadSpreadsheetData() {
 async function loadSpreadsheetDataWithCache({ forceRefresh = false } = {}) {
     const key = getSpCacheKey();
     if (!forceRefresh) {
-        const cached = await getDpCacheFromIdb(key);
+        const cached = await getCachedEntryFromIdb(key);
 
         if (cached?.entry) {
             applySpreadsheetCacheEntry(cached.entry);
@@ -1081,7 +1080,7 @@ async function loadSpreadsheetDataWithCache({ forceRefresh = false } = {}) {
         throw new Error('No versions found in spreadsheet data');
     }
 
-    await saveDpCacheToIdb(key, {
+    await saveCachedEntryToIdb(key, {
         entry: createSpreadsheetCacheEntry(),
         sha: null,
     });
@@ -1201,7 +1200,7 @@ function normalizeLevel(level) {
  */
 async function loadDpData() {
     const key = getDpCacheKey();
-    const cached = await getDpCacheFromIdb(key);
+    const cached = await getCachedEntryFromIdb(key);
 
     if (cached?.entry) {
         state.dpCacheFileSha = cached.sha || null;
@@ -1241,7 +1240,7 @@ async function loadDpData() {
     }
 
     applyDpCacheEntry(data.entry);
-    await saveDpCacheToIdb(key, { entry: data.entry, sha: data.sha || null });
+    await saveCachedEntryToIdb(key, { entry: data.entry, sha: data.sha || null });
 
     if (state.dp.levels.length === 0) {
         throw new Error('No levels found in cached DP data');
@@ -1436,7 +1435,7 @@ async function fetchAndStoreDpData() {
 
     const saveData = await saveResponse.json();
     state.dpCacheFileSha = saveData.sha || state.dpCacheFileSha;
-    await saveDpCacheToIdb(getDpCacheKey(), {
+    await saveCachedEntryToIdb(getDpCacheKey(), {
         entry: createDpCacheEntry(),
         sha: state.dpCacheFileSha,
     });
@@ -1916,7 +1915,7 @@ async function loadPlayHistory() {
         console.error('Failed to load play history:', e);
         // Non-fatal: fall back to stale cached data if available.
         try {
-            const cached = await getDpCacheFromIdb(CONFIG.HISTORY_CACHE_KEY);
+            const cached = await getCachedEntryFromIdb(CONFIG.HISTORY_CACHE_KEY);
             if (cached?.entry) {
                 applyPlayHistoryPayload({ ...cached.entry, sha: cached.sha || null });
                 console.warn('Using stale IndexedDB play history cache after load failure');
