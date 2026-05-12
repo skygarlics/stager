@@ -3408,11 +3408,19 @@
           "status": "clear",
           "timestamp": "2026-05-12T12:03:08.154Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Without Heaven",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-12T12:03:17.866Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 21,
-      "totalCount": 38,
+      "currentLevelIndex": 5,
+      "clearCount": 22,
+      "totalCount": 39,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3451,7 +3459,8 @@
         "Pinky Crush|Uaigh Gealaí",
         "Pinky Crush|Flämingo",
         "Pinky Crush|Lightspeed",
-        "Pinky Crush|EYE OF THE HEAVEN"
+        "Pinky Crush|EYE OF THE HEAVEN",
+        "Pinky Crush|Without Heaven"
       ],
       "songStatus": [
         [
@@ -3719,6 +3728,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "Pinky Crush|Without Heaven",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -3738,5 +3754,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-12T12:03:08.154Z"
+  "lastUpdated": "2026-05-12T12:03:17.866Z"
 }
