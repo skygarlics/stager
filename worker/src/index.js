@@ -17,7 +17,7 @@
 // ==================== Constants ====================
 const HISTORY_FILE = 'play_history.json';
 const DRUM_HISTORY_FILE = 'play_history_drum.json';
-const DP_CACHE_FILE = 'dp_rank_cache.json';
+const DP_CACHE_FILE_PREFIX = 'dp_rank_cache';
 const GITHUB_API = 'https://api.github.com';
 const MAX_REQUEST_BODY = 512 * 1024; // 512 KB max request body
 
@@ -529,7 +529,11 @@ async function handleGetDpRankCache(request, env) {
     const branch = env.DATA_BRANCH || 'data';
     const requestUrl = new URL(request.url);
     const key = requestUrl.searchParams.get('key');
-    const url = `${GITHUB_API}/repos/${repo}/contents/${DP_CACHE_FILE}?ref=${branch}`;
+    if (!key) {
+        return json({ error: 'Cache key is required' }, 400);
+    }
+
+    const url = `${GITHUB_API}/repos/${repo}/contents/${getDpCacheFileName(key)}?ref=${branch}`;
 
     const ghResponse = await fetch(url, {
         headers: {
@@ -540,7 +544,7 @@ async function handleGetDpRankCache(request, env) {
     });
 
     if (ghResponse.status === 404) {
-        return json({ exists: false, schemaVersion: 1, key: key || null, entry: null, entries: {} });
+        return json({ exists: false, key, entry: null });
     }
 
     if (!ghResponse.ok) {
@@ -555,22 +559,10 @@ async function handleGetDpRankCache(request, env) {
         Uint8Array.from(content, c => c.charCodeAt(0))
     );
     const parsed = JSON.parse(decoded);
-    const normalized = normalizeDpRankCachePayload(parsed);
-
-    if (key) {
-        return json({
-            exists: true,
-            schemaVersion: normalized.schemaVersion,
-            key,
-            entry: normalized.entries[key] || null,
-            lastUpdated: normalized.lastUpdated,
-            sha: data.sha,
-        });
-    }
-
     return json({
-        ...normalized,
         exists: true,
+        key,
+        entry: parsed,
         sha: data.sha,
     });
 }
@@ -598,7 +590,8 @@ async function handlePutDpRankCache(request, env) {
         return json({ error: 'Cache entry is required' }, 400);
     }
 
-    const getUrl = `${GITHUB_API}/repos/${repo}/contents/${DP_CACHE_FILE}?ref=${branch}`;
+    const fileName = getDpCacheFileName(key);
+    const getUrl = `${GITHUB_API}/repos/${repo}/contents/${fileName}?ref=${branch}`;
     const getResponse = await fetch(getUrl, {
         headers: {
             'Authorization': `token ${env.GITHUB_PAT}`,
@@ -607,29 +600,20 @@ async function handlePutDpRankCache(request, env) {
         },
     });
 
-    let currentPayload = normalizeDpRankCachePayload({});
     let fileSha = body.sha || null;
 
     if (getResponse.ok) {
         const existing = await getResponse.json();
-        const base64Clean = existing.content.replace(/\n/g, '');
-        const content = atob(base64Clean);
-        const decoded = new TextDecoder().decode(
-            Uint8Array.from(content, c => c.charCodeAt(0))
-        );
-        currentPayload = normalizeDpRankCachePayload(JSON.parse(decoded));
         if (!fileSha) fileSha = existing.sha;
     } else if (getResponse.status !== 404) {
         const errorText = await getResponse.text();
         return json({ error: 'GitHub API error', status: getResponse.status, detail: errorText }, 502);
     }
 
-    currentPayload.entries[key] = body.entry;
-    currentPayload.lastUpdated = new Date().toISOString();
-    const jsonStr = JSON.stringify(currentPayload, null, 2);
+    const jsonStr = JSON.stringify(body.entry, null, 2);
     const encoded = toBase64Utf8(jsonStr);
 
-    const putUrl = `${GITHUB_API}/repos/${repo}/contents/${DP_CACHE_FILE}`;
+    const putUrl = `${GITHUB_API}/repos/${repo}/contents/${fileName}`;
     const ghBody = {
         message: body.message || `Update DP cache ${key} - ${new Date().toISOString()}`,
         content: encoded,
@@ -661,15 +645,9 @@ async function handlePutDpRankCache(request, env) {
     return json({ ok: true, key, sha: data.content.sha });
 }
 
-function normalizeDpRankCachePayload(payload) {
-    const entries = payload && typeof payload.entries === 'object' && payload.entries !== null
-        ? payload.entries
-        : {};
-    return {
-        schemaVersion: 1,
-        entries,
-        lastUpdated: payload?.lastUpdated || new Date().toISOString(),
-    };
+function getDpCacheFileName(key) {
+    const safeKey = key.replace(/[^A-Za-z0-9._-]/g, '_');
+    return `${DP_CACHE_FILE_PREFIX}_${safeKey}.json`;
 }
 
 // ==================== Helpers ====================
