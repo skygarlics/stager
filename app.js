@@ -43,6 +43,8 @@ const CONFIG = {
     DP_CACHE_DB: 'stager_dp_cache',
     DP_CACHE_STORE: 'entries',
     DP_CACHE_VERSION: 1,
+    HISTORY_CACHE_KEY: 'PLAY_HISTORY_STATE_V1',
+    HISTORY_CACHE_TTL_MS: 60 * 60 * 1000,
 };
 
 const ROUTES = {
@@ -187,6 +189,82 @@ async function saveDpCacheToIdb(key, payload) {
     } catch (e) {
         console.warn('Failed to save DP cache to IndexedDB:', e);
     }
+}
+
+async function getCachedHistoryState() {
+    const cached = await getDpCacheFromIdb(CONFIG.HISTORY_CACHE_KEY);
+    if (!cached || !cached.entry || !cached.savedAt) return null;
+
+    const savedAt = Date.parse(cached.savedAt);
+    if (!Number.isFinite(savedAt)) return null;
+
+    const age = Date.now() - savedAt;
+    if (age > CONFIG.HISTORY_CACHE_TTL_MS) return null;
+
+    return cached;
+}
+
+async function saveCachedHistoryState(entry, sha) {
+    await saveDpCacheToIdb(CONFIG.HISTORY_CACHE_KEY, {
+        entry,
+        sha: sha || null,
+    });
+}
+
+function applyPlayHistoryPayload(data) {
+    if (!data) return false;
+
+    state.fileSha = data.sha || null;
+
+    if (data.gameMode) {
+        state.gameMode = data.gameMode;
+    }
+    if (data.playEnv) {
+        state.playEnv = data.playEnv;
+    } else if (data.environment) {
+        state.playEnv = data.environment;
+    }
+    if (data.dp) {
+        state.dp.offi = data.dp.offi ?? CONFIG.DP.DEFAULT_OFFI;
+        state.dp.env = data.dp.env ?? CONFIG.DP.DEFAULT_ENV;
+    }
+    if (data.mode) {
+        state.mode = data.mode;
+    }
+
+    if (data.modeStates) {
+        state.modeStates = normalizeModeStates(data.modeStates);
+    } else if (data.history) {
+        const legacyModeKey = getModeKey();
+        const legacyPlayed = [];
+        const legacyStatus = [];
+        for (const entry of data.history) {
+            const k = songKey(entry.version, entry.song);
+            if (!legacyPlayed.includes(k)) legacyPlayed.push(k);
+            const existingIdx = legacyStatus.findIndex(([key]) => key === k);
+            const statusEntry = [k, { status: entry.status, level: entry.level }];
+            if (existingIdx !== -1) {
+                legacyStatus[existingIdx] = statusEntry;
+            } else {
+                legacyStatus.push(statusEntry);
+            }
+        }
+
+        state.modeStates[legacyModeKey] = {
+            history: data.history,
+            currentLevelIndex: data.currentLevelIndex ?? 0,
+            clearCount: data.clearCount ?? data.history.filter(e => e.status === 'clear').length,
+            totalCount: data.totalCount ?? data.history.length,
+            playedSongs: legacyPlayed,
+            songStatus: legacyStatus,
+        };
+    }
+
+    restoreModeState(getModeKey());
+
+    const maxIndex = state.gameMode === 'DP' ? 999 : CONFIG.LEVELS.length - 1;
+    state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, maxIndex));
+    return true;
 }
 
 // ==================== Initialization ====================
@@ -1757,6 +1835,12 @@ async function workerFetch(path, options = {}) {
 
 async function loadPlayHistory() {
     try {
+        const cached = await getCachedHistoryState();
+        if (cached?.entry && applyPlayHistoryPayload({ ...cached.entry, sha: cached.sha || null })) {
+            console.log('Restored play history from IndexedDB cache');
+            return;
+        }
+
         const response = await workerFetch('/api/history');
 
         if (!response.ok) {
@@ -1770,68 +1854,22 @@ async function loadPlayHistory() {
             return;
         }
 
-        state.fileSha = data.sha;
-
-        // Restore game mode info
-        if (data.gameMode) {
-            state.gameMode = data.gameMode;
-        }
-        if (data.playEnv) {
-            state.playEnv = data.playEnv;
-        } else if (data.environment) {
-            state.playEnv = data.environment;
-        }
-        if (data.dp) {
-            state.dp.offi = data.dp.offi ?? CONFIG.DP.DEFAULT_OFFI;
-            state.dp.env = data.dp.env ?? CONFIG.DP.DEFAULT_ENV;
-        }
-        if (data.mode) {
-            state.mode = data.mode;
-        }
-
-        // Restore per-mode states
-        if (data.modeStates) {
-            state.modeStates = normalizeModeStates(data.modeStates);
-        } else if (data.history) {
-            // Backward compatibility: migrate from old single-history format
-            const legacyModeKey = getModeKey();
-            // Build playedSongs and songStatus from legacy history
-            const legacyPlayed = [];
-            const legacyStatus = [];
-            for (const entry of data.history) {
-                const k = songKey(entry.version, entry.song);
-                if (!legacyPlayed.includes(k)) legacyPlayed.push(k);
-                // Last entry wins (overwrites previous status for same song)
-                const existingIdx = legacyStatus.findIndex(([key]) => key === k);
-                const statusEntry = [k, { status: entry.status, level: entry.level }];
-                if (existingIdx !== -1) {
-                    legacyStatus[existingIdx] = statusEntry;
-                } else {
-                    legacyStatus.push(statusEntry);
-                }
-            }
-
-            state.modeStates[legacyModeKey] = {
-                history: data.history,
-                currentLevelIndex: data.currentLevelIndex ?? 0,
-                clearCount: data.clearCount ?? data.history.filter(e => e.status === 'clear').length,
-                totalCount: data.totalCount ?? data.history.length,
-                playedSongs: legacyPlayed,
-                songStatus: legacyStatus,
-            };
-        }
-
-        // Restore current mode's state from modeStates
-        restoreModeState(getModeKey());
-
-        // Clamp level index to valid range
-        const maxIndex = state.gameMode === 'DP' ? 999 : CONFIG.LEVELS.length - 1;
-        state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, maxIndex));
+        applyPlayHistoryPayload({ ...data, sha: data.sha || null });
+        await saveCachedHistoryState(data, data.sha || null);
 
         console.log(`Restored mode ${getModeKey()}: ${state.history.length} history entries, level: ${getCurrentLevel()}, gameMode: ${state.gameMode}`);
     } catch (e) {
         console.error('Failed to load play history:', e);
-        // Non-fatal: we can still play without saved history
+        // Non-fatal: fall back to stale cached data if available.
+        try {
+            const cached = await getDpCacheFromIdb(CONFIG.HISTORY_CACHE_KEY);
+            if (cached?.entry) {
+                applyPlayHistoryPayload({ ...cached.entry, sha: cached.sha || null });
+                console.warn('Using stale IndexedDB play history cache after load failure');
+            }
+        } catch (cacheError) {
+            console.warn('Failed to restore stale play history cache:', cacheError);
+        }
     }
 }
 
@@ -1877,6 +1915,7 @@ async function savePlayHistory() {
 
     const data = await response.json();
     state.fileSha = data.sha;
+    await saveCachedHistoryState(payload, state.fileSha);
 }
 
 // ==================== Mode Toggle ====================
