@@ -627,7 +627,7 @@ async function handlePutDpRankCache(request, env) {
     currentPayload.entries[key] = body.entry;
     currentPayload.lastUpdated = new Date().toISOString();
     const jsonStr = JSON.stringify(currentPayload, null, 2);
-    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+    const encoded = toBase64Utf8(jsonStr);
 
     const putUrl = `${GITHUB_API}/repos/${repo}/contents/${DP_CACHE_FILE}`;
     const ghBody = {
