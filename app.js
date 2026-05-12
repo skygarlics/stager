@@ -1873,7 +1873,9 @@ async function loadPlayHistory() {
     }
 }
 
-async function savePlayHistory() {
+async function savePlayHistory(options = {}) {
+    const { sync = true } = options;
+
     // Trim history to max entries before saving
     if (state.history.length > CONFIG.MAX_HISTORY_ENTRIES) {
         state.history = state.history.slice(-CONFIG.MAX_HISTORY_ENTRIES);
@@ -1898,6 +1900,12 @@ async function savePlayHistory() {
         content: payload,
         message: `Update play history - ${state.gameMode} ${state.playEnv} ${getCurrentLevel()} - ${new Date().toISOString()}`,
     };
+
+    await saveCachedHistoryState(payload, state.fileSha);
+
+    if (!sync) {
+        return;
+    }
 
     if (state.fileSha) {
         body.sha = state.fileSha;
@@ -1939,7 +1947,7 @@ async function handleModeToggle() {
 
     // Save current mode's state before switching
     saveModeState();
-    await savePlayHistory().catch(err => console.error('Save before mode switch failed:', err));
+    await savePlayHistory({ sync: false }).catch(err => console.error('Save before mode switch failed:', err));
 
     // Switch mode
     state.mode = nextMode;
@@ -1988,7 +1996,7 @@ async function handleEnvironmentToggle() {
     document.getElementById('song-level').textContent = '';
 
     saveModeState();
-    await savePlayHistory().catch(err => console.error('Save before environment switch failed:', err));
+    await savePlayHistory({ sync: false }).catch(err => console.error('Save before environment switch failed:', err));
 
     state.playEnv = state.playEnv === 'home' ? 'arcade' : 'home';
     updateEnvironmentUI();
@@ -2000,7 +2008,7 @@ async function handleEnvironmentToggle() {
     selectNextSong();
 
     saveModeState();
-    await savePlayHistory().catch(err => console.error('Save after environment switch failed:', err));
+    await savePlayHistory({ sync: false }).catch(err => console.error('Save after environment switch failed:', err));
 
     enableActionButtons(true);
 
@@ -2023,7 +2031,7 @@ async function handleGameModeToggle() {
 
     // Save current mode's state before switching
     saveModeState();
-    await savePlayHistory().catch(err => console.error('Save before game mode switch failed:', err));
+    await savePlayHistory({ sync: false }).catch(err => console.error('Save before game mode switch failed:', err));
 
     // Switch game mode
     state.gameMode = nextGameMode;
@@ -2132,7 +2140,7 @@ async function handleDpOffiChange(delta) {
 
     // Save current DP level's state before switching
     saveModeState();
-    await savePlayHistory().catch(err => console.error('Save before offi change failed:', err));
+    await savePlayHistory({ sync: false }).catch(err => console.error('Save before offi change failed:', err));
 
     state.dp.offi = levels[newIdx];
 
