@@ -438,7 +438,7 @@ async function handlePutHistory(request, env) {
 
     // Encode content to base64
     const jsonStr = JSON.stringify(body.content, null, 2);
-    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+    const encoded = toBase64Utf8(jsonStr);
 
     const url = `${GITHUB_API}/repos/${repo}/contents/${HISTORY_FILE}`;
 

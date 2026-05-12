@@ -1159,7 +1159,7 @@ function showDpCacheEmptyState() {
     state.currentSong = null;
     state.currentVersion = null;
     state.currentLevel = null;
-    document.getElementById('song-name').textContent = 'DP難易度表キャッシュがありません';
+    document.getElementById('song-name').textContent = 'DP 難易度表キャッシュがありません';
     document.getElementById('song-version').textContent = '';
     document.getElementById('song-level').textContent = '更新ボタンで難易度表を取得してください';
     enableActionButtons(false);
