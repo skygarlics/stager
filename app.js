@@ -445,6 +445,7 @@ function renderDrumFloorNavigation() {
     prev.disabled = state.drumSelectedFloorIndex <= 0;
     prev.addEventListener('click', () => {
         state.drumSelectedFloorIndex = clampDrumFloorIndex(state.drumSelectedFloorIndex - 1);
+        saveDrumSelectedFloorIndex(state.drumSelectedFloorIndex);
         saveDrumHistory().catch(err => console.error('Failed to save drum selected floor:', err));
         renderDrumTowerSection();
         updateDrumSummary();
@@ -463,6 +464,7 @@ function renderDrumFloorNavigation() {
     next.disabled = state.drumSelectedFloorIndex >= state.drumFloors.length - 1;
     next.addEventListener('click', () => {
         state.drumSelectedFloorIndex = clampDrumFloorIndex(state.drumSelectedFloorIndex + 1);
+        saveDrumSelectedFloorIndex(state.drumSelectedFloorIndex);
         saveDrumHistory().catch(err => console.error('Failed to save drum selected floor:', err));
         renderDrumTowerSection();
         updateDrumSummary();
@@ -686,6 +688,25 @@ function updateHeaderCountForDrum() {
     count.textContent = `${floors}F / ${songs} songs`;
 }
 
+function loadDrumSelectedFloorIndex() {
+    try {
+        const raw = localStorage.getItem('drum_selected_floor_v1');
+        if (raw == null) return 0;
+        const parsed = Number.parseInt(raw, 10);
+        return Number.isFinite(parsed) ? parsed : 0;
+    } catch (e) {
+        return 0;
+    }
+}
+
+function saveDrumSelectedFloorIndex(index) {
+    try {
+        localStorage.setItem('drum_selected_floor_v1', String(index));
+    } catch (e) {
+        console.warn('Failed to save selected DrumTower floor:', e);
+    }
+}
+
 function loadDrumFloorStatuses() {
     if (state.drumFloorStatuses && Object.keys(state.drumFloorStatuses).length > 0) {
         return state.drumFloorStatuses;
@@ -730,21 +751,24 @@ async function loadDrumHistory() {
             state.drumFileSha = null;
             state.drumRankStore = loadDrumRankStore();
             state.drumFloorStatuses = loadDrumFloorStatuses();
+            state.drumSelectedFloorIndex = clampDrumFloorIndex(loadDrumSelectedFloorIndex());
             return;
         }
 
         state.drumFileSha = data.sha || null;
-    const payload = normalizeDrumHistoryPayload(data);
-    state.drumRankStore = payload.rankStore;
-    state.drumFloorStatuses = payload.floorStatuses;
-    state.drumSelectedFloorIndex = payload.selectedFloorIndex;
+        const payload = normalizeDrumHistoryPayload(data);
+        state.drumRankStore = payload.rankStore;
+        state.drumFloorStatuses = payload.floorStatuses;
+        state.drumSelectedFloorIndex = clampDrumFloorIndex(payload.selectedFloorIndex);
 
         localStorage.setItem('drum_ranks_v1', JSON.stringify(state.drumRankStore));
         localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(state.drumFloorStatuses));
+        saveDrumSelectedFloorIndex(state.drumSelectedFloorIndex);
     } catch (e) {
         console.error('Failed to load drum history:', e);
         state.drumRankStore = loadDrumRankStore();
         state.drumFloorStatuses = loadDrumFloorStatuses();
+        state.drumSelectedFloorIndex = clampDrumFloorIndex(loadDrumSelectedFloorIndex());
     }
 }
 
@@ -752,7 +776,7 @@ async function saveDrumHistory() {
     const payload = {
         schemaVersion: 1,
         route: 'drum',
-        selectedFloorIndex: state.drumSelectedFloorIndex || 0,
+        selectedFloorIndex: clampDrumFloorIndex(state.drumSelectedFloorIndex || 0),
         rankStore: state.drumRankStore || {},
         floorStatuses: state.drumFloorStatuses || {},
         lastUpdated: new Date().toISOString(),
@@ -779,6 +803,7 @@ async function saveDrumHistory() {
 
     const data = await response.json();
     state.drumFileSha = data.sha || null;
+    saveDrumSelectedFloorIndex(payload.selectedFloorIndex);
 }
 
 function normalizeDrumHistoryPayload(data) {
