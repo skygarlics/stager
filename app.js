@@ -75,6 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('clear-btn').addEventListener('click', () => handleResult('clear'));
     document.getElementById('fail-btn').addEventListener('click', () => handleResult('fail'));
 
+    // Service toggle (visible button in header)
+    const svcToggle = document.getElementById('service-toggle');
+    if (svcToggle) {
+        svcToggle.addEventListener('click', () => {
+            // cycle through available services
+            const keys = Object.keys(SERVICE_CONFIGS);
+            const cur = state.service || DEFAULT_SERVICE;
+            const idx = keys.indexOf(cur);
+            const next = keys[(idx + 1) % keys.length];
+            window.location.hash = `#${next}`;
+        });
+    }
+
     // History toggle
     document.getElementById('history-toggle').addEventListener('click', toggleHistory);
 
