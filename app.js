@@ -82,6 +82,7 @@ const state = {
     currentLevel: null,          // Level of current song (may differ from currentLevelIndex)
     fileSha: null,               // GitHub file SHA for updates
     drumFileSha: null,           // GitHub file SHA for DrumTower updates
+    dpCacheFileSha: null,        // GitHub file SHA for DP cache updates
     mode: 'ノマゲ',              // Current gauge mode (SP only)
     gameMode: 'SP',              // 'SP' or 'DP'
     playEnv: 'home',             // 'home' or 'arcade'
@@ -132,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // DP star level selector
     document.getElementById('dp-offi-down')?.addEventListener('click', () => handleDpOffiChange(-1));
     document.getElementById('dp-offi-up')?.addEventListener('click', () => handleDpOffiChange(1));
+    document.getElementById('dp-refresh-btn')?.addEventListener('click', handleDpRefresh);
 
     // Try auto-login from saved session
     tryAutoLogin();
@@ -357,7 +359,12 @@ async function initializeApp() {
         await loadPlayHistory();
 
         // Then load song data based on restored gameMode
-        await (state.gameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
+        let hasSongData = true;
+        if (state.gameMode === 'DP') {
+            hasSongData = await loadDpData();
+        } else {
+            await loadSpreadsheetData();
+        }
 
         // Clamp level index after data is loaded
         const levels = getCurrentLevels();
@@ -377,11 +384,14 @@ async function initializeApp() {
         updateCountDisplay();
         renderFullHistory();
 
-        // Select first song
-        selectNextSong();
-
-        // Enable buttons
-        enableActionButtons(true);
+        if (hasSongData) {
+            // Select first song
+            selectNextSong();
+            // Enable buttons
+            enableActionButtons(true);
+        } else {
+            showDpCacheEmptyState();
+        }
     } catch (e) {
         console.error('Initialization failed:', e);
         clearSession();
@@ -934,28 +944,32 @@ function normalizeLevel(level) {
  * Load DP difficulty table from zasa.sakura.ne.jp via Worker proxy
  */
 async function loadDpData() {
-    const response = await workerFetch('/api/dp-rank', {
-        method: 'POST',
-        body: JSON.stringify({
-            offi: state.dp.offi,
-            env: state.dp.env,
-            cat: 0,
-            mode: 'p1',
-        }),
-    });
+    const key = getDpCacheKey();
+    const response = await workerFetch(`/api/dp-rank-cache?key=${encodeURIComponent(key)}`);
 
     if (!response.ok) {
-        throw new Error(`DP rank fetch failed: ${response.status}`);
+        throw new Error(`DP cache fetch failed: ${response.status}`);
     }
 
     const data = await response.json();
-    parseDpHtml(data.html);
+    state.dpCacheFileSha = data.sha || null;
 
-    if (state.dp.levels.length === 0) {
-        throw new Error('No levels found in DP ranking data');
+    if (!data.entry) {
+        state.songDB = {};
+        state.versions = [];
+        state.dp.levels = [];
+        state.totalSongsInDB = 0;
+        return false;
     }
 
-    console.log(`DP ☆${state.dp.offi}: Loaded ${state.totalSongsInDB} songs across ${state.dp.levels.length} rank levels`);
+    applyDpCacheEntry(data.entry);
+
+    if (state.dp.levels.length === 0) {
+        throw new Error('No levels found in cached DP data');
+    }
+
+    console.log(`DP ☆${state.dp.offi}: Loaded ${state.totalSongsInDB} songs from cache across ${state.dp.levels.length} rank levels`);
+    return true;
 }
 
 /**
@@ -1069,6 +1083,125 @@ function parseDpHtml(html) {
 
     // Sort levels numerically ascending
     state.dp.levels = Array.from(levelsSet).sort((a, b) => parseFloat(a) - parseFloat(b));
+}
+
+function getDpCacheKey() {
+    return `DP_${state.dp.env}_${state.dp.offi}`;
+}
+
+function applyDpCacheEntry(entry) {
+    state.songDB = entry?.songDB && typeof entry.songDB === 'object'
+        ? JSON.parse(JSON.stringify(entry.songDB))
+        : {};
+    state.versions = Array.isArray(entry?.versions) ? [...entry.versions] : [];
+    state.dp.levels = Array.isArray(entry?.levels) ? [...entry.levels] : [];
+    state.totalSongsInDB = Number.isFinite(entry?.totalSongsInDB) ? entry.totalSongsInDB : 0;
+}
+
+function createDpCacheEntry() {
+    return {
+        offi: state.dp.offi,
+        env: state.dp.env,
+        mode: 'p1',
+        cat: 0,
+        versions: [...state.versions],
+        levels: [...state.dp.levels],
+        totalSongsInDB: state.totalSongsInDB,
+        songDB: state.songDB,
+        parsedAt: new Date().toISOString(),
+    };
+}
+
+async function fetchAndStoreDpData() {
+    const response = await workerFetch('/api/dp-rank', {
+        method: 'POST',
+        body: JSON.stringify({
+            offi: state.dp.offi,
+            env: state.dp.env,
+            cat: 0,
+            mode: 'p1',
+        }),
+    });
+
+    if (!response.ok) {
+        throw new Error(`DP rank fetch failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+    parseDpHtml(data.html);
+
+    if (state.dp.levels.length === 0) {
+        throw new Error('No levels found in DP ranking data');
+    }
+
+    const saveResponse = await workerFetch('/api/dp-rank-cache', {
+        method: 'PUT',
+        body: JSON.stringify({
+            key: getDpCacheKey(),
+            entry: createDpCacheEntry(),
+            sha: state.dpCacheFileSha,
+            message: `Update DP cache ${getDpCacheKey()} - ${new Date().toISOString()}`,
+        }),
+    });
+
+    if (!saveResponse.ok) {
+        const errorData = await saveResponse.json().catch(() => ({}));
+        throw new Error(`DP cache save failed: ${saveResponse.status} - ${errorData.detail || ''}`);
+    }
+
+    const saveData = await saveResponse.json();
+    state.dpCacheFileSha = saveData.sha || state.dpCacheFileSha;
+
+    console.log(`DP ☆${state.dp.offi}: Parsed and cached ${state.totalSongsInDB} songs across ${state.dp.levels.length} rank levels`);
+}
+
+function showDpCacheEmptyState() {
+    state.currentSong = null;
+    state.currentVersion = null;
+    state.currentLevel = null;
+    document.getElementById('song-name').textContent = 'DP 난이도표 캐시가 없습니다';
+    document.getElementById('song-version').textContent = '';
+    document.getElementById('song-level').textContent = '갱신 버튼으로 난이도표를 불러오세요';
+    enableActionButtons(false);
+}
+
+function setDpRefreshButtonBusy(isBusy) {
+    const refreshBtn = document.getElementById('dp-refresh-btn');
+    if (!refreshBtn) return;
+    refreshBtn.disabled = isBusy;
+    refreshBtn.textContent = isBusy ? '갱신중' : '갱신';
+}
+
+async function handleDpRefresh() {
+    if (state.isProcessing || state.gameMode !== 'DP') return;
+
+    state.isProcessing = true;
+    enableActionButtons(false);
+    setDpRefreshButtonBusy(true);
+
+    document.getElementById('song-name').textContent = '난이도표 갱신중...';
+    document.getElementById('song-version').textContent = '';
+    document.getElementById('song-level').textContent = '';
+
+    try {
+        await fetchAndStoreDpData();
+
+        if (state.dp.levels.length > 0) {
+            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, state.dp.levels.length - 1));
+        }
+
+        updateLevelDisplay();
+        updateCountDisplay();
+        renderFullHistory();
+        selectNextSong();
+        enableActionButtons(true);
+    } catch (e) {
+        console.error('DP refresh failed:', e);
+        showDpCacheEmptyState();
+    }
+
+    setDpRefreshButtonBusy(false);
+    state.isProcessing = false;
 }
 
 /**
@@ -1327,7 +1460,10 @@ async function handleResult(result) {
  */
 async function workerFetch(path, options = {}) {
     if (isLocalDevEnvironment()) {
-        if (path === '/api/history') {
+        const [mockPath, mockQuery = ''] = path.split('?');
+        const mockParams = new URLSearchParams(mockQuery);
+
+        if (mockPath === '/api/history') {
             return {
                 ok: true,
                 status: 200,
@@ -1336,7 +1472,7 @@ async function workerFetch(path, options = {}) {
             };
         }
 
-        if (path === '/api/drum-history') {
+        if (mockPath === '/api/drum-history') {
             return {
                 ok: true,
                 status: 200,
@@ -1345,7 +1481,47 @@ async function workerFetch(path, options = {}) {
             };
         }
 
-        if (path === '/api/dp-rank') {
+        if (mockPath === '/api/dp-rank-cache') {
+            const key = mockParams.get('key') || getDpCacheKey();
+            return {
+                ok: true,
+                status: 200,
+                json: async () => ({
+                    exists: true,
+                    key,
+                    entry: {
+                        offi: state.dp.offi,
+                        env: state.dp.env,
+                        mode: 'p1',
+                        cat: 0,
+                        versions: ['Dummy'],
+                        levels: ['11'],
+                        totalSongsInDB: 1,
+                        songDB: { Dummy: { '11': ['Dummy Song'] } },
+                        parsedAt: new Date().toISOString(),
+                    },
+                    sha: null,
+                }),
+                text: async () => JSON.stringify({
+                    exists: true,
+                    key,
+                    entry: {
+                        offi: state.dp.offi,
+                        env: state.dp.env,
+                        mode: 'p1',
+                        cat: 0,
+                        versions: ['Dummy'],
+                        levels: ['11'],
+                        totalSongsInDB: 1,
+                        songDB: { Dummy: { '11': ['Dummy Song'] } },
+                        parsedAt: new Date().toISOString(),
+                    },
+                    sha: null,
+                }),
+            };
+        }
+
+        if (mockPath === '/api/dp-rank') {
             return {
                 ok: true,
                 status: 200,
@@ -1619,7 +1795,12 @@ async function handleGameModeToggle() {
     updateEnvironmentUI();
 
     try {
-        await (nextGameMode === 'DP' ? loadDpData() : loadSpreadsheetData());
+        let hasSongData = true;
+        if (nextGameMode === 'DP') {
+            hasSongData = await loadDpData();
+        } else {
+            await loadSpreadsheetData();
+        }
 
         // Clamp level index after data is loaded
         const levels = getCurrentLevels();
@@ -1630,8 +1811,12 @@ async function handleGameModeToggle() {
         updateLevelDisplay();
         updateCountDisplay();
         renderFullHistory();
-        selectNextSong();
-        enableActionButtons(true);
+        if (hasSongData) {
+            selectNextSong();
+            enableActionButtons(true);
+        } else {
+            showDpCacheEmptyState();
+        }
     } catch (e) {
         console.error('Game mode switch failed:', e);
         document.getElementById('song-name').textContent = 'モード切替に失敗しました';
@@ -1720,7 +1905,7 @@ async function handleDpOffiChange(delta) {
     document.getElementById('song-level').textContent = '';
 
     try {
-        await loadDpData();
+        const hasSongData = await loadDpData();
 
         // Clamp level index after data reload
         if (state.dp.levels.length > 0) {
@@ -1730,8 +1915,12 @@ async function handleDpOffiChange(delta) {
         updateLevelDisplay();
         updateCountDisplay();
         renderFullHistory();
-        selectNextSong();
-        enableActionButtons(true);
+        if (hasSongData) {
+            selectNextSong();
+            enableActionButtons(true);
+        } else {
+            showDpCacheEmptyState();
+        }
     } catch (e) {
         console.error('DP offi change failed:', e);
         document.getElementById('song-name').textContent = 'レベル切替に失敗しました';
