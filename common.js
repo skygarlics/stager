@@ -199,6 +199,95 @@ async function saveCachedDrumHistoryState(entry, sha) {
     await writeCachedEntry(CONFIG.DRUM_HISTORY_CACHE_KEY, entry, sha || null);
 }
 
+function applyPlayHistoryPayload(data) {
+    if (!data) return false;
+
+    state.fileSha = data.sha || null;
+
+    if (data.gameMode) {
+        state.gameMode = data.gameMode;
+    }
+    if (data.playEnv) {
+        state.playEnv = data.playEnv;
+    } else if (data.environment) {
+        state.playEnv = data.environment;
+    }
+    if (data.dp) {
+        state.dp.offi = data.dp.offi ?? CONFIG.DP.DEFAULT_OFFI;
+        state.dp.env = data.dp.env ?? CONFIG.DP.DEFAULT_ENV;
+    }
+    if (data.mode) {
+        state.mode = data.mode;
+    }
+
+    if (data.modeStates) {
+        state.modeStates = normalizeModeStates(data.modeStates);
+    } else if (data.history) {
+        const legacyModeKey = getModeKey();
+        const legacyPlayed = [];
+        const legacyStatus = [];
+
+        for (const entry of data.history) {
+            const key = songKey(entry.version, entry.song);
+            if (!legacyPlayed.includes(key)) legacyPlayed.push(key);
+            const existingIdx = legacyStatus.findIndex(([savedKey]) => savedKey === key);
+            const statusEntry = [key, { status: entry.status, level: entry.level }];
+            if (existingIdx !== -1) {
+                legacyStatus[existingIdx] = statusEntry;
+            } else {
+                legacyStatus.push(statusEntry);
+            }
+        }
+
+        state.modeStates[legacyModeKey] = {
+            history: data.history,
+            currentLevelIndex: data.currentLevelIndex ?? 0,
+            clearCount: data.clearCount ?? data.history.filter(entry => entry.status === 'clear').length,
+            totalCount: data.totalCount ?? data.history.length,
+            playedSongs: legacyPlayed,
+            songStatus: legacyStatus,
+        };
+    }
+
+    restoreModeState(getModeKey());
+
+    const maxIndex = state.gameMode === 'DP' ? 999 : CONFIG.LEVELS.length - 1;
+    state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, maxIndex));
+    return true;
+}
+
+function normalizeDrumHistoryPayload(data) {
+    const rankStore = data.rankStore || data.drumRankStore || data.ranks || data.data?.rankStore || {};
+    const floorStatuses = data.floorStatuses || data.drumFloorStatuses || data.floors || data.data?.floorStatuses || {};
+    const selectedFloorIndex = data.selectedFloorIndex ?? data.drumSelectedFloorIndex ?? data.currentFloorIndex ?? data.data?.selectedFloorIndex ?? 0;
+
+    return {
+        rankStore,
+        floorStatuses,
+        selectedFloorIndex,
+    };
+}
+
+function applyDrumHistoryPayload(data) {
+    if (!data) return false;
+
+    state.drumFileSha = data.sha || null;
+    const payload = normalizeDrumHistoryPayload(data);
+    state.drumRankStore = payload.rankStore;
+    state.drumFloorStatuses = payload.floorStatuses;
+    state.drumSelectedFloorIndex = clampDrumFloorIndex(payload.selectedFloorIndex);
+
+    try {
+        localStorage.setItem('drum_ranks_v1', JSON.stringify(state.drumRankStore));
+        localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(state.drumFloorStatuses));
+        saveDrumSelectedFloorIndex(state.drumSelectedFloorIndex);
+    } catch (e) {
+        console.warn('Failed to persist drum history state locally:', e);
+    }
+
+    return true;
+}
+
 // ==================== Generic Helpers ====================
 function songKey(version, song) {
     return `${version}|${song}`;

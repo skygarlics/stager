@@ -822,9 +822,15 @@ async function handleResult(result) {
  * Helper to call Worker API with authentication
  */
 async function workerFetch(path, options = {}) {
+    const url = `${CONFIG.WORKER_URL}${path}`;
+    const headers = {
+        'Authorization': `Bearer ${state.password}`,
+        'Content-Type': 'application/json',
+        ...options.headers,
+    };
+
     if (isLocalDevEnvironment()) {
         const [mockPath, mockQuery = ''] = path.split('?');
-        const mockParams = new URLSearchParams(mockQuery);
 
         if (mockPath === '/api/history') {
             return {
@@ -843,70 +849,7 @@ async function workerFetch(path, options = {}) {
                 text: async () => JSON.stringify({ exists: false, schemaVersion: 1, route: 'drum', rankStore: {}, floorStatuses: {}, selectedFloorIndex: 0 }),
             };
         }
-
-        if (mockPath === '/api/dp-rank-cache') {
-            const key = mockParams.get('key') || getDpCacheKey();
-            return {
-                ok: true,
-                status: 200,
-                json: async () => ({
-                    exists: true,
-                    key,
-                    entry: {
-                        offi: state.dp.offi,
-                        env: state.dp.env,
-                        mode: 'p1',
-                        cat: 0,
-                        versions: ['Dummy'],
-                        levels: ['11'],
-                        totalSongsInDB: 1,
-                        songDB: { Dummy: { '11': ['Dummy Song'] } },
-                        parsedAt: new Date().toISOString(),
-                    },
-                    sha: null,
-                }),
-                text: async () => JSON.stringify({
-                    exists: true,
-                    key,
-                    entry: {
-                        offi: state.dp.offi,
-                        env: state.dp.env,
-                        mode: 'p1',
-                        cat: 0,
-                        versions: ['Dummy'],
-                        levels: ['11'],
-                        totalSongsInDB: 1,
-                        songDB: { Dummy: { '11': ['Dummy Song'] } },
-                        parsedAt: new Date().toISOString(),
-                    },
-                    sha: null,
-                }),
-            };
-        }
-
-        if (mockPath === '/api/dp-rank') {
-            return {
-                ok: true,
-                status: 200,
-                json: async () => ({ html: '<table class="rank_p1"><tr><th class="rank">rank</th><th>Dummy</th></tr><tr><td class="rank">11</td><td><a class="music">Dummy Song</a></td></tr></table>' }),
-                text: async () => '<table class="rank_p1"><tr><th class="rank">rank</th><th>Dummy</th></tr><tr><td class="rank">11</td><td><a class="music">Dummy Song</a></td></tr></table>',
-            };
-        }
-
-        return {
-            ok: true,
-            status: 200,
-            json: async () => ({ ok: true, sha: null }),
-            text: async () => JSON.stringify({ ok: true, sha: null }),
-        };
     }
-
-    const url = `${CONFIG.WORKER_URL}${path}`;
-    const headers = {
-        'Authorization': `Bearer ${state.password}`,
-        'Content-Type': 'application/json',
-        ...options.headers,
-    };
 
     const response = await fetch(url, { ...options, headers });
     return response;
@@ -1477,3 +1420,27 @@ function adjustColor(hex, amount) {
     const b = Math.min(255, Math.max(0, (num & 0x0000FF) + amount));
     return `#${(1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1)}`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeRouting();
+
+    document.getElementById('login-btn')?.addEventListener('click', handleLogin);
+    document.getElementById('password-input')?.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            handleLogin();
+        }
+    });
+
+    document.getElementById('clear-btn')?.addEventListener('click', () => handleResult('clear'));
+    document.getElementById('fail-btn')?.addEventListener('click', () => handleResult('fail'));
+    document.getElementById('history-toggle')?.addEventListener('click', toggleHistory);
+    document.getElementById('mode-toggle')?.addEventListener('click', handleModeToggle);
+    document.getElementById('game-mode-toggle')?.addEventListener('click', handleGameModeToggle);
+    document.getElementById('env-toggle')?.addEventListener('click', handleEnvironmentToggle);
+    document.getElementById('dp-offi-down')?.addEventListener('click', () => handleDpOffiChange(-1));
+    document.getElementById('dp-offi-up')?.addEventListener('click', () => handleDpOffiChange(1));
+    document.getElementById('dp-refresh-btn')?.addEventListener('click', handleDpRefresh);
+    document.getElementById('sp-refresh-btn')?.addEventListener('click', handleSpreadsheetRefresh);
+
+    tryAutoLogin();
+});

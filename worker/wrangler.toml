@@ -10,7 +10,7 @@ compatibility_date = "2024-12-01"
 [vars]
 REPO = "skygarlics/stager"
 DATA_BRANCH = "data"
-ALLOWED_ORIGIN = "https://skygarlics.github.io"
+ALLOWED_ORIGIN = "https://skygarlics.github.io,http://localhost:5500"
 
 # ── Production Environment ───────────────────────────────
 # [env.production]

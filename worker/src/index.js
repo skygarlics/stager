@@ -20,6 +20,7 @@ const DRUM_HISTORY_FILE = 'play_history_drum.json';
 const DP_CACHE_FILE_PREFIX = 'dp_rank_cache';
 const GITHUB_API = 'https://api.github.com';
 const MAX_REQUEST_BODY = 512 * 1024; // 512 KB max request body
+let currentRequestOrigin = '';
 
 // ==================== Rate Limiting ====================
 // In-memory sliding window rate limiter (per-Worker-instance)
@@ -88,6 +89,8 @@ function getClientIP(request) {
 // ==================== Main Handler ====================
 export default {
     async fetch(request, env) {
+        currentRequestOrigin = request.headers.get('Origin') || '';
+
         // Handle CORS preflight
         if (request.method === 'OPTIONS') {
             return corsResponse(env, new Response(null, { status: 204 }));
@@ -711,7 +714,13 @@ function toBase64Utf8(text) {
 }
 
 function corsResponse(env, response) {
-    const origin = env.ALLOWED_ORIGIN || '*';
+    const allowedOrigins = String(env.ALLOWED_ORIGIN || '*')
+        .split(',')
+        .map(origin => origin.trim())
+        .filter(Boolean);
+    const origin = allowedOrigins.includes('*')
+        ? '*'
+        : (allowedOrigins.includes(currentRequestOrigin) ? currentRequestOrigin : allowedOrigins[0] || '*');
     const headers = new Headers(response.headers);
     headers.set('Access-Control-Allow-Origin', origin);
     headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS');
