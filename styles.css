@@ -618,26 +618,30 @@ main {
 
 .drum-song-row {
     display: grid;
-    grid-template-columns: 2.2rem minmax(0, 2fr) minmax(0, 1.1fr) 4.2rem 4rem minmax(0, 1.2fr) 3rem;
+    grid-template-columns: minmax(0, 2.2fr) minmax(0, 0.8fr) 2.4rem 2.8rem minmax(0, 1.2fr) 3rem;
     gap: 0.5rem;
     align-items: center;
     padding: 0.8rem 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
-.drum-song-row:last-child {
-    border-bottom: none;
+.drum-song-row > * + * {
+    border-left: 1px solid rgba(255,255,255,0.08);
+    padding-left: 0.5rem;
 }
 
-.drum-song-row .song-idx {
-    color: var(--text-dim);
-    font-size: 0.8rem;
-    text-align: center;
+.drum-song-row:last-child {
+    border-bottom: none;
 }
 
 .drum-song-row .song-name {
     font-weight: 600;
     line-height: 1.35;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .drum-song-row .song-version,
@@ -648,6 +652,30 @@ main {
     font-size: 0.82rem;
 }
 
+.drum-song-row .song-diff {
+    text-align: center;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.drum-song-row .song-level {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.drum-song-row .song-version {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
 .drum-song-row .song-tags {
     white-space: pre-line;
 }
@@ -656,12 +684,18 @@ main {
     justify-self: end;
     width: 2.4rem;
     height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 999px;
     border: 1px solid var(--border-color);
     background: var(--bg-surface);
     color: var(--text-secondary);
     cursor: pointer;
     font-weight: 700;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
 }
 
 .drum-song-row .song-toggle[data-rank="S"] {
@@ -877,6 +911,20 @@ footer {
 
     .action-btn .btn-icon {
         font-size: 1.5rem;
+    }
+
+    .drum-song-row {
+        grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr) 2.8rem 3rem;
+        gap: 0.35rem;
+    }
+
+    .drum-song-row .song-level,
+    .drum-song-row .song-tags {
+        display: none;
+    }
+
+    .drum-song-row > * + * {
+        padding-left: 0.35rem;
     }
 }
 

@@ -553,10 +553,6 @@ function renderDrumSongRow(floorKey, song) {
         row.classList.add('boss');
     }
 
-    const idx = document.createElement('span');
-    idx.className = 'song-idx';
-    idx.textContent = song.idx ?? '';
-
     const name = document.createElement('span');
     name.className = 'song-name';
     name.textContent = song.displayName || song.songName || '';
@@ -593,7 +589,6 @@ function renderDrumSongRow(floorKey, song) {
         updateHeaderCountForDrum();
     });
 
-    row.appendChild(idx);
     row.appendChild(name);
     row.appendChild(version);
     row.appendChild(diff);
