@@ -5,7 +5,11 @@
 ```
 stager/
 ├── index.html          ─┐
-├── app.js               ├─ 프론트엔드 → GitHub Pages
+├── common.js            ├─ 공통 상태 / 캐시 / 유틸
+├── sp.js                ├─ SP 데이터 로드 / 캐시
+├── dp.js                ├─ DP 데이터 로드 / 캐시
+├── drum.js              ├─ DrumTower 데이터 / 캐시
+├── app.js               ├─ 부트스트랩 / 라우팅 / UI
 ├── styles.css          ─┘
 └── worker/             ─┐
     ├── wrangler.toml    ├─ 백엔드 → Cloudflare Workers
@@ -15,6 +19,11 @@ stager/
 
 **프론트엔드**는 GitHub Pages에서 정적 호스팅되고, **백엔드(Worker)**는 Cloudflare Workers에서 실행됩니다.
 Worker가 GitHub API 호출을 대신 처리하므로 PAT(Personal Access Token)이 클라이언트에 노출되지 않습니다.
+브라우저는 `common.js → sp.js → dp.js → drum.js → app.js` 순서로 로드됩니다.
+
+프론트엔드는 난이도/기록 데이터를 로컬 IndexedDB에 캐시합니다.
+- `SP` / `DP` 난이도 데이터: 로컬 우선 캐시
+- `play_history.json` / `play_history_drum.json`: 1시간 TTL 로컬 캐시
 
 현재 백엔드는 두 개의 기록 파일을 다룹니다.
 - `play_history.json` : IIDX 플레이 기록
@@ -154,7 +163,7 @@ curl -X POST https://stager-proxy.<subdomain>.workers.dev/api/auth \
 
 ### 3-1. Worker URL 설정
 
-`app.js`의 `CONFIG.WORKER_URL`에 Worker URL 입력:
+`common.js`의 `CONFIG.WORKER_URL`에 Worker URL 입력:
 
 ```js
 WORKER_URL: 'https://stager-proxy.<subdomain>.workers.dev',
@@ -189,6 +198,7 @@ GitHub → Repository → **Settings** → **Pages**:
 | 6 | 데이터 영속성 | 브라우저 새로고침 → 기록 & 레벨 복원 |
 | 7 | 모드 전환 | ノマゲ ↔ ハード 전환 동작 |
 | 8 | DrumTower 저장 | Drum 페이지에서 층 변경 / S 토글 후 `play_history_drum.json` 갱신 |
+| 9 | 로컬 캐시 | 오프라인/재접속 시 SP/DP/기록이 IndexedDB에서 복원 |
 
 ---
 
@@ -210,7 +220,7 @@ GitHub → Repository → **Settings** → **Pages**:
 
 | 증상 | 원인 | 해결 |
 |------|------|------|
-| `認証サーバーに接続できません` | `WORKER_URL`이 비어있거나 잘못됨 | `app.js`의 `WORKER_URL` 확인 |
+| `認証サーバーに接続できません` | `WORKER_URL`이 비어있거나 잘못됨 | `common.js`의 `WORKER_URL` 확인 |
 | `パスワードが正しくありません` | `AUTH_HASH`와 비밀번호 불일치 | 해시 재생성 → `wrangler secret put AUTH_HASH` |
 | CORS 에러 | `ALLOWED_ORIGIN` 불일치 | `wrangler.toml`의 origin → 실제 Pages URL과 일치시킴 |
 | `Worker PUT failed: 502` | PAT 만료 또는 권한 부족 | 새 PAT 발급 → `wrangler secret put GITHUB_PAT` |
