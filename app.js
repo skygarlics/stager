@@ -39,7 +39,7 @@ const CONFIG = {
     },
     // When true, local development can bypass auth and Worker persistence
     DEV_ALLOW_OFFLINE: true,
-    // IndexedDB cache for DP data
+    // IndexedDB cache for song data
     DP_CACHE_DB: 'stager_dp_cache',
     DP_CACHE_STORE: 'entries',
     DP_CACHE_VERSION: 1,
@@ -111,6 +111,10 @@ const state = {
 // ==================== IndexedDB Cache ====================
 function getDpCacheIdbKey() {
     return getDpCacheKey();
+}
+
+function getSpCacheKey() {
+    return `SP_${state.mode}`;
 }
 
 function openDpCacheDb() {
@@ -215,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('dp-offi-down')?.addEventListener('click', () => handleDpOffiChange(-1));
     document.getElementById('dp-offi-up')?.addEventListener('click', () => handleDpOffiChange(1));
     document.getElementById('dp-refresh-btn')?.addEventListener('click', handleDpRefresh);
+    document.getElementById('sp-refresh-btn')?.addEventListener('click', handleSpreadsheetRefresh);
 
     // Try auto-login from saved session
     tryAutoLogin();
@@ -265,6 +270,7 @@ function applyRouteUI() {
     document.getElementById('env-toggle')?.classList.toggle('hidden', state.route !== 'iidx');
     document.getElementById('mode-toggle')?.classList.toggle('hidden', state.route !== 'iidx');
     document.getElementById('dp-controls')?.classList.toggle('hidden', state.route !== 'iidx');
+    document.getElementById('sp-refresh-btn')?.classList.toggle('hidden', state.route !== 'iidx' || state.gameMode !== 'SP');
 
     const currentLevel = document.getElementById('current-level');
     if (currentLevel && state.route === 'drum') {
@@ -444,7 +450,7 @@ async function initializeApp() {
         if (state.gameMode === 'DP') {
             hasSongData = await loadDpData();
         } else {
-            await loadSpreadsheetData();
+            hasSongData = await loadSpreadsheetData();
         }
 
         // Clamp level index after data is loaded
@@ -906,6 +912,24 @@ function normalizeDrumHistoryPayload(data) {
 
 // ==================== Spreadsheet Data Loading ====================
 async function loadSpreadsheetData() {
+    return loadSpreadsheetDataWithCache({ forceRefresh: false });
+}
+
+async function loadSpreadsheetDataWithCache({ forceRefresh = false } = {}) {
+    const key = getSpCacheKey();
+    if (!forceRefresh) {
+        const cached = await getDpCacheFromIdb(key);
+
+        if (cached?.entry) {
+            applySpreadsheetCacheEntry(cached.entry);
+
+            if (state.versions.length > 0) {
+                console.log(`Loaded ${state.totalSongsInDB} songs across ${state.versions.length} versions from IndexedDB cache`);
+                return true;
+            }
+        }
+    }
+
     const gid = CONFIG.SHEET_GIDS[state.mode];
     if (gid == null) {
         throw new Error(`Sheet GID not configured for mode: ${state.mode}`);
@@ -925,7 +949,13 @@ async function loadSpreadsheetData() {
         throw new Error('No versions found in spreadsheet data');
     }
 
+    await saveDpCacheToIdb(key, {
+        entry: createSpreadsheetCacheEntry(),
+        sha: null,
+    });
+
     console.log(`Loaded ${state.totalSongsInDB} songs across ${state.versions.length} versions`);
+    return true;
 }
 
 function parseSpreadsheetCSV(csvText) {
@@ -1001,6 +1031,24 @@ function parseSpreadsheetCSV(csvText) {
             state.totalSongsInDB += songs.length;
         }
     }
+}
+
+function applySpreadsheetCacheEntry(entry) {
+    state.songDB = entry?.songDB && typeof entry.songDB === 'object'
+        ? JSON.parse(JSON.stringify(entry.songDB))
+        : {};
+    state.versions = Array.isArray(entry?.versions) ? [...entry.versions] : [];
+    state.totalSongsInDB = Number.isFinite(entry?.totalSongsInDB) ? entry.totalSongsInDB : 0;
+}
+
+function createSpreadsheetCacheEntry() {
+    return {
+        mode: state.mode,
+        versions: [...state.versions],
+        totalSongsInDB: state.totalSongsInDB,
+        songDB: state.songDB,
+        parsedAt: new Date().toISOString(),
+    };
 }
 
 /**
@@ -1310,6 +1358,55 @@ async function handleDpRefresh() {
     }
 
     setDpRefreshButtonBusy(false);
+    state.isProcessing = false;
+}
+
+function setSpreadsheetRefreshButtonBusy(isBusy) {
+    const refreshBtn = document.getElementById('sp-refresh-btn');
+    if (!refreshBtn) return;
+    refreshBtn.disabled = isBusy;
+    refreshBtn.textContent = isBusy ? '更新中' : '更新';
+}
+
+async function handleSpreadsheetRefresh() {
+    if (state.isProcessing || state.gameMode !== 'SP') return;
+
+    state.isProcessing = true;
+    enableActionButtons(false);
+    setSpreadsheetRefreshButtonBusy(true);
+
+    document.getElementById('song-name').textContent = '難易度表更新中...';
+    document.getElementById('song-version').textContent = '';
+    document.getElementById('song-level').textContent = '';
+
+    try {
+        await loadSpreadsheetDataWithCache({ forceRefresh: true });
+
+        const levels = getCurrentLevels();
+        if (levels.length > 0) {
+            state.currentLevelIndex = Math.max(0, Math.min(state.currentLevelIndex, levels.length - 1));
+        }
+
+        updateLevelDisplay();
+        updateCountDisplay();
+        renderFullHistory();
+        selectNextSong();
+        enableActionButtons(true);
+    } catch (e) {
+        console.error('SP refresh failed:', e);
+        if (state.versions.length > 0) {
+            updateLevelDisplay();
+            updateCountDisplay();
+            renderFullHistory();
+            selectNextSong();
+            enableActionButtons(true);
+        } else {
+            document.getElementById('song-name').textContent = '難易度表の更新に失敗しました';
+            enableActionButtons(false);
+        }
+    }
+
+    setSpreadsheetRefreshButtonBusy(false);
     state.isProcessing = false;
 }
 
@@ -1941,17 +2038,20 @@ function updateGameModeUI() {
     const gameModeBtn = document.getElementById('game-mode-toggle');
     const modeToggle = document.getElementById('mode-toggle');
     const dpControls = document.getElementById('dp-controls');
+    const spRefreshBtn = document.getElementById('sp-refresh-btn');
 
     gameModeBtn.textContent = state.gameMode;
 
     if (state.gameMode === 'DP') {
         modeToggle.classList.add('hidden');
         dpControls.classList.remove('hidden');
+        spRefreshBtn?.classList.add('hidden');
         updateDpOffiDisplay();
     } else {
         modeToggle.classList.remove('hidden');
         modeToggle.textContent = state.mode;
         dpControls.classList.add('hidden');
+        spRefreshBtn?.classList.toggle('hidden', state.route !== 'iidx');
     }
 }
 
