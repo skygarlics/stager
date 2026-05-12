@@ -5,18 +5,17 @@
   "rankStore": {
     "2F|0": "S",
     "2F|1": "S",
-    "2F|2": "S",
-    "38F|1": "S"
+    "2F|2": "S"
   },
   "floorStatuses": {
     "38F": {
       "cleared": false,
       "autoCleared": false,
-      "sCount": 0,
+      "sCount": 1,
       "needed": 6,
       "bossFail": true,
       "updatedAt": "2026-05-12T12:03:25.455Z"
     }
   },
-  "lastUpdated": "2026-05-12T12:03:32.387Z"
+  "lastUpdated": "2026-05-12T12:03:35.305Z"
 }
