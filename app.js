@@ -39,6 +39,10 @@ const CONFIG = {
     },
     // When true, local development can bypass auth and Worker persistence
     DEV_ALLOW_OFFLINE: true,
+    // IndexedDB cache for DP data
+    DP_CACHE_DB: 'stager_dp_cache',
+    DP_CACHE_STORE: 'entries',
+    DP_CACHE_VERSION: 1,
 };
 
 const ROUTES = {
@@ -103,6 +107,83 @@ const state = {
         env: 'a330',             // Game version env code
     },
 };
+
+// ==================== IndexedDB Cache ====================
+function getDpCacheIdbKey() {
+    return getDpCacheKey();
+}
+
+function openDpCacheDb() {
+    if (!('indexedDB' in window)) {
+        return Promise.resolve(null);
+    }
+
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(CONFIG.DP_CACHE_DB, CONFIG.DP_CACHE_VERSION);
+
+        request.onupgradeneeded = () => {
+            const db = request.result;
+            if (!db.objectStoreNames.contains(CONFIG.DP_CACHE_STORE)) {
+                db.createObjectStore(CONFIG.DP_CACHE_STORE, { keyPath: 'key' });
+            }
+        };
+
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+    });
+}
+
+async function getDpCacheFromIdb(key) {
+    try {
+        const db = await openDpCacheDb();
+        if (!db) return null;
+
+        return await new Promise((resolve, reject) => {
+            const tx = db.transaction(CONFIG.DP_CACHE_STORE, 'readonly');
+            const store = tx.objectStore(CONFIG.DP_CACHE_STORE);
+            const request = store.get(key);
+
+            request.onsuccess = () => resolve(request.result || null);
+            request.onerror = () => reject(request.error);
+            tx.oncomplete = () => db.close();
+            tx.onerror = () => {
+                db.close();
+                reject(tx.error);
+            };
+        });
+    } catch (e) {
+        console.warn('Failed to read DP cache from IndexedDB:', e);
+        return null;
+    }
+}
+
+async function saveDpCacheToIdb(key, payload) {
+    try {
+        const db = await openDpCacheDb();
+        if (!db) return;
+
+        await new Promise((resolve, reject) => {
+            const tx = db.transaction(CONFIG.DP_CACHE_STORE, 'readwrite');
+            const store = tx.objectStore(CONFIG.DP_CACHE_STORE);
+            store.put({
+                key,
+                entry: payload.entry,
+                sha: payload.sha || null,
+                savedAt: new Date().toISOString(),
+            });
+            tx.oncomplete = () => {
+                db.close();
+                resolve();
+            };
+            tx.onerror = () => {
+                db.close();
+                reject(tx.error);
+            };
+        });
+    } catch (e) {
+        console.warn('Failed to save DP cache to IndexedDB:', e);
+    }
+}
 
 // ==================== Initialization ====================
 document.addEventListener('DOMContentLoaded', () => {
@@ -940,6 +1021,18 @@ function normalizeLevel(level) {
  */
 async function loadDpData() {
     const key = getDpCacheKey();
+    const cached = await getDpCacheFromIdb(key);
+
+    if (cached?.entry) {
+        state.dpCacheFileSha = cached.sha || null;
+        applyDpCacheEntry(cached.entry);
+
+        if (state.dp.levels.length > 0) {
+            console.log(`DP ☆${state.dp.offi}: Loaded ${state.totalSongsInDB} songs from IndexedDB cache across ${state.dp.levels.length} rank levels`);
+            return true;
+        }
+    }
+
     const response = await workerFetch(`/api/dp-rank-cache?key=${encodeURIComponent(key)}`);
 
     if (!response.ok) {
@@ -968,6 +1061,7 @@ async function loadDpData() {
     }
 
     applyDpCacheEntry(data.entry);
+    await saveDpCacheToIdb(key, { entry: data.entry, sha: data.sha || null });
 
     if (state.dp.levels.length === 0) {
         throw new Error('No levels found in cached DP data');
@@ -1162,6 +1256,10 @@ async function fetchAndStoreDpData() {
 
     const saveData = await saveResponse.json();
     state.dpCacheFileSha = saveData.sha || state.dpCacheFileSha;
+    await saveDpCacheToIdb(getDpCacheKey(), {
+        entry: createDpCacheEntry(),
+        sha: state.dpCacheFileSha,
+    });
 
     console.log(`DP ☆${state.dp.offi}: Parsed and cached ${state.totalSongsInDB} songs across ${state.dp.levels.length} rank levels`);
 }
