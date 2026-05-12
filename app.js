@@ -12,6 +12,8 @@
 const CONFIG = {
     // Cloudflare Worker proxy URL (handles GitHub API calls server-side)
     WORKER_URL: '',  // e.g., 'https://stager-proxy.<your-subdomain>.workers.dev'
+    // When true, allow running the app without a Worker configured (development only)
+    DEV_ALLOW_OFFLINE: true,
     // Levels ordered from lowest to highest
     LEVELS: ['F', 'E', 'D', 'C', 'B', 'B+', 'A', 'A+', 'S', 'S+'],
     // Known version identifiers to help find the header row
@@ -119,6 +121,31 @@ function applyServiceUI() {
     document.getElementById('login-title').textContent = serviceConfig.title;
     document.getElementById('app-title').textContent = serviceConfig.title;
     document.querySelector('.login-desc').textContent = serviceConfig.loginDesc;
+    // Toggle IIDX song info visibility when in drum mode
+    const isDrum = state.service === 'drum';
+    const songCard = document.getElementById('song-card');
+    const actionButtons = document.getElementById('action-buttons');
+    if (songCard) songCard.classList.toggle('hidden', isDrum);
+    if (actionButtons) actionButtons.classList.toggle('hidden', isDrum);
+    // Show/hide drum panel depending on service
+    const drumPanel = document.getElementById('drum-floor-panel');
+    if (drumPanel) drumPanel.classList.toggle('hidden', !isDrum);
+
+    // Hide play history in Drum mode
+    const historyPanel = document.getElementById('history-panel');
+    if (historyPanel) historyPanel.classList.toggle('hidden', isDrum);
+
+    // Update service-toggle button label to show current service
+    const svcBtn = document.getElementById('service-toggle');
+    if (svcBtn) svcBtn.textContent = getServiceLabel(state.service);
+}
+
+function getServiceLabel(key) {
+    if (!key) return '';
+    if (key.toLowerCase() === 'iidx') return 'IIDX';
+    if (key.toLowerCase() === 'drum') return 'Drum';
+    // fallback: capitalize
+    return key.charAt(0).toUpperCase() + key.slice(1);
 }
 
 function initializeRouting() {
@@ -221,10 +248,9 @@ async function loadDrumJsonData() {
 }
 
 function renderDrumFloorPanel() {
-    // Remove existing panel if any
+    // Render single-current-floor UI
     const existing = document.getElementById('drum-floor-panel');
     if (existing) existing.remove();
-
     const main = document.querySelector('main');
     const panel = document.createElement('div');
     panel.id = 'drum-floor-panel';
@@ -233,123 +259,227 @@ function renderDrumFloorPanel() {
     const header = document.createElement('div');
     header.className = 'panel-header';
     const title = document.createElement('h3');
-    title.textContent = 'Drum Tower - Floors';
+    title.textContent = 'Drumtower';
     header.appendChild(title);
 
-    const evalBtn = document.createElement('button');
-    evalBtn.textContent = 'Evaluate Floors';
-    evalBtn.className = 'btn-primary';
-    evalBtn.addEventListener('click', evaluateDrumFloors);
-    header.appendChild(evalBtn);
+    // floor navigation
+    const nav = document.createElement('div');
+    nav.style.display = 'flex';
+    nav.style.gap = '8px';
+    nav.style.alignItems = 'center';
+
+    const prevBtn = document.createElement('button');
+    prevBtn.textContent = '◀';
+    prevBtn.className = 'mode-badge';
+    prevBtn.addEventListener('click', () => {
+        state.drumCurrentFloorIndex = Math.max(0, (state.drumCurrentFloorIndex || 0) - 1);
+        renderDrumFloorPanel();
+    });
+    nav.appendChild(prevBtn);
+
+    const floorSelect = document.createElement('select');
+    floorSelect.id = 'drum-floor-select';
+    for (let i = 0; i < state.drumFloors.length; i++) {
+        const opt = document.createElement('option');
+        opt.value = String(i);
+        opt.textContent = `${state.drumFloors[i].floor} (${state.drumFloors[i].songCount})`;
+        floorSelect.appendChild(opt);
+    }
+    floorSelect.value = String(state.drumCurrentFloorIndex || 0);
+    floorSelect.addEventListener('change', () => {
+        state.drumCurrentFloorIndex = Number(floorSelect.value);
+        renderDrumFloorPanel();
+    });
+    nav.appendChild(floorSelect);
+
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = '▶';
+    nextBtn.className = 'mode-badge';
+    nextBtn.addEventListener('click', () => {
+        state.drumCurrentFloorIndex = Math.min(state.drumFloors.length - 1, (state.drumCurrentFloorIndex || 0) + 1);
+        renderDrumFloorPanel();
+    });
+    nav.appendChild(nextBtn);
+
+    header.appendChild(nav);
 
     panel.appendChild(header);
 
-    const store = loadDrumRankStore();
-
-    for (let fIdx = 0; fIdx < state.drumFloors.length; fIdx++) {
-        const floor = state.drumFloors[fIdx];
-        const section = document.createElement('section');
-        section.className = 'floor-section';
-
-        const h4 = document.createElement('h4');
-        h4.textContent = `${floor.floor} (${floor.songCount})`;
-        const statusBadge = document.createElement('span');
-        statusBadge.className = 'floor-status';
-        statusBadge.id = `floor-status-${fIdx}`;
-        h4.appendChild(statusBadge);
-        section.appendChild(h4);
-
-        const table = document.createElement('table');
-        table.className = 'floor-table';
-        const thead = document.createElement('thead');
-        thead.innerHTML = '<tr><th>#</th><th>曲名</th><th>Ver</th><th>難度</th><th>Lv</th><th>タグ</th><th>ランク</th></tr>';
-        table.appendChild(thead);
-        const tbody = document.createElement('tbody');
-
-        for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
-            const song = floor.songs[sIdx];
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>${sIdx + 1}</td>
-                <td class="song-name">${escapeHtml(song.songName || song.displayName || '')}</td>
-                <td class="song-ver">${escapeHtml(song.version || '')}</td>
-                <td class="song-diff">${escapeHtml(song.difficultyLabel || '')}</td>
-                <td class="song-lv">${song.level ?? ''}</td>
-                <td class="song-tags">${(song.tags || []).join(', ')}</td>
-            `;
-
-            const tdSelect = document.createElement('td');
-            const select = document.createElement('select');
-            select.id = `rank-${fIdx}-${sIdx}`;
-            const ranks = ['','S+','S','A+','A','B+','B','C','D','E','F'];
-            for (const r of ranks) {
-                const opt = document.createElement('option');
-                opt.value = r;
-                opt.textContent = r || '-';
-                select.appendChild(opt);
-            }
-            // restore from store
-            const key = `${floor.floor}|${sIdx}`;
-            if (store[key]) select.value = store[key];
-            select.addEventListener('change', () => saveDrumRank(floor.floor, sIdx, select.value));
-
-            tdSelect.appendChild(select);
-            tr.appendChild(tdSelect);
-            tbody.appendChild(tr);
-        }
-
-        table.appendChild(tbody);
-        section.appendChild(table);
-        panel.appendChild(section);
+    const floor = state.drumFloors[state.drumCurrentFloorIndex || 0];
+    if (!floor) {
+        const p = document.createElement('p');
+        p.textContent = 'No floor data available';
+        panel.appendChild(p);
+        main.appendChild(panel);
+        return;
     }
 
+    const statusRow = document.createElement('div');
+    statusRow.style.display = 'flex';
+    statusRow.style.gap = '8px';
+    statusRow.style.alignItems = 'center';
+    const statusBadge = document.createElement('button');
+    statusBadge.id = 'current-floor-status';
+    statusBadge.className = 'floor-status';
+    statusBadge.title = 'Toggle floor clear';
+    statusBadge.addEventListener('click', () => {
+        // Toggle persisted cleared state for this floor
+        const statuses = loadDrumFloorStatuses();
+        const key = floor.floor;
+        const prev = statuses[key] || {};
+        prev.cleared = !prev.cleared;
+        prev.timestamp = new Date().toISOString();
+        statuses[key] = prev;
+        localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(statuses));
+        renderDrumFloorPanel();
+    });
+    statusRow.appendChild(statusBadge);
+
+    // Show cleared count (S or higher) for this floor instead of manual Check button
+    const countSpan = document.createElement('span');
+    countSpan.id = 'current-floor-count';
+    countSpan.className = 'floor-count';
+    // compute S-or-higher count from stored ranks
+    const storeForCount = loadDrumRankStore();
+    const rankOrder = CONFIG.LEVELS || ['D','C','B','A','S','S+'];
+    const sIndex = rankOrder.indexOf('S');
+    let sOrHigherCount = 0;
+    for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+        const key = `${floor.floor}|${sIdx}`;
+        const rank = storeForCount[key] || '';
+        if (rank && rankOrder.indexOf(rank) >= sIndex) sOrHigherCount++;
+    }
+    countSpan.textContent = `${sOrHigherCount}/${floor.songs.length} S`;
+    statusRow.appendChild(countSpan);
+
+    panel.appendChild(statusRow);
+
+    const list = document.createElement('div');
+    list.className = 'floor-list';
+
+    const store = loadDrumRankStore();
+    const statuses = loadDrumFloorStatuses();
+    const floorStatus = statuses[floor.floor] || {};
+    if (floorStatus.cleared) {
+        statusBadge.textContent = 'CLEARED';
+        statusBadge.style.color = 'limegreen';
+        statusBadge.setAttribute('aria-pressed', 'true');
+    } else {
+        statusBadge.textContent = 'LOCKED';
+        statusBadge.style.color = 'crimson';
+        statusBadge.setAttribute('aria-pressed', 'false');
+    }
+
+    for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+        const song = floor.songs[sIdx];
+        const row = document.createElement('p');
+        row.className = 'floor-row';
+
+        const songName = document.createElement('span');
+        songName.className = 'song-name';
+        songName.textContent = song.songName || song.displayName || '';
+
+        const songDiff = document.createElement('span');
+        songDiff.className = 'song-diff';
+        songDiff.textContent = song.difficultyLabel || '';
+
+        const songLv = document.createElement('span');
+        songLv.className = 'song-lv';
+        songLv.textContent = song.level ?? '';
+
+        const songVer = document.createElement('span');
+        songVer.className = 'song-ver';
+        songVer.textContent = song.version || '';
+
+        const songTags = document.createElement('span');
+        songTags.className = 'song-tags';
+        // Normalize tags: accept array or comma-separated string
+        let tags = song.tags || [];
+        if (typeof tags === 'string') {
+            tags = tags.split(',').map(t => t.trim()).filter(Boolean);
+        }
+        if (!Array.isArray(tags)) tags = [];
+        if (tags.length === 0) {
+            songTags.textContent = '';
+        } else {
+            // Render tags as newline-separated text inside the span (no <br>)
+            songTags.textContent = tags.map(t => t).join('\n');
+        }
+
+        const tdToggle = document.createElement('span');
+        tdToggle.className = 'song-rank';
+        const btn = document.createElement('button');
+        btn.className = 'mode-badge';
+        const key = `${floor.floor}|${sIdx}`;
+        const val = store[key] || '';
+        btn.textContent = val === 'S' ? 'S' : '-';
+        btn.addEventListener('click', () => {
+            const newVal = (store[key] === 'S') ? '' : 'S';
+            saveDrumRank(floor.floor, sIdx, newVal);
+            renderDrumFloorPanel();
+        });
+        tdToggle.appendChild(btn);
+        row.appendChild(songName);
+        row.appendChild(songDiff);
+        row.appendChild(songLv);
+        row.appendChild(songVer);
+        row.appendChild(songTags);
+        row.appendChild(tdToggle);
+
+        list.appendChild(row);
+    }
+
+    panel.appendChild(list);
     main.appendChild(panel);
 }
 
-function evaluateDrumFloors() {
-    const results = [];
-    const rankOrder = CONFIG.LEVELS; // F..S+
+function evaluateCurrentFloor() {
+    const rankOrder = CONFIG.LEVELS;
     const sIndex = rankOrder.indexOf('S');
+    const floor = state.drumFloors[state.drumCurrentFloorIndex || 0];
+    if (!floor) return;
 
-    for (let fIdx = 0; fIdx < state.drumFloors.length; fIdx++) {
-        const floor = state.drumFloors[fIdx];
-        let sOrHigherCount = 0;
-        let bossFail = false;
-        const failures = [];
+    const store = loadDrumRankStore();
+    let sOrHigherCount = 0;
+    let bossFail = false;
+    const failures = [];
 
-        for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
-            const sel = document.getElementById(`rank-${fIdx}-${sIdx}`);
-            const rank = sel ? sel.value : '';
-            const isSOrHigher = rank && rankOrder.indexOf(rank) >= sIndex;
+    for (let sIdx = 0; sIdx < floor.songs.length; sIdx++) {
+        const key = `${floor.floor}|${sIdx}`;
+        const rank = store[key] || '';
+        const isSOrHigher = rank && rankOrder.indexOf(rank) >= sIndex;
+        if (isSOrHigher) sOrHigherCount++;
 
-            if (isSOrHigher) sOrHigherCount++;
-
-            const song = floor.songs[sIdx];
-            const isBoss = (song.clearType && song.clearType === 'boss') || (song.tags || []).includes('보스곡');
-            if (isBoss && !isSOrHigher) {
-                bossFail = true;
-                failures.push({ song: song.songName || song.displayName, reason: 'boss-not-S' });
-            }
+        const song = floor.songs[sIdx];
+        const isBoss = (song.clearType && song.clearType === 'boss') || (song.tags || []).includes('보ス곡') || (song.tags || []).includes('보스곡');
+        if (isBoss && !isSOrHigher) {
+            bossFail = true;
+            failures.push({ song: song.songName || song.displayName, reason: 'boss-not-S' });
         }
-
-        const needed = Math.ceil((floor.songCount || floor.songs.length) * 3 / 4);
-        const countOk = sOrHigherCount >= needed;
-        const cleared = countOk && !bossFail;
-
-        // update UI badge
-        const badge = document.getElementById(`floor-status-${fIdx}`);
-        if (badge) {
-            badge.textContent = cleared ? 'CLEARED' : 'LOCKED';
-            badge.style.color = cleared ? 'limegreen' : 'crimson';
-            badge.style.marginLeft = '8px';
-        }
-
-        results.push({ floor: floor.floor, cleared, sOrHigherCount, needed, bossFail, failures });
     }
 
-    // show a summary alert (concise)
-    const okCount = results.filter(r => r.cleared).length;
-    alert(`Floors cleared: ${okCount} / ${results.length}`);
+    const needed = Math.ceil((floor.songCount || floor.songs.length) * 3 / 4);
+    const countOk = sOrHigherCount >= needed;
+    const cleared = countOk && !bossFail;
+
+    // persist floor status
+    const statuses = loadDrumFloorStatuses();
+    statuses[floor.floor] = { cleared, sOrHigherCount, needed, bossFail, failures, timestamp: new Date().toISOString() };
+    localStorage.setItem('drum_floor_statuses_v1', JSON.stringify(statuses));
+
+    renderDrumFloorPanel();
+    if (cleared) {
+        alert(`Floor ${floor.floor} CLEARED! (${sOrHigherCount}/${floor.songs.length} S+)`);
+    } else {
+        alert(`Floor ${floor.floor} NOT CLEARED. ${sOrHigherCount}/${needed} S+ required. Boss requirement ${bossFail ? 'FAILED' : 'OK'}.`);
+    }
+}
+
+function loadDrumFloorStatuses() {
+    try {
+        const raw = localStorage.getItem('drum_floor_statuses_v1');
+        return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
 }
 
 function saveDrumRank(floorName, sIdx, value) {
@@ -384,7 +514,25 @@ async function handleLogin() {
     }
 
     if (!CONFIG.WORKER_URL) {
-        showError(errorEl, 'Worker URLが未設定です。app.js の WORKER_URL を設定してください。');
+        if (!CONFIG.DEV_ALLOW_OFFLINE) {
+            showError(errorEl, 'Worker URLが未設定です。app.js の WORKER_URL を設定してください。');
+            return;
+        }
+        // Dev fallback: skip worker auth and proceed
+        console.warn('DEV: WORKER_URL not set, running in offline development mode');
+        state.password = 'dev';
+        document.getElementById('login-modal').classList.add('hidden');
+        document.getElementById('loading-overlay').classList.remove('hidden');
+
+        try {
+            await initializeAppData();
+        } catch (e) {
+            console.error('Initialization failed (dev mode):', e);
+            document.getElementById('loading-overlay').classList.add('hidden');
+            document.getElementById('login-modal').classList.remove('hidden');
+            showError(errorEl, `初期化に失敗しました: ${e.message}`);
+        }
+
         return;
     }
 
@@ -678,6 +826,14 @@ async function workerFetch(path, options = {}) {
 }
 
 async function loadPlayHistory() {
+    if (!CONFIG.WORKER_URL) {
+        if (CONFIG.DEV_ALLOW_OFFLINE) {
+            console.log('DEV: skipping loadPlayHistory (no WORKER_URL)');
+            return;
+        }
+        throw new Error('Worker URL not configured');
+    }
+
     try {
         const response = await workerFetch(`/api/history?service=${encodeURIComponent(state.service)}`);
 
@@ -715,6 +871,13 @@ async function loadPlayHistory() {
 }
 
 async function savePlayHistory() {
+    if (!CONFIG.WORKER_URL) {
+        if (CONFIG.DEV_ALLOW_OFFLINE) {
+            console.log('DEV: skipping savePlayHistory (no WORKER_URL)');
+            return;
+        }
+        throw new Error('Worker URL not configured');
+    }
     const payload = {
         history: state.history,
         currentLevelIndex: state.currentLevelIndex,
