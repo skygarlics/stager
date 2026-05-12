@@ -1159,9 +1159,9 @@ function showDpCacheEmptyState() {
     state.currentSong = null;
     state.currentVersion = null;
     state.currentLevel = null;
-    document.getElementById('song-name').textContent = 'DP 난이도표 캐시가 없습니다';
+    document.getElementById('song-name').textContent = 'DP難易度表キャッシュがありません';
     document.getElementById('song-version').textContent = '';
-    document.getElementById('song-level').textContent = '갱신 버튼으로 난이도표를 불러오세요';
+    document.getElementById('song-level').textContent = '更新ボタンで難易度表を取得してください';
     enableActionButtons(false);
 }
 
@@ -1169,7 +1169,7 @@ function setDpRefreshButtonBusy(isBusy) {
     const refreshBtn = document.getElementById('dp-refresh-btn');
     if (!refreshBtn) return;
     refreshBtn.disabled = isBusy;
-    refreshBtn.textContent = isBusy ? '갱신중' : '갱신';
+    refreshBtn.textContent = isBusy ? '更新中' : '更新';
 }
 
 async function handleDpRefresh() {
@@ -1179,7 +1179,7 @@ async function handleDpRefresh() {
     enableActionButtons(false);
     setDpRefreshButtonBusy(true);
 
-    document.getElementById('song-name').textContent = '난이도표 갱신중...';
+    document.getElementById('song-name').textContent = '難易度表更新中...';
     document.getElementById('song-version').textContent = '';
     document.getElementById('song-level').textContent = '';
 

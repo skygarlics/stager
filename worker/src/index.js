@@ -284,7 +284,7 @@ async function handlePutDrumHistory(request, env) {
 
     const normalizedContent = normalizeDrumHistoryPayload(body.content || {});
     const jsonStr = JSON.stringify(normalizedContent, null, 2);
-    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
+    const encoded = toBase64Utf8(jsonStr);
 
     const url = `${GITHUB_API}/repos/${repo}/contents/${DRUM_HISTORY_FILE}`;
 
@@ -721,6 +721,15 @@ async function readBody(request) {
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function toBase64Utf8(text) {
+    const bytes = new TextEncoder().encode(text);
+    let binary = '';
+    for (const byte of bytes) {
+        binary += String.fromCharCode(byte);
+    }
+    return btoa(binary);
 }
 
 function corsResponse(env, response) {
