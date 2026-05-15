@@ -3432,11 +3432,19 @@
           "status": "clear",
           "timestamp": "2026-05-15T12:48:00.232Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Resonant",
+          "version": "EPOLIS",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-05-15T12:50:52.457Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 23,
-      "totalCount": 41,
+      "currentLevelIndex": 6,
+      "clearCount": 24,
+      "totalCount": 42,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3478,7 +3486,8 @@
         "Pinky Crush|EYE OF THE HEAVEN",
         "Pinky Crush|Without Heaven",
         "Sparkle Shower|UNDO THE NIGHT",
-        "Pinky Crush|destination"
+        "Pinky Crush|destination",
+        "EPOLIS|Resonant"
       ],
       "songStatus": [
         [
@@ -3767,6 +3776,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|Resonant",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -3786,5 +3802,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-15T12:48:00.232Z"
+  "lastUpdated": "2026-05-15T12:50:52.457Z"
 }
