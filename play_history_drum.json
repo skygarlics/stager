@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "route": "drum",
-  "selectedFloorIndex": 43,
+  "selectedFloorIndex": 48,
   "rankStore": {
     "2F|0": "S",
     "2F|1": "S",
@@ -55,7 +55,47 @@
       "needed": 6,
       "bossFail": true,
       "updatedAt": "2026-05-15T13:12:32.222Z"
+    },
+    "44F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:32.423Z"
+    },
+    "45F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:32.629Z"
+    },
+    "46F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:32.814Z"
+    },
+    "47F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:32.980Z"
+    },
+    "48F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:33.149Z"
     }
   },
-  "lastUpdated": "2026-05-15T13:12:32.422Z"
+  "lastUpdated": "2026-05-15T13:12:37.236Z"
 }
