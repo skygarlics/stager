@@ -3416,11 +3416,19 @@
           "status": "clear",
           "timestamp": "2026-05-12T12:03:17.866Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "UNDO THE NIGHT",
+          "version": "Sparkle Shower",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-05-15T12:47:58.167Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 22,
-      "totalCount": 39,
+      "totalCount": 40,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3460,7 +3468,8 @@
         "Pinky Crush|Flämingo",
         "Pinky Crush|Lightspeed",
         "Pinky Crush|EYE OF THE HEAVEN",
-        "Pinky Crush|Without Heaven"
+        "Pinky Crush|Without Heaven",
+        "Sparkle Shower|UNDO THE NIGHT"
       ],
       "songStatus": [
         [
@@ -3735,6 +3744,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "Sparkle Shower|UNDO THE NIGHT",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -3754,5 +3770,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-12T12:03:17.866Z"
+  "lastUpdated": "2026-05-15T12:47:58.167Z"
 }
