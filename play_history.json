@@ -3488,11 +3488,19 @@
           "status": "clear",
           "timestamp": "2026-05-15T13:07:04.577Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "NOIXIA",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-05-15T13:09:34.499Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 27,
-      "totalCount": 48,
+      "totalCount": 49,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3541,7 +3549,8 @@
         "EPOLIS|INHERITANCE[L]",
         "EPOLIS|Submerge Serenade[L]",
         "EPOLIS|The Last Apocalypse",
-        "EPOLIS|Xb10r"
+        "EPOLIS|Xb10r",
+        "Pinky Crush|NOIXIA"
       ],
       "songStatus": [
         [
@@ -3879,6 +3888,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|NOIXIA",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -3898,5 +3914,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-15T13:07:04.577Z"
+  "lastUpdated": "2026-05-15T13:09:34.500Z"
 }
