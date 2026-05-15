@@ -3464,11 +3464,19 @@
           "status": "clear",
           "timestamp": "2026-05-15T12:59:47.062Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Submerge Serenade[L]",
+          "version": "EPOLIS",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-05-15T13:03:47.748Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 25,
-      "totalCount": 45,
+      "totalCount": 46,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3514,7 +3522,8 @@
         "EPOLIS|Resonant",
         "Pinky Crush|uәn",
         "EPOLIS|今宵、ロマンス横丁。",
-        "EPOLIS|INHERITANCE[L]"
+        "EPOLIS|INHERITANCE[L]",
+        "EPOLIS|Submerge Serenade[L]"
       ],
       "songStatus": [
         [
@@ -3831,6 +3840,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|Submerge Serenade[L]",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -3850,5 +3866,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-15T12:59:47.063Z"
+  "lastUpdated": "2026-05-15T13:03:47.748Z"
 }
