@@ -3424,11 +3424,19 @@
           "status": "fail",
           "timestamp": "2026-05-15T12:47:58.167Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "destination",
+          "version": "Pinky Crush",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-15T12:48:00.232Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 22,
-      "totalCount": 40,
+      "currentLevelIndex": 5,
+      "clearCount": 23,
+      "totalCount": 41,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3469,7 +3477,8 @@
         "Pinky Crush|Lightspeed",
         "Pinky Crush|EYE OF THE HEAVEN",
         "Pinky Crush|Without Heaven",
-        "Sparkle Shower|UNDO THE NIGHT"
+        "Sparkle Shower|UNDO THE NIGHT",
+        "Pinky Crush|destination"
       ],
       "songStatus": [
         [
@@ -3751,6 +3760,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|destination",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -3770,5 +3786,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-15T12:47:58.167Z"
+  "lastUpdated": "2026-05-15T12:48:00.232Z"
 }
