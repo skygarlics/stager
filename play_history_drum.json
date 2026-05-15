@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
   "route": "drum",
-  "selectedFloorIndex": 45,
+  "selectedFloorIndex": 19,
   "rankStore": {
     "2F|0": "S",
     "2F|1": "S",
-    "2F|2": "S"
+    "2F|2": "S",
+    "20F|3": "S"
   },
   "floorStatuses": {
     "38F": {
@@ -143,7 +144,151 @@
       "needed": 6,
       "bossFail": true,
       "updatedAt": "2026-05-15T13:12:40.791Z"
+    },
+    "37F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:47.588Z"
+    },
+    "36F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:48.014Z"
+    },
+    "35F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:48.507Z"
+    },
+    "34F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:49.086Z"
+    },
+    "33F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:49.730Z"
+    },
+    "32F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:50.243Z"
+    },
+    "31F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:50.691Z"
+    },
+    "30F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:51.367Z"
+    },
+    "29F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:52.082Z"
+    },
+    "28F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:53.256Z"
+    },
+    "27F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:53.752Z"
+    },
+    "26F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:54.244Z"
+    },
+    "25F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:54.604Z"
+    },
+    "24F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:55.004Z"
+    },
+    "23F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:55.280Z"
+    },
+    "22F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:12:55.848Z"
+    },
+    "21F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:13:21.803Z"
+    },
+    "20F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-15T13:13:22.242Z"
     }
   },
-  "lastUpdated": "2026-05-15T13:12:44.460Z"
+  "lastUpdated": "2026-05-15T13:13:28.007Z"
 }
