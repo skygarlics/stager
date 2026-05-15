@@ -3472,11 +3472,19 @@
           "status": "fail",
           "timestamp": "2026-05-15T13:03:47.748Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "The Last Apocalypse",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-15T13:06:25.052Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 25,
-      "totalCount": 46,
+      "currentLevelIndex": 5,
+      "clearCount": 26,
+      "totalCount": 47,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3523,7 +3531,8 @@
         "Pinky Crush|uәn",
         "EPOLIS|今宵、ロマンス横丁。",
         "EPOLIS|INHERITANCE[L]",
-        "EPOLIS|Submerge Serenade[L]"
+        "EPOLIS|Submerge Serenade[L]",
+        "EPOLIS|The Last Apocalypse"
       ],
       "songStatus": [
         [
@@ -3847,6 +3856,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|The Last Apocalypse",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -3866,5 +3882,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-15T13:03:47.748Z"
+  "lastUpdated": "2026-05-15T13:06:25.052Z"
 }
