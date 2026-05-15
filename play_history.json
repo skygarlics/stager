@@ -3448,11 +3448,19 @@
           "status": "fail",
           "timestamp": "2026-05-15T12:59:37.228Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "今宵、ロマンス横丁。",
+          "version": "EPOLIS",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-05-15T12:59:39.535Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 24,
-      "totalCount": 43,
+      "totalCount": 44,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3496,7 +3504,8 @@
         "Sparkle Shower|UNDO THE NIGHT",
         "Pinky Crush|destination",
         "EPOLIS|Resonant",
-        "Pinky Crush|uәn"
+        "Pinky Crush|uәn",
+        "EPOLIS|今宵、ロマンス横丁。"
       ],
       "songStatus": [
         [
@@ -3799,6 +3808,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "EPOLIS|今宵、ロマンス横丁。",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -3818,5 +3834,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-15T12:59:37.228Z"
+  "lastUpdated": "2026-05-15T12:59:39.536Z"
 }
