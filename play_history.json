@@ -3504,11 +3504,19 @@
           "status": "fail",
           "timestamp": "2026-05-16T10:19:16.698Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "MAXIMUM CHEAT GIRL",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-05-16T10:52:27.519Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 27,
-      "totalCount": 50,
+      "totalCount": 51,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3559,7 +3567,8 @@
         "EPOLIS|The Last Apocalypse",
         "EPOLIS|Xb10r",
         "Pinky Crush|NOIXIA",
-        "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)"
+        "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+        "EPOLIS|MAXIMUM CHEAT GIRL"
       ],
       "songStatus": [
         [
@@ -3911,6 +3920,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|MAXIMUM CHEAT GIRL",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -3930,5 +3946,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-16T10:19:16.699Z"
+  "lastUpdated": "2026-05-16T10:52:27.520Z"
 }
