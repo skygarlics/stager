@@ -3520,11 +3520,19 @@
           "status": "clear",
           "timestamp": "2026-05-16T12:25:35.565Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Vermilion Carol",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-05-16T12:55:18.087Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 28,
-      "totalCount": 52,
+      "totalCount": 53,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3577,7 +3585,8 @@
         "Pinky Crush|NOIXIA",
         "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
         "EPOLIS|MAXIMUM CHEAT GIRL",
-        "Pinky Crush|COSMIC V3LOCITY"
+        "Pinky Crush|COSMIC V3LOCITY",
+        "EPOLIS|Vermilion Carol"
       ],
       "songStatus": [
         [
@@ -3943,6 +3952,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|Vermilion Carol",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -3962,5 +3978,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-16T12:25:35.565Z"
+  "lastUpdated": "2026-05-16T12:55:18.088Z"
 }
