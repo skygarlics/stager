@@ -3528,11 +3528,19 @@
           "status": "fail",
           "timestamp": "2026-05-16T12:55:18.087Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "FlyAway",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-16T13:13:29.304Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 28,
-      "totalCount": 53,
+      "currentLevelIndex": 4,
+      "clearCount": 29,
+      "totalCount": 54,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3586,7 +3594,8 @@
         "EPOLIS|灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
         "EPOLIS|MAXIMUM CHEAT GIRL",
         "Pinky Crush|COSMIC V3LOCITY",
-        "EPOLIS|Vermilion Carol"
+        "EPOLIS|Vermilion Carol",
+        "Pinky Crush|FlyAway"
       ],
       "songStatus": [
         [
@@ -3959,6 +3968,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|FlyAway",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -3978,5 +3994,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-16T12:55:18.088Z"
+  "lastUpdated": "2026-05-16T13:13:29.308Z"
 }
