@@ -3624,11 +3624,19 @@
           "status": "fail",
           "timestamp": "2026-05-17T04:01:22.996Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "GAME ON",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-17T04:50:52.223Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 34,
-      "totalCount": 65,
+      "currentLevelIndex": 4,
+      "clearCount": 35,
+      "totalCount": 66,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3694,7 +3702,8 @@
         "Pinky Crush|Mid-Corner (Magic Maker)",
         "RESIDENT|MAX 360",
         "EPOLIS|Seven Times Four",
-        "RESIDENT|BIGWAVERS"
+        "RESIDENT|BIGWAVERS",
+        "EPOLIS|GAME ON"
       ],
       "songStatus": [
         [
@@ -4151,6 +4160,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|GAME ON",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4170,5 +4186,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-17T04:01:22.996Z"
+  "lastUpdated": "2026-05-17T04:50:52.226Z"
 }
