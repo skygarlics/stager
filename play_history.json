@@ -3552,11 +3552,19 @@
           "status": "clear",
           "timestamp": "2026-05-17T03:31:08.499Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "摩天楼",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-17T03:33:55.153Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 30,
-      "totalCount": 56,
+      "currentLevelIndex": 5,
+      "clearCount": 31,
+      "totalCount": 57,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3613,7 +3621,8 @@
         "EPOLIS|Vermilion Carol",
         "Pinky Crush|FlyAway",
         "EPOLIS|未完成ノ蒸氣驅動乙女",
-        "Pinky Crush|Roar of Chronos"
+        "Pinky Crush|Roar of Chronos",
+        "EPOLIS|摩天楼"
       ],
       "songStatus": [
         [
@@ -4007,6 +4016,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|摩天楼",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4026,5 +4042,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-17T03:31:08.499Z"
+  "lastUpdated": "2026-05-17T03:33:55.154Z"
 }
