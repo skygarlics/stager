@@ -3536,11 +3536,19 @@
           "status": "clear",
           "timestamp": "2026-05-16T13:13:29.304Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "未完成ノ蒸氣驅動乙女",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-05-17T03:31:05.013Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 29,
-      "totalCount": 54,
+      "totalCount": 55,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3595,7 +3603,8 @@
         "EPOLIS|MAXIMUM CHEAT GIRL",
         "Pinky Crush|COSMIC V3LOCITY",
         "EPOLIS|Vermilion Carol",
-        "Pinky Crush|FlyAway"
+        "Pinky Crush|FlyAway",
+        "EPOLIS|未完成ノ蒸氣驅動乙女"
       ],
       "songStatus": [
         [
@@ -3975,6 +3984,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|未完成ノ蒸氣驅動乙女",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -3994,5 +4010,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-16T13:13:29.308Z"
+  "lastUpdated": "2026-05-17T03:31:05.014Z"
 }
