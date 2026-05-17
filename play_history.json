@@ -3544,11 +3544,19 @@
           "status": "fail",
           "timestamp": "2026-05-17T03:31:05.013Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Roar of Chronos",
+          "version": "Pinky Crush",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-17T03:31:08.499Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 29,
-      "totalCount": 55,
+      "currentLevelIndex": 4,
+      "clearCount": 30,
+      "totalCount": 56,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3604,7 +3612,8 @@
         "Pinky Crush|COSMIC V3LOCITY",
         "EPOLIS|Vermilion Carol",
         "Pinky Crush|FlyAway",
-        "EPOLIS|未完成ノ蒸氣驅動乙女"
+        "EPOLIS|未完成ノ蒸氣驅動乙女",
+        "Pinky Crush|Roar of Chronos"
       ],
       "songStatus": [
         [
@@ -3991,6 +4000,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Pinky Crush|Roar of Chronos",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4010,5 +4026,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-17T03:31:05.014Z"
+  "lastUpdated": "2026-05-17T03:31:08.499Z"
 }
