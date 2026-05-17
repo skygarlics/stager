@@ -3584,11 +3584,19 @@
           "status": "fail",
           "timestamp": "2026-05-17T03:43:21.062Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "電腦都市",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-05-17T03:48:24.454Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 32,
-      "totalCount": 60,
+      "totalCount": 61,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3649,7 +3657,8 @@
         "EPOLIS|摩天楼",
         "RESIDENT|Peaktime Booster",
         "Pinky Crush|Pinky Happy Crazy",
-        "RESIDENT|ぞうしょく！？マイデンティティ"
+        "RESIDENT|ぞうしょく！？マイデンティティ",
+        "EPOLIS|電腦都市"
       ],
       "songStatus": [
         [
@@ -4071,6 +4080,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|電腦都市",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4090,5 +4106,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-17T03:43:21.062Z"
+  "lastUpdated": "2026-05-17T03:48:24.455Z"
 }
