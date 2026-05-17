@@ -3616,11 +3616,19 @@
           "status": "clear",
           "timestamp": "2026-05-17T03:58:35.507Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "BIGWAVERS",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-05-17T04:01:22.996Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 34,
-      "totalCount": 64,
+      "totalCount": 65,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3685,7 +3693,8 @@
         "EPOLIS|電腦都市",
         "Pinky Crush|Mid-Corner (Magic Maker)",
         "RESIDENT|MAX 360",
-        "EPOLIS|Seven Times Four"
+        "EPOLIS|Seven Times Four",
+        "RESIDENT|BIGWAVERS"
       ],
       "songStatus": [
         [
@@ -4135,6 +4144,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|BIGWAVERS",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4154,5 +4170,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-17T03:58:35.507Z"
+  "lastUpdated": "2026-05-17T04:01:22.996Z"
 }
