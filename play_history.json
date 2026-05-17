@@ -3568,11 +3568,19 @@
           "status": "clear",
           "timestamp": "2026-05-17T03:40:41.693Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Pinky Happy Crazy",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-05-17T03:41:03.056Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 32,
-      "totalCount": 58,
+      "totalCount": 59,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3631,7 +3639,8 @@
         "EPOLIS|未完成ノ蒸氣驅動乙女",
         "Pinky Crush|Roar of Chronos",
         "EPOLIS|摩天楼",
-        "RESIDENT|Peaktime Booster"
+        "RESIDENT|Peaktime Booster",
+        "Pinky Crush|Pinky Happy Crazy"
       ],
       "songStatus": [
         [
@@ -4039,6 +4048,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|Pinky Happy Crazy",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -4058,5 +4074,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-17T03:40:41.694Z"
+  "lastUpdated": "2026-05-17T03:41:03.056Z"
 }
