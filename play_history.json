@@ -3600,11 +3600,19 @@
           "status": "clear",
           "timestamp": "2026-05-17T03:56:00.544Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "MAX 360",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-05-17T03:56:12.204Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 33,
-      "totalCount": 62,
+      "totalCount": 63,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3667,7 +3675,8 @@
         "Pinky Crush|Pinky Happy Crazy",
         "RESIDENT|ぞうしょく！？マイデンティティ",
         "EPOLIS|電腦都市",
-        "Pinky Crush|Mid-Corner (Magic Maker)"
+        "Pinky Crush|Mid-Corner (Magic Maker)",
+        "RESIDENT|MAX 360"
       ],
       "songStatus": [
         [
@@ -4103,6 +4112,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|MAX 360",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4122,5 +4138,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-17T03:56:00.544Z"
+  "lastUpdated": "2026-05-17T03:56:12.205Z"
 }
