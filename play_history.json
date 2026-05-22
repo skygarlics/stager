@@ -3752,11 +3752,19 @@
           "status": "fail",
           "timestamp": "2026-05-22T08:55:52.525Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "神っぽいな[L]",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-22T08:55:54.696Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 42,
-      "totalCount": 81,
+      "currentLevelIndex": 4,
+      "clearCount": 43,
+      "totalCount": 82,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3838,7 +3846,8 @@
         "CastHour|GRAVITON",
         "RESIDENT|Caldwell 99[L]",
         "EPOLIS|Sword of Vengeance",
-        "RESIDENT|儚キ戀ノ幻想譚"
+        "RESIDENT|儚キ戀ノ幻想譚",
+        "RESIDENT|神っぽいな[L]"
       ],
       "songStatus": [
         [
@@ -4407,6 +4416,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "RESIDENT|神っぽいな[L]",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4426,5 +4442,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:55:52.527Z"
+  "lastUpdated": "2026-05-22T08:55:54.697Z"
 }
