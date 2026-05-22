@@ -3720,11 +3720,19 @@
           "status": "fail",
           "timestamp": "2026-05-22T08:38:37.161Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "GRAVITON",
+          "version": "CastHour",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-05-22T08:43:57.722Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 41,
-      "totalCount": 77,
+      "totalCount": 78,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3802,7 +3810,8 @@
         "RESIDENT|kors k's How to make OTOGE CORE 「LONG」",
         "Pinky Crush|Cross Fire",
         "CastHour|ミュージック・アワー[L]",
-        "EPOLIS|Demon March"
+        "EPOLIS|Demon March",
+        "CastHour|GRAVITON"
       ],
       "songStatus": [
         [
@@ -4343,6 +4352,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "CastHour|GRAVITON",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -4362,5 +4378,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:38:37.162Z"
+  "lastUpdated": "2026-05-22T08:43:57.723Z"
 }
