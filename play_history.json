@@ -3664,11 +3664,19 @@
           "status": "fail",
           "timestamp": "2026-05-22T08:05:29.525Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Astra Blaze",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-05-22T08:05:35.419Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 36,
-      "totalCount": 70,
+      "currentLevelIndex": 3,
+      "clearCount": 37,
+      "totalCount": 71,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3739,7 +3747,8 @@
         "RESIDENT|I",
         "EPOLIS|電光",
         "Sparkle Shower|RIZING-GAMERS.",
-        "EPOLIS|Ghost Pulse"
+        "EPOLIS|Ghost Pulse",
+        "Sparkle Shower|Astra Blaze"
       ],
       "songStatus": [
         [
@@ -4231,6 +4240,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "Sparkle Shower|Astra Blaze",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -4250,5 +4266,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:05:29.526Z"
+  "lastUpdated": "2026-05-22T08:05:35.420Z"
 }
