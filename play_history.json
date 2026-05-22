@@ -3760,11 +3760,19 @@
           "status": "clear",
           "timestamp": "2026-05-22T08:55:54.696Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "恋愛＝精度×認識力",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-22T08:55:57.809Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 43,
-      "totalCount": 82,
+      "currentLevelIndex": 5,
+      "clearCount": 44,
+      "totalCount": 83,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3847,7 +3855,8 @@
         "RESIDENT|Caldwell 99[L]",
         "EPOLIS|Sword of Vengeance",
         "RESIDENT|儚キ戀ノ幻想譚",
-        "RESIDENT|神っぽいな[L]"
+        "RESIDENT|神っぽいな[L]",
+        "RESIDENT|恋愛＝精度×認識力"
       ],
       "songStatus": [
         [
@@ -4423,6 +4432,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "RESIDENT|恋愛＝精度×認識力",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4442,5 +4458,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:55:54.697Z"
+  "lastUpdated": "2026-05-22T08:55:57.809Z"
 }
