@@ -3672,11 +3672,27 @@
           "status": "clear",
           "timestamp": "2026-05-22T08:05:35.419Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Million Dollar",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-22T08:05:36.674Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "24h Endurance Race",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-22T08:27:58.497Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 37,
-      "totalCount": 71,
+      "currentLevelIndex": 5,
+      "clearCount": 39,
+      "totalCount": 73,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3748,7 +3764,9 @@
         "EPOLIS|電光",
         "Sparkle Shower|RIZING-GAMERS.",
         "EPOLIS|Ghost Pulse",
-        "Sparkle Shower|Astra Blaze"
+        "Sparkle Shower|Astra Blaze",
+        "EPOLIS|Million Dollar",
+        "RESIDENT|24h Endurance Race"
       ],
       "songStatus": [
         [
@@ -4247,6 +4265,20 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "EPOLIS|Million Dollar",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|24h Endurance Race",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4266,5 +4298,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:05:35.420Z"
+  "lastUpdated": "2026-05-22T08:27:58.501Z"
 }
