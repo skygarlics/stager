@@ -3640,11 +3640,19 @@
           "status": "fail",
           "timestamp": "2026-05-22T06:35:33.235Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "電光",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-05-22T06:45:10.911Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 35,
-      "totalCount": 67,
+      "totalCount": 68,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3712,7 +3720,8 @@
         "EPOLIS|Seven Times Four",
         "RESIDENT|BIGWAVERS",
         "EPOLIS|GAME ON",
-        "RESIDENT|I"
+        "RESIDENT|I",
+        "EPOLIS|電光"
       ],
       "songStatus": [
         [
@@ -4183,6 +4192,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|電光",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4202,5 +4218,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T06:35:33.236Z"
+  "lastUpdated": "2026-05-22T06:45:10.914Z"
 }
