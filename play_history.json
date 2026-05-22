@@ -3648,11 +3648,19 @@
           "status": "fail",
           "timestamp": "2026-05-22T06:45:10.911Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "RIZING-GAMERS.",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-05-22T06:45:25.251Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 35,
-      "totalCount": 68,
+      "currentLevelIndex": 3,
+      "clearCount": 36,
+      "totalCount": 69,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3721,7 +3729,8 @@
         "RESIDENT|BIGWAVERS",
         "EPOLIS|GAME ON",
         "RESIDENT|I",
-        "EPOLIS|電光"
+        "EPOLIS|電光",
+        "Sparkle Shower|RIZING-GAMERS."
       ],
       "songStatus": [
         [
@@ -4199,6 +4208,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "Sparkle Shower|RIZING-GAMERS.",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -4218,5 +4234,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T06:45:10.914Z"
+  "lastUpdated": "2026-05-22T06:45:25.251Z"
 }
