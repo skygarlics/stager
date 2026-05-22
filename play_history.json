@@ -3736,11 +3736,19 @@
           "status": "fail",
           "timestamp": "2026-05-22T08:44:01.757Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Sword of Vengeance",
+          "version": "EPOLIS",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-05-22T08:44:04.068Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 41,
-      "totalCount": 79,
+      "currentLevelIndex": 4,
+      "clearCount": 42,
+      "totalCount": 80,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3820,7 +3828,8 @@
         "CastHour|ミュージック・アワー[L]",
         "EPOLIS|Demon March",
         "CastHour|GRAVITON",
-        "RESIDENT|Caldwell 99[L]"
+        "RESIDENT|Caldwell 99[L]",
+        "EPOLIS|Sword of Vengeance"
       ],
       "songStatus": [
         [
@@ -4375,6 +4384,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "EPOLIS|Sword of Vengeance",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4394,5 +4410,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:44:01.759Z"
+  "lastUpdated": "2026-05-22T08:44:04.069Z"
 }
