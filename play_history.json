@@ -3696,11 +3696,19 @@
           "status": "clear",
           "timestamp": "2026-05-22T08:32:10.226Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Cross Fire",
+          "version": "Pinky Crush",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-05-22T08:35:40.752Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 40,
-      "totalCount": 74,
+      "totalCount": 75,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3775,7 +3783,8 @@
         "Sparkle Shower|Astra Blaze",
         "EPOLIS|Million Dollar",
         "RESIDENT|24h Endurance Race",
-        "RESIDENT|kors k's How to make OTOGE CORE 「LONG」"
+        "RESIDENT|kors k's How to make OTOGE CORE 「LONG」",
+        "Pinky Crush|Cross Fire"
       ],
       "songStatus": [
         [
@@ -4295,6 +4304,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "Pinky Crush|Cross Fire",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -4314,5 +4330,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:32:10.226Z"
+  "lastUpdated": "2026-05-22T08:35:40.753Z"
 }
