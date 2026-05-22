@@ -3776,11 +3776,19 @@
           "status": "clear",
           "timestamp": "2026-05-22T08:58:32.287Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Cult Invitation",
+          "version": "EPOLIS",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-05-22T09:05:01.808Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 45,
-      "totalCount": 84,
+      "totalCount": 85,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3865,7 +3873,8 @@
         "RESIDENT|儚キ戀ノ幻想譚",
         "RESIDENT|神っぽいな[L]",
         "RESIDENT|恋愛＝精度×認識力",
-        "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec."
+        "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
+        "EPOLIS|Cult Invitation"
       ],
       "songStatus": [
         [
@@ -4455,6 +4464,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|Cult Invitation",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -4474,5 +4490,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:58:32.288Z"
+  "lastUpdated": "2026-05-22T09:05:01.809Z"
 }
