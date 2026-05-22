@@ -3712,11 +3712,19 @@
           "status": "clear",
           "timestamp": "2026-05-22T08:36:11.460Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Demon March",
+          "version": "EPOLIS",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-05-22T08:38:37.161Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 41,
-      "totalCount": 76,
+      "totalCount": 77,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3793,7 +3801,8 @@
         "RESIDENT|24h Endurance Race",
         "RESIDENT|kors k's How to make OTOGE CORE 「LONG」",
         "Pinky Crush|Cross Fire",
-        "CastHour|ミュージック・アワー[L]"
+        "CastHour|ミュージック・アワー[L]",
+        "EPOLIS|Demon March"
       ],
       "songStatus": [
         [
@@ -4327,6 +4336,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "EPOLIS|Demon March",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -4346,5 +4362,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T08:36:11.461Z"
+  "lastUpdated": "2026-05-22T08:38:37.162Z"
 }
