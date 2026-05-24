@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "route": "drum",
-  "selectedFloorIndex": 18,
+  "selectedFloorIndex": 19,
   "rankStore": {
     "2F|0": "S",
     "2F|1": "S",
@@ -288,7 +288,15 @@
       "needed": 6,
       "bossFail": true,
       "updatedAt": "2026-05-15T13:13:22.242Z"
+    },
+    "19F": {
+      "cleared": false,
+      "autoCleared": false,
+      "sCount": 0,
+      "needed": 6,
+      "bossFail": true,
+      "updatedAt": "2026-05-24T10:19:15.544Z"
     }
   },
-  "lastUpdated": "2026-05-24T10:19:15.542Z"
+  "lastUpdated": "2026-05-24T10:19:17.899Z"
 }
