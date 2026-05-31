@@ -4555,16 +4555,25 @@
           "status": "clear",
           "timestamp": "2026-05-31T07:44:07.068Z",
           "modeKey": "DP_arcade_11"
+        },
+        {
+          "song": "Get Higher [A]",
+          "version": "EPO",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-05-31T07:46:53.306Z",
+          "modeKey": "DP_arcade_11"
         }
       ],
-      "currentLevelIndex": 1,
+      "currentLevelIndex": 0,
       "clearCount": 2,
-      "totalCount": 4,
+      "totalCount": 5,
       "playedSongs": [
         "SS|ACID VISION [A]",
         "DD|Broadbanded [A]",
         "SS|GOLD RUSH 2025 [A]",
-        "5th|Real [A]"
+        "5th|Real [A]",
+        "EPO|Get Higher [A]"
       ],
       "songStatus": [
         [
@@ -4594,6 +4603,13 @@
             "status": "clear",
             "level": "10.2"
           }
+        ],
+        [
+          "EPO|Get Higher [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -4605,5 +4621,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:44:07.069Z"
+  "lastUpdated": "2026-05-31T07:46:53.306Z"
 }
