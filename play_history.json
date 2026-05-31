@@ -3824,11 +3824,19 @@
           "status": "fail",
           "timestamp": "2026-05-31T07:36:53.412Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Arkadia",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-31T07:52:41.156Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 46,
-      "totalCount": 88,
+      "currentLevelIndex": 5,
+      "clearCount": 47,
+      "totalCount": 89,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3917,7 +3925,8 @@
         "EPOLIS|Cult Invitation",
         "CastHour|GiGaGaHell",
         "CastHour|Angel's Ladder",
-        "BISTROVER|水鏡の異界"
+        "BISTROVER|水鏡の異界",
+        "CastHour|Arkadia"
       ],
       "songStatus": [
         [
@@ -4535,6 +4544,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CastHour|Arkadia",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4630,11 +4646,11 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "DP",
+  "gameMode": "SP",
   "playEnv": "arcade",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:47:09.624Z"
+  "lastUpdated": "2026-05-31T07:52:41.156Z"
 }
