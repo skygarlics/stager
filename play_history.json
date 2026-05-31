@@ -4539,14 +4539,23 @@
           "status": "clear",
           "timestamp": "2026-05-31T07:43:59.687Z",
           "modeKey": "DP_arcade_11"
+        },
+        {
+          "song": "GOLD RUSH 2025 [A]",
+          "version": "SS",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-05-31T07:44:04.128Z",
+          "modeKey": "DP_arcade_11"
         }
       ],
-      "currentLevelIndex": 1,
+      "currentLevelIndex": 0,
       "clearCount": 1,
-      "totalCount": 2,
+      "totalCount": 3,
       "playedSongs": [
         "SS|ACID VISION [A]",
-        "DD|Broadbanded [A]"
+        "DD|Broadbanded [A]",
+        "SS|GOLD RUSH 2025 [A]"
       ],
       "songStatus": [
         [
@@ -4562,6 +4571,13 @@
             "status": "clear",
             "level": "10.2"
           }
+        ],
+        [
+          "SS|GOLD RUSH 2025 [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
+          }
         ]
       ]
     }
@@ -4573,5 +4589,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:43:59.687Z"
+  "lastUpdated": "2026-05-31T07:44:04.128Z"
 }
