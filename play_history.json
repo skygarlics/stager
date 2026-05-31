@@ -3800,11 +3800,19 @@
           "status": "clear",
           "timestamp": "2026-05-31T07:33:10.789Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "水鏡の異界",
+          "version": "BISTROVER",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-05-31T07:36:53.412Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 46,
-      "totalCount": 87,
+      "totalCount": 88,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3892,7 +3900,8 @@
         "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
         "EPOLIS|Cult Invitation",
         "CastHour|GiGaGaHell",
-        "CastHour|Angel's Ladder"
+        "CastHour|Angel's Ladder",
+        "BISTROVER|水鏡の異界"
       ],
       "songStatus": [
         [
@@ -4503,6 +4512,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "BISTROVER|水鏡の異界",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -4522,5 +4538,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:33:10.790Z"
+  "lastUpdated": "2026-05-31T07:36:53.413Z"
 }
