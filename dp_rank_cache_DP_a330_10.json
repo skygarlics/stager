@@ -1,0 +1,1428 @@
+{
+  "offi": 10,
+  "env": "a330",
+  "mode": "p1",
+  "cat": 0,
+  "versions": [
+    "1st",
+    "sub",
+    "2nd",
+    "3rd",
+    "4th",
+    "5th",
+    "6th",
+    "7th",
+    "8th",
+    "9th",
+    "10th",
+    "RED",
+    "HSKY",
+    "DD",
+    "GOLD",
+    "DJT",
+    "EMP",
+    "SIR",
+    "RA",
+    "LC",
+    "TRI",
+    "SPA",
+    "PEN",
+    "COP",
+    "SINO",
+    "CB",
+    "ROOT",
+    "HERO",
+    "BIS",
+    "CH",
+    "RDT",
+    "EPO",
+    "PC",
+    "SS"
+  ],
+  "levels": [
+    "8.5",
+    "9.0",
+    "9.3",
+    "9.6",
+    "10.0",
+    "10.2",
+    "10.5",
+    "10.7",
+    "11.0",
+    "11.2",
+    "11.4"
+  ],
+  "totalSongsInDB": 939,
+  "songDB": {
+    "PC": {
+      "8.5": [
+        "スパークリング☆彡ハイパーチューン！！ [H]"
+      ],
+      "9.3": [
+        "Roar of Chronos [H]",
+        "SISYPHUS [H]",
+        "灼熱 Lost Summer Dayz [H]"
+      ],
+      "9.6": [
+        "1116 [H]",
+        "FlyAway [H]",
+        "Lightspeed [H]",
+        "get set mind [A]",
+        "ギャ・ギャ・ギャ・ギャラクシー！ [A]",
+        "ハルイロメロディー [A]"
+      ],
+      "10.0": [
+        "COSMIC V3LOCITY [H]",
+        "destination [H]",
+        "Flämingo [H]",
+        "Here We Go Now [H]",
+        "Pinky Happy Crazy [H]",
+        "u gotta beat [H]",
+        "Arcanos [A]",
+        "Bling-Bang-Bang-Born [A]",
+        "Galaxy Collapse [A]",
+        "KOTONOHA ft. Kotoha [A]",
+        "ＰＡＳＴＥＬＩＳＭ [A]",
+        "PERFECT HUMAN [A]",
+        "オブソミート [A]",
+        "ビビデバ [A]",
+        "消極的セツナイズム [A]",
+        "進捗ダメダメです [A]"
+      ],
+      "10.2": [
+        "Cross Fire [H]",
+        "DIVINE JUDGEMENT [H]",
+        "EX-MASSIVE FIGHTER [H]",
+        "MARLIN [H]",
+        "Mid-Corner (Magic Maker) [H]",
+        "NOIXIA [H]",
+        "Satellite Burst [H]",
+        "SμG@R RU$# [H]",
+        "Uaigh Gealaí [H]",
+        "uən [H]",
+        "Without Heaven [H]",
+        "アラビアン ハイパー ナイト [H]",
+        "スキッテイエェエエェ!!!! [H]",
+        "天使のカンタータ -Cantata of Angels- [H]",
+        "Chasing After YOU ～夢の欠片～ ft. 小林マナ [A]",
+        "Eleanor [A]",
+        "FERMI♡PARADOX [A]",
+        "Good Looking [A]",
+        "PIT A PAT [A]",
+        "Plazma [A]",
+        "Vibing! Shake it! [A]",
+        "エクスプロウル [A]",
+        "きゅうくらりん [A]",
+        "ドーナツホール 2024 [A]",
+        "最強頂戴girl♡ [A]"
+      ],
+      "10.5": [
+        "EYE OF THE HEAVEN [H]",
+        "God Mind [H]",
+        "hora de verdad [H]",
+        "Lycoris [A]",
+        "Shirdal [A]",
+        "オッド♡ラヴィ [A]",
+        "キスキツネ [A]",
+        "ゲシュタルト [A]",
+        "ドリムチウ [A]",
+        "弾幕信仰 [A]",
+        "我ら完全無敵のアイドル!! [A]",
+        "朱と碧のランページ [A]"
+      ],
+      "10.7": [
+        "XHRONOXAPSULΞ [H]",
+        "Mighty Cutie [A]",
+        "Secret Rouge [A]"
+      ],
+      "11.0": [
+        "Skratch Education Lv-1 [H]"
+      ]
+    },
+    "9th": {
+      "9.0": [
+        "ADVANCE (PC) [A]"
+      ],
+      "9.3": [
+        "Abyss -The Heavens Remix- [A]"
+      ],
+      "10.0": [
+        "Cradle [H]",
+        "e-motion 2003 -romantic extra- [H]",
+        "Silvia Drive [H]"
+      ],
+      "10.2": [
+        "Really Love [H]",
+        "bag [A]"
+      ],
+      "10.5": [
+        "lower world [H]",
+        "ACT [A]",
+        "BRIGHTNESS DARKNESS [A]",
+        "lights [A]",
+        "真夏の花・真夏の夢 [A]"
+      ],
+      "10.7": [
+        "Make A Difference [A]",
+        "one or eight [A]",
+        "PARANOIA survivor MAX [A]",
+        "Quickening [A]",
+        "SNOW (DJT) [A]"
+      ],
+      "11.2": [
+        "fun [A]"
+      ]
+    },
+    "DD": {
+      "9.0": [
+        "DUE TOMORROW [H]"
+      ],
+      "9.3": [
+        "Broadbanded [H]"
+      ],
+      "9.6": [
+        "tripping contact(teranoid&MC Natsack Remix) [H]",
+        "waxing and wanding [H]",
+        "華蝶風雪 [H]",
+        "Double♡♡Loving Heart [A]"
+      ],
+      "10.0": [
+        "The Dirty of Loudness [H]",
+        "The Dirty of Loudness [A]"
+      ],
+      "10.2": [
+        "Bloody Tears(IIDX EDITION) [H]",
+        "Concertino in Blue [H]",
+        "CONTRACT [H]",
+        "MINT [H]",
+        "MOON [H]",
+        "Power of Love [A]"
+      ],
+      "10.5": [
+        "TYPE MARS(G-Style Mix) [H]",
+        "BOOM BOOM DISCO NIGHT [A]",
+        "Heavenly Sun (IIDX VERSION) [A]",
+        "INFERNO [A]",
+        "Leaving... [A]",
+        "タシカナモノ [A]"
+      ],
+      "10.7": [
+        "ALFARSHEAR 双神威に廻る夢 [A]"
+      ]
+    },
+    "TRI": {
+      "9.0": [
+        "DAY DREAM [H]"
+      ],
+      "9.3": [
+        "examination leave [H]"
+      ],
+      "9.6": [
+        "Cookie Bouquets [H]",
+        "Devilz Staircase [H]",
+        "neu [H]",
+        "Thor's Hammer [H]",
+        "音楽 [H]"
+      ],
+      "10.0": [
+        "Liberation [H]",
+        "Neonlights [H]",
+        "Plan 8 [H]",
+        "Saturn [H]",
+        "狂イ咲ケ焔ノ華 [H]",
+        "8bit Princess [A]",
+        "Howling [A]",
+        "梅雪夜 [A]"
+      ],
+      "10.2": [
+        "GAIA [H]",
+        "Illegal Function Call [H]",
+        "Proof of the existence [H]",
+        "rumrum triplets [H]",
+        "VALLIS-NERIA [H]",
+        "Zirkfied [H]",
+        "ΕΛΠΙΣ [H]",
+        "BRAVE GLOW [A]",
+        "New Lights [A]",
+        "お米の美味しい炊き方、そしてお米を食べることによるその効果。 [A]",
+        "朧 [A]"
+      ],
+      "10.5": [
+        "Confiserie [H]",
+        "Elemental Creation [H]",
+        "JOMANDA [H]",
+        "SYNC-ANTHEM [H]",
+        "True Blue [H]",
+        "Valanga [H]",
+        "キャトられ♥恋はモ～モク [H]",
+        "シュレーディンガーの猫 [H]",
+        "たまゆら [H]",
+        "LUV CAN SAVE U [A]",
+        "Rainbow after snow [A]"
+      ],
+      "10.7": [
+        "STULTI [H]",
+        "BLUE STRAGGLER [A]",
+        "POINT ZERO [A]",
+        "Reflection Into the EDEN [A]",
+        "ラキラキ [A]"
+      ],
+      "11.0": [
+        "ILIAS [A]"
+      ]
+    },
+    "BIS": {
+      "9.0": [
+        "スーパー戦湯ババンバーン [H]"
+      ],
+      "9.3": [
+        "When I Met U [A]"
+      ],
+      "9.6": [
+        "∀ [H]",
+        "BIGソムタム [H]",
+        "Fire Beat [H]",
+        "Explorer feat. ぷにぷに電機 [A]"
+      ],
+      "10.0": [
+        "-65℃ [H]",
+        "DENIM [H]",
+        "Empire of Fury [H]",
+        "Ignis†Iræ [H]",
+        "innocent revolver [H]",
+        "THE PEERLESS UNDER HEAVEN [H]",
+        "Viridian [H]",
+        "伐折羅-vajra- [H]",
+        "As You Want [A]",
+        "HIGH VOLTAGE [A]",
+        "Midnight Drive [A]",
+        "WAKE UP NOW [A]",
+        "Winner's Proof ft. KANASA from bless4 [A]"
+      ],
+      "10.2": [
+        "BLACK or WHITE? [H]",
+        "DUAL STRIKER [H]",
+        "Level 3 [H]",
+        "LOCUS OF THE TRAVEL [H]",
+        "MEGAERA [H]",
+        "Tiempo Loco [H]",
+        "ディスコルディア [H]",
+        "閠槞彁の願い [H]",
+        "Chewingood!!! [A]",
+        "Euphoric Lagoon [A]",
+        "Frisk And Squeak [A]",
+        "Here We Are [A]",
+        "MOVE! (We Keep It Movin') [A]",
+        "smooooch・∀・ (Snail's House Remix) [A]",
+        "Sugarplum [A]",
+        "That Feeling [A]",
+        "ここからよろしく大作戦143 [A]",
+        "新宝島 [A]"
+      ],
+      "10.5": [
+        "SOLID STATE SQUAD -RISEN RELIC REMIX- [H]",
+        "二人ノ廃城幽踊宴 [H]",
+        "IIDX RED Ending (Ryu☆Remix) [A]",
+        "Ocean Blue feat. Luschel [A]",
+        "The Wind of China Express(The 4th Mashup) [A]"
+      ],
+      "10.7": [
+        "COSMIC RAY [H]",
+        "霧幻メモリア [A]"
+      ]
+    },
+    "CH": {
+      "9.0": [
+        "雪上断火 [H]"
+      ],
+      "9.3": [
+        "GRAVITON [H]",
+        "n/a [H]",
+        "ANEMONE [A]"
+      ],
+      "9.6": [
+        "GiGaGaHell [H]",
+        "Silver Bullet [H]",
+        "EMOTiON TRiPPER [A]",
+        "HEARTACHE [A]",
+        "Stepper [A]",
+        "シル・ヴ・プレジデント [A]"
+      ],
+      "10.0": [
+        "Aftermath [H]",
+        "Don't believe the hype [H]",
+        "Fegrix [H]",
+        "Flying Castle [H]",
+        "LIVE DRIVING!! feat. 花たん [H]",
+        "RAGE feat.H14 of LEONAIR [H]",
+        "Smalt #28598F [H]",
+        "禊 [H]",
+        "Ariah [A]",
+        "Get set, Go! feat.Kanae Asaba [A]",
+        "Harmonia [A]",
+        "No Day But Today! [A]",
+        "PIRATES BLADE [A]",
+        "Victory Of Ravers [A]",
+        "Wonderful Escape [A]",
+        "アクマフカ [A]",
+        "オドループ [A]",
+        "口カラ凸ゲキ [A]"
+      ],
+      "10.2": [
+        "2 Beasts Unchained [H]",
+        "ALTERNATOR [H]",
+        "Angel's Ladder [H]",
+        "hard-wired [H]",
+        "PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec. [H]",
+        "Purple Perplex [H]",
+        "TOMAHAWK [H]",
+        "Triple Cross [H]",
+        "WHA [H]",
+        "逆月 [H]",
+        "N.O. [A]",
+        "P.O.W.E.R. [A]",
+        "SPARK IN THE NIGHT [A]",
+        "めでてえ [A]",
+        "怪物 [A]",
+        "愛しくてラヴィンユー ft. マナ [A]"
+      ],
+      "10.5": [
+        "ABSOLUTE EVIL [H]",
+        "Binary Black Hole [H]",
+        "ピアノ独奏無言歌 \"灰燼\" [H]",
+        "烽火連天の刃 [H]",
+        "AMICABLE [A]",
+        "Non Stop Rock [A]",
+        "Prohibited Props [A]",
+        "ナイトフィクション [A]"
+      ],
+      "10.7": [
+        "Brave Spirits [A]"
+      ]
+    },
+    "RDT": {
+      "9.0": [
+        "≡+≡ [H]"
+      ],
+      "9.3": [
+        "Peaktime Booster [H]",
+        "雨のちパノラマセカイ [A]"
+      ],
+      "9.6": [
+        "[ ]DENTITY [H]",
+        "Stylus [H]",
+        "ちょえちょえまぎか [H]",
+        "Next Level [A]",
+        "異心前進♪ぴょんぴょんぴょん [A]"
+      ],
+      "10.0": [
+        "#CMFLG [H]",
+        "dica dica [H]",
+        "kors k's How to make OTOGE CORE 「LONG」 [H]",
+        "LOUDER ROLLING THUNDER [H]",
+        "No Border [H]",
+        "ONE AND ONLY [H]",
+        "Ōu Legends [H]",
+        "RINИE [H]",
+        "VOLAQUAS [H]",
+        "ぞうしょく！？マイデンティティ [H]",
+        "儚キ戀ノ幻想譚 [H]",
+        "恋愛＝精度×認識力 [H]",
+        "Dreaming Dream [A]",
+        "GET UP AGAIN [A]",
+        "Shamshir [A]",
+        "おとせサンダー [A]",
+        "昏き甲鉄のヴェルガ [A]"
+      ],
+      "10.2": [
+        "24h Endurance Race [H]",
+        "Bad Encryption [H]",
+        "glacia [H]",
+        "I [H]",
+        "Level 4 [H]",
+        "MAX 360 [H]",
+        "栄冠のカンパネラ [H]",
+        "7 Colors [A]",
+        "Fading Stars [A]",
+        "FLARE -炎舞- ft.Nana Takahashi [A]",
+        "Rewind Time [A]",
+        "きゅんです。 [A]",
+        "サヨナラ・ヘヴン-Celtic Chip Dance Mix- [A]",
+        "月と夢の跡 ft. マナ [A]",
+        "湘南ロンリーMIDNIGHT RAIN [A]"
+      ],
+      "10.5": [
+        "B.O.D.Y. [H]",
+        "suspicions [H]",
+        "Xerulean [H]",
+        "■□模様 [A]",
+        "AWA AWA [A]",
+        "CUE CUE RESCUE [A]",
+        "LADS [A]",
+        "STAR BEAT [A]",
+        "Summerblue [A]",
+        "神っぽいな [A]"
+      ],
+      "10.7": [
+        "The Clown of 24stairs [H]",
+        "VØID [H]",
+        "楽園追放 [A]"
+      ],
+      "11.0": [
+        "Somnidiscotheque [H]"
+      ]
+    },
+    "RED": {
+      "9.3": [
+        "Don't be afraid myself [A]"
+      ],
+      "10.2": [
+        "Click Again [A]"
+      ],
+      "10.5": [
+        "Raspberry♡Heart(English version) [A]",
+        "spiral galaxy [A]",
+        "The Hope of Tomorrow [A]",
+        "Wonder Bullfighter [A]"
+      ],
+      "10.7": [
+        "ピアノ協奏曲第１番”蠍火” [H]",
+        "BREATH [A]"
+      ],
+      "11.0": [
+        "SPEEDY CAT [A]"
+      ]
+    },
+    "RA": {
+      "9.3": [
+        "PARADISE LOST [H]",
+        "sakura storm [H]"
+      ],
+      "9.6": [
+        "New Castle Legions [H]",
+        "灼熱Beach Side Bunny [H]",
+        "BLUST OF WIND [A]",
+        "XANADU OF TWO [A]"
+      ],
+      "10.0": [
+        "ANTHEM LANDING [H]",
+        "Session 9 -Chronicles- [H]",
+        "SPECIAL SUMMER CAMPAIGN! [H]",
+        "THE BLACK KNIGHT [H]",
+        "ZETA～素数の世界と超越者～ [H]",
+        "旅人リラン [H]",
+        "黒髪乱れし修羅となりて [H]",
+        "I FIGHT ME [A]",
+        "おおきなこえで [L]"
+      ],
+      "10.2": [
+        "Breaking the ground [A]",
+        "DAYDREAMER [A]"
+      ],
+      "10.5": [
+        "BROKEN EDEN [H]",
+        "Dances with Snow Fairies [H]",
+        "Everlasting Resort [A]",
+        "Fantasia [A]",
+        "Mermaid girl [A]",
+        "Vermillion [A]",
+        "かげぬい ～ Ver.BENIBOTAN ～ [A]"
+      ],
+      "10.7": [
+        "Aegis [A]",
+        "Golden Palms [A]",
+        "Rock Da House [A]",
+        "中華急行 [A]"
+      ]
+    },
+    "PEN": {
+      "9.3": [
+        "SAMSARA [A]"
+      ],
+      "9.6": [
+        "Sweet Radar [A]"
+      ],
+      "10.0": [
+        "NEO GENERATOR SEVEN [H]",
+        "ZZ [H]",
+        "夏色DIARY - L.E.D.-G STYLE MIX - [H]",
+        "ぷろぐれっしぶ時空少女！うらしまたろ子ちゃん！ [A]",
+        "十六夜セツナ [A]",
+        "chrono diver -fragment- [L]"
+      ],
+      "10.2": [
+        "We're so Happy (P*Light Remix) IIDX ver. [H]",
+        "それは花火のような恋 [H]",
+        "リリーゼと炎龍レーヴァテイン [H]",
+        "鬼天 [H]",
+        "TA・DA☆YO・SHI [A]",
+        "取り残された美術(Arranged:HiZuMi) [A]"
+      ],
+      "10.5": [
+        "Despair of ELFERIA [H]",
+        "entelecheia [H]",
+        "TOXIC VIBRATION [H]",
+        "少年は空を辿る [H]",
+        "Beat Radiance [A]",
+        "Cosmic Cat [A]",
+        "In The Breeze [A]",
+        "No Tears [A]",
+        "PENDUAL TALISMAN [A]",
+        "Sakura Mirage [A]"
+      ],
+      "10.7": [
+        "FANTASTIC THREE [H]",
+        "Say YEEEAHH [H]",
+        "Shooting Fireball [H]",
+        "共鳴遊戯の華 [H]",
+        "表裏一体！？怪盗いいんちょの悩み♥ [H]",
+        "COLOSSEUM [A]"
+      ]
+    },
+    "SINO": {
+      "9.3": [
+        "月雪に舞う華のように [A]"
+      ],
+      "9.6": [
+        "Go Ahead!! [H]",
+        "Macuilxochitl [H]",
+        "Snakey Kung-fu [H]",
+        "Venom [H]",
+        "刃図羅 [H]",
+        "冬椿 ft. Kanae Asaba [A]"
+      ],
+      "10.0": [
+        "Caterpillar [H]",
+        "Modular Technology [H]",
+        "TOGAKUSHI [H]",
+        "〆 [H]",
+        "鴉 [H]",
+        "Believe in you [A]",
+        "Magical [A]",
+        "OOO [A]",
+        "Piano Samurai [A]",
+        "恋はどう？モロ◎波動OK☆方程式!! [A]"
+      ],
+      "10.2": [
+        "BabeL ～Grand Story～ [H]",
+        "DORNWALD ～Junge～ [H]",
+        "OTENAMI Hurricane [H]",
+        "Quakes [H]",
+        "RAIN [H]",
+        "津軽雪 [H]",
+        "Music is The Answer [A]",
+        "Remedy feat. Kanae Asaba [A]",
+        "Surf on the Light [A]",
+        "Umbral [A]",
+        "次葉 -turn the page- [A]"
+      ],
+      "10.5": [
+        "Around The Galaxy [H]",
+        "ECHIDNA [H]",
+        "GuNGNiR [H]",
+        "INVISIBLE STRIX [H]",
+        "Sky High [H]",
+        "焔極OVERKILL [H]",
+        "SINOBUZ Fantasy [A]"
+      ],
+      "10.7": [
+        "Mare Nectaris [H]",
+        "SEQUENCE CAT [H]",
+        "AO-∞ [A]",
+        "Vermilion [A]",
+        "Warrior [A]"
+      ]
+    },
+    "CB": {
+      "9.3": [
+        "DEADHEAT [H]",
+        "HYPE THE CORE [H]"
+      ],
+      "9.6": [
+        "From Time To Time [H]",
+        "NITROUS CANNON [H]",
+        "THE CANNONBALLER [H]",
+        "The Chase [H]",
+        "UMMU [H]",
+        "Only for now [A]"
+      ],
+      "10.0": [
+        "DropZ-Line- [H]",
+        "Papilio ulysses [H]",
+        "Persephone [H]",
+        "Rampage [H]",
+        "Raspberry Railgun [H]",
+        "Xperanza [H]",
+        "LUV DRIVE [A]",
+        "STARLIGHT JUNCTION [A]",
+        "Static State [A]",
+        "エディブルフラワーの独白 [A]",
+        "共犯ヘヴンズコード [A]",
+        "純真可憐デザイア [A]",
+        "草原の王女-軌跡を辿って- [A]"
+      ],
+      "10.2": [
+        "ANCHOR [H]",
+        "Illusionary Waterlily [H]",
+        "Life Is A Game ft.DD\"ナカタ\"Metal [H]",
+        "ACCELERATE [A]",
+        "Best of Me [A]",
+        "Expanded !! [A]"
+      ],
+      "10.5": [
+        "DEATH†ZIGOQ ～怒りの高速爆走野郎～ [H]",
+        "Initiation [H]",
+        "O/D*20 [H]",
+        "Usual Days-remix [H]",
+        "シムルグの目醒め [H]",
+        "神謳 -RESONANCE- [H]",
+        "1001 -ESCAPE- [A]",
+        "Break Stasis [A]",
+        "HAT TRICK [A]",
+        "Hella Deep [A]",
+        "ハイ*ビスカス ft. Kanae Asaba [A]"
+      ],
+      "10.7": [
+        "AA -rebuild- [H]",
+        "ANAGMA [A]",
+        "バスルーム ロマンス [A]"
+      ]
+    },
+    "ROOT": {
+      "9.3": [
+        "IDC feat.REVERBEE (Mo'Cuts Ver) [H]",
+        "抱きしめてモナムール [H]"
+      ],
+      "9.6": [
+        "Catch Our Fire! [H]",
+        "Level One [H]",
+        "Mächö Mönky [H]"
+      ],
+      "10.0": [
+        "CODE:Ø [H]",
+        "GO OVER WITH GLARE -ROOTAGE 26- [H]",
+        "HEISEI [H]",
+        "KILL EACH OTHER [H]",
+        "ONIGOROSHI [H]",
+        "ruin of opals [H]",
+        "THE DAY OF JUBILATIONS [H]",
+        "Trill auf G [H]",
+        "Visterhv [H]",
+        "最小三倍完全数 [H]",
+        "龍王の霊廟(Mausoleum Of The Primal Dragon) [H]",
+        "IDOL syndrome. [A]",
+        "Lift Us High [A]",
+        "toy boxer [A]"
+      ],
+      "10.2": [
+        "dAuntl3ss [H]",
+        "Drastic Dramatic [H]",
+        "EVANESCENT [H]",
+        "Painful Fate [H]",
+        "The Rebellion of Sequencer [H]",
+        "Unbelief [H]",
+        "voltississimo [H]",
+        "Xlø [H]",
+        "お菓子の王国 [H]",
+        "金野火織の金色提言 [H]",
+        "Cranberry City ft. Luschel [A]",
+        "Geirskögul [A]",
+        "Technicolour Dreams [A]",
+        "The Best of Both Worlds [A]",
+        "夏の匂い。キミの残像。 ft. Kanae Asaba [A]",
+        "OVER TIME [L]"
+      ],
+      "10.5": [
+        "CoMAAAAAAA [H]",
+        "Red. by Jack Trance [H]",
+        "50th Memorial Songs -二人の時 ～under the cherry blossoms～- [A]",
+        "BLACK JACKAL [A]",
+        "Let me be your cure [A]",
+        "グラナダの風 [A]"
+      ],
+      "10.7": [
+        "Carmina [H]",
+        "BLO§OM [A]",
+        "Glory [A]",
+        "SPEED ROCKER [A]"
+      ],
+      "11.0": [
+        "50th Memorial Songs -Flagship medley- [A]",
+        "CoMAAAAAAA [A]"
+      ]
+    },
+    "HERO": {
+      "9.3": [
+        "Lords Of The Roundtable [H]",
+        "UNITE THE HEART [H]",
+        "開きたまえ！Next stAge！ [H]"
+      ],
+      "9.6": [
+        "Double Dribble [H]",
+        "Level 2 [H]",
+        "セピアの軌跡 ft. 天宮みや(少女フラクタル) [A]"
+      ],
+      "10.0": [
+        "AKASHIC BREAK [H]",
+        "EROICA [H]",
+        "THE BRAVE MUST DIE [H]",
+        "ピアノ協奏曲第1番”蠍火” (BlackY Remix) [H]",
+        "華麗なる大犬円舞曲 [H]",
+        "beatAffection [A]",
+        "Calvados Queen [A]",
+        "Forgetting Machine [A]",
+        "Ska-sh All Neurons!! [A]"
+      ],
+      "10.2": [
+        "Dans la nuit de l'éternité [H]",
+        "Megalara Garuda [H]",
+        "ORCA [H]",
+        "Fly Above (Vicissitude Remix) [A]",
+        "Hold My Hand [A]",
+        "OUTER PLANETS [A]",
+        "Rainstorm [A]",
+        "Silly Love [A]",
+        "take me higher [A]",
+        "VIBRΛ [A]",
+        "Virus Funk [A]",
+        "Voo Doo Bamboleo [A]",
+        "ラブキラ☆スプラッシュ [A]",
+        "灼熱Beach Side Bunny (Masayoshi Iimori Remix) [A]"
+      ],
+      "10.5": [
+        "Artist [H]",
+        "Smashing Wedge [H]",
+        "THE F∀UST [H]",
+        "Vinculum stellarum [H]",
+        "がっつり陰キャ!? 怪盗いいんちょの億劫^^; [H]",
+        "Do What You Want [A]",
+        "If [A]",
+        "Sugar Drippin' [A]",
+        "Mel [L]"
+      ],
+      "10.7": [
+        "Rave Patroller [H]",
+        "Infinity Mirror [A]"
+      ]
+    },
+    "EPO": {
+      "9.3": [
+        "Hat Surprise (Season 3) [H]",
+        "ポラリスノウタ [A]"
+      ],
+      "9.6": [
+        "Cult Invitation [H]",
+        "夢縁 [H]",
+        "灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix) [H]",
+        "Iris [A]",
+        "アタシ完全絶対正義ちゃん！ [A]",
+        "電子になりたい [A]"
+      ],
+      "10.0": [
+        "ACTØ [H]",
+        "GAME ON [H]",
+        "Resonant [H]",
+        "The Last Apocalypse [H]",
+        "Vermilion Carol [H]",
+        "未完成ノ蒸氣驅動乙女 [H]",
+        "残像ニ繋ガレタ追憶ノHIDEAWAY [H]",
+        "電光 [H]",
+        "Hard Breaker [A]",
+        "TITANIUM RIDERS [A]",
+        "アイドル [A]",
+        "デビルじゃないもん [A]",
+        "ないないルーティン [A]",
+        "夏風邪デスコ [A]",
+        "愛包ダンスホール [A]",
+        "流桜ノ門 [A]",
+        "神様、つれない。 [A]",
+        "閉塞的フレーション [A]",
+        "ちゅ、多様性。 [L]"
+      ],
+      "10.2": [
+        "Ambivalent Vermilia [H]",
+        "Dahlia [H]",
+        "frequent [H]",
+        "JUSTICE/GUILTY feat. Nana Takahashi & 709sec. [H]",
+        "MAXIMUM CHEAT GIRL [H]",
+        "Million Dollar [H]",
+        "Out of Control [H]",
+        "Stereo Beasts [H]",
+        "Sword of Vengeance [H]",
+        "Vulnerability [H]",
+        "今宵、ロマンス横丁。 [H]",
+        "終焔のClaudia [H]",
+        "Akatsuki [A]",
+        "Get Wicked [A]",
+        "Jumper [A]",
+        "シンデレラ [A]",
+        "酔いどれ知らず [A]"
+      ],
+      "10.5": [
+        "CADENZA [H]",
+        "Demon March [H]",
+        "Glitch N Ride [H]",
+        "Level 5 [H]",
+        "SOLAR ECLIPSE [H]",
+        "Xb10r [H]",
+        "電腦都市 [H]",
+        "COUNTING SHEEP ft. Kanae Asaba [A]",
+        "NEEDLESS MY LOVE FOR YOU [A]",
+        "WaterCube Pf.(RX-Ver.S.P.L.) [A]",
+        "ZEROIN ON THE LIGHT [A]",
+        "可愛くてごめん [L]"
+      ],
+      "10.7": [
+        "Tripping Jumping [A]"
+      ],
+      "11.0": [
+        "Bitter & Lucky [A]"
+      ]
+    },
+    "SS": {
+      "9.3": [
+        "PALETTE [A]"
+      ],
+      "9.6": [
+        "かわいいだけじゃだめですか？ [A]",
+        "デラむぅのでらっくす☆どり～むぅ [A]",
+        "バブリン [A]"
+      ],
+      "10.0": [
+        "Amor∞Fati [H]",
+        "Astra Blaze [H]",
+        "BitRacer [H]",
+        "Dusk Endir [H]",
+        "fixer [H]",
+        "From Human Blood [H]",
+        "HEROES [H]",
+        "King of Tribe [H]",
+        "OMEGA [H]",
+        "RALLY '25 [H]",
+        "Regina vespaE [H]",
+        "RIZING-GAMERS. [H]",
+        "RUINA [H]",
+        "Space Battleship S4TØ [H]",
+        "ベンガル vs. アムール Battle [H]",
+        "ラブコメトキドキシリアス [H]",
+        "AGETEKE ONDO [A]",
+        "HORIZON BEATZ [A]",
+        "Nyan Nyan University [A]",
+        "SHINING☆DANCE [A]",
+        "Show Time [A]",
+        "Skywalking [A]",
+        "X-Plan [A]",
+        "それが、ボクの使命～レスキュー隊長 メンキュー～ [A]",
+        "レシピのリドル [A]",
+        "不死身ごっこ [A]",
+        "恋愛観測 [A]"
+      ],
+      "10.2": [
+        "⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason [H]",
+        "Begin [H]",
+        "chaplet -IIDX re:build- [H]",
+        "Lisa-RICCIA [H]",
+        "Memoria Obscura [H]",
+        "PERFECT GREAT!! [H]",
+        "ιgniЯRuina [H]",
+        "色を喪った街 [H]",
+        "COLOR BURST [A]",
+        "Shooting Star [A]",
+        "SPLASH!!!!!!!!! [A]",
+        "もんめためたもん [A]",
+        "夏色のセレナーデ [A]",
+        "好吃来世deエレクトリック [A]",
+        "百恋ラブラスター [A]"
+      ],
+      "10.5": [
+        "HyperTwist [H]",
+        "Bloom [A]",
+        "Watermelon Explosion [A]"
+      ],
+      "10.7": [
+        "Makin' It [H]",
+        "SILKY BRAVE [A]"
+      ],
+      "11.2": [
+        "FiZZλ_PØT!0И [H]"
+      ]
+    },
+    "8th": {
+      "9.6": [
+        "Colors -Y&Co. Eurobeat Remix- [H]"
+      ],
+      "10.0": [
+        "Colors -Y&Co. Eurobeat Remix- [A]",
+        "HYPER BOUNDARY GATE [A]"
+      ],
+      "10.2": [
+        "memories [H]",
+        "murmur twins [H]",
+        "rainbow flyer [H]",
+        "桜 [H]",
+        "WAR GAME [A]"
+      ],
+      "10.5": [
+        "LAB [H]",
+        "symbolic [H]",
+        "Blame [A]",
+        "Halfway of promise [A]",
+        "Luv 2 Feel Your Body [A]"
+      ],
+      "10.7": [
+        "Giudecca [H]",
+        "ALL RIGHT [A]"
+      ],
+      "11.0": [
+        "PLEASE DON'T GO [A]"
+      ]
+    },
+    "10th": {
+      "9.6": [
+        "Love Is Eternity [H]",
+        "SCORE (CH) [A]"
+      ],
+      "10.0": [
+        "Feedback [H]",
+        "One More Lovely [H]",
+        "Rise'n Beauty (10th) [H]"
+      ],
+      "10.2": [
+        "No.13 [H]",
+        "ALIEN TEMPLE [A]",
+        "FEEL IT [A]",
+        "HIGH [A]"
+      ],
+      "10.5": [
+        "Lucy [H]",
+        "雪月花 [H]"
+      ],
+      "10.7": [
+        "Narcissus At Oasis [H]",
+        "ASTRAL VOYAGE [A]",
+        "CARRY ON NIGHT (English version) [A]",
+        "Feedback [A]"
+      ],
+      "11.0": [
+        "1st Samurai [H]",
+        "Innocent Walls [H]",
+        "Freezing atmosphere [A]"
+      ],
+      "11.2": [
+        "Back Into The Light [A]"
+      ]
+    },
+    "HSKY": {
+      "9.6": [
+        "Little Little Princess [H]",
+        "Xepher [H]"
+      ],
+      "10.0": [
+        "double thrash [H]",
+        "Scripted Connection⇒ H mix [H]"
+      ],
+      "10.2": [
+        "rage against usual [H]",
+        "Catch Me [A]",
+        "Pink Rose [L]"
+      ],
+      "10.5": [
+        "100% minimoo-G [H]",
+        "Aurora [H]",
+        "Scripted Connection⇒ A mix [H]",
+        "Tizona d'El Cid [H]",
+        "alla turca con passione [A]",
+        "Don't let it go (BIS) [A]",
+        "First Resolution [A]",
+        "HAPPY☆ANGEL [A]"
+      ],
+      "10.7": [
+        "MOON RACE [H]",
+        "SCREAM SQUAD [H]",
+        "EDEN [A]",
+        "Scripted Connection⇒ N mix [A]",
+        "月光 [A]"
+      ]
+    },
+    "GOLD": {
+      "9.6": [
+        "Fascination MAXX [H]",
+        "snow storm [H]"
+      ],
+      "10.0": [
+        "CROSSROAD ～Left Story～ [A]",
+        "クルクル☆ラブ～Opioid Peptide MIX～ [A]"
+      ],
+      "10.2": [
+        "ANDROMEDA II [H]",
+        "TRANOID [H]",
+        "電人、暁に斃れる。 [H]",
+        "Roulette [A]",
+        "零 - ZERO - [A]"
+      ],
+      "10.5": [
+        "KAMAITACHI [H]",
+        "GOLD RUSH [A]",
+        "GRID KNIGHT [A]",
+        "星をこの手に [A]"
+      ],
+      "10.7": [
+        "Blind Justice ～Torn souls, Hurt Faiths ～ [A]"
+      ],
+      "11.4": [
+        "2hot2eat [A]"
+      ]
+    },
+    "DJT": {
+      "9.6": [
+        "avant-guerre [A]",
+        "satfinal [A]"
+      ],
+      "10.0": [
+        "Do it!! Do it!! [H]",
+        "LOVELY STORM [H]",
+        "THE DEEP STRIKER [H]",
+        "TROOPERS [H]",
+        "beatonic nation [A]",
+        "華爛漫 -Flowers- [A]"
+      ],
+      "10.2": [
+        "end of world [H]",
+        "satellite020712 from \"CODED ARMS\" (DJT) [H]",
+        "STEEL NEEDLE [H]",
+        "ミラージュ・レジデンス [H]",
+        "2 tribe 4 K [A]",
+        "Blue Rain [A]",
+        "Digitank System [A]",
+        "Kick Out 仮面 [A]",
+        "Ristaccia [A]"
+      ],
+      "10.5": [
+        "ICARUS [H]",
+        "MENDES [H]",
+        "少年A [H]"
+      ],
+      "10.7": [
+        "Anisakis -somatic mutation type\"Forza\"- [H]",
+        "four pieces of heaven [H]",
+        "in the Sky [H]",
+        "Übertreffen [H]",
+        "MAX LOVE [A]",
+        "SOUND OF GIALLARHORN [A]",
+        "高高度降下低高度開傘 [A]"
+      ],
+      "11.0": [
+        "madrugada (CB) [A]",
+        "the trigger of innocence [A]"
+      ]
+    },
+    "SPA": {
+      "9.6": [
+        "バンブーソード・ガール [H]"
+      ],
+      "10.0": [
+        "RIZING YOU UP [H]",
+        "KHAMEN BREAK [A]",
+        "MAD ATTACK [A]"
+      ],
+      "10.2": [
+        "BLUE DRAGON(雷龍RemixIIDX) [H]",
+        "BRAINSTORM [H]",
+        "I will be back -オレは帰ってきた- [H]",
+        "Idola [H]",
+        "invoker [H]",
+        "Verflucht [H]",
+        "旋律のドグマ～Misérables～ [H]",
+        "海神 [H]",
+        "轟け！恋のビーンボール！！ [H]",
+        "Claiomh Solais [A]",
+        "into the battlefield [A]",
+        "お願いアインシュタイン [A]",
+        "廿 [A]"
+      ],
+      "10.5": [
+        "Adularia [H]",
+        "Ancient Scapes [H]",
+        "Last Dance [H]",
+        "煉獄のエルフェリア [H]",
+        "疾風迅雷 [H]",
+        "EXTREME MACH COLLIDER [A]",
+        "NPC World [A]",
+        "Odin [A]"
+      ],
+      "10.7": [
+        "KAISER PHOENIX [H]",
+        "ra'am [H]",
+        "Insane Techniques [A]",
+        "RISE [A]",
+        "THE DETONATOR [A]",
+        "Wonder Girl feat. Kanae Asaba [A]",
+        "アルストロメリア [A]",
+        "罪と罰 [A]"
+      ],
+      "11.0": [
+        "Sigmund [H]"
+      ]
+    },
+    "COP": {
+      "9.6": [
+        "199024club -Re:BounceKiller- [H]",
+        "Grand Chariot [H]",
+        "量子の海のリントヴルム [H]"
+      ],
+      "10.0": [
+        "Derelict Star feat. Ryu* [H]",
+        "Devil's Gear [H]",
+        "DIAMOND CROSSING [H]",
+        "Highcharge Divolt [H]",
+        "Konzert V [H]",
+        "M4K3 1T B0UNC3 [H]",
+        "refrain [H]",
+        "Violet Rose [H]",
+        "追想快晴テーマパーク [H]",
+        "麗 ～うらら～ [H]",
+        "Musik LoverZ [A]",
+        "Sephirot [A]",
+        "星屑ディスタンシア [A]"
+      ],
+      "10.2": [
+        "Blue Spring Express [H]",
+        "Nightmare before oversleep [H]",
+        "Triple Counter [H]",
+        "めいさいアイドル☆あいむちゃん♪ [H]",
+        "紫陽花 -AZISAI- [H]",
+        "Damage Per Second [A]",
+        "Everlasting Last [A]",
+        "GENERATE feat.綾倉盟 [A]",
+        "NO LIMIT -オレ達に限界は無い- [A]",
+        "Super Duper Racers [A]",
+        "SURVIVOR [A]",
+        "Uh-Oh [A]",
+        "オルタネイトβ [A]",
+        "ギョギョっと人魚♨爆婚ブライダル [A]",
+        "シュッパツシンコウ・シサカンコ [A]"
+      ],
+      "10.5": [
+        "AO-1 [H]",
+        "Dynamite [H]",
+        "Godspeed [H]",
+        "NZM [H]",
+        "POSSESSION [H]",
+        "Central Station [A]",
+        "do the thing feat. Kanae Asaba [A]"
+      ],
+      "10.7": [
+        "X [H]",
+        "駅猫のワルツ [H]",
+        "Violet Pulse [A]"
+      ],
+      "11.0": [
+        "Arcana [A]",
+        "NANAIRO [A]"
+      ]
+    },
+    "1st": {
+      "10.0": [
+        "5.1.1. [A]"
+      ]
+    },
+    "4th": {
+      "10.0": [
+        "Hitch Hiker2 [L]"
+      ],
+      "10.2": [
+        "SWEET LAB (SINO) [H]",
+        "Mr.T.(take me higher) [A]"
+      ],
+      "10.7": [
+        "Broken My Heart [A]",
+        "KAMIKAZE [A]"
+      ]
+    },
+    "6th": {
+      "10.0": [
+        "19,November [A]",
+        "fly through the night [A]"
+      ],
+      "10.2": [
+        "VJ ARMY (ROOT) [A]"
+      ],
+      "10.5": [
+        "Colors (radio edit) [H]",
+        "Blueberry Stream [A]",
+        "DIVE ～INTO YOUR HEART～ [A]"
+      ],
+      "10.7": [
+        "THE SAFARI (6th) [H]",
+        "Buffalo [A]",
+        "L'amour et la liberté [A]"
+      ],
+      "11.0": [
+        "NEMESIS [H]"
+      ]
+    },
+    "7th": {
+      "10.0": [
+        "AVE DE RAPINA [H]"
+      ],
+      "10.2": [
+        "Last Message [H]",
+        "Happy Wedding [A]",
+        "traces [A]"
+      ],
+      "10.5": [
+        "MAX 300 [H]",
+        "stoic [H]"
+      ],
+      "10.7": [
+        "Tomorrow Perfume [H]",
+        "ZERO-ONE [A]"
+      ]
+    },
+    "EMP": {
+      "10.0": [
+        "Arabian Rave Night [H]",
+        "Colorful Cookie [H]",
+        "Go Beyond!! [H]",
+        "Kung-fu Empire [H]",
+        "Secrets [H]",
+        "Y&Co. is dead or alive [H]",
+        "You'll say \"Now!\" [H]",
+        "Cyber Force -DJ Yoshitaka Remix- [A]",
+        "naughty girl@Queen's Palace [A]"
+      ],
+      "10.2": [
+        "SOLITON BEAM (EMP) [H]",
+        "V2 [H]",
+        "天空脳番長危機十六連打 [H]",
+        "THANK YOU FOR PLAYING [A]",
+        "ハリツヤランデヴー [A]",
+        "Flash Back 90's [L]"
+      ],
+      "10.5": [
+        "BITTER CHOCOLATE STRIKER [H]",
+        "smooooch・∀・ [A]",
+        "凛として咲く花の如く [A]",
+        "山岡晃の「クイズ！家事都合！」 [A]",
+        "鉄甲乙女-under the steel- [A]"
+      ],
+      "10.7": [
+        "3y3s [H]",
+        "Programmed World [H]",
+        "Punch Love♡仮面 [A]",
+        "thunder HOUSE NATION Remix [A]",
+        "Turii ～Panta rhei～ [A]"
+      ]
+    },
+    "SIR": {
+      "10.0": [
+        "DOMINION [H]",
+        "Raison d'être～交差する宿命～ [H]",
+        "MIRACLE MEETS [A]",
+        "サヨナラ・ヘヴン [L]"
+      ],
+      "10.2": [
+        "bloomin' feeling [H]",
+        "Empire State Glory [H]",
+        "eRAseRmOToRpHAntOM [H]",
+        "Evans [H]",
+        "beatchic☆仮面～好き、でいさせて～ [A]",
+        "CaptivAte～裁き～(SUBLIME TECHNO MIX) [A]",
+        "Do Back Burn (CH) [A]",
+        "IN THE NAME OF LOVE [A]",
+        "Programmed Sun [A]",
+        "未来のプリズム [A]"
+      ],
+      "10.5": [
+        "D [H]",
+        "EXUSIA [H]",
+        "GALGALIM [H]",
+        "bass 2 bass [A]",
+        "Hydrogen Blueback [A]",
+        "She is my wife [A]",
+        "たからもの [A]"
+      ],
+      "10.7": [
+        "Bad Maniacs [H]",
+        "ワルツ第17番 ト短調”大犬のワルツ” [H]",
+        "水上の提督(Short mix from \"幻想水滸伝V\") (SIR) [A]"
+      ],
+      "11.0": [
+        "BEAUTIFUL ANGEL [A]",
+        "DAWN -THE NEXT ENDEAVOUR- [A]",
+        "DESIRE [A]",
+        "THE LAST STRIKER [A]"
+      ]
+    },
+    "LC": {
+      "10.0": [
+        "BLACK.by X-Cross Fade [H]",
+        "SHADE [H]"
+      ],
+      "10.2": [
+        "F [H]",
+        "HAERETICUS [H]",
+        "Infinite cave [H]",
+        "Far east nightbird [A]",
+        "Flip Flap [A]",
+        "Follow Tomorrow [A]",
+        "GIGANT [A]",
+        "LETHEBOLG ～双神威に斬り咲けり～ [A]",
+        "Lucky Days [A]",
+        "Release The Music [A]"
+      ],
+      "10.5": [
+        "DIAVOLO [H]",
+        "NNRT [H]",
+        "Snake Stick [H]",
+        "Drive Me Crazy [A]",
+        "LOVE B.B.B [A]",
+        "Miami Sunset Drive [A]",
+        "RESISTANCE [A]",
+        "Round and Round [A]",
+        "Several Words [A]",
+        "衰色小町メランコリア [A]",
+        "陽炎 [A]"
+      ],
+      "10.7": [
+        "ƒƒƒƒƒ [H]",
+        "The Limbo [H]",
+        "The Sampling Paradise [H]",
+        "子供の落書き帳 [H]",
+        "聖人の塔 [H]",
+        "LAX5 feat.Ryota Yoshinari [A]",
+        "突撃!ガラスのニーソ姫! [A]"
+      ],
+      "11.0": [
+        "QUANTUM TELEPORTATION [H]",
+        "Star Trail [A]"
+      ]
+    },
+    "5th": {
+      "10.2": [
+        "Regulus [H]",
+        "Spin the disc [H]"
+      ],
+      "10.5": [
+        "V [H]",
+        "in my eyes [A]",
+        "outer wall [A]",
+        "RIDE ON THE LIGHT (HI GREAT MIX) [L]"
+      ],
+      "10.7": [
+        "Radical Faith [A]"
+      ]
+    },
+    "sub": {
+      "10.5": [
+        "THE EARTH LIGHT [H]"
+      ]
+    },
+    "3rd": {
+      "10.7": [
+        "Holic [H]"
+      ]
+    }
+  },
+  "parsedAt": "2026-05-31T07:47:05.559Z"
+}
