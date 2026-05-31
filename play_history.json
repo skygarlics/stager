@@ -3784,11 +3784,19 @@
           "status": "fail",
           "timestamp": "2026-05-22T09:05:01.808Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "GiGaGaHell",
+          "version": "CastHour",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-05-31T07:23:33.217Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 45,
-      "totalCount": 85,
+      "totalCount": 86,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3874,7 +3882,8 @@
         "RESIDENT|神っぽいな[L]",
         "RESIDENT|恋愛＝精度×認識力",
         "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
-        "EPOLIS|Cult Invitation"
+        "EPOLIS|Cult Invitation",
+        "CastHour|GiGaGaHell"
       ],
       "songStatus": [
         [
@@ -4471,6 +4480,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "CastHour|GiGaGaHell",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -4490,5 +4506,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-22T09:05:01.809Z"
+  "lastUpdated": "2026-05-31T07:23:33.217Z"
 }
