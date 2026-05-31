@@ -3085,13 +3085,22 @@
           "status": "clear",
           "timestamp": "2026-05-12T05:41:35.700Z",
           "modeKey": "DP_arcade_10"
+        },
+        {
+          "song": "≡+≡ [H]",
+          "version": "RDT",
+          "level": "9.0",
+          "status": "clear",
+          "timestamp": "2026-05-31T07:47:09.623Z",
+          "modeKey": "DP_arcade_10"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 1,
-      "totalCount": 1,
+      "currentLevelIndex": 2,
+      "clearCount": 2,
+      "totalCount": 2,
       "playedSongs": [
-        "PC|スパークリング☆彡ハイパーチューン！！ [H]"
+        "PC|スパークリング☆彡ハイパーチューン！！ [H]",
+        "RDT|≡+≡ [H]"
       ],
       "songStatus": [
         [
@@ -3099,6 +3108,13 @@
           {
             "status": "clear",
             "level": "8.5"
+          }
+        ],
+        [
+          "RDT|≡+≡ [H]",
+          {
+            "status": "clear",
+            "level": "9.0"
           }
         ]
       ]
@@ -4569,7 +4585,6 @@
       "clearCount": 2,
       "totalCount": 5,
       "playedSongs": [
-        "SS|ACID VISION [A]",
         "DD|Broadbanded [A]",
         "SS|GOLD RUSH 2025 [A]",
         "5th|Real [A]",
@@ -4618,8 +4633,8 @@
   "gameMode": "DP",
   "playEnv": "arcade",
   "dp": {
-    "offi": 11,
+    "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:46:53.306Z"
+  "lastUpdated": "2026-05-31T07:47:09.624Z"
 }
