@@ -4523,20 +4523,39 @@
       ]
     },
     "DP_arcade_11": {
-      "history": [],
+      "history": [
+        {
+          "song": "ACID VISION [A]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "fail",
+          "timestamp": "2026-05-31T07:41:01.356Z",
+          "modeKey": "DP_arcade_11"
+        }
+      ],
       "currentLevelIndex": 0,
       "clearCount": 0,
-      "totalCount": 0,
-      "playedSongs": [],
-      "songStatus": []
+      "totalCount": 1,
+      "playedSongs": [
+        "SS|ACID VISION [A]"
+      ],
+      "songStatus": [
+        [
+          "SS|ACID VISION [A]",
+          {
+            "status": "fail",
+            "level": "10.2"
+          }
+        ]
+      ]
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "playEnv": "arcade",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:36:53.413Z"
+  "lastUpdated": "2026-05-31T07:41:01.356Z"
 }
