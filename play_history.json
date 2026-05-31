@@ -3792,11 +3792,19 @@
           "status": "fail",
           "timestamp": "2026-05-31T07:23:33.217Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Angel's Ladder",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-05-31T07:33:10.789Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 45,
-      "totalCount": 86,
+      "currentLevelIndex": 5,
+      "clearCount": 46,
+      "totalCount": 87,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3883,7 +3891,8 @@
         "RESIDENT|恋愛＝精度×認識力",
         "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
         "EPOLIS|Cult Invitation",
-        "CastHour|GiGaGaHell"
+        "CastHour|GiGaGaHell",
+        "CastHour|Angel's Ladder"
       ],
       "songStatus": [
         [
@@ -4487,6 +4496,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CastHour|Angel's Ladder",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4506,5 +4522,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:23:33.217Z"
+  "lastUpdated": "2026-05-31T07:33:10.790Z"
 }
