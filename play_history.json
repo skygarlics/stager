@@ -4531,19 +4531,35 @@
           "status": "fail",
           "timestamp": "2026-05-31T07:41:01.356Z",
           "modeKey": "DP_arcade_11"
+        },
+        {
+          "song": "Broadbanded [A]",
+          "version": "DD",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-05-31T07:43:59.687Z",
+          "modeKey": "DP_arcade_11"
         }
       ],
-      "currentLevelIndex": 0,
-      "clearCount": 0,
-      "totalCount": 1,
+      "currentLevelIndex": 1,
+      "clearCount": 1,
+      "totalCount": 2,
       "playedSongs": [
-        "SS|ACID VISION [A]"
+        "SS|ACID VISION [A]",
+        "DD|Broadbanded [A]"
       ],
       "songStatus": [
         [
           "SS|ACID VISION [A]",
           {
             "status": "fail",
+            "level": "10.2"
+          }
+        ],
+        [
+          "DD|Broadbanded [A]",
+          {
+            "status": "clear",
             "level": "10.2"
           }
         ]
@@ -4557,5 +4573,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T07:41:01.356Z"
+  "lastUpdated": "2026-05-31T07:43:59.687Z"
 }
