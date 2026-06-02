@@ -3864,11 +3864,19 @@
           "status": "clear",
           "timestamp": "2026-06-02T10:40:29.542Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Always We Trust In You",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-02T10:43:05.940Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 48,
-      "totalCount": 93,
+      "currentLevelIndex": 4,
+      "clearCount": 49,
+      "totalCount": 94,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3962,7 +3970,8 @@
         "BISTROVER|Empire of Fury",
         "CastHour|逆月",
         "RESIDENT|Super Freak",
-        "EPOLIS|Dahlia"
+        "EPOLIS|Dahlia",
+        "RESIDENT|Always We Trust In You"
       ],
       "songStatus": [
         [
@@ -4615,6 +4624,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "RESIDENT|Always We Trust In You",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4716,5 +4732,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-02T10:40:29.542Z"
+  "lastUpdated": "2026-06-02T10:43:05.940Z"
 }
