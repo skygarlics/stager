@@ -3840,11 +3840,19 @@
           "status": "fail",
           "timestamp": "2026-05-31T08:30:07.326Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "逆月",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-02T10:35:06.048Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 47,
-      "totalCount": 90,
+      "totalCount": 91,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3935,7 +3943,8 @@
         "CastHour|Angel's Ladder",
         "BISTROVER|水鏡の異界",
         "CastHour|Arkadia",
-        "BISTROVER|Empire of Fury"
+        "BISTROVER|Empire of Fury",
+        "CastHour|逆月"
       ],
       "songStatus": [
         [
@@ -4567,6 +4576,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CastHour|逆月",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4668,5 +4684,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-05-31T08:30:07.326Z"
+  "lastUpdated": "2026-06-02T10:35:06.048Z"
 }
