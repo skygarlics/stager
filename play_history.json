@@ -3848,11 +3848,19 @@
           "status": "fail",
           "timestamp": "2026-06-02T10:35:06.048Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Super Freak",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-06-02T10:38:04.040Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 47,
-      "totalCount": 91,
+      "totalCount": 92,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3944,7 +3952,8 @@
         "BISTROVER|水鏡の異界",
         "CastHour|Arkadia",
         "BISTROVER|Empire of Fury",
-        "CastHour|逆月"
+        "CastHour|逆月",
+        "RESIDENT|Super Freak"
       ],
       "songStatus": [
         [
@@ -4583,6 +4592,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "RESIDENT|Super Freak",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4684,5 +4700,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-02T10:35:06.048Z"
+  "lastUpdated": "2026-06-02T10:38:04.040Z"
 }
