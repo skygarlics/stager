@@ -3856,11 +3856,19 @@
           "status": "fail",
           "timestamp": "2026-06-02T10:38:04.040Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Dahlia",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-06-02T10:40:29.542Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 47,
-      "totalCount": 92,
+      "currentLevelIndex": 3,
+      "clearCount": 48,
+      "totalCount": 93,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3953,7 +3961,8 @@
         "CastHour|Arkadia",
         "BISTROVER|Empire of Fury",
         "CastHour|逆月",
-        "RESIDENT|Super Freak"
+        "RESIDENT|Super Freak",
+        "EPOLIS|Dahlia"
       ],
       "songStatus": [
         [
@@ -4599,6 +4608,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|Dahlia",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -4700,5 +4716,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-02T10:38:04.040Z"
+  "lastUpdated": "2026-06-02T10:40:29.542Z"
 }
