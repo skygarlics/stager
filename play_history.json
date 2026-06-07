@@ -3872,11 +3872,19 @@
           "status": "clear",
           "timestamp": "2026-06-02T10:43:05.940Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Triple Cross",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-06-07T11:15:46.885Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 49,
-      "totalCount": 94,
+      "currentLevelIndex": 5,
+      "clearCount": 50,
+      "totalCount": 95,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3971,7 +3979,8 @@
         "CastHour|逆月",
         "RESIDENT|Super Freak",
         "EPOLIS|Dahlia",
-        "RESIDENT|Always We Trust In You"
+        "RESIDENT|Always We Trust In You",
+        "CastHour|Triple Cross"
       ],
       "songStatus": [
         [
@@ -4631,6 +4640,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "CastHour|Triple Cross",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4732,5 +4748,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-02T10:43:05.940Z"
+  "lastUpdated": "2026-06-07T11:15:46.885Z"
 }
