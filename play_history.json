@@ -3896,11 +3896,19 @@
           "status": "fail",
           "timestamp": "2026-06-09T09:53:52.074Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Inferno of Fomalhaut",
+          "version": "HEROIC VERSE",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-06-09T09:56:31.391Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 51,
-      "totalCount": 97,
+      "totalCount": 98,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3998,7 +4006,8 @@
         "RESIDENT|Always We Trust In You",
         "CastHour|Triple Cross",
         "HEROIC VERSE|ORCA",
-        "RESIDENT|suspicions"
+        "RESIDENT|suspicions",
+        "HEROIC VERSE|Inferno of Fomalhaut"
       ],
       "songStatus": [
         [
@@ -4679,6 +4688,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "HEROIC VERSE|Inferno of Fomalhaut",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -4780,5 +4796,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-09T09:53:52.074Z"
+  "lastUpdated": "2026-06-09T09:56:31.391Z"
 }
