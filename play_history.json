@@ -3912,11 +3912,19 @@
           "status": "clear",
           "timestamp": "2026-06-09T09:59:31.211Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Mächö Mönky",
+          "version": "Rootage",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-06-09T10:02:05.316Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 52,
-      "totalCount": 99,
+      "totalCount": 100,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4016,7 +4024,8 @@
         "HEROIC VERSE|ORCA",
         "RESIDENT|suspicions",
         "HEROIC VERSE|Inferno of Fomalhaut",
-        "CastHour|Flying Castle"
+        "CastHour|Flying Castle",
+        "Rootage|Mächö Mönky"
       ],
       "songStatus": [
         [
@@ -4711,6 +4720,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "Rootage|Mächö Mönky",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -4812,5 +4828,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-09T09:59:31.212Z"
+  "lastUpdated": "2026-06-09T10:02:05.316Z"
 }
