@@ -3880,11 +3880,19 @@
           "status": "clear",
           "timestamp": "2026-06-07T11:15:46.885Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ORCA",
+          "version": "HEROIC VERSE",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-06-09T09:51:02.903Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 50,
-      "totalCount": 95,
+      "currentLevelIndex": 6,
+      "clearCount": 51,
+      "totalCount": 96,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3980,7 +3988,8 @@
         "RESIDENT|Super Freak",
         "EPOLIS|Dahlia",
         "RESIDENT|Always We Trust In You",
-        "CastHour|Triple Cross"
+        "CastHour|Triple Cross",
+        "HEROIC VERSE|ORCA"
       ],
       "songStatus": [
         [
@@ -4647,6 +4656,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "HEROIC VERSE|ORCA",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -4748,5 +4764,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-07T11:15:46.885Z"
+  "lastUpdated": "2026-06-09T09:51:02.906Z"
 }
