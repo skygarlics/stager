@@ -3904,11 +3904,19 @@
           "status": "fail",
           "timestamp": "2026-06-09T09:56:31.391Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Flying Castle",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-06-09T09:59:31.211Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 51,
-      "totalCount": 98,
+      "currentLevelIndex": 5,
+      "clearCount": 52,
+      "totalCount": 99,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4007,7 +4015,8 @@
         "CastHour|Triple Cross",
         "HEROIC VERSE|ORCA",
         "RESIDENT|suspicions",
-        "HEROIC VERSE|Inferno of Fomalhaut"
+        "HEROIC VERSE|Inferno of Fomalhaut",
+        "CastHour|Flying Castle"
       ],
       "songStatus": [
         [
@@ -4695,6 +4704,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CastHour|Flying Castle",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4796,5 +4812,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-09T09:56:31.391Z"
+  "lastUpdated": "2026-06-09T09:59:31.212Z"
 }
