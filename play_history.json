@@ -3888,11 +3888,19 @@
           "status": "clear",
           "timestamp": "2026-06-09T09:51:02.903Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "suspicions",
+          "version": "RESIDENT",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-06-09T09:53:52.074Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 51,
-      "totalCount": 96,
+      "totalCount": 97,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3989,7 +3997,8 @@
         "EPOLIS|Dahlia",
         "RESIDENT|Always We Trust In You",
         "CastHour|Triple Cross",
-        "HEROIC VERSE|ORCA"
+        "HEROIC VERSE|ORCA",
+        "RESIDENT|suspicions"
       ],
       "songStatus": [
         [
@@ -4663,6 +4672,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "RESIDENT|suspicions",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -4764,5 +4780,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-09T09:51:02.906Z"
+  "lastUpdated": "2026-06-09T09:53:52.074Z"
 }
