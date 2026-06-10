@@ -3920,11 +3920,19 @@
           "status": "fail",
           "timestamp": "2026-06-09T10:02:05.316Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "One for All",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-10T03:56:16.256Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 52,
-      "totalCount": 100,
+      "totalCount": 101,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4025,7 +4033,8 @@
         "RESIDENT|suspicions",
         "HEROIC VERSE|Inferno of Fomalhaut",
         "CastHour|Flying Castle",
-        "Rootage|Mächö Mönky"
+        "Rootage|Mächö Mönky",
+        "CastHour|One for All"
       ],
       "songStatus": [
         [
@@ -4727,6 +4736,13 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CastHour|One for All",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4828,5 +4844,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-09T10:02:05.316Z"
+  "lastUpdated": "2026-06-10T03:56:16.256Z"
 }
