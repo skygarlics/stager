@@ -3936,11 +3936,19 @@
           "status": "clear",
           "timestamp": "2026-06-11T01:42:36.285Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Smalt #28598F",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-06-11T03:49:12.131Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 53,
-      "totalCount": 102,
+      "currentLevelIndex": 5,
+      "clearCount": 54,
+      "totalCount": 103,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4043,7 +4051,8 @@
         "CastHour|Flying Castle",
         "Rootage|Mächö Mönky",
         "CastHour|One for All",
-        "RESIDENT|Ōu Legends"
+        "RESIDENT|Ōu Legends",
+        "CastHour|Smalt #28598F"
       ],
       "songStatus": [
         [
@@ -4759,6 +4768,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "CastHour|Smalt #28598F",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4860,5 +4876,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-11T01:42:36.285Z"
+  "lastUpdated": "2026-06-11T03:49:12.131Z"
 }
