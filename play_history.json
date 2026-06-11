@@ -3984,11 +3984,19 @@
           "status": "clear",
           "timestamp": "2026-06-11T04:09:49.944Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Vitrum",
+          "version": "BISTROVER",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-11T04:24:32.433Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 56,
-      "totalCount": 108,
+      "totalCount": 109,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4097,7 +4105,8 @@
         "CastHour|雪上断火",
         "RESIDENT|B.O.D.Y.",
         "BISTROVER|DUAL STRIKER",
-        "RESIDENT|Chaotoxin"
+        "RESIDENT|Chaotoxin",
+        "BISTROVER|Vitrum"
       ],
       "songStatus": [
         [
@@ -4855,6 +4864,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "BISTROVER|Vitrum",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4956,5 +4972,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-11T04:09:49.944Z"
+  "lastUpdated": "2026-06-11T04:24:32.433Z"
 }
