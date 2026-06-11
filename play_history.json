@@ -4000,11 +4000,19 @@
           "status": "clear",
           "timestamp": "2026-06-11T04:24:37.258Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Burning Flame[L]",
+          "version": "BISTROVER",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-11T04:27:15.473Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 57,
-      "totalCount": 110,
+      "totalCount": 111,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4115,7 +4123,8 @@
         "BISTROVER|DUAL STRIKER",
         "RESIDENT|Chaotoxin",
         "BISTROVER|Vitrum",
-        "RESIDENT|RINИE"
+        "RESIDENT|RINИE",
+        "BISTROVER|Burning Flame[L]"
       ],
       "songStatus": [
         [
@@ -4887,6 +4896,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "BISTROVER|Burning Flame[L]",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -4988,5 +5004,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-11T04:24:37.258Z"
+  "lastUpdated": "2026-06-11T04:27:15.474Z"
 }
