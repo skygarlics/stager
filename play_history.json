@@ -3992,11 +3992,19 @@
           "status": "fail",
           "timestamp": "2026-06-11T04:24:32.433Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "RINИE",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-11T04:24:37.258Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 56,
-      "totalCount": 109,
+      "currentLevelIndex": 4,
+      "clearCount": 57,
+      "totalCount": 110,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4106,7 +4114,8 @@
         "RESIDENT|B.O.D.Y.",
         "BISTROVER|DUAL STRIKER",
         "RESIDENT|Chaotoxin",
-        "BISTROVER|Vitrum"
+        "BISTROVER|Vitrum",
+        "RESIDENT|RINИE"
       ],
       "songStatus": [
         [
@@ -4871,6 +4880,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "RESIDENT|RINИE",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4972,5 +4988,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-11T04:24:32.433Z"
+  "lastUpdated": "2026-06-11T04:24:37.258Z"
 }
