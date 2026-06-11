@@ -3952,11 +3952,27 @@
           "status": "fail",
           "timestamp": "2026-06-11T03:53:45.317Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "雪上断火",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-11T03:53:46.620Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "B.O.D.Y.",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-11T04:05:04.816Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 4,
-      "clearCount": 54,
-      "totalCount": 104,
+      "clearCount": 55,
+      "totalCount": 106,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4061,7 +4077,9 @@
         "CastHour|One for All",
         "RESIDENT|Ōu Legends",
         "CastHour|Smalt #28598F",
-        "Rootage|抱きしめてモナムール"
+        "Rootage|抱きしめてモナムール",
+        "CastHour|雪上断火",
+        "RESIDENT|B.O.D.Y."
       ],
       "songStatus": [
         [
@@ -4791,6 +4809,20 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CastHour|雪上断火",
+          {
+            "status": "fail",
+            "level": "B"
+          }
+        ],
+        [
+          "RESIDENT|B.O.D.Y.",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4892,5 +4924,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-11T03:53:45.317Z"
+  "lastUpdated": "2026-06-11T04:05:04.817Z"
 }
