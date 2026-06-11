@@ -3976,11 +3976,19 @@
           "status": "fail",
           "timestamp": "2026-06-11T04:05:11.865Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Chaotoxin",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-11T04:09:49.944Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 55,
-      "totalCount": 107,
+      "currentLevelIndex": 4,
+      "clearCount": 56,
+      "totalCount": 108,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4088,7 +4096,8 @@
         "Rootage|抱きしめてモナムール",
         "CastHour|雪上断火",
         "RESIDENT|B.O.D.Y.",
-        "BISTROVER|DUAL STRIKER"
+        "BISTROVER|DUAL STRIKER",
+        "RESIDENT|Chaotoxin"
       ],
       "songStatus": [
         [
@@ -4839,6 +4848,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "RESIDENT|Chaotoxin",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4940,5 +4956,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-11T04:05:11.866Z"
+  "lastUpdated": "2026-06-11T04:09:49.944Z"
 }
