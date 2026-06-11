@@ -3928,11 +3928,19 @@
           "status": "fail",
           "timestamp": "2026-06-10T03:56:16.256Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Ōu Legends",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-11T01:42:36.285Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 52,
-      "totalCount": 101,
+      "currentLevelIndex": 4,
+      "clearCount": 53,
+      "totalCount": 102,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4034,7 +4042,8 @@
         "HEROIC VERSE|Inferno of Fomalhaut",
         "CastHour|Flying Castle",
         "Rootage|Mächö Mönky",
-        "CastHour|One for All"
+        "CastHour|One for All",
+        "RESIDENT|Ōu Legends"
       ],
       "songStatus": [
         [
@@ -4743,6 +4752,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "RESIDENT|Ōu Legends",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -4844,5 +4860,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-10T03:56:16.256Z"
+  "lastUpdated": "2026-06-11T01:42:36.285Z"
 }
