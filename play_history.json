@@ -4056,11 +4056,27 @@
           "status": "clear",
           "timestamp": "2026-06-12T06:11:30.961Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "禊",
+          "version": "CastHour",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:11:32.902Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "LASER CRUSTER (IGNITE REMIX)",
+          "version": "HEROIC VERSE",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T06:11:35.972Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 60,
-      "totalCount": 117,
+      "clearCount": 61,
+      "totalCount": 119,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4178,7 +4194,9 @@
         "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～",
         "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)",
         "CastHour|Aftermath",
-        "EPOLIS|BLAZING_LAZER"
+        "EPOLIS|BLAZING_LAZER",
+        "CastHour|禊",
+        "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)"
       ],
       "songStatus": [
         [
@@ -4999,6 +5017,20 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "CastHour|禊",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5100,5 +5132,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:11:30.964Z"
+  "lastUpdated": "2026-06-12T06:11:35.972Z"
 }
