@@ -4112,11 +4112,19 @@
           "status": "clear",
           "timestamp": "2026-06-12T06:11:56.531Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "HARD BRAIN",
+          "version": "Rootage",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T06:25:45.214Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 64,
-      "totalCount": 124,
+      "totalCount": 125,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4241,7 +4249,8 @@
         "HEROIC VERSE|魅惑のYUMMYスイーツ",
         "BISTROVER|Viridian",
         "Rootage|Xlø",
-        "BISTROVER|innocent revolver"
+        "BISTROVER|innocent revolver",
+        "Rootage|HARD BRAIN"
       ],
       "songStatus": [
         [
@@ -5111,6 +5120,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "Rootage|HARD BRAIN",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5212,5 +5228,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:11:56.532Z"
+  "lastUpdated": "2026-06-12T06:25:45.214Z"
 }
