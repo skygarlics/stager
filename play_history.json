@@ -4216,11 +4216,19 @@
           "status": "clear",
           "timestamp": "2026-06-12T07:06:42.179Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Level 2",
+          "version": "HEROIC VERSE",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-06-12T07:25:27.977Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 70,
-      "totalCount": 137,
+      "totalCount": 138,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4358,7 +4366,8 @@
         "HEROIC VERSE|AKASHIC BREAK",
         "Rootage|KILL EACH OTHER",
         "HEROIC VERSE|深淵に捧ぐレクイエム",
-        "RESIDENT|dica dica"
+        "RESIDENT|dica dica",
+        "HEROIC VERSE|Level 2"
       ],
       "songStatus": [
         [
@@ -5319,6 +5328,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "HEROIC VERSE|Level 2",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -5420,5 +5436,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T07:06:42.180Z"
+  "lastUpdated": "2026-06-12T07:25:27.978Z"
 }
