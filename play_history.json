@@ -4184,11 +4184,19 @@
           "status": "clear",
           "timestamp": "2026-06-12T06:38:55.861Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "AKASHIC BREAK",
+          "version": "HEROIC VERSE",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:52:04.054Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 68,
-      "totalCount": 133,
+      "currentLevelIndex": 4,
+      "clearCount": 69,
+      "totalCount": 134,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4322,7 +4330,8 @@
         "BISTROVER|rommmo",
         "Rootage|GENE",
         "BISTROVER|SOLID STATE SQUAD -RISEN RELIC REMIX-",
-        "RESIDENT|ONE AND ONLY"
+        "RESIDENT|ONE AND ONLY",
+        "HEROIC VERSE|AKASHIC BREAK"
       ],
       "songStatus": [
         [
@@ -5255,6 +5264,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "HEROIC VERSE|AKASHIC BREAK",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -5356,5 +5372,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:38:55.861Z"
+  "lastUpdated": "2026-06-12T06:52:04.056Z"
 }
