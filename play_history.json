@@ -4088,11 +4088,27 @@
           "status": "fail",
           "timestamp": "2026-06-12T06:11:39.715Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Viridian",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:11:41.517Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Xlø",
+          "version": "Rootage",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T06:11:42.546Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 62,
-      "totalCount": 121,
+      "clearCount": 63,
+      "totalCount": 123,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4214,7 +4230,9 @@
         "CastHour|禊",
         "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
         "CastHour|LIVE DRIVING!! feat. 花たん",
-        "HEROIC VERSE|魅惑のYUMMYスイーツ"
+        "HEROIC VERSE|魅惑のYUMMYスイーツ",
+        "BISTROVER|Viridian",
+        "Rootage|Xlø"
       ],
       "songStatus": [
         [
@@ -5063,6 +5081,20 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "BISTROVER|Viridian",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "Rootage|Xlø",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5164,5 +5196,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:11:39.715Z"
+  "lastUpdated": "2026-06-12T06:11:42.546Z"
 }
