@@ -4128,11 +4128,19 @@
           "status": "clear",
           "timestamp": "2026-06-12T06:25:49.266Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ruin of opals",
+          "version": "Rootage",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T06:25:51.234Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 65,
-      "totalCount": 126,
+      "totalCount": 127,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4259,7 +4267,8 @@
         "Rootage|Xlø",
         "BISTROVER|innocent revolver",
         "Rootage|HARD BRAIN",
-        "BISTROVER|スーパー戦湯ババンバーン"
+        "BISTROVER|スーパー戦湯ババンバーン",
+        "Rootage|ruin of opals"
       ],
       "songStatus": [
         [
@@ -5143,6 +5152,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "Rootage|ruin of opals",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5244,5 +5260,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:25:49.267Z"
+  "lastUpdated": "2026-06-12T06:25:51.234Z"
 }
