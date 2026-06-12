@@ -4048,11 +4048,19 @@
           "status": "fail",
           "timestamp": "2026-06-12T05:59:02.272Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "BLAZING_LAZER",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:11:30.961Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 59,
-      "totalCount": 116,
+      "currentLevelIndex": 3,
+      "clearCount": 60,
+      "totalCount": 117,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4169,7 +4177,8 @@
         "BISTROVER|ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
         "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～",
         "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)",
-        "CastHour|Aftermath"
+        "CastHour|Aftermath",
+        "EPOLIS|BLAZING_LAZER"
       ],
       "songStatus": [
         [
@@ -4983,6 +4992,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "EPOLIS|BLAZING_LAZER",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -5084,5 +5100,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T05:59:02.272Z"
+  "lastUpdated": "2026-06-12T06:11:30.964Z"
 }
