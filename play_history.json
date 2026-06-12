@@ -4008,11 +4008,19 @@
           "status": "fail",
           "timestamp": "2026-06-11T04:27:15.473Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ハイテックトキオ[L]",
+          "version": "CastHour",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T05:12:38.033Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 57,
-      "totalCount": 111,
+      "currentLevelIndex": 4,
+      "clearCount": 58,
+      "totalCount": 112,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4124,7 +4132,8 @@
         "RESIDENT|Chaotoxin",
         "BISTROVER|Vitrum",
         "RESIDENT|RINИE",
-        "BISTROVER|Burning Flame[L]"
+        "BISTROVER|Burning Flame[L]",
+        "CastHour|ハイテックトキオ[L]"
       ],
       "songStatus": [
         [
@@ -4903,6 +4912,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "CastHour|ハイテックトキオ[L]",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -5004,5 +5020,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-11T04:27:15.474Z"
+  "lastUpdated": "2026-06-12T05:12:38.038Z"
 }
