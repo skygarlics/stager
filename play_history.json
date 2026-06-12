@@ -4232,11 +4232,27 @@
           "status": "clear",
           "timestamp": "2026-06-12T07:25:37.491Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Vinculum stellarum",
+          "version": "HEROIC VERSE",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T07:25:39.126Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Illusionary Waterlily",
+          "version": "CANNON BALLERS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T07:25:40.596Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 71,
-      "totalCount": 139,
+      "clearCount": 72,
+      "totalCount": 141,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4376,7 +4392,9 @@
         "HEROIC VERSE|深淵に捧ぐレクイエム",
         "RESIDENT|dica dica",
         "HEROIC VERSE|Level 2",
-        "RESIDENT|Meissa"
+        "RESIDENT|Meissa",
+        "HEROIC VERSE|Vinculum stellarum",
+        "CANNON BALLERS|Illusionary Waterlily"
       ],
       "songStatus": [
         [
@@ -5351,6 +5369,20 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "HEROIC VERSE|Vinculum stellarum",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "CANNON BALLERS|Illusionary Waterlily",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5452,5 +5484,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T07:25:37.492Z"
+  "lastUpdated": "2026-06-12T07:25:40.596Z"
 }
