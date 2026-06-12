@@ -4072,11 +4072,27 @@
           "status": "fail",
           "timestamp": "2026-06-12T06:11:35.972Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "LIVE DRIVING!! feat. 花たん",
+          "version": "CastHour",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:11:37.276Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "魅惑のYUMMYスイーツ",
+          "version": "HEROIC VERSE",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T06:11:39.715Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 61,
-      "totalCount": 119,
+      "clearCount": 62,
+      "totalCount": 121,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4196,7 +4212,9 @@
         "CastHour|Aftermath",
         "EPOLIS|BLAZING_LAZER",
         "CastHour|禊",
-        "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)"
+        "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
+        "CastHour|LIVE DRIVING!! feat. 花たん",
+        "HEROIC VERSE|魅惑のYUMMYスイーツ"
       ],
       "songStatus": [
         [
@@ -5031,6 +5049,20 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "CastHour|LIVE DRIVING!! feat. 花たん",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "HEROIC VERSE|魅惑のYUMMYスイーツ",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5132,5 +5164,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:11:35.972Z"
+  "lastUpdated": "2026-06-12T06:11:39.715Z"
 }
