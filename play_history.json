@@ -4248,11 +4248,27 @@
           "status": "fail",
           "timestamp": "2026-06-12T07:25:40.596Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Friction[!]Function",
+          "version": "HEROIC VERSE",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T07:25:42.221Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Xperanza",
+          "version": "CANNON BALLERS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T07:28:30.263Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 72,
-      "totalCount": 141,
+      "clearCount": 73,
+      "totalCount": 143,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4394,7 +4410,9 @@
         "HEROIC VERSE|Level 2",
         "RESIDENT|Meissa",
         "HEROIC VERSE|Vinculum stellarum",
-        "CANNON BALLERS|Illusionary Waterlily"
+        "CANNON BALLERS|Illusionary Waterlily",
+        "HEROIC VERSE|Friction[!]Function",
+        "CANNON BALLERS|Xperanza"
       ],
       "songStatus": [
         [
@@ -5383,6 +5401,20 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "HEROIC VERSE|Friction[!]Function",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "CANNON BALLERS|Xperanza",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5484,5 +5516,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T07:25:40.596Z"
+  "lastUpdated": "2026-06-12T07:28:30.263Z"
 }
