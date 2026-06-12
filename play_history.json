@@ -4280,11 +4280,35 @@
           "status": "clear",
           "timestamp": "2026-06-12T08:07:05.759Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "TECHNO Style Essentials",
+          "version": "HEROIC VERSE",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-06-12T08:07:07.588Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "神のシナリオ",
+          "version": "RESIDENT",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-06-12T08:07:09.126Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Rave Patroller",
+          "version": "HEROIC VERSE",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T08:07:11.002Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 74,
-      "totalCount": 145,
+      "currentLevelIndex": 4,
+      "clearCount": 76,
+      "totalCount": 148,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4430,7 +4454,10 @@
         "HEROIC VERSE|Friction[!]Function",
         "CANNON BALLERS|Xperanza",
         "HEROIC VERSE|Ypsilon[L]",
-        "RESIDENT|#CMFLG"
+        "RESIDENT|#CMFLG",
+        "HEROIC VERSE|TECHNO Style Essentials",
+        "RESIDENT|神のシナリオ",
+        "HEROIC VERSE|Rave Patroller"
       ],
       "songStatus": [
         [
@@ -5447,6 +5474,27 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "HEROIC VERSE|TECHNO Style Essentials",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|神のシナリオ",
+          {
+            "status": "clear",
+            "level": "D"
+          }
+        ],
+        [
+          "HEROIC VERSE|Rave Patroller",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -5548,5 +5596,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T08:07:05.762Z"
+  "lastUpdated": "2026-06-12T08:07:11.003Z"
 }
