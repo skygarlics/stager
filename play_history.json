@@ -4136,11 +4136,27 @@
           "status": "fail",
           "timestamp": "2026-06-12T06:25:51.234Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "新宝島[L]",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-06-12T06:25:52.852Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ACTØ",
+          "version": "EPOLIS",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:25:54.346Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 65,
-      "totalCount": 127,
+      "clearCount": 66,
+      "totalCount": 129,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4268,7 +4284,9 @@
         "BISTROVER|innocent revolver",
         "Rootage|HARD BRAIN",
         "BISTROVER|スーパー戦湯ババンバーン",
-        "Rootage|ruin of opals"
+        "Rootage|ruin of opals",
+        "BISTROVER|新宝島[L]",
+        "EPOLIS|ACTØ"
       ],
       "songStatus": [
         [
@@ -5159,6 +5177,20 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "BISTROVER|新宝島[L]",
+          {
+            "status": "fail",
+            "level": "C"
+          }
+        ],
+        [
+          "EPOLIS|ACTØ",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -5260,5 +5292,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:25:51.234Z"
+  "lastUpdated": "2026-06-12T06:25:54.346Z"
 }
