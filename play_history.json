@@ -4120,11 +4120,19 @@
           "status": "fail",
           "timestamp": "2026-06-12T06:25:45.214Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "スーパー戦湯ババンバーン",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:25:49.266Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 64,
-      "totalCount": 125,
+      "currentLevelIndex": 4,
+      "clearCount": 65,
+      "totalCount": 126,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4250,7 +4258,8 @@
         "BISTROVER|Viridian",
         "Rootage|Xlø",
         "BISTROVER|innocent revolver",
-        "Rootage|HARD BRAIN"
+        "Rootage|HARD BRAIN",
+        "BISTROVER|スーパー戦湯ババンバーン"
       ],
       "songStatus": [
         [
@@ -5127,6 +5136,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "BISTROVER|スーパー戦湯ババンバーン",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -5228,5 +5244,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:25:45.214Z"
+  "lastUpdated": "2026-06-12T06:25:49.267Z"
 }
