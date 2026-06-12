@@ -4016,11 +4016,19 @@
           "status": "clear",
           "timestamp": "2026-06-12T05:12:38.033Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
+          "version": "BISTROVER",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T05:21:01.706Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 58,
-      "totalCount": 112,
+      "totalCount": 113,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4133,7 +4141,8 @@
         "BISTROVER|Vitrum",
         "RESIDENT|RINИE",
         "BISTROVER|Burning Flame[L]",
-        "CastHour|ハイテックトキオ[L]"
+        "CastHour|ハイテックトキオ[L]",
+        "BISTROVER|ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)"
       ],
       "songStatus": [
         [
@@ -4919,6 +4928,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "BISTROVER|ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5020,5 +5036,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T05:12:38.038Z"
+  "lastUpdated": "2026-06-12T05:21:01.706Z"
 }
