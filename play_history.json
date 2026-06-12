@@ -4152,11 +4152,27 @@
           "status": "clear",
           "timestamp": "2026-06-12T06:25:54.346Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "rommmo",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-06-12T06:25:56.443Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "GENE",
+          "version": "Rootage",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-06-12T06:32:38.052Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 3,
-      "clearCount": 66,
-      "totalCount": 129,
+      "clearCount": 67,
+      "totalCount": 131,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -4286,7 +4302,9 @@
         "BISTROVER|スーパー戦湯ババンバーン",
         "Rootage|ruin of opals",
         "BISTROVER|新宝島[L]",
-        "EPOLIS|ACTØ"
+        "EPOLIS|ACTØ",
+        "BISTROVER|rommmo",
+        "Rootage|GENE"
       ],
       "songStatus": [
         [
@@ -5191,6 +5209,20 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "BISTROVER|rommmo",
+          {
+            "status": "clear",
+            "level": "C"
+          }
+        ],
+        [
+          "Rootage|GENE",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -5292,5 +5324,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-06-12T06:25:54.346Z"
+  "lastUpdated": "2026-06-12T06:32:38.053Z"
 }
