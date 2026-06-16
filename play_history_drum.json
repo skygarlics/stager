@@ -7,7 +7,8 @@
     "2F|1": "S",
     "2F|2": "S",
     "20F|1": "S",
-    "20F|5": "S"
+    "20F|5": "S",
+    "20F|6": "S"
   },
   "floorStatuses": {
     "38F": {
@@ -285,7 +286,7 @@
     "20F": {
       "cleared": false,
       "autoCleared": false,
-      "sCount": 1,
+      "sCount": 2,
       "needed": 6,
       "bossFail": true,
       "updatedAt": "2026-05-15T13:13:22.242Z"
@@ -299,5 +300,5 @@
       "updatedAt": "2026-05-24T10:19:15.544Z"
     }
   },
-  "lastUpdated": "2026-05-24T12:16:31.465Z"
+  "lastUpdated": "2026-06-16T13:06:06.220Z"
 }
