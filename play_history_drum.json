@@ -13,7 +13,8 @@
     "20F|8": "S",
     "20F|4": "S",
     "21F|7": "S",
-    "21F|8": "S"
+    "21F|8": "S",
+    "21F|6": "S"
   },
   "floorStatuses": {
     "38F": {
@@ -283,9 +284,9 @@
     "21F": {
       "cleared": false,
       "autoCleared": false,
-      "sCount": 1,
+      "sCount": 2,
       "needed": 6,
-      "bossFail": true,
+      "bossFail": false,
       "updatedAt": "2026-05-15T13:13:21.803Z"
     },
     "20F": {
@@ -305,5 +306,5 @@
       "updatedAt": "2026-05-24T10:19:15.544Z"
     }
   },
-  "lastUpdated": "2026-06-16T13:22:27.186Z"
+  "lastUpdated": "2026-06-16T13:36:14.677Z"
 }
