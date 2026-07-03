@@ -15,8 +15,7 @@
     "21F|7": "S",
     "21F|8": "S",
     "21F|6": "S",
-    "21F|3": "S",
-    "21F|4": "S"
+    "21F|3": "S"
   },
   "floorStatuses": {
     "38F": {
@@ -286,7 +285,7 @@
     "21F": {
       "cleared": false,
       "autoCleared": false,
-      "sCount": 4,
+      "sCount": 5,
       "needed": 6,
       "bossFail": false,
       "updatedAt": "2026-05-15T13:13:21.803Z"
@@ -308,5 +307,5 @@
       "updatedAt": "2026-05-24T10:19:15.544Z"
     }
   },
-  "lastUpdated": "2026-07-03T13:13:57.052Z"
+  "lastUpdated": "2026-07-03T13:13:59.202Z"
 }
