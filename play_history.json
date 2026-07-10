@@ -2378,11 +2378,19 @@
           "status": "clear",
           "timestamp": "2026-07-10T13:38:08.336Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "儚キ戀ノ幻想譚",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-10T13:40:28.853Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 50,
-      "totalCount": 96,
+      "totalCount": 97,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2479,7 +2487,8 @@
         "RESIDENT|恋愛＝精度×認識力",
         "RESIDENT|B.O.D.Y.",
         "RESIDENT|MAX 360",
-        "RESIDENT|Chaotoxin"
+        "RESIDENT|Chaotoxin",
+        "RESIDENT|儚キ戀ノ幻想譚"
       ],
       "songStatus": [
         [
@@ -3152,6 +3161,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|儚キ戀ノ幻想譚",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -5740,5 +5756,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:38:08.336Z"
+  "lastUpdated": "2026-07-10T13:40:28.853Z"
 }
