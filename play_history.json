@@ -2362,11 +2362,19 @@
           "status": "clear",
           "timestamp": "2026-07-10T13:33:55.713Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "MAX 360",
+          "version": "RESIDENT",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-10T13:38:06.467Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 49,
-      "totalCount": 94,
+      "totalCount": 95,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2461,7 +2469,8 @@
         "EPOLIS|INHERITANCE[L]",
         "RESIDENT|RINИE",
         "RESIDENT|恋愛＝精度×認識力",
-        "RESIDENT|B.O.D.Y."
+        "RESIDENT|B.O.D.Y.",
+        "RESIDENT|MAX 360"
       ],
       "songStatus": [
         [
@@ -3120,6 +3129,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "RESIDENT|MAX 360",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -5708,5 +5724,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:33:55.713Z"
+  "lastUpdated": "2026-07-10T13:38:06.467Z"
 }
