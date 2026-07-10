@@ -2394,11 +2394,19 @@
           "status": "clear",
           "timestamp": "2026-07-10T13:42:59.072Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "雪上断火",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-10T13:43:13.370Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 51,
-      "totalCount": 98,
+      "totalCount": 99,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2497,7 +2505,8 @@
         "RESIDENT|MAX 360",
         "RESIDENT|Chaotoxin",
         "RESIDENT|儚キ戀ノ幻想譚",
-        "RESIDENT|Always We Trust In You"
+        "RESIDENT|Always We Trust In You",
+        "CastHour|雪上断火"
       ],
       "songStatus": [
         [
@@ -3184,6 +3193,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "CastHour|雪上断火",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -5772,5 +5788,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:42:59.072Z"
+  "lastUpdated": "2026-07-10T13:43:13.370Z"
 }
