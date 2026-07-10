@@ -2330,11 +2330,19 @@
           "status": "fail",
           "timestamp": "2026-04-07T13:33:38.826Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "INHERITANCE[L]",
+          "version": "EPOLIS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-10T13:27:31.219Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 47,
-      "totalCount": 90,
+      "totalCount": 91,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2425,7 +2433,8 @@
         "RESIDENT|ONE AND ONLY",
         "RESIDENT|神っぽいな[L]",
         "RESIDENT|Caldwell 99[L]",
-        "CastHour|GiGaGaHell"
+        "CastHour|GiGaGaHell",
+        "EPOLIS|INHERITANCE[L]"
       ],
       "songStatus": [
         [
@@ -3056,6 +3065,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "EPOLIS|INHERITANCE[L]",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -5639,10 +5655,10 @@
   },
   "mode": "ノマゲ",
   "gameMode": "SP",
-  "playEnv": "arcade",
+  "playEnv": "home",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-03T12:16:28.003Z"
+  "lastUpdated": "2026-07-10T13:27:31.219Z"
 }
