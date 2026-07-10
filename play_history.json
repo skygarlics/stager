@@ -2434,11 +2434,19 @@
           "status": "fail",
           "timestamp": "2026-07-10T13:54:24.599Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Push on Beats!～音ゲの国のeX-ストリーマー～",
+          "version": "CastHour",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-07-10T13:55:35.552Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 53,
-      "totalCount": 103,
+      "totalCount": 104,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2542,7 +2550,8 @@
         "RESIDENT|Super Freak",
         "Sparkle Shower|ラブコメトキドキシリアス",
         "Sparkle Shower|BitRacer",
-        "CastHour|Flying Castle"
+        "CastHour|Flying Castle",
+        "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～"
       ],
       "songStatus": [
         [
@@ -3264,6 +3273,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～",
+          {
+            "status": "fail",
+            "level": "C"
           }
         ]
       ]
@@ -5852,5 +5868,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:54:24.599Z"
+  "lastUpdated": "2026-07-10T13:55:35.552Z"
 }
