@@ -2418,11 +2418,19 @@
           "status": "clear",
           "timestamp": "2026-07-10T13:49:18.685Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "BitRacer",
+          "version": "Sparkle Shower",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-07-10T13:51:36.228Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 53,
-      "totalCount": 101,
+      "totalCount": 102,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2524,7 +2532,8 @@
         "RESIDENT|Always We Trust In You",
         "CastHour|雪上断火",
         "RESIDENT|Super Freak",
-        "Sparkle Shower|ラブコメトキドキシリアス"
+        "Sparkle Shower|ラブコメトキドキシリアス",
+        "Sparkle Shower|BitRacer"
       ],
       "songStatus": [
         [
@@ -3232,6 +3241,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "Sparkle Shower|BitRacer",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -5820,5 +5836,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:49:18.685Z"
+  "lastUpdated": "2026-07-10T13:51:36.228Z"
 }
