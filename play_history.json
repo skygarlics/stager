@@ -2370,11 +2370,19 @@
           "status": "fail",
           "timestamp": "2026-07-10T13:38:06.467Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Chaotoxin",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-07-10T13:38:08.336Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 49,
-      "totalCount": 95,
+      "currentLevelIndex": 4,
+      "clearCount": 50,
+      "totalCount": 96,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2470,7 +2478,8 @@
         "RESIDENT|RINИE",
         "RESIDENT|恋愛＝精度×認識力",
         "RESIDENT|B.O.D.Y.",
-        "RESIDENT|MAX 360"
+        "RESIDENT|MAX 360",
+        "RESIDENT|Chaotoxin"
       ],
       "songStatus": [
         [
@@ -3136,6 +3145,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "RESIDENT|Chaotoxin",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -5724,5 +5740,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:38:06.467Z"
+  "lastUpdated": "2026-07-10T13:38:08.336Z"
 }
