@@ -2386,11 +2386,19 @@
           "status": "fail",
           "timestamp": "2026-07-10T13:40:28.853Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Always We Trust In You",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-07-10T13:42:59.072Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 50,
-      "totalCount": 97,
+      "currentLevelIndex": 4,
+      "clearCount": 51,
+      "totalCount": 98,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2488,7 +2496,8 @@
         "RESIDENT|B.O.D.Y.",
         "RESIDENT|MAX 360",
         "RESIDENT|Chaotoxin",
-        "RESIDENT|儚キ戀ノ幻想譚"
+        "RESIDENT|儚キ戀ノ幻想譚",
+        "RESIDENT|Always We Trust In You"
       ],
       "songStatus": [
         [
@@ -3168,6 +3177,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "RESIDENT|Always We Trust In You",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -5756,5 +5772,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:40:28.853Z"
+  "lastUpdated": "2026-07-10T13:42:59.072Z"
 }
