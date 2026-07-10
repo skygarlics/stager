@@ -2338,11 +2338,19 @@
           "status": "fail",
           "timestamp": "2026-07-10T13:27:31.219Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "RINИE",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-07-10T13:33:51.269Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 47,
-      "totalCount": 91,
+      "currentLevelIndex": 4,
+      "clearCount": 48,
+      "totalCount": 92,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2434,7 +2442,8 @@
         "RESIDENT|神っぽいな[L]",
         "RESIDENT|Caldwell 99[L]",
         "CastHour|GiGaGaHell",
-        "EPOLIS|INHERITANCE[L]"
+        "EPOLIS|INHERITANCE[L]",
+        "RESIDENT|RINИE"
       ],
       "songStatus": [
         [
@@ -3072,6 +3081,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "RESIDENT|RINИE",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -5660,5 +5676,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:27:31.219Z"
+  "lastUpdated": "2026-07-10T13:33:51.270Z"
 }
