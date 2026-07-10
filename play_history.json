@@ -2426,11 +2426,19 @@
           "status": "fail",
           "timestamp": "2026-07-10T13:51:36.228Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Flying Castle",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-10T13:54:24.599Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 53,
-      "totalCount": 102,
+      "totalCount": 103,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2533,7 +2541,8 @@
         "CastHour|雪上断火",
         "RESIDENT|Super Freak",
         "Sparkle Shower|ラブコメトキドキシリアス",
-        "Sparkle Shower|BitRacer"
+        "Sparkle Shower|BitRacer",
+        "CastHour|Flying Castle"
       ],
       "songStatus": [
         [
@@ -3248,6 +3257,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "CastHour|Flying Castle",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -5836,5 +5852,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:51:36.228Z"
+  "lastUpdated": "2026-07-10T13:54:24.599Z"
 }
