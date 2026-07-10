@@ -2402,11 +2402,19 @@
           "status": "fail",
           "timestamp": "2026-07-10T13:43:13.370Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Super Freak",
+          "version": "RESIDENT",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-07-10T13:45:38.249Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 51,
-      "totalCount": 99,
+      "currentLevelIndex": 4,
+      "clearCount": 52,
+      "totalCount": 100,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2506,7 +2514,8 @@
         "RESIDENT|Chaotoxin",
         "RESIDENT|儚キ戀ノ幻想譚",
         "RESIDENT|Always We Trust In You",
-        "CastHour|雪上断火"
+        "CastHour|雪上断火",
+        "RESIDENT|Super Freak"
       ],
       "songStatus": [
         [
@@ -3200,6 +3209,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "RESIDENT|Super Freak",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -5788,5 +5804,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:43:13.370Z"
+  "lastUpdated": "2026-07-10T13:45:38.249Z"
 }
