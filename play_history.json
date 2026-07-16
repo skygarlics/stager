@@ -791,11 +791,19 @@
           "status": "clear",
           "timestamp": "2026-03-21T06:59:13.933Z",
           "modeKey": "DP_11"
+        },
+        {
+          "song": "Shiva [A]",
+          "version": "HERO",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-07-16T11:45:22.683Z",
+          "modeKey": "DP_home_11"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 55,
-      "totalCount": 108,
+      "currentLevelIndex": 3,
+      "clearCount": 56,
+      "totalCount": 109,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -897,7 +905,8 @@
         "BIS|Ah Hah Yeah [A]",
         "SIR|G59 [H]",
         "BIS|Explorer feat. ぷにぷに電機 [L]",
-        "DJT|Dazzlin' Darlin [A]"
+        "DJT|Dazzlin' Darlin [A]",
+        "HERO|Shiva [A]"
       ],
       "songStatus": [
         [
@@ -1605,6 +1614,13 @@
           {
             "status": "fail",
             "level": "10.5"
+          }
+        ],
+        [
+          "HERO|Shiva [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
           }
         ]
       ]
@@ -5884,8 +5900,8 @@
   "gameMode": "DP",
   "playEnv": "home",
   "dp": {
-    "offi": 10,
+    "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-16T11:40:27.263Z"
+  "lastUpdated": "2026-07-16T11:45:22.684Z"
 }
