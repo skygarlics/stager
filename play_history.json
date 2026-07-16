@@ -799,11 +799,19 @@
           "status": "clear",
           "timestamp": "2026-07-16T11:45:22.683Z",
           "modeKey": "DP_home_11"
+        },
+        {
+          "song": "Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]",
+          "version": "PC",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-07-16T11:47:57.781Z",
+          "modeKey": "DP_home_11"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 56,
-      "totalCount": 109,
+      "totalCount": 110,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -906,7 +914,8 @@
         "SIR|G59 [H]",
         "BIS|Explorer feat. ぷにぷに電機 [L]",
         "DJT|Dazzlin' Darlin [A]",
-        "HERO|Shiva [A]"
+        "HERO|Shiva [A]",
+        "PC|Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]"
       ],
       "songStatus": [
         [
@@ -1621,6 +1630,13 @@
           {
             "status": "clear",
             "level": "10.7"
+          }
+        ],
+        [
+          "PC|Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
           }
         ]
       ]
@@ -5903,5 +5919,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-16T11:45:22.684Z"
+  "lastUpdated": "2026-07-16T11:47:57.781Z"
 }
