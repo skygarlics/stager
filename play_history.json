@@ -3293,12 +3293,31 @@
       "songStatus": []
     },
     "DP_home_10": {
-      "history": [],
-      "currentLevelIndex": 0,
-      "clearCount": 0,
-      "totalCount": 0,
-      "playedSongs": [],
-      "songStatus": []
+      "history": [
+        {
+          "song": "スパークリング☆彡ハイパーチューン！！ [H]",
+          "version": "PC",
+          "level": "8.5",
+          "status": "clear",
+          "timestamp": "2026-07-16T11:40:27.263Z",
+          "modeKey": "DP_home_10"
+        }
+      ],
+      "currentLevelIndex": 1,
+      "clearCount": 1,
+      "totalCount": 1,
+      "playedSongs": [
+        "PC|スパークリング☆彡ハイパーチューン！！ [H]"
+      ],
+      "songStatus": [
+        [
+          "PC|スパークリング☆彡ハイパーチューン！！ [H]",
+          {
+            "status": "clear",
+            "level": "8.5"
+          }
+        ]
+      ]
     },
     "DP_arcade_10": {
       "history": [
@@ -5862,11 +5881,11 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "playEnv": "home",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-10T13:55:35.552Z"
+  "lastUpdated": "2026-07-16T11:40:27.263Z"
 }
