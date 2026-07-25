@@ -3628,14 +3628,23 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:45:58.419Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "PALETTE [A]",
+          "version": "SS",
+          "level": "9.3",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:46:11.432Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 2,
-      "totalCount": 2,
+      "currentLevelIndex": 3,
+      "clearCount": 3,
+      "totalCount": 3,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
-        "RDT|≡+≡ [H]"
+        "RDT|≡+≡ [H]",
+        "SS|PALETTE [A]"
       ],
       "songStatus": [
         [
@@ -3650,6 +3659,13 @@
           {
             "status": "clear",
             "level": "9.0"
+          }
+        ],
+        [
+          "SS|PALETTE [A]",
+          {
+            "status": "clear",
+            "level": "9.3"
           }
         ]
       ]
@@ -6222,5 +6238,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:45:58.419Z"
+  "lastUpdated": "2026-07-25T07:46:11.432Z"
 }
