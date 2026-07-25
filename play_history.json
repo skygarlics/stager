@@ -3740,11 +3740,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T11:49:21.651Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "ドリムチウ [A]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-07-25T11:52:04.820Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 11,
-      "totalCount": 16,
+      "currentLevelIndex": 7,
+      "clearCount": 12,
+      "totalCount": 17,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3761,7 +3769,8 @@
         "EPO|Bitter & Lucky [A]",
         "PC|Mighty Cutie [A]",
         "SS|Bloom [A]",
-        "SS|好吃来世deエレクトリック [A]"
+        "SS|好吃来世deエレクトリック [A]",
+        "PC|ドリムチウ [A]"
       ],
       "songStatus": [
         [
@@ -3874,6 +3883,13 @@
           {
             "status": "clear",
             "level": "10.2"
+          }
+        ],
+        [
+          "PC|ドリムチウ [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
           }
         ]
       ]
@@ -6446,5 +6462,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:49:21.651Z"
+  "lastUpdated": "2026-07-25T11:52:04.824Z"
 }
