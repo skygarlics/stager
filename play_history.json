@@ -2673,11 +2673,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T13:06:24.120Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Viridian",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-07-25T13:11:07.417Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 63,
-      "totalCount": 123,
+      "totalCount": 124,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2801,7 +2809,8 @@
         "RESIDENT|ちょえちょえまぎか[L]",
         "CastHour|逆月",
         "CastHour|Aftermath",
-        "Sparkle Shower|Astra Blaze"
+        "Sparkle Shower|Astra Blaze",
+        "BISTROVER|Viridian"
       ],
       "songStatus": [
         [
@@ -3663,6 +3672,13 @@
           {
             "status": "clear",
             "level": "D"
+          }
+        ],
+        [
+          "BISTROVER|Viridian",
+          {
+            "status": "fail",
+            "level": "C"
           }
         ]
       ]
@@ -6766,5 +6782,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T13:06:24.120Z"
+  "lastUpdated": "2026-07-25T13:11:07.417Z"
 }
