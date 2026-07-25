@@ -3836,11 +3836,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T12:25:18.121Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Shirdal [A]",
+          "version": "PC",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-07-25T12:30:17.802Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 17,
-      "totalCount": 28,
+      "currentLevelIndex": 7,
+      "clearCount": 18,
+      "totalCount": 29,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3869,7 +3877,8 @@
         "PC|オッド♡ラヴィ [A]",
         "RDT|The Clown of 24stairs [H]",
         "COP|NANAIRO [A]",
-        "RDT|VØID [H]"
+        "RDT|VØID [H]",
+        "PC|Shirdal [A]"
       ],
       "songStatus": [
         [
@@ -4066,6 +4075,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "PC|Shirdal [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
           }
         ]
       ]
@@ -6638,5 +6654,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:25:18.121Z"
+  "lastUpdated": "2026-07-25T12:30:17.802Z"
 }
