@@ -2586,11 +2586,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T07:23:28.537Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "PERFECT GREAT!!",
+          "version": "Sparkle Shower",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-07-25T07:25:48.158Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 62,
-      "totalCount": 118,
+      "totalCount": 119,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2709,7 +2717,8 @@
         "CastHour|Angel's Ladder",
         "Sparkle Shower|UNDO THE NIGHT",
         "Sparkle Shower|HEROES",
-        "Sparkle Shower|色を喪った街"
+        "Sparkle Shower|色を喪った街",
+        "Sparkle Shower|PERFECT GREAT!!"
       ],
       "songStatus": [
         [
@@ -3536,6 +3545,13 @@
           {
             "status": "fail",
             "level": "A+"
+          }
+        ],
+        [
+          "Sparkle Shower|PERFECT GREAT!!",
+          {
+            "status": "fail",
+            "level": "A"
           }
         ]
       ]
@@ -6143,5 +6159,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:23:28.537Z"
+  "lastUpdated": "2026-07-25T07:25:48.158Z"
 }
