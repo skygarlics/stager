@@ -2514,11 +2514,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T06:51:30.861Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "LIVE DRIVING!! feat. 花たん",
+          "version": "CastHour",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-07-25T06:54:32.997Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 56,
-      "totalCount": 109,
+      "currentLevelIndex": 4,
+      "clearCount": 57,
+      "totalCount": 110,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2628,7 +2636,8 @@
         "Sparkle Shower|King of Tribe",
         "EPOLIS|残像ニ繋ガレタ追憶ノHIDEAWAY",
         "EPOLIS|Sirius",
-        "Sparkle Shower|ベンガル vs. アムール Battle"
+        "Sparkle Shower|ベンガル vs. アムール Battle",
+        "CastHour|LIVE DRIVING!! feat. 花たん"
       ],
       "songStatus": [
         [
@@ -3392,6 +3401,13 @@
           {
             "status": "clear",
             "level": "D"
+          }
+        ],
+        [
+          "CastHour|LIVE DRIVING!! feat. 花たん",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -5999,5 +6015,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T06:51:30.861Z"
+  "lastUpdated": "2026-07-25T06:54:32.997Z"
 }
