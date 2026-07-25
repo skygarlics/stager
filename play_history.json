@@ -2546,11 +2546,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T07:04:30.276Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ハイテックトキオ[L]",
+          "version": "CastHour",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:07:29.211Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 58,
-      "totalCount": 113,
+      "currentLevelIndex": 4,
+      "clearCount": 59,
+      "totalCount": 114,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2664,7 +2672,8 @@
         "CastHour|LIVE DRIVING!! feat. 花たん",
         "CastHour|Smalt #28598F",
         "CastHour|禊",
-        "CastHour|One for All"
+        "CastHour|One for All",
+        "CastHour|ハイテックトキオ[L]"
       ],
       "songStatus": [
         [
@@ -3456,6 +3465,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "CastHour|ハイテックトキオ[L]",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -6063,5 +6079,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:04:30.277Z"
+  "lastUpdated": "2026-07-25T07:07:29.211Z"
 }
