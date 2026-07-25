@@ -3812,11 +3812,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T12:17:34.283Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "The Clown of 24stairs [H]",
+          "version": "RDT",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-07-25T12:19:51.810Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 16,
-      "totalCount": 25,
+      "currentLevelIndex": 8,
+      "clearCount": 17,
+      "totalCount": 26,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3842,7 +3850,8 @@
         "EPO|Tripping Jumping [A]",
         "ROOT|CoMAAAAAAA [A]",
         "RDT|楽園追放 [A]",
-        "PC|オッド♡ラヴィ [A]"
+        "PC|オッド♡ラヴィ [A]",
+        "RDT|The Clown of 24stairs [H]"
       ],
       "songStatus": [
         [
@@ -4018,6 +4027,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "RDT|The Clown of 24stairs [H]",
+          {
+            "status": "clear",
+            "level": "10.7"
           }
         ]
       ]
@@ -6590,5 +6606,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:17:34.283Z"
+  "lastUpdated": "2026-07-25T12:19:51.810Z"
 }
