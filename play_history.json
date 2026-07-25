@@ -3692,11 +3692,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T11:38:10.390Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "HyperTwist [H]",
+          "version": "SS",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-07-25T11:40:30.548Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 8,
-      "totalCount": 10,
+      "currentLevelIndex": 7,
+      "clearCount": 9,
+      "totalCount": 11,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3707,7 +3715,8 @@
         "SS|Watermelon Explosion [A]",
         "SS|Makin' It [H]",
         "PC|Skratch Education Lv-1 [H]",
-        "SS|SILKY BRAVE [A]"
+        "SS|SILKY BRAVE [A]",
+        "SS|HyperTwist [H]"
       ],
       "songStatus": [
         [
@@ -3778,6 +3787,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "SS|HyperTwist [H]",
+          {
+            "status": "clear",
+            "level": "10.5"
           }
         ]
       ]
@@ -6350,5 +6366,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:38:10.390Z"
+  "lastUpdated": "2026-07-25T11:40:30.548Z"
 }
