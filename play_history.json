@@ -2641,11 +2641,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T07:25:48.158Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ちょえちょえまぎか[L]",
+          "version": "RESIDENT",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-07-25T12:58:43.688Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 62,
-      "totalCount": 119,
+      "totalCount": 120,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2765,7 +2773,8 @@
         "Sparkle Shower|UNDO THE NIGHT",
         "Sparkle Shower|HEROES",
         "Sparkle Shower|色を喪った街",
-        "Sparkle Shower|PERFECT GREAT!!"
+        "Sparkle Shower|PERFECT GREAT!!",
+        "RESIDENT|ちょえちょえまぎか[L]"
       ],
       "songStatus": [
         [
@@ -3599,6 +3608,13 @@
           {
             "status": "fail",
             "level": "A"
+          }
+        ],
+        [
+          "RESIDENT|ちょえちょえまぎか[L]",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -6696,11 +6712,11 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "DP",
+  "gameMode": "SP",
   "playEnv": "home",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:37:22.890Z"
+  "lastUpdated": "2026-07-25T12:58:43.688Z"
 }
