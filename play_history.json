@@ -2697,11 +2697,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T13:11:22.925Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Triple Cross",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-07-25T13:13:33.943Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 65,
-      "totalCount": 126,
+      "currentLevelIndex": 5,
+      "clearCount": 66,
+      "totalCount": 127,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2828,7 +2836,8 @@
         "Sparkle Shower|Astra Blaze",
         "BISTROVER|Viridian",
         "Sparkle Shower|RIZING-GAMERS.",
-        "BISTROVER|新宝島[L]"
+        "BISTROVER|新宝島[L]",
+        "CastHour|Triple Cross"
       ],
       "songStatus": [
         [
@@ -3711,6 +3720,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "CastHour|Triple Cross",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -6814,5 +6830,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T13:11:22.926Z"
+  "lastUpdated": "2026-07-25T13:13:33.943Z"
 }
