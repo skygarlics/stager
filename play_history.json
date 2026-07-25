@@ -3668,11 +3668,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:53:35.393Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Makin' It [H]",
+          "version": "SS",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-07-25T11:35:29.838Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 7,
-      "totalCount": 7,
+      "currentLevelIndex": 8,
+      "clearCount": 8,
+      "totalCount": 8,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3680,7 +3688,8 @@
         "SS|かわいいだけじゃだめですか？ [A]",
         "SS|Amor∞Fati [H]",
         "SS|COLOR BURST [A]",
-        "SS|Watermelon Explosion [A]"
+        "SS|Watermelon Explosion [A]",
+        "SS|Makin' It [H]"
       ],
       "songStatus": [
         [
@@ -3730,6 +3739,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "SS|Makin' It [H]",
+          {
+            "status": "clear",
+            "level": "10.7"
           }
         ]
       ]
@@ -6302,5 +6318,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:53:35.393Z"
+  "lastUpdated": "2026-07-25T11:35:29.841Z"
 }
