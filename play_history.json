@@ -3732,11 +3732,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T11:47:00.012Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "好吃来世deエレクトリック [A]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "clear",
+          "timestamp": "2026-07-25T11:49:21.651Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 10,
-      "totalCount": 15,
+      "currentLevelIndex": 6,
+      "clearCount": 11,
+      "totalCount": 16,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3752,7 +3760,8 @@
         "PC|XHRONOXAPSULΞ [H]",
         "EPO|Bitter & Lucky [A]",
         "PC|Mighty Cutie [A]",
-        "SS|Bloom [A]"
+        "SS|Bloom [A]",
+        "SS|好吃来世deエレクトリック [A]"
       ],
       "songStatus": [
         [
@@ -3858,6 +3867,13 @@
           {
             "status": "fail",
             "level": "10.5"
+          }
+        ],
+        [
+          "SS|好吃来世deエレクトリック [A]",
+          {
+            "status": "clear",
+            "level": "10.2"
           }
         ]
       ]
@@ -6430,5 +6446,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:47:00.012Z"
+  "lastUpdated": "2026-07-25T11:49:21.651Z"
 }
