@@ -3852,11 +3852,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T12:30:42.316Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Arcana [A]",
+          "version": "COP",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-07-25T12:33:04.969Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 19,
-      "totalCount": 30,
+      "totalCount": 31,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3887,7 +3895,8 @@
         "COP|NANAIRO [A]",
         "RDT|VØID [H]",
         "PC|Shirdal [A]",
-        "CH|Brave Spirits [A]"
+        "CH|Brave Spirits [A]",
+        "COP|Arcana [A]"
       ],
       "songStatus": [
         [
@@ -4098,6 +4107,13 @@
           {
             "status": "clear",
             "level": "10.7"
+          }
+        ],
+        [
+          "COP|Arcana [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
           }
         ]
       ]
@@ -6670,5 +6686,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:30:42.316Z"
+  "lastUpdated": "2026-07-25T12:33:04.969Z"
 }
