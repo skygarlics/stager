@@ -3844,11 +3844,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T12:30:17.802Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Brave Spirits [A]",
+          "version": "CH",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-07-25T12:30:42.316Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 18,
-      "totalCount": 29,
+      "currentLevelIndex": 8,
+      "clearCount": 19,
+      "totalCount": 30,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3878,7 +3886,8 @@
         "RDT|The Clown of 24stairs [H]",
         "COP|NANAIRO [A]",
         "RDT|VØID [H]",
-        "PC|Shirdal [A]"
+        "PC|Shirdal [A]",
+        "CH|Brave Spirits [A]"
       ],
       "songStatus": [
         [
@@ -4082,6 +4091,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "CH|Brave Spirits [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
           }
         ]
       ]
@@ -6654,5 +6670,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:30:17.802Z"
+  "lastUpdated": "2026-07-25T12:30:42.316Z"
 }
