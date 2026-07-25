@@ -3756,11 +3756,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T12:00:06.621Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Somnidiscotheque [H]",
+          "version": "RDT",
+          "level": "11.0",
+          "status": "clear",
+          "timestamp": "2026-07-25T12:04:34.619Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 8,
-      "clearCount": 13,
-      "totalCount": 18,
+      "currentLevelIndex": 9,
+      "clearCount": 14,
+      "totalCount": 19,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3779,7 +3787,8 @@
         "SS|Bloom [A]",
         "SS|好吃来世deエレクトリック [A]",
         "PC|ドリムチウ [A]",
-        "PC|Secret Rouge [A]"
+        "PC|Secret Rouge [A]",
+        "RDT|Somnidiscotheque [H]"
       ],
       "songStatus": [
         [
@@ -3906,6 +3915,13 @@
           {
             "status": "clear",
             "level": "10.7"
+          }
+        ],
+        [
+          "RDT|Somnidiscotheque [H]",
+          {
+            "status": "clear",
+            "level": "11.0"
           }
         ]
       ]
@@ -6478,5 +6494,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:00:06.622Z"
+  "lastUpdated": "2026-07-25T12:04:34.619Z"
 }
