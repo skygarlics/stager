@@ -3780,11 +3780,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T12:06:56.930Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Tripping Jumping [A]",
+          "version": "EPO",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-07-25T12:07:34.853Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 14,
-      "totalCount": 21,
+      "currentLevelIndex": 8,
+      "clearCount": 15,
+      "totalCount": 22,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3806,7 +3814,8 @@
         "PC|Secret Rouge [A]",
         "RDT|Somnidiscotheque [H]",
         "SS|FiZZλ_PØT!0И [H]",
-        "ROOT|50th Memorial Songs -Flagship medley- [A]"
+        "ROOT|50th Memorial Songs -Flagship medley- [A]",
+        "EPO|Tripping Jumping [A]"
       ],
       "songStatus": [
         [
@@ -3954,6 +3963,13 @@
           {
             "status": "fail",
             "level": "11.0"
+          }
+        ],
+        [
+          "EPO|Tripping Jumping [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
           }
         ]
       ]
@@ -6526,5 +6542,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:06:56.931Z"
+  "lastUpdated": "2026-07-25T12:07:34.853Z"
 }
