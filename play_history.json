@@ -3764,11 +3764,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T12:04:34.619Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "FiZZλ_PØT!0И [H]",
+          "version": "SS",
+          "level": "11.2",
+          "status": "fail",
+          "timestamp": "2026-07-25T12:06:54.259Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 9,
+      "currentLevelIndex": 8,
       "clearCount": 14,
-      "totalCount": 19,
+      "totalCount": 20,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3788,7 +3796,8 @@
         "SS|好吃来世deエレクトリック [A]",
         "PC|ドリムチウ [A]",
         "PC|Secret Rouge [A]",
-        "RDT|Somnidiscotheque [H]"
+        "RDT|Somnidiscotheque [H]",
+        "SS|FiZZλ_PØT!0И [H]"
       ],
       "songStatus": [
         [
@@ -3922,6 +3931,13 @@
           {
             "status": "clear",
             "level": "11.0"
+          }
+        ],
+        [
+          "SS|FiZZλ_PØT!0И [H]",
+          {
+            "status": "fail",
+            "level": "11.2"
           }
         ]
       ]
@@ -6494,5 +6510,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:04:34.619Z"
+  "lastUpdated": "2026-07-25T12:06:54.259Z"
 }
