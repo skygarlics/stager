@@ -3748,11 +3748,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T11:52:04.820Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Secret Rouge [A]",
+          "version": "PC",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-07-25T12:00:06.621Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 12,
-      "totalCount": 17,
+      "currentLevelIndex": 8,
+      "clearCount": 13,
+      "totalCount": 18,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3770,7 +3778,8 @@
         "PC|Mighty Cutie [A]",
         "SS|Bloom [A]",
         "SS|好吃来世deエレクトリック [A]",
-        "PC|ドリムチウ [A]"
+        "PC|ドリムチウ [A]",
+        "PC|Secret Rouge [A]"
       ],
       "songStatus": [
         [
@@ -3890,6 +3899,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "PC|Secret Rouge [A]",
+          {
+            "status": "clear",
+            "level": "10.7"
           }
         ]
       ]
@@ -6462,5 +6478,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:52:04.824Z"
+  "lastUpdated": "2026-07-25T12:00:06.622Z"
 }
