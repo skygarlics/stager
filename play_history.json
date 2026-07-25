@@ -2649,11 +2649,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T12:58:43.688Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "逆月",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-25T13:01:18.059Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 62,
-      "totalCount": 120,
+      "totalCount": 121,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2774,7 +2782,8 @@
         "Sparkle Shower|HEROES",
         "Sparkle Shower|色を喪った街",
         "Sparkle Shower|PERFECT GREAT!!",
-        "RESIDENT|ちょえちょえまぎか[L]"
+        "RESIDENT|ちょえちょえまぎか[L]",
+        "CastHour|逆月"
       ],
       "songStatus": [
         [
@@ -3615,6 +3624,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "CastHour|逆月",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -6718,5 +6734,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:58:43.688Z"
+  "lastUpdated": "2026-07-25T13:01:18.060Z"
 }
