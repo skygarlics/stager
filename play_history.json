@@ -3700,11 +3700,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T11:40:30.548Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "XHRONOXAPSULΞ [H]",
+          "version": "PC",
+          "level": "10.7",
+          "status": "clear",
+          "timestamp": "2026-07-25T11:40:49.248Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
-      "clearCount": 9,
-      "totalCount": 11,
+      "currentLevelIndex": 8,
+      "clearCount": 10,
+      "totalCount": 12,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3716,7 +3724,8 @@
         "SS|Makin' It [H]",
         "PC|Skratch Education Lv-1 [H]",
         "SS|SILKY BRAVE [A]",
-        "SS|HyperTwist [H]"
+        "SS|HyperTwist [H]",
+        "PC|XHRONOXAPSULΞ [H]"
       ],
       "songStatus": [
         [
@@ -3794,6 +3803,13 @@
           {
             "status": "clear",
             "level": "10.5"
+          }
+        ],
+        [
+          "PC|XHRONOXAPSULΞ [H]",
+          {
+            "status": "clear",
+            "level": "10.7"
           }
         ]
       ]
@@ -6366,5 +6382,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:40:30.548Z"
+  "lastUpdated": "2026-07-25T11:40:49.248Z"
 }
