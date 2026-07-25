@@ -2554,11 +2554,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:07:29.211Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Angel's Ladder",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:10:33.621Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 59,
-      "totalCount": 114,
+      "currentLevelIndex": 5,
+      "clearCount": 60,
+      "totalCount": 115,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2673,7 +2681,8 @@
         "CastHour|Smalt #28598F",
         "CastHour|禊",
         "CastHour|One for All",
-        "CastHour|ハイテックトキオ[L]"
+        "CastHour|ハイテックトキオ[L]",
+        "CastHour|Angel's Ladder"
       ],
       "songStatus": [
         [
@@ -3472,6 +3481,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "CastHour|Angel's Ladder",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -6079,5 +6095,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:07:29.211Z"
+  "lastUpdated": "2026-07-25T07:10:33.621Z"
 }
