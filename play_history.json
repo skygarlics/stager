@@ -3676,11 +3676,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T11:35:29.838Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Skratch Education Lv-1 [H]",
+          "version": "PC",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-07-25T11:35:31.794Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 8,
-      "totalCount": 8,
+      "totalCount": 9,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3689,7 +3697,8 @@
         "SS|Amor∞Fati [H]",
         "SS|COLOR BURST [A]",
         "SS|Watermelon Explosion [A]",
-        "SS|Makin' It [H]"
+        "SS|Makin' It [H]",
+        "PC|Skratch Education Lv-1 [H]"
       ],
       "songStatus": [
         [
@@ -3746,6 +3755,13 @@
           {
             "status": "clear",
             "level": "10.7"
+          }
+        ],
+        [
+          "PC|Skratch Education Lv-1 [H]",
+          {
+            "status": "fail",
+            "level": "11.0"
           }
         ]
       ]
@@ -6318,5 +6334,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:35:29.841Z"
+  "lastUpdated": "2026-07-25T11:35:31.795Z"
 }
