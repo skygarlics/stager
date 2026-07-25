@@ -3684,11 +3684,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T11:35:31.794Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "SILKY BRAVE [A]",
+          "version": "SS",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-07-25T11:38:10.390Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 8,
-      "totalCount": 9,
+      "totalCount": 10,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3698,7 +3706,8 @@
         "SS|COLOR BURST [A]",
         "SS|Watermelon Explosion [A]",
         "SS|Makin' It [H]",
-        "PC|Skratch Education Lv-1 [H]"
+        "PC|Skratch Education Lv-1 [H]",
+        "SS|SILKY BRAVE [A]"
       ],
       "songStatus": [
         [
@@ -3762,6 +3771,13 @@
           {
             "status": "fail",
             "level": "11.0"
+          }
+        ],
+        [
+          "SS|SILKY BRAVE [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -6334,5 +6350,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:35:31.795Z"
+  "lastUpdated": "2026-07-25T11:38:10.390Z"
 }
