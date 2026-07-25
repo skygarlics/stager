@@ -2522,11 +2522,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T06:54:32.997Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Smalt #28598F",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-25T06:59:11.130Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 57,
-      "totalCount": 110,
+      "totalCount": 111,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2637,7 +2645,8 @@
         "EPOLIS|残像ニ繋ガレタ追憶ノHIDEAWAY",
         "EPOLIS|Sirius",
         "Sparkle Shower|ベンガル vs. アムール Battle",
-        "CastHour|LIVE DRIVING!! feat. 花たん"
+        "CastHour|LIVE DRIVING!! feat. 花たん",
+        "CastHour|Smalt #28598F"
       ],
       "songStatus": [
         [
@@ -3408,6 +3417,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "CastHour|Smalt #28598F",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -6015,5 +6031,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T06:54:32.997Z"
+  "lastUpdated": "2026-07-25T06:59:11.130Z"
 }
