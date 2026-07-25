@@ -807,11 +807,19 @@
           "status": "fail",
           "timestamp": "2026-07-16T11:47:57.781Z",
           "modeKey": "DP_home_11"
+        },
+        {
+          "song": "Amor De Verão [A]",
+          "version": "CB",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-07-25T07:28:07.994Z",
+          "modeKey": "DP_home_11"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 56,
-      "totalCount": 110,
+      "totalCount": 111,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -915,7 +923,8 @@
         "BIS|Explorer feat. ぷにぷに電機 [L]",
         "DJT|Dazzlin' Darlin [A]",
         "HERO|Shiva [A]",
-        "PC|Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]"
+        "PC|Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]",
+        "CB|Amor De Verão [A]"
       ],
       "songStatus": [
         [
@@ -1637,6 +1646,13 @@
           {
             "status": "fail",
             "level": "11.0"
+          }
+        ],
+        [
+          "CB|Amor De Verão [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -6153,11 +6169,11 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "SP",
+  "gameMode": "DP",
   "playEnv": "home",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:25:48.158Z"
+  "lastUpdated": "2026-07-25T07:28:07.994Z"
 }
