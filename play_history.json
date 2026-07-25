@@ -3796,11 +3796,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T12:15:12.289Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "楽園追放 [A]",
+          "version": "RDT",
+          "level": "10.7",
+          "status": "fail",
+          "timestamp": "2026-07-25T12:17:32.322Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 15,
-      "totalCount": 23,
+      "totalCount": 24,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3824,7 +3832,8 @@
         "SS|FiZZλ_PØT!0И [H]",
         "ROOT|50th Memorial Songs -Flagship medley- [A]",
         "EPO|Tripping Jumping [A]",
-        "ROOT|CoMAAAAAAA [A]"
+        "ROOT|CoMAAAAAAA [A]",
+        "RDT|楽園追放 [A]"
       ],
       "songStatus": [
         [
@@ -3986,6 +3995,13 @@
           {
             "status": "fail",
             "level": "11.0"
+          }
+        ],
+        [
+          "RDT|楽園追放 [A]",
+          {
+            "status": "fail",
+            "level": "10.7"
           }
         ]
       ]
@@ -6558,5 +6574,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:15:12.292Z"
+  "lastUpdated": "2026-07-25T12:17:32.323Z"
 }
