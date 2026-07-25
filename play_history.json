@@ -3660,18 +3660,27 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:51:29.574Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Watermelon Explosion [A]",
+          "version": "SS",
+          "level": "10.5",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:53:35.393Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 6,
-      "totalCount": 6,
+      "currentLevelIndex": 7,
+      "clearCount": 7,
+      "totalCount": 7,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
         "SS|PALETTE [A]",
         "SS|かわいいだけじゃだめですか？ [A]",
         "SS|Amor∞Fati [H]",
-        "SS|COLOR BURST [A]"
+        "SS|COLOR BURST [A]",
+        "SS|Watermelon Explosion [A]"
       ],
       "songStatus": [
         [
@@ -3714,6 +3723,13 @@
           {
             "status": "clear",
             "level": "10.2"
+          }
+        ],
+        [
+          "SS|Watermelon Explosion [A]",
+          {
+            "status": "clear",
+            "level": "10.5"
           }
         ]
       ]
@@ -6286,5 +6302,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:51:29.574Z"
+  "lastUpdated": "2026-07-25T07:53:35.393Z"
 }
