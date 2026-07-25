@@ -2570,11 +2570,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:13:22.059Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "HEROES",
+          "version": "Sparkle Shower",
+          "level": "A",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:16:03.681Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 61,
-      "totalCount": 116,
+      "currentLevelIndex": 7,
+      "clearCount": 62,
+      "totalCount": 117,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2691,7 +2699,8 @@
         "CastHour|One for All",
         "CastHour|ハイテックトキオ[L]",
         "CastHour|Angel's Ladder",
-        "Sparkle Shower|UNDO THE NIGHT"
+        "Sparkle Shower|UNDO THE NIGHT",
+        "Sparkle Shower|HEROES"
       ],
       "songStatus": [
         [
@@ -3504,6 +3513,13 @@
           {
             "status": "clear",
             "level": "B+"
+          }
+        ],
+        [
+          "Sparkle Shower|HEROES",
+          {
+            "status": "clear",
+            "level": "A"
           }
         ]
       ]
@@ -6111,5 +6127,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:13:22.059Z"
+  "lastUpdated": "2026-07-25T07:16:03.681Z"
 }
