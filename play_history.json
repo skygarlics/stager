@@ -941,8 +941,7 @@
         "HERO|Shiva [A]",
         "PC|Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]",
         "CB|Amor De Verão [A]",
-        "GOLD|CaptivAte～誓い～ [A]",
-        "SS|ACID VISION [A]"
+        "GOLD|CaptivAte～誓い～ [A]"
       ],
       "songStatus": [
         [
@@ -3621,13 +3620,22 @@
           "status": "clear",
           "timestamp": "2026-07-16T11:40:27.263Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "≡+≡ [H]",
+          "version": "RDT",
+          "level": "9.0",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:45:58.419Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 1,
-      "totalCount": 1,
+      "currentLevelIndex": 2,
+      "clearCount": 2,
+      "totalCount": 2,
       "playedSongs": [
-        "PC|スパークリング☆彡ハイパーチューン！！ [H]"
+        "PC|スパークリング☆彡ハイパーチューン！！ [H]",
+        "RDT|≡+≡ [H]"
       ],
       "songStatus": [
         [
@@ -3635,6 +3643,13 @@
           {
             "status": "clear",
             "level": "8.5"
+          }
+        ],
+        [
+          "RDT|≡+≡ [H]",
+          {
+            "status": "clear",
+            "level": "9.0"
           }
         ]
       ]
@@ -6204,8 +6219,8 @@
   "gameMode": "DP",
   "playEnv": "home",
   "dp": {
-    "offi": 11,
+    "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:45:48.518Z"
+  "lastUpdated": "2026-07-25T07:45:58.419Z"
 }
