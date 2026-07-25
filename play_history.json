@@ -2506,11 +2506,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T06:49:08.163Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ベンガル vs. アムール Battle",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-07-25T06:51:30.861Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 55,
-      "totalCount": 108,
+      "currentLevelIndex": 3,
+      "clearCount": 56,
+      "totalCount": 109,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2619,7 +2627,8 @@
         "Sparkle Shower|HyperTwist",
         "Sparkle Shower|King of Tribe",
         "EPOLIS|残像ニ繋ガレタ追憶ノHIDEAWAY",
-        "EPOLIS|Sirius"
+        "EPOLIS|Sirius",
+        "Sparkle Shower|ベンガル vs. アムール Battle"
       ],
       "songStatus": [
         [
@@ -3376,6 +3385,13 @@
           {
             "status": "clear",
             "level": "E"
+          }
+        ],
+        [
+          "Sparkle Shower|ベンガル vs. アムール Battle",
+          {
+            "status": "clear",
+            "level": "D"
           }
         ]
       ]
@@ -5983,5 +5999,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T06:49:08.163Z"
+  "lastUpdated": "2026-07-25T06:51:30.861Z"
 }
