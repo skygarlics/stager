@@ -3708,11 +3708,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T11:40:49.248Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Bitter & Lucky [A]",
+          "version": "EPO",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-07-25T11:43:19.968Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 10,
-      "totalCount": 12,
+      "totalCount": 13,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3725,7 +3733,8 @@
         "PC|Skratch Education Lv-1 [H]",
         "SS|SILKY BRAVE [A]",
         "SS|HyperTwist [H]",
-        "PC|XHRONOXAPSULΞ [H]"
+        "PC|XHRONOXAPSULΞ [H]",
+        "EPO|Bitter & Lucky [A]"
       ],
       "songStatus": [
         [
@@ -3810,6 +3819,13 @@
           {
             "status": "clear",
             "level": "10.7"
+          }
+        ],
+        [
+          "EPO|Bitter & Lucky [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
           }
         ]
       ]
@@ -6382,5 +6398,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:40:49.248Z"
+  "lastUpdated": "2026-07-25T11:43:19.968Z"
 }
