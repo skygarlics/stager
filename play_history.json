@@ -3724,11 +3724,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T11:46:33.924Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Bloom [A]",
+          "version": "SS",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-07-25T11:47:00.012Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 10,
-      "totalCount": 14,
+      "totalCount": 15,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3743,7 +3751,8 @@
         "SS|HyperTwist [H]",
         "PC|XHRONOXAPSULΞ [H]",
         "EPO|Bitter & Lucky [A]",
-        "PC|Mighty Cutie [A]"
+        "PC|Mighty Cutie [A]",
+        "SS|Bloom [A]"
       ],
       "songStatus": [
         [
@@ -3842,6 +3851,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "SS|Bloom [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
           }
         ]
       ]
@@ -6414,5 +6430,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T11:46:33.924Z"
+  "lastUpdated": "2026-07-25T11:47:00.012Z"
 }
