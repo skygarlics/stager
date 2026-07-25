@@ -2689,11 +2689,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T13:11:20.279Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "新宝島[L]",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-07-25T13:11:22.925Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 64,
-      "totalCount": 125,
+      "currentLevelIndex": 4,
+      "clearCount": 65,
+      "totalCount": 126,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2819,7 +2827,8 @@
         "CastHour|Aftermath",
         "Sparkle Shower|Astra Blaze",
         "BISTROVER|Viridian",
-        "Sparkle Shower|RIZING-GAMERS."
+        "Sparkle Shower|RIZING-GAMERS.",
+        "BISTROVER|新宝島[L]"
       ],
       "songStatus": [
         [
@@ -3695,6 +3704,13 @@
           {
             "status": "clear",
             "level": "D"
+          }
+        ],
+        [
+          "BISTROVER|新宝島[L]",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -6798,5 +6814,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T13:11:20.279Z"
+  "lastUpdated": "2026-07-25T13:11:22.926Z"
 }
