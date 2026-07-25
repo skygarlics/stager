@@ -2681,11 +2681,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T13:11:07.417Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "RIZING-GAMERS.",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-07-25T13:11:20.279Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 63,
-      "totalCount": 124,
+      "currentLevelIndex": 3,
+      "clearCount": 64,
+      "totalCount": 125,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2810,7 +2818,8 @@
         "CastHour|逆月",
         "CastHour|Aftermath",
         "Sparkle Shower|Astra Blaze",
-        "BISTROVER|Viridian"
+        "BISTROVER|Viridian",
+        "Sparkle Shower|RIZING-GAMERS."
       ],
       "songStatus": [
         [
@@ -3679,6 +3688,13 @@
           {
             "status": "fail",
             "level": "C"
+          }
+        ],
+        [
+          "Sparkle Shower|RIZING-GAMERS.",
+          {
+            "status": "clear",
+            "level": "D"
           }
         ]
       ]
@@ -6782,5 +6798,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T13:11:07.417Z"
+  "lastUpdated": "2026-07-25T13:11:20.279Z"
 }
