@@ -3820,11 +3820,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T12:19:51.810Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "NANAIRO [A]",
+          "version": "COP",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-07-25T12:22:45.870Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 17,
-      "totalCount": 26,
+      "totalCount": 27,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3851,7 +3859,8 @@
         "ROOT|CoMAAAAAAA [A]",
         "RDT|楽園追放 [A]",
         "PC|オッド♡ラヴィ [A]",
-        "RDT|The Clown of 24stairs [H]"
+        "RDT|The Clown of 24stairs [H]",
+        "COP|NANAIRO [A]"
       ],
       "songStatus": [
         [
@@ -4034,6 +4043,13 @@
           {
             "status": "clear",
             "level": "10.7"
+          }
+        ],
+        [
+          "COP|NANAIRO [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
           }
         ]
       ]
@@ -6606,5 +6622,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:19:51.810Z"
+  "lastUpdated": "2026-07-25T12:22:45.872Z"
 }
