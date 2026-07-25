@@ -815,11 +815,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T07:28:07.994Z",
           "modeKey": "DP_home_11"
+        },
+        {
+          "song": "CaptivAte～誓い～ [A]",
+          "version": "GOLD",
+          "level": "10.5",
+          "status": "fail",
+          "timestamp": "2026-07-25T07:43:11.452Z",
+          "modeKey": "DP_home_11"
         }
       ],
-      "currentLevelIndex": 1,
+      "currentLevelIndex": 0,
       "clearCount": 56,
-      "totalCount": 111,
+      "totalCount": 112,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -924,7 +932,8 @@
         "DJT|Dazzlin' Darlin [A]",
         "HERO|Shiva [A]",
         "PC|Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]",
-        "CB|Amor De Verão [A]"
+        "CB|Amor De Verão [A]",
+        "GOLD|CaptivAte～誓い～ [A]"
       ],
       "songStatus": [
         [
@@ -1653,6 +1662,13 @@
           {
             "status": "fail",
             "level": "10.7"
+          }
+        ],
+        [
+          "GOLD|CaptivAte～誓い～ [A]",
+          {
+            "status": "fail",
+            "level": "10.5"
           }
         ]
       ]
@@ -6175,5 +6191,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:28:07.994Z"
+  "lastUpdated": "2026-07-25T07:43:11.453Z"
 }
