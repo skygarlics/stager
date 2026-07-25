@@ -2482,11 +2482,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T06:43:50.817Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "King of Tribe",
+          "version": "Sparkle Shower",
+          "level": "E",
+          "status": "fail",
+          "timestamp": "2026-07-25T06:46:11.534Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 1,
+      "currentLevelIndex": 0,
       "clearCount": 53,
-      "totalCount": 105,
+      "totalCount": 106,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2592,7 +2600,8 @@
         "Sparkle Shower|BitRacer",
         "CastHour|Flying Castle",
         "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～",
-        "Sparkle Shower|HyperTwist"
+        "Sparkle Shower|HyperTwist",
+        "Sparkle Shower|King of Tribe"
       ],
       "songStatus": [
         [
@@ -3328,6 +3337,13 @@
           {
             "status": "fail",
             "level": "D"
+          }
+        ],
+        [
+          "Sparkle Shower|King of Tribe",
+          {
+            "status": "fail",
+            "level": "E"
           }
         ]
       ]
@@ -5935,5 +5951,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T06:43:50.818Z"
+  "lastUpdated": "2026-07-25T06:46:11.535Z"
 }
