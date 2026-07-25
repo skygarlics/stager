@@ -2562,11 +2562,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:10:33.621Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "UNDO THE NIGHT",
+          "version": "Sparkle Shower",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:13:22.059Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 60,
-      "totalCount": 115,
+      "currentLevelIndex": 6,
+      "clearCount": 61,
+      "totalCount": 116,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2682,7 +2690,8 @@
         "CastHour|禊",
         "CastHour|One for All",
         "CastHour|ハイテックトキオ[L]",
-        "CastHour|Angel's Ladder"
+        "CastHour|Angel's Ladder",
+        "Sparkle Shower|UNDO THE NIGHT"
       ],
       "songStatus": [
         [
@@ -3488,6 +3497,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "Sparkle Shower|UNDO THE NIGHT",
+          {
+            "status": "clear",
+            "level": "B+"
           }
         ]
       ]
@@ -6095,5 +6111,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:10:33.621Z"
+  "lastUpdated": "2026-07-25T07:13:22.059Z"
 }
