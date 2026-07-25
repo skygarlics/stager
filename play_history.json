@@ -3772,11 +3772,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T12:06:54.259Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "50th Memorial Songs -Flagship medley- [A]",
+          "version": "ROOT",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-07-25T12:06:56.930Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 14,
-      "totalCount": 20,
+      "totalCount": 21,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3797,7 +3805,8 @@
         "PC|ドリムチウ [A]",
         "PC|Secret Rouge [A]",
         "RDT|Somnidiscotheque [H]",
-        "SS|FiZZλ_PØT!0И [H]"
+        "SS|FiZZλ_PØT!0И [H]",
+        "ROOT|50th Memorial Songs -Flagship medley- [A]"
       ],
       "songStatus": [
         [
@@ -3938,6 +3947,13 @@
           {
             "status": "fail",
             "level": "11.2"
+          }
+        ],
+        [
+          "ROOT|50th Memorial Songs -Flagship medley- [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
           }
         ]
       ]
@@ -6510,5 +6526,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:06:54.259Z"
+  "lastUpdated": "2026-07-25T12:06:56.931Z"
 }
