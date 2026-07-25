@@ -3788,11 +3788,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T12:07:34.853Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "CoMAAAAAAA [A]",
+          "version": "ROOT",
+          "level": "11.0",
+          "status": "fail",
+          "timestamp": "2026-07-25T12:15:12.289Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 8,
+      "currentLevelIndex": 7,
       "clearCount": 15,
-      "totalCount": 22,
+      "totalCount": 23,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
@@ -3815,7 +3823,8 @@
         "RDT|Somnidiscotheque [H]",
         "SS|FiZZλ_PØT!0И [H]",
         "ROOT|50th Memorial Songs -Flagship medley- [A]",
-        "EPO|Tripping Jumping [A]"
+        "EPO|Tripping Jumping [A]",
+        "ROOT|CoMAAAAAAA [A]"
       ],
       "songStatus": [
         [
@@ -3970,6 +3979,13 @@
           {
             "status": "clear",
             "level": "10.7"
+          }
+        ],
+        [
+          "ROOT|CoMAAAAAAA [A]",
+          {
+            "status": "fail",
+            "level": "11.0"
           }
         ]
       ]
@@ -6542,5 +6558,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T12:07:34.853Z"
+  "lastUpdated": "2026-07-25T12:15:12.292Z"
 }
