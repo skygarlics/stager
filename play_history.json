@@ -2578,11 +2578,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:16:03.681Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "色を喪った街",
+          "version": "Sparkle Shower",
+          "level": "A+",
+          "status": "fail",
+          "timestamp": "2026-07-25T07:23:28.537Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 62,
-      "totalCount": 117,
+      "totalCount": 118,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2700,7 +2708,8 @@
         "CastHour|ハイテックトキオ[L]",
         "CastHour|Angel's Ladder",
         "Sparkle Shower|UNDO THE NIGHT",
-        "Sparkle Shower|HEROES"
+        "Sparkle Shower|HEROES",
+        "Sparkle Shower|色を喪った街"
       ],
       "songStatus": [
         [
@@ -3520,6 +3529,13 @@
           {
             "status": "clear",
             "level": "A"
+          }
+        ],
+        [
+          "Sparkle Shower|色を喪った街",
+          {
+            "status": "fail",
+            "level": "A+"
           }
         ]
       ]
@@ -6127,5 +6143,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:16:03.681Z"
+  "lastUpdated": "2026-07-25T07:23:28.537Z"
 }
