@@ -3644,16 +3644,25 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:46:14.179Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "Amor∞Fati [H]",
+          "version": "SS",
+          "level": "10.0",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:48:57.233Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 4,
-      "totalCount": 4,
+      "currentLevelIndex": 5,
+      "clearCount": 5,
+      "totalCount": 5,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
         "SS|PALETTE [A]",
-        "SS|かわいいだけじゃだめですか？ [A]"
+        "SS|かわいいだけじゃだめですか？ [A]",
+        "SS|Amor∞Fati [H]"
       ],
       "songStatus": [
         [
@@ -3682,6 +3691,13 @@
           {
             "status": "clear",
             "level": "9.6"
+          }
+        ],
+        [
+          "SS|Amor∞Fati [H]",
+          {
+            "status": "clear",
+            "level": "10.0"
           }
         ]
       ]
@@ -6254,5 +6270,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:46:14.179Z"
+  "lastUpdated": "2026-07-25T07:48:57.233Z"
 }
