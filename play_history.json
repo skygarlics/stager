@@ -3636,15 +3636,24 @@
           "status": "clear",
           "timestamp": "2026-07-25T07:46:11.432Z",
           "modeKey": "DP_home_10"
+        },
+        {
+          "song": "かわいいだけじゃだめですか？ [A]",
+          "version": "SS",
+          "level": "9.6",
+          "status": "clear",
+          "timestamp": "2026-07-25T07:46:14.179Z",
+          "modeKey": "DP_home_10"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 3,
-      "totalCount": 3,
+      "currentLevelIndex": 4,
+      "clearCount": 4,
+      "totalCount": 4,
       "playedSongs": [
         "PC|スパークリング☆彡ハイパーチューン！！ [H]",
         "RDT|≡+≡ [H]",
-        "SS|PALETTE [A]"
+        "SS|PALETTE [A]",
+        "SS|かわいいだけじゃだめですか？ [A]"
       ],
       "songStatus": [
         [
@@ -3666,6 +3675,13 @@
           {
             "status": "clear",
             "level": "9.3"
+          }
+        ],
+        [
+          "SS|かわいいだけじゃだめですか？ [A]",
+          {
+            "status": "clear",
+            "level": "9.6"
           }
         ]
       ]
@@ -6238,5 +6254,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:46:11.432Z"
+  "lastUpdated": "2026-07-25T07:46:14.179Z"
 }
