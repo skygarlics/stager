@@ -2538,11 +2538,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T06:59:15.189Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "One for All",
+          "version": "CastHour",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-07-25T07:04:30.276Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 58,
-      "totalCount": 112,
+      "totalCount": 113,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2655,7 +2663,8 @@
         "Sparkle Shower|ベンガル vs. アムール Battle",
         "CastHour|LIVE DRIVING!! feat. 花たん",
         "CastHour|Smalt #28598F",
-        "CastHour|禊"
+        "CastHour|禊",
+        "CastHour|One for All"
       ],
       "songStatus": [
         [
@@ -3440,6 +3449,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "CastHour|One for All",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -6047,5 +6063,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T06:59:15.192Z"
+  "lastUpdated": "2026-07-25T07:04:30.277Z"
 }
