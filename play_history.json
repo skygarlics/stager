@@ -2474,11 +2474,19 @@
           "status": "fail",
           "timestamp": "2026-07-10T13:55:35.552Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "HyperTwist",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "fail",
+          "timestamp": "2026-07-25T06:43:50.817Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
+      "currentLevelIndex": 1,
       "clearCount": 53,
-      "totalCount": 104,
+      "totalCount": 105,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2583,7 +2591,8 @@
         "Sparkle Shower|ラブコメトキドキシリアス",
         "Sparkle Shower|BitRacer",
         "CastHour|Flying Castle",
-        "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～"
+        "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～",
+        "Sparkle Shower|HyperTwist"
       ],
       "songStatus": [
         [
@@ -3312,6 +3321,13 @@
           {
             "status": "fail",
             "level": "C"
+          }
+        ],
+        [
+          "Sparkle Shower|HyperTwist",
+          {
+            "status": "fail",
+            "level": "D"
           }
         ]
       ]
@@ -5913,11 +5929,11 @@
     }
   },
   "mode": "ノマゲ",
-  "gameMode": "DP",
+  "gameMode": "SP",
   "playEnv": "home",
   "dp": {
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-16T11:47:57.781Z"
+  "lastUpdated": "2026-07-25T06:43:50.818Z"
 }
