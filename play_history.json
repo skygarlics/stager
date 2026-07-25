@@ -823,11 +823,19 @@
           "status": "fail",
           "timestamp": "2026-07-25T07:43:11.452Z",
           "modeKey": "DP_home_11"
+        },
+        {
+          "song": "ACID VISION [A]",
+          "version": "SS",
+          "level": "10.2",
+          "status": "fail",
+          "timestamp": "2026-07-25T07:45:48.518Z",
+          "modeKey": "DP_home_11"
         }
       ],
       "currentLevelIndex": 0,
       "clearCount": 56,
-      "totalCount": 112,
+      "totalCount": 113,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -933,7 +941,8 @@
         "HERO|Shiva [A]",
         "PC|Stargazing Trip ～星 探す旅～ ft. 小林マナ [A]",
         "CB|Amor De Verão [A]",
-        "GOLD|CaptivAte～誓い～ [A]"
+        "GOLD|CaptivAte～誓い～ [A]",
+        "SS|ACID VISION [A]"
       ],
       "songStatus": [
         [
@@ -1669,6 +1678,13 @@
           {
             "status": "fail",
             "level": "10.5"
+          }
+        ],
+        [
+          "SS|ACID VISION [A]",
+          {
+            "status": "fail",
+            "level": "10.2"
           }
         ]
       ]
@@ -6191,5 +6207,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T07:43:11.453Z"
+  "lastUpdated": "2026-07-25T07:45:48.518Z"
 }
