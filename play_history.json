@@ -2498,11 +2498,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T06:46:30.434Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Sirius",
+          "version": "EPOLIS",
+          "level": "E",
+          "status": "clear",
+          "timestamp": "2026-07-25T06:49:08.163Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 1,
-      "clearCount": 54,
-      "totalCount": 107,
+      "currentLevelIndex": 2,
+      "clearCount": 55,
+      "totalCount": 108,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2610,7 +2618,8 @@
         "CastHour|Push on Beats!～音ゲの国のeX-ストリーマー～",
         "Sparkle Shower|HyperTwist",
         "Sparkle Shower|King of Tribe",
-        "EPOLIS|残像ニ繋ガレタ追憶ノHIDEAWAY"
+        "EPOLIS|残像ニ繋ガレタ追憶ノHIDEAWAY",
+        "EPOLIS|Sirius"
       ],
       "songStatus": [
         [
@@ -3360,6 +3369,13 @@
           {
             "status": "clear",
             "level": "F"
+          }
+        ],
+        [
+          "EPOLIS|Sirius",
+          {
+            "status": "clear",
+            "level": "E"
           }
         ]
       ]
@@ -5967,5 +5983,5 @@
     "offi": 11,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T06:46:30.435Z"
+  "lastUpdated": "2026-07-25T06:49:08.163Z"
 }
