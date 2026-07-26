@@ -2721,11 +2721,19 @@
           "status": "clear",
           "timestamp": "2026-07-26T05:45:03.586Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "GRAVITON",
+          "version": "CastHour",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-07-26T12:51:40.920Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 67,
-      "totalCount": 129,
+      "currentLevelIndex": 6,
+      "clearCount": 68,
+      "totalCount": 130,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2855,7 +2863,8 @@
         "BISTROVER|新宝島[L]",
         "CastHour|Triple Cross",
         "CastHour|ミュージック・アワー[L]",
-        "CastHour|Arkadia"
+        "CastHour|Arkadia",
+        "CastHour|GRAVITON"
       ],
       "songStatus": [
         [
@@ -3759,6 +3768,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "CastHour|GRAVITON",
+          {
+            "status": "clear",
+            "level": "B+"
           }
         ]
       ]
@@ -6862,5 +6878,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-26T05:45:03.587Z"
+  "lastUpdated": "2026-07-26T12:51:40.920Z"
 }
