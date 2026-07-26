@@ -2729,11 +2729,19 @@
           "status": "clear",
           "timestamp": "2026-07-26T12:51:40.920Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "2 Beasts Unchained",
+          "version": "CastHour",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-07-26T12:54:07.789Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 68,
-      "totalCount": 130,
+      "totalCount": 131,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2864,7 +2872,8 @@
         "CastHour|Triple Cross",
         "CastHour|ミュージック・アワー[L]",
         "CastHour|Arkadia",
-        "CastHour|GRAVITON"
+        "CastHour|GRAVITON",
+        "CastHour|2 Beasts Unchained"
       ],
       "songStatus": [
         [
@@ -3775,6 +3784,13 @@
           {
             "status": "clear",
             "level": "B+"
+          }
+        ],
+        [
+          "CastHour|2 Beasts Unchained",
+          {
+            "status": "fail",
+            "level": "A"
           }
         ]
       ]
@@ -6878,5 +6894,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-26T12:51:40.920Z"
+  "lastUpdated": "2026-07-26T12:54:07.790Z"
 }
