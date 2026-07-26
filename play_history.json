@@ -2713,11 +2713,19 @@
           "status": "fail",
           "timestamp": "2026-07-26T05:34:43.074Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Arkadia",
+          "version": "CastHour",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-07-26T05:45:03.586Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 66,
-      "totalCount": 128,
+      "currentLevelIndex": 5,
+      "clearCount": 67,
+      "totalCount": 129,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2846,7 +2854,8 @@
         "Sparkle Shower|RIZING-GAMERS.",
         "BISTROVER|新宝島[L]",
         "CastHour|Triple Cross",
-        "CastHour|ミュージック・アワー[L]"
+        "CastHour|ミュージック・アワー[L]",
+        "CastHour|Arkadia"
       ],
       "songStatus": [
         [
@@ -3743,6 +3752,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "CastHour|Arkadia",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -6846,5 +6862,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-26T05:34:43.074Z"
+  "lastUpdated": "2026-07-26T05:45:03.587Z"
 }
