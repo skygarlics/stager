@@ -2705,11 +2705,19 @@
           "status": "clear",
           "timestamp": "2026-07-25T13:13:33.943Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ミュージック・アワー[L]",
+          "version": "CastHour",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-07-26T05:34:43.074Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 66,
-      "totalCount": 127,
+      "totalCount": 128,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2837,7 +2845,8 @@
         "BISTROVER|Viridian",
         "Sparkle Shower|RIZING-GAMERS.",
         "BISTROVER|新宝島[L]",
-        "CastHour|Triple Cross"
+        "CastHour|Triple Cross",
+        "CastHour|ミュージック・アワー[L]"
       ],
       "songStatus": [
         [
@@ -3727,6 +3736,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "CastHour|ミュージック・アワー[L]",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -6830,5 +6846,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-25T13:13:33.943Z"
+  "lastUpdated": "2026-07-26T05:34:43.074Z"
 }
