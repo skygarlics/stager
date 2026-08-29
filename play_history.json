@@ -2737,11 +2737,19 @@
           "status": "fail",
           "timestamp": "2026-07-26T12:54:07.789Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
+          "version": "CastHour",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-08-29T11:58:18.442Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 68,
-      "totalCount": 131,
+      "totalCount": 132,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2873,7 +2881,8 @@
         "CastHour|ミュージック・アワー[L]",
         "CastHour|Arkadia",
         "CastHour|GRAVITON",
-        "CastHour|2 Beasts Unchained"
+        "CastHour|2 Beasts Unchained",
+        "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec."
       ],
       "songStatus": [
         [
@@ -3791,6 +3800,13 @@
           {
             "status": "fail",
             "level": "A"
+          }
+        ],
+        [
+          "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -6894,5 +6910,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-07-26T12:54:07.790Z"
+  "lastUpdated": "2026-08-29T11:58:18.443Z"
 }
