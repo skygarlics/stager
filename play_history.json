@@ -2753,11 +2753,19 @@
           "status": "clear",
           "timestamp": "2026-09-04T12:58:54.777Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Empire of Fury",
+          "version": "BISTROVER",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-09-04T13:01:14.133Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 69,
-      "totalCount": 133,
+      "totalCount": 134,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2891,7 +2899,8 @@
         "CastHour|GRAVITON",
         "CastHour|2 Beasts Unchained",
         "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
-        "BISTROVER|DUAL STRIKER"
+        "BISTROVER|DUAL STRIKER",
+        "BISTROVER|Empire of Fury"
       ],
       "songStatus": [
         [
@@ -3823,6 +3832,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "BISTROVER|Empire of Fury",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -6926,5 +6942,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-04T12:58:54.778Z"
+  "lastUpdated": "2026-09-04T13:01:14.133Z"
 }
