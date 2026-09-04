@@ -2785,11 +2785,19 @@
           "status": "fail",
           "timestamp": "2026-09-04T13:09:11.838Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ORCA",
+          "version": "HEROIC VERSE",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-09-04T13:11:34.352Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 71,
-      "totalCount": 137,
+      "totalCount": 138,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2927,7 +2935,8 @@
         "BISTROVER|Empire of Fury",
         "BISTROVER|Vitrum",
         "BISTROVER|水鏡の異界",
-        "CastHour|Purple Perplex"
+        "CastHour|Purple Perplex",
+        "HEROIC VERSE|ORCA"
       ],
       "songStatus": [
         [
@@ -3887,6 +3896,13 @@
           {
             "status": "fail",
             "level": "A"
+          }
+        ],
+        [
+          "HEROIC VERSE|ORCA",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -6990,5 +7006,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-04T13:09:11.840Z"
+  "lastUpdated": "2026-09-04T13:11:34.354Z"
 }
