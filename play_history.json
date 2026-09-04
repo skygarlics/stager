@@ -2761,11 +2761,19 @@
           "status": "fail",
           "timestamp": "2026-09-04T13:01:14.133Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Vitrum",
+          "version": "BISTROVER",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-09-04T13:04:07.994Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 69,
-      "totalCount": 134,
+      "currentLevelIndex": 5,
+      "clearCount": 70,
+      "totalCount": 135,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2900,7 +2908,8 @@
         "CastHour|2 Beasts Unchained",
         "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
         "BISTROVER|DUAL STRIKER",
-        "BISTROVER|Empire of Fury"
+        "BISTROVER|Empire of Fury",
+        "BISTROVER|Vitrum"
       ],
       "songStatus": [
         [
@@ -3839,6 +3848,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "BISTROVER|Vitrum",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -6942,5 +6958,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-04T13:01:14.133Z"
+  "lastUpdated": "2026-09-04T13:04:07.995Z"
 }
