@@ -2769,11 +2769,19 @@
           "status": "clear",
           "timestamp": "2026-09-04T13:04:07.994Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "水鏡の異界",
+          "version": "BISTROVER",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-09-04T13:06:32.493Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 70,
-      "totalCount": 135,
+      "currentLevelIndex": 6,
+      "clearCount": 71,
+      "totalCount": 136,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2909,7 +2917,8 @@
         "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
         "BISTROVER|DUAL STRIKER",
         "BISTROVER|Empire of Fury",
-        "BISTROVER|Vitrum"
+        "BISTROVER|Vitrum",
+        "BISTROVER|水鏡の異界"
       ],
       "songStatus": [
         [
@@ -3855,6 +3864,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "BISTROVER|水鏡の異界",
+          {
+            "status": "clear",
+            "level": "B+"
           }
         ]
       ]
@@ -6958,5 +6974,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-04T13:04:07.995Z"
+  "lastUpdated": "2026-09-04T13:06:32.493Z"
 }
