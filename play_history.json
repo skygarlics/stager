@@ -2745,11 +2745,19 @@
           "status": "fail",
           "timestamp": "2026-08-29T11:58:18.442Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "DUAL STRIKER",
+          "version": "BISTROVER",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-09-04T12:58:54.777Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 68,
-      "totalCount": 132,
+      "currentLevelIndex": 5,
+      "clearCount": 69,
+      "totalCount": 133,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2882,7 +2890,8 @@
         "CastHour|Arkadia",
         "CastHour|GRAVITON",
         "CastHour|2 Beasts Unchained",
-        "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec."
+        "CastHour|PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
+        "BISTROVER|DUAL STRIKER"
       ],
       "songStatus": [
         [
@@ -3807,6 +3816,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "BISTROVER|DUAL STRIKER",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -6910,5 +6926,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-08-29T11:58:18.443Z"
+  "lastUpdated": "2026-09-04T12:58:54.778Z"
 }
