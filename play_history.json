@@ -2809,11 +2809,19 @@
           "status": "clear",
           "timestamp": "2026-09-04T13:16:37.065Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Burning Flame[L]",
+          "version": "BISTROVER",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-09-04T13:19:13.403Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 72,
-      "totalCount": 140,
+      "currentLevelIndex": 5,
+      "clearCount": 73,
+      "totalCount": 141,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2954,7 +2962,8 @@
         "CastHour|Purple Perplex",
         "HEROIC VERSE|ORCA",
         "BISTROVER|ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
-        "BISTROVER|innocent revolver"
+        "BISTROVER|innocent revolver",
+        "BISTROVER|Burning Flame[L]"
       ],
       "songStatus": [
         [
@@ -3935,6 +3944,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "BISTROVER|Burning Flame[L]",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -7038,5 +7054,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-04T13:16:37.066Z"
+  "lastUpdated": "2026-09-04T13:19:13.403Z"
 }
