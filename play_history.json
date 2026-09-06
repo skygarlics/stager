@@ -5794,11 +5794,19 @@
           "status": "clear",
           "timestamp": "2026-09-06T11:09:36.943Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "PERFECT GREAT!!",
+          "version": "Sparkle Shower",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-09-06T12:04:54.842Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 82,
-      "totalCount": 158,
+      "totalCount": 159,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -5957,7 +5965,8 @@
         "CANNON BALLERS|神謳 -RESONANCE-",
         "RESIDENT|ちょえちょえまぎか[L]",
         "CANNON BALLERS|AA -rebuild-",
-        "Rootage|Unbelief"
+        "Rootage|Unbelief",
+        "Sparkle Shower|PERFECT GREAT!!"
       ],
       "songStatus": [
         [
@@ -7065,6 +7074,13 @@
             "status": "clear",
             "level": "B+"
           }
+        ],
+        [
+          "Sparkle Shower|PERFECT GREAT!!",
+          {
+            "status": "fail",
+            "level": "A"
+          }
         ]
       ]
     },
@@ -7166,5 +7182,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-06T11:09:36.943Z"
+  "lastUpdated": "2026-09-06T12:04:54.845Z"
 }
