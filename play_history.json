@@ -5778,11 +5778,27 @@
           "status": "fail",
           "timestamp": "2026-09-06T11:09:25.648Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "AA -rebuild-",
+          "version": "CANNON BALLERS",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-09-06T11:09:27.003Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Unbelief",
+          "version": "Rootage",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-09-06T11:09:36.943Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 80,
-      "totalCount": 156,
+      "currentLevelIndex": 6,
+      "clearCount": 82,
+      "totalCount": 158,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -5939,7 +5955,9 @@
         "Sparkle Shower|ラブコメトキドキシリアス",
         "Sparkle Shower|BitRacer",
         "CANNON BALLERS|神謳 -RESONANCE-",
-        "RESIDENT|ちょえちょえまぎか[L]"
+        "RESIDENT|ちょえちょえまぎか[L]",
+        "CANNON BALLERS|AA -rebuild-",
+        "Rootage|Unbelief"
       ],
       "songStatus": [
         [
@@ -7033,6 +7051,20 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CANNON BALLERS|AA -rebuild-",
+          {
+            "status": "clear",
+            "level": "B"
+          }
+        ],
+        [
+          "Rootage|Unbelief",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -7134,5 +7166,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-06T11:09:25.649Z"
+  "lastUpdated": "2026-09-06T11:09:36.943Z"
 }
