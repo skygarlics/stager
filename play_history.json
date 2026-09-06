@@ -5762,11 +5762,27 @@
           "status": "fail",
           "timestamp": "2026-09-06T11:09:22.157Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "神謳 -RESONANCE-",
+          "version": "CANNON BALLERS",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-09-06T11:09:23.438Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ちょえちょえまぎか[L]",
+          "version": "RESIDENT",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-09-06T11:09:25.648Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 4,
-      "clearCount": 79,
-      "totalCount": 154,
+      "clearCount": 80,
+      "totalCount": 156,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -5921,7 +5937,9 @@
         "RESIDENT|No Border",
         "Rootage|L.F.O",
         "Sparkle Shower|ラブコメトキドキシリアス",
-        "Sparkle Shower|BitRacer"
+        "Sparkle Shower|BitRacer",
+        "CANNON BALLERS|神謳 -RESONANCE-",
+        "RESIDENT|ちょえちょえまぎか[L]"
       ],
       "songStatus": [
         [
@@ -7001,6 +7019,20 @@
             "status": "fail",
             "level": "B+"
           }
+        ],
+        [
+          "CANNON BALLERS|神謳 -RESONANCE-",
+          {
+            "status": "clear",
+            "level": "B"
+          }
+        ],
+        [
+          "RESIDENT|ちょえちょえまぎか[L]",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -7102,5 +7134,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-06T11:09:22.158Z"
+  "lastUpdated": "2026-09-06T11:09:25.649Z"
 }
