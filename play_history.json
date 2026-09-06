@@ -5802,11 +5802,19 @@
           "status": "fail",
           "timestamp": "2026-09-06T12:04:54.842Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Visterhv",
+          "version": "Rootage",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-09-06T12:08:09.595Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 82,
-      "totalCount": 159,
+      "currentLevelIndex": 6,
+      "clearCount": 83,
+      "totalCount": 160,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -5966,7 +5974,8 @@
         "RESIDENT|ちょえちょえまぎか[L]",
         "CANNON BALLERS|AA -rebuild-",
         "Rootage|Unbelief",
-        "Sparkle Shower|PERFECT GREAT!!"
+        "Sparkle Shower|PERFECT GREAT!!",
+        "Rootage|Visterhv"
       ],
       "songStatus": [
         [
@@ -7081,6 +7090,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "Rootage|Visterhv",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -7182,5 +7198,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-06T12:04:54.845Z"
+  "lastUpdated": "2026-09-06T12:08:09.596Z"
 }
