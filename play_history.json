@@ -5746,11 +5746,19 @@
           "status": "clear",
           "timestamp": "2026-09-06T11:09:17.459Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ラブコメトキドキシリアス",
+          "version": "Sparkle Shower",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-09-06T11:09:20.011Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 78,
-      "totalCount": 152,
+      "currentLevelIndex": 5,
+      "clearCount": 79,
+      "totalCount": 153,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -5903,7 +5911,8 @@
         "CANNON BALLERS|Slipstream",
         "Rootage|Ember Lights[L]",
         "RESIDENT|No Border",
-        "Rootage|L.F.O"
+        "Rootage|L.F.O",
+        "Sparkle Shower|ラブコメトキドキシリアス"
       ],
       "songStatus": [
         [
@@ -6969,6 +6978,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "Sparkle Shower|ラブコメトキドキシリアス",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -7070,5 +7086,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-06T11:09:17.465Z"
+  "lastUpdated": "2026-09-06T11:09:20.012Z"
 }
