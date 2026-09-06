@@ -5818,11 +5818,19 @@
           "status": "fail",
           "timestamp": "2026-09-06T12:31:31.884Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Boomy and The Boost",
+          "version": "CANNON BALLERS",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-09-06T12:46:07.559Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 83,
-      "totalCount": 161,
+      "totalCount": 162,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -5984,7 +5992,8 @@
         "Rootage|Unbelief",
         "Sparkle Shower|PERFECT GREAT!!",
         "Rootage|Visterhv",
-        "RESIDENT|VOLAQUAS"
+        "RESIDENT|VOLAQUAS",
+        "CANNON BALLERS|Boomy and The Boost"
       ],
       "songStatus": [
         [
@@ -7113,6 +7122,13 @@
             "status": "fail",
             "level": "A"
           }
+        ],
+        [
+          "CANNON BALLERS|Boomy and The Boost",
+          {
+            "status": "fail",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -7214,5 +7230,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-06T12:31:31.889Z"
+  "lastUpdated": "2026-09-06T12:46:07.563Z"
 }
