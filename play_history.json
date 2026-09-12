@@ -5898,11 +5898,19 @@
           "status": "fail",
           "timestamp": "2026-09-12T06:25:44.491Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "dAuntl3ss",
+          "version": "Rootage",
+          "level": "C",
+          "status": "fail",
+          "timestamp": "2026-09-12T06:34:10.508Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
+      "currentLevelIndex": 2,
       "clearCount": 87,
-      "totalCount": 171,
+      "totalCount": 172,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6074,7 +6082,8 @@
         "Rootage|龍王の霊廟(Mausoleum Of The Primal Dragon)[L]",
         "SINOBUZ|Sky High",
         "Rootage|ONIGOROSHI",
-        "SINOBUZ|Super Rush"
+        "SINOBUZ|Super Rush",
+        "Rootage|dAuntl3ss"
       ],
       "songStatus": [
         [
@@ -7273,6 +7282,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Rootage|dAuntl3ss",
+          {
+            "status": "fail",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -7374,5 +7390,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T06:25:44.492Z"
+  "lastUpdated": "2026-09-12T06:34:10.508Z"
 }
