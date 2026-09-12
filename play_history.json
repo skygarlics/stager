@@ -5914,11 +5914,19 @@
           "status": "clear",
           "timestamp": "2026-09-12T07:01:06.872Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "LOST TECHNOLOGIE",
+          "version": "Rootage",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-09-12T07:01:09.623Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 88,
-      "totalCount": 173,
+      "currentLevelIndex": 4,
+      "clearCount": 89,
+      "totalCount": 174,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6092,7 +6100,8 @@
         "Rootage|ONIGOROSHI",
         "SINOBUZ|Super Rush",
         "Rootage|dAuntl3ss",
-        "Sparkle Shower|ベンガル vs. アムール Battle"
+        "Sparkle Shower|ベンガル vs. アムール Battle",
+        "Rootage|LOST TECHNOLOGIE"
       ],
       "songStatus": [
         [
@@ -7305,6 +7314,13 @@
             "status": "clear",
             "level": "D"
           }
+        ],
+        [
+          "Rootage|LOST TECHNOLOGIE",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -7406,5 +7422,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T07:01:06.877Z"
+  "lastUpdated": "2026-09-12T07:01:09.624Z"
 }
