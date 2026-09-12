@@ -5906,11 +5906,19 @@
           "status": "fail",
           "timestamp": "2026-09-12T06:34:10.508Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ベンガル vs. アムール Battle",
+          "version": "Sparkle Shower",
+          "level": "D",
+          "status": "clear",
+          "timestamp": "2026-09-12T07:01:06.872Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 2,
-      "clearCount": 87,
-      "totalCount": 172,
+      "currentLevelIndex": 3,
+      "clearCount": 88,
+      "totalCount": 173,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6083,7 +6091,8 @@
         "SINOBUZ|Sky High",
         "Rootage|ONIGOROSHI",
         "SINOBUZ|Super Rush",
-        "Rootage|dAuntl3ss"
+        "Rootage|dAuntl3ss",
+        "Sparkle Shower|ベンガル vs. アムール Battle"
       ],
       "songStatus": [
         [
@@ -7289,6 +7298,13 @@
             "status": "fail",
             "level": "C"
           }
+        ],
+        [
+          "Sparkle Shower|ベンガル vs. アムール Battle",
+          {
+            "status": "clear",
+            "level": "D"
+          }
         ]
       ]
     },
@@ -7390,5 +7406,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T06:34:10.508Z"
+  "lastUpdated": "2026-09-12T07:01:06.877Z"
 }
