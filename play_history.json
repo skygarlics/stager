@@ -5866,11 +5866,19 @@
           "status": "fail",
           "timestamp": "2026-09-12T06:22:57.391Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "龍王の霊廟(Mausoleum Of The Primal Dragon)[L]",
+          "version": "Rootage",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-09-12T06:22:59.630Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 85,
-      "totalCount": 167,
+      "currentLevelIndex": 4,
+      "clearCount": 86,
+      "totalCount": 168,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6038,7 +6046,8 @@
         "Rootage|THE DAY OF JUBILATIONS",
         "CANNON BALLERS|Papilio ulysses",
         "Rootage|Lethal Weapon",
-        "CANNON BALLERS|NITROUS CANNON"
+        "CANNON BALLERS|NITROUS CANNON",
+        "Rootage|龍王の霊廟(Mausoleum Of The Primal Dragon)[L]"
       ],
       "songStatus": [
         [
@@ -7209,6 +7218,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Rootage|龍王の霊廟(Mausoleum Of The Primal Dragon)[L]",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -7310,5 +7326,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T06:22:57.391Z"
+  "lastUpdated": "2026-09-12T06:22:59.630Z"
 }
