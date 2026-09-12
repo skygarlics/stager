@@ -5842,11 +5842,19 @@
           "status": "clear",
           "timestamp": "2026-09-12T05:27:33.801Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Papilio ulysses",
+          "version": "CANNON BALLERS",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-09-12T06:01:28.214Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 84,
-      "totalCount": 164,
+      "totalCount": 165,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6011,7 +6019,8 @@
         "RESIDENT|VOLAQUAS",
         "CANNON BALLERS|Boomy and The Boost",
         "CANNON BALLERS|DropZ-Line-",
-        "Rootage|THE DAY OF JUBILATIONS"
+        "Rootage|THE DAY OF JUBILATIONS",
+        "CANNON BALLERS|Papilio ulysses"
       ],
       "songStatus": [
         [
@@ -7161,6 +7170,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "CANNON BALLERS|Papilio ulysses",
+          {
+            "status": "fail",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -7262,5 +7278,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T05:27:33.802Z"
+  "lastUpdated": "2026-09-12T06:01:28.217Z"
 }
