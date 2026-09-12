@@ -5874,11 +5874,27 @@
           "status": "clear",
           "timestamp": "2026-09-12T06:22:59.630Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Sky High",
+          "version": "SINOBUZ",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-09-12T06:23:01.464Z",
+          "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ONIGOROSHI",
+          "version": "Rootage",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-09-12T06:23:03.510Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
       "currentLevelIndex": 4,
-      "clearCount": 86,
-      "totalCount": 168,
+      "clearCount": 87,
+      "totalCount": 170,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6047,7 +6063,9 @@
         "CANNON BALLERS|Papilio ulysses",
         "Rootage|Lethal Weapon",
         "CANNON BALLERS|NITROUS CANNON",
-        "Rootage|龍王の霊廟(Mausoleum Of The Primal Dragon)[L]"
+        "Rootage|龍王の霊廟(Mausoleum Of The Primal Dragon)[L]",
+        "SINOBUZ|Sky High",
+        "Rootage|ONIGOROSHI"
       ],
       "songStatus": [
         [
@@ -7225,6 +7243,20 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "SINOBUZ|Sky High",
+          {
+            "status": "fail",
+            "level": "B"
+          }
+        ],
+        [
+          "Rootage|ONIGOROSHI",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -7326,5 +7358,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T06:22:59.630Z"
+  "lastUpdated": "2026-09-12T06:23:03.511Z"
 }
