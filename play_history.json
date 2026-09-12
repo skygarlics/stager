@@ -5850,11 +5850,19 @@
           "status": "fail",
           "timestamp": "2026-09-12T06:01:28.214Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "Lethal Weapon",
+          "version": "Rootage",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-09-12T06:22:54.759Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 84,
-      "totalCount": 165,
+      "currentLevelIndex": 4,
+      "clearCount": 85,
+      "totalCount": 166,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6020,7 +6028,8 @@
         "CANNON BALLERS|Boomy and The Boost",
         "CANNON BALLERS|DropZ-Line-",
         "Rootage|THE DAY OF JUBILATIONS",
-        "CANNON BALLERS|Papilio ulysses"
+        "CANNON BALLERS|Papilio ulysses",
+        "Rootage|Lethal Weapon"
       ],
       "songStatus": [
         [
@@ -7177,6 +7186,13 @@
             "status": "fail",
             "level": "B"
           }
+        ],
+        [
+          "Rootage|Lethal Weapon",
+          {
+            "status": "clear",
+            "level": "C"
+          }
         ]
       ]
     },
@@ -7278,5 +7294,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T06:01:28.217Z"
+  "lastUpdated": "2026-09-12T06:22:54.763Z"
 }
