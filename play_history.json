@@ -5938,11 +5938,19 @@
           "status": "clear",
           "timestamp": "2026-09-12T07:03:53.141Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "#MAGiCVLGiRL_TRVP_B3VTZ",
+          "version": "SINOBUZ",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-09-13T11:25:59.549Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 90,
-      "totalCount": 176,
+      "currentLevelIndex": 5,
+      "clearCount": 91,
+      "totalCount": 177,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6119,7 +6127,8 @@
         "Sparkle Shower|ベンガル vs. アムール Battle",
         "Rootage|LOST TECHNOLOGIE",
         "SINOBUZ|童話回廊",
-        "Rootage|Dr. Chemical & Killing Machine"
+        "Rootage|Dr. Chemical & Killing Machine",
+        "SINOBUZ|#MAGiCVLGiRL_TRVP_B3VTZ"
       ],
       "songStatus": [
         [
@@ -7353,6 +7362,13 @@
             "status": "clear",
             "level": "C"
           }
+        ],
+        [
+          "SINOBUZ|#MAGiCVLGiRL_TRVP_B3VTZ",
+          {
+            "status": "clear",
+            "level": "B"
+          }
         ]
       ]
     },
@@ -7454,5 +7470,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-12T07:03:53.142Z"
+  "lastUpdated": "2026-09-13T11:25:59.553Z"
 }
