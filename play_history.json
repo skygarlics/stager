@@ -2841,11 +2841,19 @@
           "status": "clear",
           "timestamp": "2026-10-30T11:41:35.576Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "LASER CRUSTER (IGNITE REMIX)",
+          "version": "HEROIC VERSE",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-10-30T11:44:01.560Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 74,
-      "totalCount": 144,
+      "totalCount": 145,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2990,7 +2998,8 @@
         "BISTROVER|Burning Flame[L]",
         "HEROIC VERSE|Inferno of Fomalhaut",
         "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)",
-        "BISTROVER|rommmo"
+        "BISTROVER|rommmo",
+        "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)"
       ],
       "songStatus": [
         [
@@ -3999,6 +4008,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -7518,5 +7534,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T11:41:35.576Z"
+  "lastUpdated": "2026-10-30T11:44:01.560Z"
 }
