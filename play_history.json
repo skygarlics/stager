@@ -2905,11 +2905,19 @@
           "status": "clear",
           "timestamp": "2026-10-30T12:09:50.544Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "KILL EACH OTHER",
+          "version": "Rootage",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-10-30T12:12:32.808Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 78,
-      "totalCount": 152,
+      "currentLevelIndex": 5,
+      "clearCount": 79,
+      "totalCount": 153,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3062,7 +3070,8 @@
         "Rootage|ruin of opals",
         "HEROIC VERSE|深淵に捧ぐレクイエム",
         "Rootage|GENE",
-        "HEROIC VERSE|AKASHIC BREAK"
+        "HEROIC VERSE|AKASHIC BREAK",
+        "Rootage|KILL EACH OTHER"
       ],
       "songStatus": [
         [
@@ -4127,6 +4136,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "Rootage|KILL EACH OTHER",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -7646,5 +7662,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T12:09:50.545Z"
+  "lastUpdated": "2026-10-30T12:12:32.808Z"
 }
