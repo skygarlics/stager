@@ -2873,11 +2873,19 @@
           "status": "clear",
           "timestamp": "2026-10-30T11:54:13.569Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ruin of opals",
+          "version": "Rootage",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-10-30T11:59:00.110Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 76,
-      "totalCount": 148,
+      "totalCount": 149,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3026,7 +3034,8 @@
         "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
         "BISTROVER|スーパー戦湯ババンバーン",
         "HEROIC VERSE|魅惑のYUMMYスイーツ",
-        "BISTROVER|SOLID STATE SQUAD -RISEN RELIC REMIX-"
+        "BISTROVER|SOLID STATE SQUAD -RISEN RELIC REMIX-",
+        "Rootage|ruin of opals"
       ],
       "songStatus": [
         [
@@ -4063,6 +4072,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "Rootage|ruin of opals",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -7582,5 +7598,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T11:54:13.570Z"
+  "lastUpdated": "2026-10-30T11:59:00.112Z"
 }
