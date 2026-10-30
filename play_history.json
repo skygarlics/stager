@@ -2849,11 +2849,19 @@
           "status": "fail",
           "timestamp": "2026-10-30T11:44:01.560Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "スーパー戦湯ババンバーン",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-10-30T11:46:32.805Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 74,
-      "totalCount": 145,
+      "currentLevelIndex": 4,
+      "clearCount": 75,
+      "totalCount": 146,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2999,7 +3007,8 @@
         "HEROIC VERSE|Inferno of Fomalhaut",
         "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)",
         "BISTROVER|rommmo",
-        "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)"
+        "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
+        "BISTROVER|スーパー戦湯ババンバーン"
       ],
       "songStatus": [
         [
@@ -4015,6 +4024,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "BISTROVER|スーパー戦湯ババンバーン",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -7534,5 +7550,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T11:44:01.560Z"
+  "lastUpdated": "2026-10-30T11:46:32.805Z"
 }
