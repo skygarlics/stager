@@ -2833,11 +2833,19 @@
           "status": "fail",
           "timestamp": "2026-10-30T11:39:11.278Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "rommmo",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-10-30T11:41:35.576Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 73,
-      "totalCount": 143,
+      "currentLevelIndex": 4,
+      "clearCount": 74,
+      "totalCount": 144,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2981,7 +2989,8 @@
         "BISTROVER|innocent revolver",
         "BISTROVER|Burning Flame[L]",
         "HEROIC VERSE|Inferno of Fomalhaut",
-        "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)"
+        "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)",
+        "BISTROVER|rommmo"
       ],
       "songStatus": [
         [
@@ -3983,6 +3992,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "BISTROVER|rommmo",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -7502,5 +7518,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T11:39:11.278Z"
+  "lastUpdated": "2026-10-30T11:41:35.576Z"
 }
