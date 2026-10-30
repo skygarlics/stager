@@ -2817,11 +2817,19 @@
           "status": "clear",
           "timestamp": "2026-09-04T13:19:13.403Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Inferno of Fomalhaut",
+          "version": "HEROIC VERSE",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-10-30T11:34:37.877Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 73,
-      "totalCount": 141,
+      "totalCount": 142,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2963,7 +2971,8 @@
         "HEROIC VERSE|ORCA",
         "BISTROVER|ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
         "BISTROVER|innocent revolver",
-        "BISTROVER|Burning Flame[L]"
+        "BISTROVER|Burning Flame[L]",
+        "HEROIC VERSE|Inferno of Fomalhaut"
       ],
       "songStatus": [
         [
@@ -3951,6 +3960,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "HEROIC VERSE|Inferno of Fomalhaut",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -7465,10 +7481,10 @@
   },
   "mode": "ノマゲ",
   "gameMode": "SP",
-  "playEnv": "arcade",
+  "playEnv": "home",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-09-13T11:25:59.553Z"
+  "lastUpdated": "2026-10-30T11:34:37.877Z"
 }
