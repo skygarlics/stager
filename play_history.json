@@ -2857,11 +2857,19 @@
           "status": "clear",
           "timestamp": "2026-10-30T11:46:32.805Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "魅惑のYUMMYスイーツ",
+          "version": "HEROIC VERSE",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-10-30T11:51:39.812Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 75,
-      "totalCount": 146,
+      "totalCount": 147,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3008,7 +3016,8 @@
         "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)",
         "BISTROVER|rommmo",
         "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
-        "BISTROVER|スーパー戦湯ババンバーン"
+        "BISTROVER|スーパー戦湯ババンバーン",
+        "HEROIC VERSE|魅惑のYUMMYスイーツ"
       ],
       "songStatus": [
         [
@@ -4031,6 +4040,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "HEROIC VERSE|魅惑のYUMMYスイーツ",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -7550,5 +7566,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T11:46:32.805Z"
+  "lastUpdated": "2026-10-30T11:51:39.816Z"
 }
