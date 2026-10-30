@@ -2889,11 +2889,19 @@
           "status": "clear",
           "timestamp": "2026-10-30T12:01:29.447Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "GENE",
+          "version": "Rootage",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-10-30T12:07:19.555Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 77,
-      "totalCount": 150,
+      "totalCount": 151,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3044,7 +3052,8 @@
         "HEROIC VERSE|魅惑のYUMMYスイーツ",
         "BISTROVER|SOLID STATE SQUAD -RISEN RELIC REMIX-",
         "Rootage|ruin of opals",
-        "HEROIC VERSE|深淵に捧ぐレクイエム"
+        "HEROIC VERSE|深淵に捧ぐレクイエム",
+        "Rootage|GENE"
       ],
       "songStatus": [
         [
@@ -4095,6 +4104,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "Rootage|GENE",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -7614,5 +7630,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T12:01:29.447Z"
+  "lastUpdated": "2026-10-30T12:07:19.555Z"
 }
