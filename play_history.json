@@ -2865,11 +2865,19 @@
           "status": "fail",
           "timestamp": "2026-10-30T11:51:39.812Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "SOLID STATE SQUAD -RISEN RELIC REMIX-",
+          "version": "BISTROVER",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-10-30T11:54:13.569Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 75,
-      "totalCount": 147,
+      "currentLevelIndex": 4,
+      "clearCount": 76,
+      "totalCount": 148,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3017,7 +3025,8 @@
         "BISTROVER|rommmo",
         "HEROIC VERSE|LASER CRUSTER (IGNITE REMIX)",
         "BISTROVER|スーパー戦湯ババンバーン",
-        "HEROIC VERSE|魅惑のYUMMYスイーツ"
+        "HEROIC VERSE|魅惑のYUMMYスイーツ",
+        "BISTROVER|SOLID STATE SQUAD -RISEN RELIC REMIX-"
       ],
       "songStatus": [
         [
@@ -4047,6 +4056,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "BISTROVER|SOLID STATE SQUAD -RISEN RELIC REMIX-",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -7566,5 +7582,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T11:51:39.816Z"
+  "lastUpdated": "2026-10-30T11:54:13.570Z"
 }
