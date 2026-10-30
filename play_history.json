@@ -2825,11 +2825,19 @@
           "status": "fail",
           "timestamp": "2026-10-30T11:34:37.877Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "T-REX vs Velociraptor (In the Far east euphoria)",
+          "version": "HEROIC VERSE",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-10-30T11:39:11.278Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 73,
-      "totalCount": 142,
+      "totalCount": 143,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -2972,7 +2980,8 @@
         "BISTROVER|ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
         "BISTROVER|innocent revolver",
         "BISTROVER|Burning Flame[L]",
-        "HEROIC VERSE|Inferno of Fomalhaut"
+        "HEROIC VERSE|Inferno of Fomalhaut",
+        "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)"
       ],
       "songStatus": [
         [
@@ -3967,6 +3976,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "HEROIC VERSE|T-REX vs Velociraptor (In the Far east euphoria)",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -7486,5 +7502,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T11:34:37.877Z"
+  "lastUpdated": "2026-10-30T11:39:11.278Z"
 }
