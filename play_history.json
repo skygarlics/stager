@@ -2921,11 +2921,19 @@
           "status": "fail",
           "timestamp": "2026-11-12T13:14:23.716Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "HARD BRAIN",
+          "version": "Rootage",
+          "level": "B",
+          "status": "fail",
+          "timestamp": "2026-11-12T13:17:10.818Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
+      "currentLevelIndex": 3,
       "clearCount": 79,
-      "totalCount": 154,
+      "totalCount": 155,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3080,7 +3088,8 @@
         "Rootage|GENE",
         "HEROIC VERSE|AKASHIC BREAK",
         "Rootage|KILL EACH OTHER",
-        "Rootage|Mächö Mönky"
+        "Rootage|Mächö Mönky",
+        "Rootage|HARD BRAIN"
       ],
       "songStatus": [
         [
@@ -4159,6 +4168,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "Rootage|HARD BRAIN",
+          {
+            "status": "fail",
+            "level": "B"
           }
         ]
       ]
@@ -7678,5 +7694,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-12T13:14:23.717Z"
+  "lastUpdated": "2026-11-12T13:17:10.818Z"
 }
