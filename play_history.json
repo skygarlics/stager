@@ -2937,11 +2937,19 @@
           "status": "clear",
           "timestamp": "2026-11-12T13:20:33.933Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Xlø",
+          "version": "Rootage",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-11-12T13:23:12.309Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 80,
-      "totalCount": 156,
+      "currentLevelIndex": 5,
+      "clearCount": 81,
+      "totalCount": 157,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3098,7 +3106,8 @@
         "Rootage|KILL EACH OTHER",
         "Rootage|Mächö Mönky",
         "Rootage|HARD BRAIN",
-        "HEROIC VERSE|Friction[!]Function"
+        "HEROIC VERSE|Friction[!]Function",
+        "Rootage|Xlø"
       ],
       "songStatus": [
         [
@@ -4191,6 +4200,13 @@
           {
             "status": "clear",
             "level": "C"
+          }
+        ],
+        [
+          "Rootage|Xlø",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -7710,5 +7726,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-12T13:20:33.935Z"
+  "lastUpdated": "2026-11-12T13:23:12.309Z"
 }
