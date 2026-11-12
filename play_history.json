@@ -2929,11 +2929,19 @@
           "status": "fail",
           "timestamp": "2026-11-12T13:17:10.818Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Friction[!]Function",
+          "version": "HEROIC VERSE",
+          "level": "C",
+          "status": "clear",
+          "timestamp": "2026-11-12T13:20:33.933Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 3,
-      "clearCount": 79,
-      "totalCount": 155,
+      "currentLevelIndex": 4,
+      "clearCount": 80,
+      "totalCount": 156,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3089,7 +3097,8 @@
         "HEROIC VERSE|AKASHIC BREAK",
         "Rootage|KILL EACH OTHER",
         "Rootage|Mächö Mönky",
-        "Rootage|HARD BRAIN"
+        "Rootage|HARD BRAIN",
+        "HEROIC VERSE|Friction[!]Function"
       ],
       "songStatus": [
         [
@@ -4175,6 +4184,13 @@
           {
             "status": "fail",
             "level": "B"
+          }
+        ],
+        [
+          "HEROIC VERSE|Friction[!]Function",
+          {
+            "status": "clear",
+            "level": "C"
           }
         ]
       ]
@@ -7694,5 +7710,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-12T13:17:10.818Z"
+  "lastUpdated": "2026-11-12T13:20:33.935Z"
 }
