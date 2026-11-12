@@ -2945,11 +2945,19 @@
           "status": "clear",
           "timestamp": "2026-11-12T13:23:12.309Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Visterhv",
+          "version": "Rootage",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-11-12T13:25:36.780Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 81,
-      "totalCount": 157,
+      "totalCount": 158,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3107,7 +3115,8 @@
         "Rootage|Mächö Mönky",
         "Rootage|HARD BRAIN",
         "HEROIC VERSE|Friction[!]Function",
-        "Rootage|Xlø"
+        "Rootage|Xlø",
+        "Rootage|Visterhv"
       ],
       "songStatus": [
         [
@@ -4207,6 +4216,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "Rootage|Visterhv",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -7726,5 +7742,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-12T13:23:12.309Z"
+  "lastUpdated": "2026-11-12T13:25:36.781Z"
 }
