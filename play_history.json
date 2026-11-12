@@ -2913,11 +2913,19 @@
           "status": "clear",
           "timestamp": "2026-10-30T12:12:32.808Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Mächö Mönky",
+          "version": "Rootage",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-11-12T13:14:23.716Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 79,
-      "totalCount": 153,
+      "totalCount": 154,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3071,7 +3079,8 @@
         "HEROIC VERSE|深淵に捧ぐレクイエム",
         "Rootage|GENE",
         "HEROIC VERSE|AKASHIC BREAK",
-        "Rootage|KILL EACH OTHER"
+        "Rootage|KILL EACH OTHER",
+        "Rootage|Mächö Mönky"
       ],
       "songStatus": [
         [
@@ -4143,6 +4152,13 @@
           {
             "status": "clear",
             "level": "B"
+          }
+        ],
+        [
+          "Rootage|Mächö Mönky",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -7662,5 +7678,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-10-30T12:12:32.808Z"
+  "lastUpdated": "2026-11-12T13:14:23.717Z"
 }
