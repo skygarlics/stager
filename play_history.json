@@ -2969,11 +2969,19 @@
           "status": "clear",
           "timestamp": "2026-11-13T14:07:14.164Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "ALTERNATOR",
+          "version": "CastHour",
+          "level": "A",
+          "status": "clear",
+          "timestamp": "2026-11-13T14:09:48.122Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
-      "clearCount": 83,
-      "totalCount": 160,
+      "currentLevelIndex": 7,
+      "clearCount": 84,
+      "totalCount": 161,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3134,7 +3142,8 @@
         "Rootage|Xlø",
         "Rootage|Visterhv",
         "CANNON BALLERS|Slipstream",
-        "Rootage|Unbelief"
+        "Rootage|Unbelief",
+        "CastHour|ALTERNATOR"
       ],
       "songStatus": [
         [
@@ -4255,6 +4264,13 @@
           {
             "status": "clear",
             "level": "B+"
+          }
+        ],
+        [
+          "CastHour|ALTERNATOR",
+          {
+            "status": "clear",
+            "level": "A"
           }
         ]
       ]
@@ -7774,5 +7790,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-13T14:07:14.165Z"
+  "lastUpdated": "2026-11-13T14:09:48.122Z"
 }
