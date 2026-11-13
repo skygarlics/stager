@@ -2993,11 +2993,19 @@
           "status": "fail",
           "timestamp": "2026-11-13T14:14:59.337Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "抱きしめてモナムール",
+          "version": "Rootage",
+          "level": "B+",
+          "status": "fail",
+          "timestamp": "2026-11-13T14:19:23.468Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
+      "currentLevelIndex": 4,
       "clearCount": 84,
-      "totalCount": 163,
+      "totalCount": 164,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3161,7 +3169,8 @@
         "Rootage|Unbelief",
         "CastHour|ALTERNATOR",
         "Sparkle Shower|RUINA",
-        "CastHour|烽火連天の刃"
+        "CastHour|烽火連天の刃",
+        "Rootage|抱きしめてモナムール"
       ],
       "songStatus": [
         [
@@ -4303,6 +4312,13 @@
           {
             "status": "fail",
             "level": "A"
+          }
+        ],
+        [
+          "Rootage|抱きしめてモナムール",
+          {
+            "status": "fail",
+            "level": "B+"
           }
         ]
       ]
@@ -7822,5 +7838,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-13T14:14:59.337Z"
+  "lastUpdated": "2026-11-13T14:19:23.468Z"
 }
