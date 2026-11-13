@@ -2985,11 +2985,19 @@
           "status": "fail",
           "timestamp": "2026-11-13T14:12:04.414Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "烽火連天の刃",
+          "version": "CastHour",
+          "level": "A",
+          "status": "fail",
+          "timestamp": "2026-11-13T14:14:59.337Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 6,
+      "currentLevelIndex": 5,
       "clearCount": 84,
-      "totalCount": 162,
+      "totalCount": 163,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3152,7 +3160,8 @@
         "CANNON BALLERS|Slipstream",
         "Rootage|Unbelief",
         "CastHour|ALTERNATOR",
-        "Sparkle Shower|RUINA"
+        "Sparkle Shower|RUINA",
+        "CastHour|烽火連天の刃"
       ],
       "songStatus": [
         [
@@ -4287,6 +4296,13 @@
           {
             "status": "fail",
             "level": "A+"
+          }
+        ],
+        [
+          "CastHour|烽火連天の刃",
+          {
+            "status": "fail",
+            "level": "A"
           }
         ]
       ]
@@ -7806,5 +7822,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-13T14:12:04.414Z"
+  "lastUpdated": "2026-11-13T14:14:59.337Z"
 }
