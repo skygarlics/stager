@@ -2953,11 +2953,19 @@
           "status": "fail",
           "timestamp": "2026-11-12T13:25:36.780Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "Slipstream",
+          "version": "CANNON BALLERS",
+          "level": "B",
+          "status": "clear",
+          "timestamp": "2026-11-13T14:03:19.482Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 4,
-      "clearCount": 81,
-      "totalCount": 158,
+      "currentLevelIndex": 5,
+      "clearCount": 82,
+      "totalCount": 159,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3116,7 +3124,8 @@
         "Rootage|HARD BRAIN",
         "HEROIC VERSE|Friction[!]Function",
         "Rootage|Xlø",
-        "Rootage|Visterhv"
+        "Rootage|Visterhv",
+        "CANNON BALLERS|Slipstream"
       ],
       "songStatus": [
         [
@@ -4223,6 +4232,13 @@
           {
             "status": "fail",
             "level": "B+"
+          }
+        ],
+        [
+          "CANNON BALLERS|Slipstream",
+          {
+            "status": "clear",
+            "level": "B"
           }
         ]
       ]
@@ -7742,5 +7758,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-12T13:25:36.781Z"
+  "lastUpdated": "2026-11-13T14:03:19.485Z"
 }
