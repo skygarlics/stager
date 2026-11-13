@@ -2977,11 +2977,19 @@
           "status": "clear",
           "timestamp": "2026-11-13T14:09:48.122Z",
           "modeKey": "SP_home_ノマゲ"
+        },
+        {
+          "song": "RUINA",
+          "version": "Sparkle Shower",
+          "level": "A+",
+          "status": "fail",
+          "timestamp": "2026-11-13T14:12:04.414Z",
+          "modeKey": "SP_home_ノマゲ"
         }
       ],
-      "currentLevelIndex": 7,
+      "currentLevelIndex": 6,
       "clearCount": 84,
-      "totalCount": 161,
+      "totalCount": 162,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -3143,7 +3151,8 @@
         "Rootage|Visterhv",
         "CANNON BALLERS|Slipstream",
         "Rootage|Unbelief",
-        "CastHour|ALTERNATOR"
+        "CastHour|ALTERNATOR",
+        "Sparkle Shower|RUINA"
       ],
       "songStatus": [
         [
@@ -4271,6 +4280,13 @@
           {
             "status": "clear",
             "level": "A"
+          }
+        ],
+        [
+          "Sparkle Shower|RUINA",
+          {
+            "status": "fail",
+            "level": "A+"
           }
         ]
       ]
@@ -7790,5 +7806,5 @@
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-13T14:09:48.122Z"
+  "lastUpdated": "2026-11-13T14:12:04.414Z"
 }
