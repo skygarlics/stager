@@ -6314,11 +6314,19 @@
           "status": "clear",
           "timestamp": "2026-09-13T11:25:59.549Z",
           "modeKey": "SP_arcade_ノマゲ"
+        },
+        {
+          "song": "ANCHOR",
+          "version": "CANNON BALLERS",
+          "level": "B+",
+          "status": "clear",
+          "timestamp": "2026-11-15T11:16:04.052Z",
+          "modeKey": "SP_arcade_ノマゲ"
         }
       ],
-      "currentLevelIndex": 5,
-      "clearCount": 91,
-      "totalCount": 177,
+      "currentLevelIndex": 6,
+      "clearCount": 92,
+      "totalCount": 178,
       "playedSongs": [
         "Pinky Crush|スパークリング☆彡ハイパーチューン！！",
         "Sparkle Shower|Lisa-RICCIA",
@@ -6496,7 +6504,8 @@
         "Rootage|LOST TECHNOLOGIE",
         "SINOBUZ|童話回廊",
         "Rootage|Dr. Chemical & Killing Machine",
-        "SINOBUZ|#MAGiCVLGiRL_TRVP_B3VTZ"
+        "SINOBUZ|#MAGiCVLGiRL_TRVP_B3VTZ",
+        "CANNON BALLERS|ANCHOR"
       ],
       "songStatus": [
         [
@@ -7737,6 +7746,13 @@
             "status": "clear",
             "level": "B"
           }
+        ],
+        [
+          "CANNON BALLERS|ANCHOR",
+          {
+            "status": "clear",
+            "level": "B+"
+          }
         ]
       ]
     },
@@ -7833,10 +7849,10 @@
   },
   "mode": "ノマゲ",
   "gameMode": "SP",
-  "playEnv": "home",
+  "playEnv": "arcade",
   "dp": {
     "offi": 10,
     "env": "a330"
   },
-  "lastUpdated": "2026-11-13T14:19:23.468Z"
+  "lastUpdated": "2026-11-15T11:16:04.054Z"
 }
